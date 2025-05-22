@@ -1,0 +1,33 @@
+#!/usr/bin/env python3
+"""
+Script takes a list of paths in stdin separated by new lines
+then deduplicates the paths based on the basename of the path
+prioritizing the shortest path. Then outputs the results seperated
+by new lines,
+"""
+import sys
+from pathlib import PurePath
+
+
+def main():
+    known_basenames: dict[str, PurePath]
+    known_basenames = {}
+    # Iterate through paths
+    for path in sys.stdin.readlines():
+        path = PurePath(path.strip())  # Strip the newline
+        basename = path.name
+        known_path: PurePath
+        # Get the known path with the associated base name ignoring
+        # storing the path if it's the first occurrence.
+        known_path = known_basenames.setdefault(basename, path)
+
+        # Only store the shortest path
+        if len(path.parts) >= len(known_path.parts):
+            continue
+        known_basenames[basename] = path
+    for value in known_basenames.values():
+        print(value)
+
+
+if __name__ == "__main__":
+    main()

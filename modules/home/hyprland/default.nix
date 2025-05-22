@@ -1,0 +1,135 @@
+{
+  config,
+  lib,
+  pkgs,
+  osConfig,
+  ...
+}: let
+  cfg = config.TM.desktop.hyprland;
+  inherit
+    (lib)
+    mkDefault
+    mkEnableOption
+    mkOption
+    mkIf
+    types
+    ;
+  inherit (lib.strings) toShellVars;
+in {
+  imports = [
+    ./hyprpanel/base.nix
+    ./hyprlock.nix
+    ./settings.nix
+    ./rules.nix
+    ./binds.nix
+  ];
+  options.TM.desktop.hyprland = {
+    enable = mkOption {
+      type = types.bool;
+      description = "Hyprland";
+      default = osConfig.TM.desktop.hyprland.enable or false;
+    };
+    enableHDR = mkEnableOption "Enable HDR" // {default = config.TM.hasHDRDisplay;};
+    extraAutoStart = mkOption {
+      # List of strings
+      type = types.listOf types.str;
+      default = osConfig.TM.desktop.hyprland.extraAutoStart or [];
+    };
+    extraSettings = mkOption {
+      type = types.attrs;
+      default = osConfig.TM.desktop.hyprland.extraSettings or {};
+    };
+    package = mkOption {
+      type = types.package;
+      default = osConfig.programs.hyprland.package or pkgs.hyprland;
+    };
+    portalPackage = mkOption {
+      type = types.package;
+      default =
+        osConfig.programs.hyprland.portalPackage
+        or (pkgs.xdg-desktop-portal-hyprland.override {
+          hyprland = cfg.package;
+        });
+    };
+  };
+
+  config = mkIf cfg.enable {
+    systemd.user.sessionVariables = {
+      QT_WAYLAND_DISABLE_WINDOWDECORATION = 1;
+    };
+    # Use hyprbar
+    TM.programs.waybar.enable = false;
+    programs.rofi = {
+      enable = true;
+      package = pkgs.wofi;
+    };
+    systemd.user.services.hyprpaper.Unit.After = lib.mkForce ["graphical-session.target"];
+    services = {
+      hyprpaper = {
+        enable = true;
+        settings = {
+          ipc = "on";
+          splash = false;
+          preload = ["${config.stylix.image}"];
+          wallpaper = mkDefault [", ${config.stylix.image}"];
+        };
+      };
+      network-manager-applet.enable = true;
+      gpg-agent.pinentryPackage = mkDefault pkgs.pinentry-gnome3;
+      # swaync.enable = true;
+      playerctld.enable = true;
+      gnome-keyring = {
+        enable = true;
+        components = [
+          "pkcs11"
+          "ssh"
+          "secrets"
+        ];
+      };
+    };
+    xdg.configFile."uwsm/env-hyprland" = {
+      text = let
+        hdrEnabled = cfg.enableHDR;
+      in ''
+        ${toShellVars {
+          ENABLE_HDR_WSI = hdrEnabled;
+          DXVK_HDR = hdrEnabled;
+        }}
+      '';
+    };
+    home = {
+      packages = with pkgs; [
+        rofi-wayland
+        gnome-keyring
+        seahorse
+        pamixer
+        hyprpicker
+        hyprsunset
+        grimblast
+        nautilus
+        networkmanager
+        wl-clipboard
+        libgtop
+      ];
+    };
+    wayland.windowManager.hyprland = {
+      enable = true;
+      package = null;
+      xwayland.enable = true;
+      systemd = {
+        enable = !(osConfig.programs.hyprland.withUSM or true);
+        variables = ["--all"];
+      };
+      settings = cfg.extraSettings;
+    };
+    xdg.portal = {
+      inherit (osConfig.xdg.portal) config;
+
+      #   enable = true;
+      #   extraPortals = [ cfg.portalPackage ];
+      #   config = {
+      #     common.default = [ "hyprland" ];
+      #   };
+    };
+  };
+}

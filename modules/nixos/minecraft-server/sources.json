@@ -1,0 +1,46 @@
+{
+  "VanillaRefresh": {
+    "sha512": "5a3da949220b8ca0922dfb34f83b6b4486d407cdf4a214a625f8160e567028e4216848f32eca736af5d5562c703c48a8a430f2783af3eb11edb7c74c3111ce6b",
+    "url": "https://cdn.modrinth.com/data/gWO6Zqey/versions/zoG7SIUH/vanilla-refresh-1.4.27a_1.21.2-4.jar"
+  },
+  "Terralith": {
+    "sha512": "f862ed5435ce4c11a97d2ea5c40eee9f817c908f3223b5fd3e3fff0562a55111d7429dc73a2f1ca0b1af7b1ff6fa0470ed6efebb5de13336c40bb70fb357dd60",
+    "url": "https://cdn.modrinth.com/data/8oi3bsk5/versions/MuJMtPGQ/Terralith_1.21.x_v2.5.8.jar"
+  },
+  "Tectonic": {
+    "sha512": "452816b9c0eb9ee8cc22d98f2966e2ddbdcf944361dbb06abc4c8c115de87b8163ff66a0ff8d9ad3ee37521c5c6caf4a506b23c7ec0e13dfc1af471b911def25",
+    "url": "https://cdn.modrinth.com/data/lWDHr9jE/versions/FOOSlG8w/tectonic-fabric-1.21.4-2.4.3.jar"
+  },
+  "Nullscape": {
+    "sha512": "a5b69c029efba7f0d65b641f5bfa31c750248a29520f5bb498a091bb9f3d245b570d353af3cd9400e9d47c8268bd9abf7bf57b52a3c23a1610d6f7eebf46f7e0",
+    "url": "https://cdn.modrinth.com/data/LPjGiSO4/versions/4qC7kfiC/Nullscape_1.21.x_v1.2.11.jar"
+  },
+  "Incendium": {
+    "sha512": "ca897be9059ea691860715dac6c0ccd934720d7d42c8af45b95257e8f91a6c9470f506bfb9ef3c770e6a6c57e58885add2126150a35927848817433fd227ce0e",
+    "url": "https://cdn.modrinth.com/data/ZVzW5oNS/versions/7mVvV9Th/Incendium_1.21.x_v5.4.4.jar"
+  },
+  "Balm": {
+    "sha512": "55f4bfc262b2f9b96fd14a21393531c1ea9ef8a954e5dd6acd7ce200b6918d0f49e96ce7c4fd2cf05ff65a57c06275f75a7f5606e5516995a5054f995f5518db",
+    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/urF0zb9k/balm-fabric-1.21.4-21.4.33.jar"
+  },
+  "NetherPortalFix": {
+    "sha512": "7a0028dae68f43d3c95563b2aca496149c457aa5714a8e90ff582c8d0cd3d0c16497d5595ce29dc9a3faa46770f442aaf44973c98d1011f4780e2ba46155024b",
+    "url": "https://cdn.modrinth.com/data/nPZr02ET/versions/DuRtZjks/netherportalfix-fabric-1.21.4-21.4.3.jar"
+  },
+  "ConcurrentChunkManagementEngine": {
+    "sha512": "f944bf4319cfa6fb645d0cbe807b82c74784f44ef7ac75273efa161be4625aa80390ec8cf32a232c0ebce0d0cb23b090979019d93e7550771de56d09d920dd13",
+    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/EzvMx6b2/c2me-fabric-mc1.21.4-0.3.1.3.0.jar"
+  },
+  "Krypton": {
+    "sha512": "5f8cf96c79bfd4d893f1d70da582e62026bed36af49a7fa7b1e00fb6efb28d9ad6a1eec147020496b4fe38693d33fe6bfcd1eebbd93475612ee44290c2483784",
+    "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/Acz3ttTp/krypton-0.2.8.jar"
+  },
+  "FabricAPI": {
+    "sha512": "bb8de90d5d1165ecc17a620ec24ce6946f578e1d834ddc49f85c2816a0c3ba954ec37e64f625a2f496d35ac1db85b495f978a402a62bbfcc561795de3098b5c9",
+    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/bQZpGIz0/fabric-api-0.119.2%2B1.21.4.jar"
+  },
+  "Sit!": {
+    "sha512": "a573b607181dbf84c371fd358a73376db0049566bbfb078694ce0348535469a177d136c9bc9b636f38baa3f83e15f924a885277b1d10af4cf961e7a02770793f",
+    "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/TdxMsbXY/sit%21-1.2.4.1%2B1.21.4.jar"
+  }
+}

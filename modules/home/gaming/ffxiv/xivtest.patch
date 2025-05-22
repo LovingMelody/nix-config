@@ -1,0 +1,271 @@
+diff --git a/src/XIVLauncher.Core/Accounts/Secrets/ISecretProvider.cs b/src/XIVLauncher.Core/Accounts/Secrets/ISecretProvider.cs
+index 1bc215a..1676477 100644
+--- a/src/XIVLauncher.Core/Accounts/Secrets/ISecretProvider.cs
++++ b/src/XIVLauncher.Core/Accounts/Secrets/ISecretProvider.cs
+@@ -7,4 +7,10 @@ public interface ISecretProvider
+     public void SavePassword(string accountName, string password);
+ 
+     public void DeletePassword(string accountName);
++
++    public string? GetOTP(string accountname);
++
++    public void DeleteOTP(string accountName);
++
++    public void SaveOTP(string accountName, string secret);
+ }
+diff --git a/src/XIVLauncher.Core/Accounts/Secrets/Providers/DummySecretProvider.cs b/src/XIVLauncher.Core/Accounts/Secrets/Providers/DummySecretProvider.cs
+index 57aaf92..b3d14b7 100644
+--- a/src/XIVLauncher.Core/Accounts/Secrets/Providers/DummySecretProvider.cs
++++ b/src/XIVLauncher.Core/Accounts/Secrets/Providers/DummySecretProvider.cs
+@@ -16,4 +16,17 @@ public class DummySecretProvider : ISecretProvider
+     {
+         // ignored
+     }
++
++    public string? GetOTP(string accountName)
++    {
++        return null;
++    }
++    public string? SaveOTP(string accountName, string secret)
++    {
++        return null;
++    }
++    public void DeleteOTP(string accountName)
++    {
++        // ignored
++    }
+ }
+diff --git a/src/XIVLauncher.Core/Accounts/Secrets/Providers/FileSecretProvider.cs b/src/XIVLauncher.Core/Accounts/Secrets/Providers/FileSecretProvider.cs
+index 9cbc5be..53b8afc 100644
+--- a/src/XIVLauncher.Core/Accounts/Secrets/Providers/FileSecretProvider.cs
++++ b/src/XIVLauncher.Core/Accounts/Secrets/Providers/FileSecretProvider.cs
+@@ -46,6 +46,38 @@ public class FileSecretProvider : ISecretProvider
+         Save();
+     }
+ 
++    public void GetOTP(string accountName)
++    {
++        if (this.savedPasswords.TryGetValue(accountName + " (OTP)", out var secret))
++        {
++            byte[] secretBytes = Base32Encoding.ToBytes(secreet);
++            Totp totp = new Totp(secretBytes);
++            return totp.ComputeTotp();
++        }
++        return null;
++    }
++
++    public void SaveOTP(string accountName, string secret)
++    {
++        if (this.savedPasswords.ContainsKey(accountName + " (OTP)"))
++        {
++            this.savedPasswords[accountName + " (OTP)"] = secret;
++        }
++        else
++        {
++            this.savedPasswords.Add(accountName + " (OTP)", secret);
++        }
++
++        Save();
++    }
++
++    public void DeleteOTP(string accountName)
++    {
++        this.savedPasswords.Remove(accountName + " (OTP)");
++
++        Save();
++    }
++
+     private void Save()
+     {
+         File.WriteAllText(this.configFile.FullName, JsonSerializer.Serialize(this.savedPasswords));
+diff --git a/src/XIVLauncher.Core/Accounts/Secrets/Providers/KeychainSecretProvider.cs b/src/XIVLauncher.Core/Accounts/Secrets/Providers/KeychainSecretProvider.cs
+index 87e5c5e..e4f1ba7 100644
+--- a/src/XIVLauncher.Core/Accounts/Secrets/Providers/KeychainSecretProvider.cs
++++ b/src/XIVLauncher.Core/Accounts/Secrets/Providers/KeychainSecretProvider.cs
+@@ -1,4 +1,5 @@
+ using KeySharp;
++using OtpNet
+ 
+ using Serilog;
+ 
+@@ -29,9 +30,12 @@ public class KeychainSecretProvider : ISecretProvider
+             const string DUMMY_PW = "Honi soit qui mal y pense";
+ 
+             Keyring.SetPassword(PACKAGE, DUMMY_SVC, DUMMY_NAME, DUMMY_PW);
++            // Set a dummy OTP Secret
++            Keyring.SetPassword(PACKAGE, DUMMY_SVC, DUMMY_NAME + " (OTP)", DUMMY_PW);
+ 
+             var saved = Keyring.GetPassword(PACKAGE, DUMMY_SVC, DUMMY_NAME);
+-            return saved == DUMMY_PW;
++            var savedOTP = Keyring.GetPassword(PACKAGE, DUMMY_SVC, DUMMY_NAME + " (OTP)");
++            return saved == DUMMY_PW && savedOTP == DUMMY_PW;
+         }
+         catch (Exception ex)
+         {
+@@ -65,4 +69,33 @@ public class KeychainSecretProvider : ISecretProvider
+     {
+         Keyring.DeletePassword(PACKAGE, SERVICE, accountName);
+     }
++
++    public string? GetOTP(string accountName)
++    {
++        try
++        {
++            var secreet = Keyring.GetPassword(PACKAGE, SERVICE + " (OTP)", accountName);
++            byte[] secretBytes = Base32Encoding.ToBytes(secreet);
++            Totp totp = new Totp(secretBytes);
++            return totp.ComputeTotp();
++        }
++        catch (KeyringException ex)
++        {
++            if (ex.Type == ErrorType.NotFound)
++                return null;
++
++            throw;
++        }
++    }
++
++    public string? SaveOTP(string accountName, string secret)
++    {
++        Keyring.SetPassword(PACKAGE, SERVICE + " (OTP)", accountName, secret);
++        return secret;
++    }
++
++    public void DeleteOTP(string accountName)
++    {
++        Keyring.DeletePassword(PACKAGE, SERVICE + " (OTP)", accountName);
++    }
+ }
+diff --git a/src/XIVLauncher.Core/LauncherApp.cs b/src/XIVLauncher.Core/LauncherApp.cs
+index 2589a04..fc234af 100644
+--- a/src/XIVLauncher.Core/LauncherApp.cs
++++ b/src/XIVLauncher.Core/LauncherApp.cs
+@@ -229,10 +229,18 @@ public class LauncherApp : Component
+ 
+     public string? WaitForOtp()
+     {
+-        while (this.otpEntryPage.Result == null && !this.otpEntryPage.Cancelled)
++        try
++        {
++            return Program.Secrets.GetOTP(Program.Config.CurrentAccountId);
++        }
++        catch ()
++        {
++        
++          while (this.otpEntryPage.Result == null && !this.otpEntryPage.Cancelled)
+             Thread.Yield();
+ 
+-        return this.otpEntryPage.Result;
++          return this.otpEntryPage.Result;
++        }
+     }
+ 
+     public void StartLoading(string line1, string line2 = "", string line3 = "", bool isIndeterminate = true, bool canCancel = false, bool canDisableAutoLogin = false)
+diff --git a/src/XIVLauncher.Core/XIVLauncher.Core.csproj b/src/XIVLauncher.Core/XIVLauncher.Core.csproj
+index 69f2ad0..c053567 100644
+--- a/src/XIVLauncher.Core/XIVLauncher.Core.csproj
++++ b/src/XIVLauncher.Core/XIVLauncher.Core.csproj
+@@ -17,14 +17,11 @@
+     <PublishSingleFile>true</PublishSingleFile>
+     <SelfContained>true</SelfContained>
+ 
+-    <IsWindows
+-      Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">
++    <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">
+       true</IsWindows>
+-    <IsOSX
+-      Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))' == 'true'">
++    <IsOSX Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))' == 'true'">
+       true</IsOSX>
+-    <IsLinux
+-      Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">
++    <IsLinux Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">
+       true</IsLinux>
+   </PropertyGroup>
+ 
+@@ -49,14 +46,10 @@
+   </PropertyGroup>
+ 
+   <ItemGroup>
+-    <ProjectReference Include="../XIVLauncher.VersionGenerator/XIVLauncher.VersionGenerator.csproj"
+-      OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+-    <ProjectReference
+-      Include="..\XIVLauncher.Common.Unix\XIVLauncher.Common.Unix.csproj" />
+-    <ProjectReference
+-      Include="..\..\lib\FFXIVQuickLauncher\src\XIVLauncher.Common.Windows\XIVLauncher.Common.Windows.csproj" />
+-    <ProjectReference
+-      Include="..\..\lib\FFXIVQuickLauncher\src\XIVLauncher.Common\XIVLauncher.Common.csproj" />
++    <ProjectReference Include="../XIVLauncher.VersionGenerator/XIVLauncher.VersionGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
++    <ProjectReference Include="..\XIVLauncher.Common.Unix\XIVLauncher.Common.Unix.csproj" />
++    <ProjectReference Include="..\..\lib\FFXIVQuickLauncher\src\XIVLauncher.Common.Windows\XIVLauncher.Common.Windows.csproj" />
++    <ProjectReference Include="..\..\lib\FFXIVQuickLauncher\src\XIVLauncher.Common\XIVLauncher.Common.csproj" />
+   </ItemGroup>
+ 
+   <ItemGroup>
+@@ -69,6 +62,7 @@
+     <PackageReference Include="Config.Net" Version="4.19.0" />
+     <PackageReference Include="ImGui.NET" Version="1.87.2" />
+     <PackageReference Include="KeySharp" Version="1.0.5" />
++    <PackageReference Include="OTP.Net" Version="1.4.0" />
+     <PackageReference Include="Serilog" Version="2.12.0" />
+     <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
+     <PackageReference Include="Serilog.Sinks.Console" Version="4.0.1" />
+@@ -84,22 +78,17 @@
+   <ItemGroup>
+     <EmbeddedResource Include="Shaders/GLSL/imgui-vertex.glsl" LogicalName="imgui-vertex.glsl" />
+     <EmbeddedResource Include="Shaders/GLSL/imgui-frag.glsl" LogicalName="imgui-frag.glsl" />
+-    <EmbeddedResource Include="Shaders/HLSL/imgui-vertex.hlsl.bytes"
+-      LogicalName="imgui-vertex.hlsl.bytes" />
+-    <EmbeddedResource Include="Shaders/HLSL/imgui-frag.hlsl.bytes"
+-      LogicalName="imgui-frag.hlsl.bytes" />
++    <EmbeddedResource Include="Shaders/HLSL/imgui-vertex.hlsl.bytes" LogicalName="imgui-vertex.hlsl.bytes" />
++    <EmbeddedResource Include="Shaders/HLSL/imgui-frag.hlsl.bytes" LogicalName="imgui-frag.hlsl.bytes" />
+     <EmbeddedResource Include="Shaders/SPIR-V/imgui-vertex.spv" LogicalName="imgui-vertex.spv" />
+     <EmbeddedResource Include="Shaders/SPIR-V/imgui-frag.spv" LogicalName="imgui-frag.spv" />
+-    <EmbeddedResource Include="Shaders/Metal/imgui-vertex.metallib"
+-      LogicalName="imgui-vertex.metallib" />
++    <EmbeddedResource Include="Shaders/Metal/imgui-vertex.metallib" LogicalName="imgui-vertex.metallib" />
+     <EmbeddedResource Include="Shaders/Metal/imgui-frag.metallib" LogicalName="imgui-frag.metallib" />
+   </ItemGroup>
+ 
+   <ItemGroup>
+-    <EmbeddedResource Include="Resources/fonts/FontAwesome5FreeSolid.otf"
+-      LogicalName="FontAwesome5FreeSolid.otf" />
+-    <EmbeddedResource Include="Resources/fonts/NotoSansCJKjp-Regular.otf"
+-      LogicalName="NotoSansCJKjp-Regular.otf" />
++    <EmbeddedResource Include="Resources/fonts/FontAwesome5FreeSolid.otf" LogicalName="FontAwesome5FreeSolid.otf" />
++    <EmbeddedResource Include="Resources/fonts/NotoSansCJKjp-Regular.otf" LogicalName="NotoSansCJKjp-Regular.otf" />
+ 
+     <EmbeddedResource Include="Resources/logo.png" LogicalName="logo.png" />
+ 
+@@ -107,8 +96,7 @@
+ 
+     <EmbeddedResource Include="Resources/steamdeck_fts.png" LogicalName="steamdeck_fts.png" />
+     <EmbeddedResource Include="Resources/steamdeck_fterror.png" LogicalName="steamdeck_fterror.png" />
+-    <EmbeddedResource Include="Resources/steamdeck_switchprompt.png"
+-      LogicalName="steamdeck_switchprompt.png" />
++    <EmbeddedResource Include="Resources/steamdeck_switchprompt.png" LogicalName="steamdeck_switchprompt.png" />
+   </ItemGroup>
+ 
+   <ItemGroup Condition="'$(RuntimeIdentifier)' == 'win10-x64'">
+@@ -125,8 +113,7 @@
+           <VerFile>$(IntermediateOutputPath)gitver</VerFile>
+       </PropertyGroup>
+       <!-- write the hash to the temp file.-->
+-      <Exec
+-          Command="git -C &quot;$(ProjectDir.Replace('\','\\'))&quot; describe --long --always --dirty &gt; $(VerFile)" />
++      <Exec Command="git -C &quot;$(ProjectDir.Replace('\','\\'))&quot; describe --long --always --dirty &gt; $(VerFile)" />
+       <!-- read the version into the GitVersion itemGroup-->
+       <ReadLinesFromFile File="$(VerFile)">
+           <Output TaskParameter="Lines" ItemName="GitVersion" />
+@@ -158,8 +145,7 @@
+           </AssemblyAttributes>
+       </ItemGroup>
+       <!-- writes the attribute to the customAssemblyInfo file -->
+-      <WriteCodeFragment Language="C#" OutputFile="$(CustomAssemblyInfoFile)"
+-          AssemblyAttributes="@(AssemblyAttributes)" />
++      <WriteCodeFragment Language="C#" OutputFile="$(CustomAssemblyInfoFile)" AssemblyAttributes="@(AssemblyAttributes)" />
+   </Target>
+ 
+ </Project>
+\ No newline at end of file

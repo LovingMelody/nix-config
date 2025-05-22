@@ -1,0 +1,209 @@
+{
+  "pins": {
+    "base16": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "catppuccin",
+        "repo": "base16"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "99aa911b29c9c7972f7e1d868b6242507efd508c",
+      "url": "https://github.com/catppuccin/base16/archive/99aa911b29c9c7972f7e1d868b6242507efd508c.tar.gz",
+      "hash": "0bg48rvad507dr293z6q9kgjgxajp943gk2d31b1aw75386isyhw"
+    },
+    "dxvk": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "doitsujin",
+        "repo": "dxvk"
+      },
+      "branch": "master",
+      "submodules": true,
+      "revision": "61b91ea4a3fdb2926893b875e84fec5596eee746",
+      "url": null,
+      "hash": "0vhqrb2lz71zvnj3qsdjwnfcyla98cl8chs24gnf5nxbhdws2k4x"
+    },
+    "dxvk-gplasync": {
+      "type": "Git",
+      "repository": {
+        "type": "GitLab",
+        "repo_path": "Ph42oN/dxvk-gplasync",
+        "server": "https://gitlab.com/"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "8a55443c13a5c8b0a09b6859edaa54e3576518b3",
+      "url": "https://gitlab.com/api/v4/projects/Ph42oN%2Fdxvk-gplasync/repository/archive.tar.gz?sha=8a55443c13a5c8b0a09b6859edaa54e3576518b3",
+      "hash": "006r555jzr2zsxws0prnhyx7xxiaig750i9bbd9490x58jiqy3gm"
+    },
+    "dxvk-nvapi": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "jp7677",
+        "repo": "dxvk-nvapi"
+      },
+      "branch": "master",
+      "submodules": true,
+      "revision": "b0d47e7dc893f9de5a76f531dd4238726ef0a024",
+      "url": null,
+      "hash": "1ipg4vs935qmifmv5099wpqcymkp8j0wq3sx9jqf6n1nqaarxr0h"
+    },
+    "gargoyle": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "garglk",
+        "repo": "garglk"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "946d5c3200e9f686397bf45b04aef674a09c7c99",
+      "url": "https://github.com/garglk/garglk/archive/946d5c3200e9f686397bf45b04aef674a09c7c99.tar.gz",
+      "hash": "0kl6zh362nixry4dnib40112wr44i51pwgq8q1jx5qcbhr31fkrn"
+    },
+    "getopts.fish": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "jorgebucaran",
+        "repo": "getopts.fish"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "e6f87012692088a0a9fea426f08e83001668ce66",
+      "url": "https://github.com/jorgebucaran/getopts.fish/archive/e6f87012692088a0a9fea426f08e83001668ce66.tar.gz",
+      "hash": "0a7flz5cl9fnv08c8w597sfql1w3zrpqpq8kjyckvbwhc02iflmy"
+    },
+    "gposingway": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "gposingway",
+        "repo": "gposingway"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "c856ef440b361d83f5b68c9d984d9be9df0fdf54",
+      "url": "https://github.com/gposingway/gposingway/archive/c856ef440b361d83f5b68c9d984d9be9df0fdf54.tar.gz",
+      "hash": "1x9c417g3qmq9x77hwjy5763aqhr0y8jnygppym3ms5x3anmgqrz"
+    },
+    "kitty": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "kovidgoyal",
+        "repo": "kitty"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v0.42.1",
+      "revision": "4a5d7b31bc2024922b3fc797c23b842e50768b48",
+      "url": "https://api.github.com/repos/kovidgoyal/kitty/tarball/v0.42.1",
+      "hash": "0nmk2d702pv3a1ynsy7v1l4hq9giv2wwcw79w1265p5yi209cvkm"
+    },
+    "npins": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "andir",
+        "repo": "npins"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "0.3.1",
+      "revision": "476671559d5879ad2f95fe21b9eb7c7541b3e718",
+      "url": "https://api.github.com/repos/andir/npins/tarball/0.3.1",
+      "hash": "0dcikavc1ihwwg7lm3009h61ibla16zik7pi6pxpacv9xmakvy9w"
+    },
+    "obs": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "catppuccin",
+        "repo": "obs"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "58a80435caf1ff4f62b94592f508fba4c3776c97",
+      "url": "https://github.com/catppuccin/obs/archive/58a80435caf1ff4f62b94592f508fba4c3776c97.tar.gz",
+      "hash": "03s7mnpi490123bq0bbx3vvc5lwnapmdfyygy2sp465xvwqrlayq"
+    },
+    "obs-backgroundremoval": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "royshil",
+        "repo": "obs-backgroundremoval"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "b86bf8b578c324741c2ee11a5856be7ff91cfdf8",
+      "url": "https://github.com/royshil/obs-backgroundremoval/archive/b86bf8b578c324741c2ee11a5856be7ff91cfdf8.tar.gz",
+      "hash": "1fmkgic7zl6i31k3sla21w018hwigx1bjypds9wyznp5psg5v3dj"
+    },
+    "obs-ios-camera-source": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "dougg3",
+        "repo": "obs-ios-camera-source"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "c67e577638f91522d33d03a547da335f0470e970",
+      "url": "https://github.com/dougg3/obs-ios-camera-source/archive/c67e577638f91522d33d03a547da335f0470e970.tar.gz",
+      "hash": "04zd7mjmcf0bqzm2zpa146zvalzw44mk472pc5msgdjx164m2vl9"
+    },
+    "replay.fish": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "jorgebucaran",
+        "repo": "replay.fish"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "d2ecacd3fe7126e822ce8918389f3ad93b14c86c",
+      "url": "https://github.com/jorgebucaran/replay.fish/archive/d2ecacd3fe7126e822ce8918389f3ad93b14c86c.tar.gz",
+      "hash": "1n2xji4w5k1iyjsvnwb272wx0qh5jfklihqfz0h1a1bd3zp3sd2g"
+    },
+    "slower": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "lovingmelody",
+        "repo": "slower"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v0.1.0",
+      "revision": "791341bc012ac26da357f406ee8b77bcb757306f",
+      "url": "https://api.github.com/repos/lovingmelody/slower/tarball/v0.1.0",
+      "hash": "1qpci69xijkhihcirgwqc8bkjz66wijvydvm9s4k2r73fflr01w1"
+    },
+    "vkd3d-proton": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "HansKristian-Work",
+        "repo": "vkd3d-proton"
+      },
+      "branch": "master",
+      "submodules": true,
+      "revision": "87a61489d62664df17b0e7a735d9f1e0f25969f3",
+      "url": null,
+      "hash": "1xv6hmak0z5wbn1wgdvdm6pldhixlrxhzcnj6iw8jv3szk0rp52x"
+    }
+  },
+  "version": 5
+}

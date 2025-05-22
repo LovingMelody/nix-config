@@ -1,0 +1,65 @@
+keys:
+  - &admin_Melody age1qashjzd7sgl8fpat65v8qtjf96mlue8gp6fpr0w0wh9yukuj65eqthfmtd
+  - &admin_Melody2 age1ryaef6l2py87c79xhtlxdx7te4jglz4rsv298a9uwf9jze3ceprsnzuq8u
+  - &host_Rotom age1dmce48ena6uq5hmu7ct6a3gya7020y3cu37wu793t7zf25ve2sxsqfljwk
+  - &host_Snow age1alkvt9sv0yg5h8zz0fjtf3cymq88eqhtcx8asm8c33nx4n9s35jstyqnh4
+  - &host_Vulpix age1797zr9h7kz4lxkg5uat0xevehl09hngpfvluzmq0m5ld6vuwssrsncdwqv
+creation_rules:
+  - path_regex: secrets/deploy/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - pgp:
+        age:
+          - *admin_Melody
+          - *admin_Melody2
+          - *host_Snow
+          - *host_Rotom
+  - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - pgp:
+        age:
+          - *admin_Melody
+          - *admin_Melody2
+          - *host_Snow
+          - *host_Rotom
+  - path_regex: secrets/longview/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - pgp:
+        age:
+          - *admin_Melody
+          - *admin_Melody2
+  - path_regex: secrets/Minecraft/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - pgp:
+        age:
+          - *admin_Melody
+          - *admin_Melody2
+          - *host_Snow
+          - *host_Rotom
+  - path_regex: secrets/UPS/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - ppg:
+        age:
+          - *admin_Melody
+          - *admin_Melody2
+          - *host_Snow
+  - path_regex: secrets/hosts/Vulpix/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - pgp:
+        age:
+          - *admin_Melody
+          - *admin_Melody2
+          - *host_Vulpix
+  - path_regex: secrets/hosts/Snow/[^/]+\.(yaml|json|env|ini|bin)$
+    key_groups:
+      - pgp:
+        age:
+          - *admin_Melody
+          - *admin_Melody2
+          - *host_Snow
+  - path_regex: secrets/hosts/Rotom/[^/]+\.(yaml|json|env|ini|bin)$
+    key_groups:
+      - pgp:
+        age:
+          - *admin_Melody
+          - *admin_Melody2
+          - *host_Rotom
