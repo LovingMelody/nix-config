@@ -33,14 +33,8 @@ in {
       overlays = nixpkgs-overlays;
     };
     nix = {
-      package = pkgs.nix;
       registry = mapAttrs (_: v: {flake = v;}) inputs;
       nixPath = mapAttrsToList (k: v: "${k}=${v.to.path}") config.nix.registry;
-      daemonIOSchedClass = lib.mkDefault (
-        if config.TM.isServer
-        then "best-effort"
-        else "idle"
-      );
       settings = {
         trusted-public-keys = [
           "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="

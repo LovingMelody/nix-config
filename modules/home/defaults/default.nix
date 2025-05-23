@@ -5,9 +5,9 @@
   ...
 }: let
   inherit (pkgs.stdenv) isDarwin;
-  inherit (lib) mkDefault mkIf optional;
+  inherit (lib) mkDefault mkIf optional TM;
 in {
-  # imports = [ (TM.get-shared-module "defaults") ];
+  imports = [(TM.get-shared-module "defaults")];
 
   config = {
     programs = {
