@@ -2,6 +2,7 @@ name: Update Flake
 on:
   schedule:
     - cron: "0 0 * * 0" # Weekly Update
+  workflow_dispatch:
 jobs:
   update:
     runs-on: ubuntu-latest
