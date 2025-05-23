@@ -7,4 +7,4 @@ python3 ./modules/nixos/minecraft-server/generate-sources.py "$MC_VERSION" >./mo
 echo "Updating npins"
 npins update
 echo "Formatting..."
-nix fmt
+nix fmt --accept-flake-config -L

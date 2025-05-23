@@ -3,14 +3,18 @@ on:
   schedule:
     - cron: "0 0 * * 0" # Weekly Update
   workflow_dispatch:
+permissions:
+  pull-requests: write
+  actions: write
+  contents: write
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@main
-      - run: nix flake update
       - run: nix shell nixpkgs#python3 nixpkgs#npins --command ./update-script.sh # Update pins & MC Mods
+      - run: nix flake update
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update flake"
