@@ -99,7 +99,7 @@ in {
       udev = {
         packages = [game-devices-udev-rules];
         extraRules = ''
-          KERNEL=="ntsync", GROUP="gaming", MODE="0660"
+          KERNEL=="ntsync", GROUP="games", MODE="0660", TAG+="uaccess"
         '';
       };
       scx = {
