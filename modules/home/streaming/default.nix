@@ -19,13 +19,14 @@ in {
   config = mkIf cfg.enable {
     programs.obs-studio = {
       enable = true;
-      plugins = with pkgs; [
-        obs-studio-plugins.obs-composite-blur
-        obs-studio-plugins.obs-pipewire-audio-capture
-        obs-studio-plugins.obs-backgroundremoval
-        obs-studio-plugins.obs-vkcapture
-        obs-studio-plugins.input-overlay
-        pkgs.obs-ios-camera-source
+      plugins = with pkgs.obs-studio-plugins; [
+        input-overlay
+        obs-backgroundremoval
+        obs-composite-blur
+        obs-image-reaction
+        obs-ios-camera-source
+        obs-pipewire-audio-capture
+        obs-vkcapture
       ];
     };
     xdg.configFile."obs-studio/themes" = {

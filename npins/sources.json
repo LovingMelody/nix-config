@@ -149,6 +149,19 @@
       "url": "https://github.com/royshil/obs-backgroundremoval/archive/b86bf8b578c324741c2ee11a5856be7ff91cfdf8.tar.gz",
       "hash": "1fmkgic7zl6i31k3sla21w018hwigx1bjypds9wyznp5psg5v3dj"
     },
+    "obs-image-reaction": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "ashmanix",
+        "repo": "obs-image-reaction"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "bd5deec78f9a393abe3b15ee3271d0a55d7f3365",
+      "url": "https://github.com/ashmanix/obs-image-reaction/archive/bd5deec78f9a393abe3b15ee3271d0a55d7f3365.tar.gz",
+      "hash": "0k1hmdfjjkwkz40iqs2zkfpj1mmhwp5p3cjxy6rnk3969w58wisf"
+    },
     "obs-ios-camera-source": {
       "type": "Git",
       "repository": {

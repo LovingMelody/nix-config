@@ -57,7 +57,6 @@ in
     slower = final.callPackage "${self}/packages/slower" {};
     catppuccin-obs = final.callPackage "${self}/packages/catppuccin-obs" {inherit pins;};
     nitch = final.callPackage "${self}/packages/nitch" {};
-    obs-ios-camera-source = final.callPackage "${self}/packages/obs-ios-camera-source" {inherit pins;};
     unique-basenames = final.callPackage "${self}/packages/unique-basenames" {};
     textools = final.callPackage "${self}/packages/textools" {};
     star-citizen = prev.star-citizen.override {
@@ -146,6 +145,7 @@ in
           CUDA_BIN_PATH = "${final.cudaPackages.cudatoolkit}";
           CUDA_TOOLKIT_ROOT_DIR = "${final.cudaPackages.cudatoolkit}";
         };
-        inherit (final) obs-ios-camera-source;
+        obs-ios-camera-source = final.callPackage "${self}/packages/obs-ios-camera-source" {inherit pins;};
+        obs-image-reaction = final.callPackage "${self}/packages/obs-image-reaction" {inherit pins;};
       };
   }

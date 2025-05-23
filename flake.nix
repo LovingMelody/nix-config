@@ -102,13 +102,13 @@
         catppuccin-base16
         gargoyle
         nitch
-        obs-ios-camera-source
         rename-padded-numbers
         textools
         unique-basenames
         xivlauncher-rb
         gposingway
         ;
+      inherit (pkgs.obs-studio-plugins) obs-ios-camera-source obs-image-reaction;
       topology-map =
         (import inputs.nix-topology {
           inherit pkgs;
