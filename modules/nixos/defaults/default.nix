@@ -251,22 +251,6 @@ in
           else "idle"
         );
         settings = {
-          trusted-public-keys = [
-            "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
-            "nix-citizen.cachix.org-1:lPMkWc2X8XD4/7YPEEwXKKBg+SVbYTVrAaLA2wQTKCo="
-            "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
-            "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
-            "hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs="
-            "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-          ];
-          substituters = [
-            "https://nix-gaming.cachix.org"
-            "https://nix-citizen.cachix.org"
-            "https://cosmic.cachix.org/"
-            "https://cache.garnix.io?priority=5"
-            "https://cache.nixos.org?priority=9"
-            "https://hydra.nixos.org?priority=10" # Always used, set to high priority
-          ];
           trusted-users = [
             "builder"
             "root"

@@ -3,6 +3,7 @@
   pkgs,
   lib,
   inputs,
+  nixpkgs-overlays,
   ...
 }: let
   inherit
@@ -28,16 +29,35 @@ in {
     nixpkgs.config = mkIf (config.home-manager.useGlobalPkgs or true) {
       allowUnfree = true;
       permittedInsecurePackages = [];
-      # permittedInsecurePackages = [
-      #   "freeimage"
-      #   "python-2.7.18.7-env"
-      # ];
+      cudaSupport = config.TM.MyNextGPUWillNotBeNvidia or false;
+      overlays = nixpkgs-overlays;
     };
     nix = {
       package = pkgs.nix;
       registry = mapAttrs (_: v: {flake = v;}) inputs;
       nixPath = mapAttrsToList (k: v: "${k}=${v.to.path}") config.nix.registry;
+      daemonIOSchedClass = lib.mkDefault (
+        if config.TM.isServer
+        then "best-effort"
+        else "idle"
+      );
       settings = {
+        trusted-public-keys = [
+          "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
+          "nix-citizen.cachix.org-1:lPMkWc2X8XD4/7YPEEwXKKBg+SVbYTVrAaLA2wQTKCo="
+          "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
+          "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
+          "hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs="
+          "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+        ];
+        substituters = [
+          "https://nix-gaming.cachix.org"
+          "https://nix-citizen.cachix.org"
+          "https://cosmic.cachix.org/"
+          "https://cache.garnix.io"
+          "https://cache.nixos.org"
+          "https://hydra.nixos.org" # Always used, set to high priority
+        ];
         experimental-features = [
           "nix-command"
           "flakes"
