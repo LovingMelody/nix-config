@@ -22,9 +22,10 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "a97039b6867c69af49a0d865ecf08d8c6ebca42f",
+      "revision": "90d3205dfb7a19ac66026c4dcac712b163b1cd44",
       "url": null,
-      "hash": "0ylg1sq0521d7xg0xdjw67ynyy641k9whxmk7xpydpidkfg9byyd"
+      "hash": "001npfwa4js707545ffcixhp2scswclpxwdjlwbzkjn5y9gca6fl",
+      "frozen": true
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -37,7 +38,8 @@
       "submodules": false,
       "revision": "8a55443c13a5c8b0a09b6859edaa54e3576518b3",
       "url": "https://gitlab.com/api/v4/projects/Ph42oN%2Fdxvk-gplasync/repository/archive.tar.gz?sha=8a55443c13a5c8b0a09b6859edaa54e3576518b3",
-      "hash": "006r555jzr2zsxws0prnhyx7xxiaig750i9bbd9490x58jiqy3gm"
+      "hash": "006r555jzr2zsxws0prnhyx7xxiaig750i9bbd9490x58jiqy3gm",
+      "frozen": true
     },
     "dxvk-nvapi": {
       "type": "Git",
