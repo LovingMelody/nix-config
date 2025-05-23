@@ -1,0 +1,16 @@
+name: Update Flake
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Weekly Update
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+      - run: nix flake update 
+      - run: nix shell nixpkgs#python3 nixpkgs#npins --command ./update-script.sh # Update pins & MC Mods
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update flake"
