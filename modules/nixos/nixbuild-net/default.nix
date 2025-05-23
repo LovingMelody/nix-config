@@ -10,7 +10,7 @@ in {
     enable =
       mkEnableOption "Enable nixbuild"
       // {
-        default = true;
+        default = false;
       };
   };
 
