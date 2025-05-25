@@ -13,9 +13,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@main
+      - name: Configure git
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
       - run: nix shell nixpkgs#python3 nixpkgs#npins --command ./update-script.sh # Update pins & MC Mods
-      - run: nix flake update
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - run: |
+          if git diff --silent --exit-code modules/nixos/minecraft-server/sources.json; then
+            echo "Minecraft mods not updated"
+          elif [ -s modules/nixos/minecraft-server/sources.json ]; then
+            git add modules/nixos/minecraft-server/sources.json
+            git commit -m "Update Minecraft mods"
+          else
+            echo "Minecraft mod update failed, skipping"
+          fi
+          if git diff --silent --exit-code npins/sources.json; then
+            echo "No pins updated, skipping"
+          else
+            git add npins
+            git commit -m "Update pins"
+          fi
+      - run: nix flake update --commit-lock-file
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
         with:
-          commit_message: "Update flake"
-          branch: sylph-co
+          title: "Auto update packages"

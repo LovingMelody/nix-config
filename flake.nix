@@ -78,6 +78,7 @@
               inputs.home-manager.nixosModules.home-manager
               inputs.nix-gaming.nixosModules.pipewireLowLatency
               inputs.nix-gaming.nixosModules.platformOptimizations
+              inputs.nix-gaming.nixosModules.ntsync
               inputs.nix-citizen.nixosModules.StarCitizen
               inputs.nix-minecraft.nixosModules.minecraft-servers
               # inputs.nixos-cosmic.nixosModules.default
@@ -132,10 +133,6 @@
         nixpkgs.follows = "nixpkgs";
         flake-compat.follows = "flake-compat";
       };
-    };
-    apple-fonts = {
-      url = "github:Lyndeno/apple-fonts.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     ags = {
       url = "github:aylur/ags";

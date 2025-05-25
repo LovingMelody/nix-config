@@ -2,8 +2,6 @@
   config,
   pkgs,
   lib,
-  inputs,
-  system,
   ...
 }: let
   inherit
@@ -115,11 +113,11 @@ in {
       serif = {
         package = mkOption {
           type = lib.types.package;
-          default = inputs.apple-fonts.packages.${system}.sf-pro-nerd;
+          default = pkgs.inter;
         };
         name = mkOption {
           type = lib.types.str;
-          default = "SFProDisplay Nerd Font";
+          default = "Inter";
         };
       };
       sansSerif = {
