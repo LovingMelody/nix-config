@@ -136,7 +136,7 @@
     };
     apple-fonts = {
       url = "github:Lyndeno/apple-fonts.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
     ags = {
       url = "github:aylur/ags";
