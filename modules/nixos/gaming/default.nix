@@ -93,14 +93,12 @@ in {
         platformOptimizations.enable = true;
       };
     };
+    programs.wine.ntsync.enable = true;
 
     services = with pkgs; {
       xserver.modules = [xorg.xf86inputjoystick];
       udev = {
         packages = [game-devices-udev-rules];
-        extraRules = ''
-          KERNEL=="ntsync", GROUP="games", MODE="0660", TAG+="uaccess"
-        '';
       };
       scx = {
         enable = mkDefault false;
@@ -145,7 +143,6 @@ in {
 
     boot = {
       kernelPackages = cfg.kernel;
-      kernelModules = ["ntsync"];
     };
 
     hardware = {
