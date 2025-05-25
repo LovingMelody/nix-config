@@ -134,10 +134,6 @@
         flake-compat.follows = "flake-compat";
       };
     };
-    apple-fonts = {
-      url = "github:Lyndeno/apple-fonts.nix";
-      # inputs.nixpkgs.follows = "nixpkgs";
-    };
     ags = {
       url = "github:aylur/ags";
       inputs = {

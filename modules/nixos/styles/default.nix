@@ -2,8 +2,6 @@
   pkgs,
   lib,
   config,
-  inputs,
-  system,
   ...
 }: let
   cfg = config.TM.styles;
@@ -40,14 +38,6 @@ in {
         pkgs.nerd-fonts.caskaydia-cove
         pkgs.nerd-fonts.caskaydia-mono
         pkgs.font-awesome
-        inputs.apple-fonts.packages.${system}.ny
-        inputs.apple-fonts.packages.${system}.ny-nerd
-        inputs.apple-fonts.packages.${system}.sf-compact
-        inputs.apple-fonts.packages.${system}.sf-compact-nerd
-        inputs.apple-fonts.packages.${system}.sf-mono
-        inputs.apple-fonts.packages.${system}.sf-mono-nerd
-        inputs.apple-fonts.packages.${system}.sf-pro
-        inputs.apple-fonts.packages.${system}.sf-pro-nerd
         pkgs.noto-fonts-cjk-sans
         pkgs.noto-fonts-cjk-serif
       ];
