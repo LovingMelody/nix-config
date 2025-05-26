@@ -71,13 +71,19 @@ in
       pname = "dxvk-gplasync";
       src = pins.dxvk;
       version = "git+${pins.dxvk.revision}";
-      patches = [(pins.dxvk-gplasync + "/patches/dxvk-gplasync-master.patch")];
+      patches = [
+        (pins.dxvk-gplasync + "/patches/dxvk-gplasync-master.patch")
+        (pins.dxvk-gplasync + "/patches/global-dxvk.conf.patch")
+      ];
     };
     dxvk-w32 = prev.dxvk-w32.overrideAttrs {
       pname = "dxvk-gplasync";
       src = pins.dxvk;
       version = "git+${pins.dxvk.revision}";
-      patches = [(pins.dxvk-gplasync + "/patches/dxvk-gplasync-master.patch")];
+      patches = [
+        (pins.dxvk-gplasync + "/patches/dxvk-gplasync-master.patch")
+        (pins.dxvk-gplasync + "/patches/global-dxvk.conf.patch")
+      ];
     };
     vkd3d-proton-w64 = prev.vkd3d-proton-w64.overrideAttrs {
       src = pins.vkd3d-proton;
