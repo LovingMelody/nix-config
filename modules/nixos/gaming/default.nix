@@ -138,6 +138,7 @@ in {
       pkgs.steam
       pkgs.gargoyle
       pkgs.gameglass
+      pkgs.rsi-launcher
       # inputs.nix-citizen.packages.${pkgs.system}.umu
     ];
 

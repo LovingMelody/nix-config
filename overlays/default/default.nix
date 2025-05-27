@@ -67,6 +67,14 @@ in
       inherit (final) wineprefix-preparer;
       wine = final.wine-astral-ntsync;
     };
+    rsi-launcher = prev.rsi-launcher.override {
+      preCommands = ''
+        export DXVK_LOG_LEVEL=debug
+        export WINEDEBUG=
+      '';
+      inherit (final) wineprefix-preparer;
+      wine = final.wine-astral-ntsync;
+    };
     dxvk-w64 = prev.dxvk-w64.overrideAttrs {
       pname = "dxvk-gplasync";
       src = pins.dxvk;
