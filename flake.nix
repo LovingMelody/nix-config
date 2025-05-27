@@ -100,6 +100,7 @@
         (pkgs)
         star-citizen
         wine-astral
+        wine-astral-ntsync
         catppuccin-base16
         gargoyle
         nitch
