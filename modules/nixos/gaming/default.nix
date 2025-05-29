@@ -2,6 +2,7 @@
   lib,
   config,
   pkgs,
+  inputs,
   ...
 }: let
   cfg = config.TM.gaming;
@@ -21,7 +22,7 @@ in {
     remotePlay = mkEnableOption "Enable settings for remote play";
     kernel = mkOption {
       type = types.raw;
-      default = pkgs.linuxPackages_latest;
+      default = pkgs.linuxPackages_cachyos;
       description = "Set kernel";
     };
     zram = {
@@ -101,7 +102,7 @@ in {
         packages = [game-devices-udev-rules];
       };
       scx = {
-        enable = mkDefault false;
+        enable = mkDefault true;
         scheduler = mkDefault "scx_lavd";
       };
     };

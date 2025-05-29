@@ -4,6 +4,7 @@
   lib,
   inputs,
   nixpkgs-overlays,
+  osConfig ? {},
   ...
 }: let
   inherit
@@ -26,31 +27,33 @@ in {
 
   config = mkIf cfg.enable {
     qt.enable = config.TM.isGui;
-    nixpkgs.config = mkIf (config.home-manager.useGlobalPkgs or true) {
+    nixpkgs.config = {
       allowUnfree = true;
       permittedInsecurePackages = [];
       cudaSupport = config.TM.MyNextGPUWillNotBeNvidia or false;
-      overlays = nixpkgs-overlays;
+      overlays = mkIf (! (osConfig.home-manager.useGlobalPkgs or false)) nixpkgs-overlays;
     };
     nix = {
       registry = mapAttrs (_: v: {flake = v;}) inputs;
       nixPath = mapAttrsToList (k: v: "${k}=${v.to.path}") config.nix.registry;
       settings = {
         trusted-public-keys = [
+          "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
           "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
           "nix-citizen.cachix.org-1:lPMkWc2X8XD4/7YPEEwXKKBg+SVbYTVrAaLA2wQTKCo="
-          "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
           "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
-          "hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs="
-          "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+          "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
+          # "hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs="
+          "chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8="
         ];
         substituters = [
+          "https://cache.nixos.org"
           "https://nix-gaming.cachix.org"
           "https://nix-citizen.cachix.org"
-          "https://cosmic.cachix.org/"
           "https://cache.garnix.io"
-          "https://cache.nixos.org"
-          "https://hydra.nixos.org" # Always used, set to high priority
+          "https://cosmic.cachix.org/"
+          # "https://hydra.nixos.org"
+          "https://chaotic-nyx.cachix.org/"
         ];
         experimental-features = [
           "nix-command"
