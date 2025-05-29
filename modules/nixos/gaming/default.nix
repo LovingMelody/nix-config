@@ -139,7 +139,12 @@ in {
       pkgs.steam
       pkgs.gargoyle
       pkgs.gameglass
-      pkgs.rsi-launcher
+      (pkgs.rsi-launcher.override (o: {
+        preCommands = ''
+          ${o.preCommands or ""}
+          export LD_LIBRARY_PATH="${config.hardwware.nvidia.package.lib32}:$LD_LIBRARY_PATH"
+        '';
+      }))
       # inputs.nix-citizen.packages.${pkgs.system}.umu
     ];
 
