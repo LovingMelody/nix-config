@@ -36,6 +36,14 @@ in
     gargoyle =
       # TODO: This is fast tracking PR#400391
       prev.callPackage ./gargoyle-2023.1.nix {inherit pins;};
+    gallery-dl = prev.gallery-dl.overrideAttrs {
+      inherit (pins.gallery-dl-stable) version;
+      src = pins.gallery-dl-stable;
+    };
+    gallery-dl-unstable = final.gallery-dl.overrideAttrs (o: {
+      version = "${o.version}-git+${pins.gallery-dl.revision}";
+      src = pins.gallery-dl;
+    });
     dxvk_2 = prev.dxvk_2.overrideAttrs {
       src = pins.dxvk;
       version = "git+${pins.dxvk.revision}";

@@ -103,6 +103,8 @@
         wine-astral-ntsync
         catppuccin-base16
         gargoyle
+        gallery-dl
+        gallery-dl-unstable
         nitch
         rename-padded-numbers
         textools

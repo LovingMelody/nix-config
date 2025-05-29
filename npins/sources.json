@@ -54,6 +54,35 @@
       "url": null,
       "hash": "1w49m360zia47g1qybgb23c0zbs673ghk4clvc20w80xza2lvjyy"
     },
+    "gallery-dl": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "mikf",
+        "repo": "gallery-dl"
+      },
+      "branch": "master",
+      "submodules": true,
+      "revision": "6e87ad2ccc8318e59c56dfd5147ef6f96cfa8824",
+      "url": null,
+      "hash": "1blh06bjjy6vi234ccb55h03m09d15vqzn5ibc1bd6nml20i47n8"
+    },
+    "gallery-dl-stable": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "mikf",
+        "repo": "gallery-dl"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": true,
+      "version": "v1.29.7",
+      "revision": "8b6810867caab118ee2e22daa76afbe8153b644b",
+      "url": null,
+      "hash": "0sc7dy232wjgj7cmaij3qf95bxd4vrdvyqwmzzzgl6ivl4kjsy1s"
+    },
     "gargoyle": {
       "type": "Git",
       "repository": {
