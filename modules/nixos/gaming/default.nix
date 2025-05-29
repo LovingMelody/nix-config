@@ -139,8 +139,7 @@ in {
       pkgs.steam
       pkgs.gargoyle
       pkgs.gameglass
-      pkgs.rsi-launcher
-      # inputs.nix-citizen.packages.${pkgs.system}.umu
+      (pkgs.rsi-launcher.override {extraLibs = config.hardware.graphics.extraPackages ++ [config.hardware.graphics.package];})
     ];
 
     boot = {
