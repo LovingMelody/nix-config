@@ -43,6 +43,7 @@ in {
           pkgs.jq
           pkgs.yq-go
           pkgs.nix-output-monitor
+          pkgs.gallery-dl-unstable
         ]
         ++ optional config.TM.isGui pkgs.ffmpeg-full
         ++ optional (!config.TM.isGui) pkgs.ffmpeg-headless;
