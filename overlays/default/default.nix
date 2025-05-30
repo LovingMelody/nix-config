@@ -33,9 +33,10 @@ in
       src = pins.npins;
     });
     kitty = pinnedOverlay "kitty";
-    gargoyle =
-      # TODO: This is fast tracking PR#400391
-      prev.callPackage ./gargoyle-2023.1.nix {inherit pins;};
+    gargoyle = prev.gargoyle.overrideAttrs {
+      src = pins.gargoyle;
+      version = pins.gargoyle.revision;
+    };
     gallery-dl = prev.gallery-dl.overrideAttrs {
       inherit (pins.gallery-dl-stable) version;
       src = pins.gallery-dl-stable;

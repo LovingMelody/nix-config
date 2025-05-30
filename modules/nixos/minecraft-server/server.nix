@@ -71,12 +71,16 @@ in {
       sopsFile = lib.TM.get-secret-file "Minecraft/generic.yaml";
       owner = config.users.users.minecraft.name;
       reloadUnits = [
-        "minecraft-server.socket"
-        "minecraft-server.service"
+        "minecraft-server-melody.socket"
+        "minecraft-server-melody.service"
       ];
       path = cfg.dataDir + "/ops.json";
     };
     services.minecraft-servers = {
+      managementSystem = {
+        tmux.enable = false;
+        systemd-socket.enable = true;
+      };
       enable = true;
       inherit (cfg) eula;
       servers.melody = {
@@ -112,24 +116,28 @@ in {
         symlinks = {
           mods = let
             from-sources = mod: pkgs.fetchurl {inherit (sources.${mod}) url sha512;};
-            to-source-list = mods: builtins.map from-sources mods;
+            to-source-list = mods:
+              builtins.map (name: {
+                inherit name;
+                value = from-sources name;
+              })
+              mods;
           in
-            pkgs.linkFarmFromDrvs "mods" (to-source-list [
+            pkgs.linkFarmFromDrvs "mods" (builtins.attrValues (builtins.listToAttrs (to-source-list [
               "VanillaRefresh"
-              "Terralith"
-              "Tectonic"
-              "Nullscape"
-              "Incendium"
-              "Balm"
-              "NetherPortalFix"
-              "ConcurrentChunkManagementEngine"
+              # "Terralith"
+              # "Tectonic"
+              # "Nullscape"
+              # "Incendium"
+              # "Balm"
+              # "NetherPortalFix"
+              # "ConcurrentChunkManagementEngine"
               "Krypton"
               "FabricAPI"
-              "Sit!"
-            ]);
+              # "Sit!"
+            ])));
         };
-        files = {
-        };
+        files = {};
       };
     };
   };

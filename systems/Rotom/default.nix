@@ -17,7 +17,7 @@
     sound.enable = true;
     server.services.minecraft = {
       enable = true;
-      autoStart = true;
+      autoStart = false;
       eula = true;
       backup.enable = false; # Currently broken
       openFirewall = true;

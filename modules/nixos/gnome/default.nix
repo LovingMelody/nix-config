@@ -20,10 +20,8 @@ in {
       };
       colord.enable = true;
       blueman.enable = true;
-      xserver = {
-        displayManager.gdm.enable = mkDefault true;
-        desktopManager.gnome.enable = true;
-      };
+      desktopManager.gnome.enable = true;
+      displayManager.gdm.enable = mkDefault true;
     };
     hardware.bluetooth = {
       enable = true;
