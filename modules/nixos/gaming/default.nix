@@ -2,7 +2,6 @@
   lib,
   config,
   pkgs,
-  inputs,
   ...
 }: let
   cfg = config.TM.gaming;
@@ -139,7 +138,23 @@ in {
       pkgs.steam
       pkgs.gargoyle
       pkgs.gameglass
-      (pkgs.rsi-launcher.override {extraLibs = config.hardware.graphics.extraPackages ++ [config.hardware.graphics.package];})
+      (pkgs.rsi-launcher.override (o: {
+        extraLibs = config.hardware.graphics.extraPackages ++ [config.hardware.graphics.package];
+        preCommands = let
+          vars = {
+            DXVK_HUD = "compiler";
+            MANGO_HUD = 1;
+            DXVK_HDR =
+              if config.TM.hasHDRDisplay
+              then 1
+              else 0;
+            NVPRESENT_ENABLE_SMOOTH_MOTION = 1;
+          };
+        in ''
+          ${toShellVars vars}
+          ${o.preCommands or ""}
+        '';
+      }))
     ];
 
     boot = {
