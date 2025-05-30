@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }: let
   cfg = config.TM.MyNextGPUWillNotBeNvidia;
@@ -24,7 +25,18 @@ in {
     };
     hardware = {
       nvidia = {
-        package = mkDefault (patchLibcuda config.boot.kernelPackages.nvidiaPackages.beta);
+        package = mkDefault ((patchLibcuda config.boot.kernelPackages.nvidiaPackages.beta).overrideAttrs (o: {
+          patches =
+            (o.patches or [])
+            ++ lib.optional (o.version == "575.51.02")
+            pkgs.fetchpatch
+            {
+              url = "https://github.com/CachyOS/kernel-patches/raw/914aea4298e3744beddad09f3d2773d71839b182/6.15/misc/nvidia/0003-Workaround-nv_vm_flags_-calling-GPL-only-code.patch";
+              hash = "sha256-YOTAvONchPPSVDP9eJ9236pAPtxYK5nAePNtm2dlvb4=";
+              stripLen = 1;
+              extraPrefix = "kernel/";
+            };
+        }));
         modesetting.enable = mkDefault true;
         nvidiaSettings = mkDefault true;
         powerManagement.enable = mkDefault true;
