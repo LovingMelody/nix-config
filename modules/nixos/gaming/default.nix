@@ -137,7 +137,6 @@ in {
       pkgs.moonlight-qt
       pkgs.steam
       pkgs.gargoyle
-      pkgs.gameglass
       (pkgs.rsi-launcher.override (o: {
         extraLibs = config.hardware.graphics.extraPackages ++ [config.hardware.graphics.package];
         preCommands = let
