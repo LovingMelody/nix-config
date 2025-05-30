@@ -158,6 +158,10 @@ in {
   };
 
   services = {
+    hardware.openrgb = {
+      enable = true;
+      motherboard = "intel";
+    };
     usbmuxd.enable = true;
     pixiecore = let
       inherit (inputs.self.nixosConfigurations.Netboot.config.system) build;
@@ -226,7 +230,7 @@ in {
   programs = {
     gamemode.enable = mkForce false;
     coolercontrol = {
-      enable = true;
+      enable = false;
       nvidiaSupport = true;
     };
     adb.enable = true;
