@@ -28,8 +28,8 @@
     "url": "https://cdn.modrinth.com/data/nPZr02ET/versions/3xwbxqcv/netherportalfix-fabric-1.21.5-21.5.1.jar"
   },
   "ConcurrentChunkManagementEngine": {
-    "sha512": "c142712b4f0841558fa1e54f956d21e9bd102a71ff421c4877cf82315675a7bc9fc012f15372509b8f405addc913fb3c2da412dddb939e876cad054c6489f6f9",
-    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/vAHpotHa/c2me-fabric-mc1.21.5-0.3.4%2Balpha.0.19.jar"
+    "sha512": "fd02367780cc0ff379074bef649c2ca463eaddec356827de6ef9d1ff02154d98f2d44ea2a787ca78b1728db6cb59e4beeed05577e7f92b39e5d4134e6bcada74",
+    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/OvXvTD3H/c2me-fabric-mc1.21.5-0.3.4%2Balpha.0.20.jar"
   },
   "Krypton": {
     "sha512": "2e2304b1b17ecf95783aee92e26e54c9bfad325c7dfcd14deebf9891266eb2933db00ff77885caa083faa96f09c551eb56f93cf73b357789cb31edad4939ffeb",

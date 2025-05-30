@@ -56,6 +56,7 @@ in {
         vars = {
           DXVK_HUD = "compiler";
           MANGO_HUD = 1;
+          NVPRESENT_ENABLE_SMOOTH_MOTION = 1;
         };
         hdrVars =
           optionalString config.TM.hasHDRDisplay
