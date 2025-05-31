@@ -88,7 +88,7 @@ in
       pname = "dxvk-gplasync";
       src = pins.dxvk;
       version = "git+${pins.dxvk.revision}";
-      patches = [
+      patches = lib.optionals (pins.dxvk-gplasync.revision != "8a55443c13a5c8b0a09b6859edaa54e3576518b3") [
         (pins.dxvk-gplasync + "/patches/dxvk-gplasync-master.patch")
         (pins.dxvk-gplasync + "/patches/global-dxvk.conf.patch")
       ];
@@ -97,7 +97,7 @@ in
       pname = "dxvk-gplasync";
       src = pins.dxvk;
       version = "git+${pins.dxvk.revision}";
-      patches = [
+      patches = lib.optionals (pins.dxvk-gplasync.revision != "8a55443c13a5c8b0a09b6859edaa54e3576518b3") [
         (pins.dxvk-gplasync + "/patches/dxvk-gplasync-master.patch")
         (pins.dxvk-gplasync + "/patches/global-dxvk.conf.patch")
       ];

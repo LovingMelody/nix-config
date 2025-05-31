@@ -103,7 +103,6 @@ in {
       };
       scx = {
         enable = mkDefault true;
-        scheduler = mkDefault "scx_lavd";
       };
     };
     nix.settings = let
@@ -138,23 +137,20 @@ in {
       pkgs.moonlight-qt
       pkgs.steam
       pkgs.gargoyle
-      (pkgs.rsi-launcher.override (o: {
+      (pkgs.rsi-launcher.override (_: {
         extraLibs = config.hardware.graphics.extraPackages ++ [config.hardware.graphics.package];
-        preCommands = let
-          vars = {
-            DXVK_HUD = "compiler";
-            MANGO_HUD = 1;
-            DXVK_HDR =
-              if config.TM.hasHDRDisplay
-              then 1
-              else 0;
-            NVPRESENT_ENABLE_SMOOTH_MOTION = 1;
-          };
-        in ''
-          ${toShellVars vars}
-          ${o.preCommands or ""}
-        '';
+        extraEnvVars = {
+          DXVK_HUD = "compiler";
+          MANGO_HUD = 1;
+          DXVK_HDR =
+            if config.TM.hasHDRDisplay
+            then 1
+            else 0;
+          NVPRESENT_ENABLE_SMOOTH_MOTION = 1;
+        };
       }))
+      pkgs.teamspeak6-client
+      pkgs.mumble
     ];
 
     boot = {

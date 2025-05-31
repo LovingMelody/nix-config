@@ -34,7 +34,10 @@
     zfs.enable = false;
     isLaptop = true;
   };
-  nixpkgs.config.cudaSupport = true;
+  nixpkgs.config = {
+    rocmSupport = true;
+    cudaSupport = true;
+  };
   hardware = {
     nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
     # uni-sync = { enable = true; };

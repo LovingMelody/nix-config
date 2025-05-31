@@ -18,6 +18,8 @@
   default_flavor = lib.TM.info.flavor;
   default_wallpaper = "${pkgs.hyprland.src}/assets/install/wall2.png";
   cfg = config.TM.styles;
+  # NOTE: Ugly fix for https://github.com/nix-community/stylix/issues/437
+  # Maybe one day this will be fixed but for now this ugly code works
   palette = import ./palette.nix {inherit config lib;};
   editImage =
     if config.TM.styles.editImage
@@ -194,7 +196,7 @@ in {
           qt.enable = mkDefault config.TM.isGui;
         };
         opacity.desktop = mkDefault 0.70;
-        image = editImage cfg.wallpaper;
+        image = (editImage cfg.wallpaper).outPath;
         inherit (cfg) polarity fonts;
       };
     }

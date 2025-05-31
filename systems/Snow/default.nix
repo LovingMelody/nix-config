@@ -42,9 +42,9 @@ in {
       enableSecureBoot = false;
     };
     desktop = {
-      gnome.enable = false;
+      gnome.enable = true;
       hyprland = {
-        enable = true;
+        enable = false;
       };
     };
     programs = {
@@ -77,24 +77,24 @@ in {
   };
   specialisation = {
     # Configs has conflits w/ Hyprland
-    gnome = {
+    hyprland = {
       inheritParentConfig = true;
       configuration = {
-        environment.etc."specialisation".text = "gnome";
-        TM.desktop.gnome.enable = mkForce true;
-        TM.desktop.hyprland.enable = mkForce false;
+        environment.etc."specialisation".text = "hyprland";
+        TM.desktop.gnome.enable = mkForce false;
+        TM.desktop.hyprland.enable = mkForce true;
       };
     };
-    # cosmic = {
-    #   inheritParentConfig = true;
-    #   configuration = {
-    #     environment.etc."specialisation".text = "cosmic";
-    #     TM.desktop.gnome.enable = mkForce false;
-    #     TM.desktop.hyprland.enable = mkForce false;
-    #     services.desktopManager.cosmic.enable = true;
-    #     services.displayManager.cosmic-greeter.enable = true;
-    #   };
-    # };
+    cosmic = {
+      inheritParentConfig = true;
+      configuration = {
+        environment.etc."specialisation".text = "cosmic";
+        TM.desktop.gnome.enable = mkForce false;
+        TM.desktop.hyprland.enable = mkForce false;
+        services.desktopManager.cosmic.enable = true;
+        services.displayManager.cosmic-greeter.enable = true;
+      };
+    };
     # kde = {
     #   inheritParentConfig = true;
     #   configuration = {

@@ -58,6 +58,16 @@ in {
         TM.desktop.hyprland.enable = mkForce false;
       };
     };
+    cosmic = {
+      inheritParentConfig = true;
+      configuration = {
+        environment.etc."specialisation".text = "cosmic";
+        TM.desktop.gnome.enable = mkForce false;
+        TM.desktop.hyprland.enable = mkForce false;
+        services.desktopManager.cosmic.enable = true;
+        services.displayManager.cosmic-greeter.enable = true;
+      };
+    };
   };
   # Use the systemd-boot EFI boot loader.
   boot = {
