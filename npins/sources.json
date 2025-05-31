@@ -63,9 +63,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "6e87ad2ccc8318e59c56dfd5147ef6f96cfa8824",
+      "revision": "ec523c2c2c3784b2f721173eab4fb0911b392b48",
       "url": null,
-      "hash": "1blh06bjjy6vi234ccb55h03m09d15vqzn5ibc1bd6nml20i47n8"
+      "hash": "0cbszspl19g6nqgs074vly0g0imigkxv4spzd1da6xvyab19205i"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -118,9 +118,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "c856ef440b361d83f5b68c9d984d9be9df0fdf54",
-      "url": "https://github.com/gposingway/gposingway/archive/c856ef440b361d83f5b68c9d984d9be9df0fdf54.tar.gz",
-      "hash": "1x9c417g3qmq9x77hwjy5763aqhr0y8jnygppym3ms5x3anmgqrz"
+      "revision": "739295f026f1754c07da8de93e79a02411591a22",
+      "url": "https://github.com/gposingway/gposingway/archive/739295f026f1754c07da8de93e79a02411591a22.tar.gz",
+      "hash": "18mqfcjzjwmc23p80pwykpyaxlg96zs4r674rc51fmdb0377mqrc"
     },
     "kitty": {
       "type": "GitRelease",
