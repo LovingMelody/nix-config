@@ -236,6 +236,7 @@ in {
         lite-xl
         gimp
         krita
+        haruna
       ];
     };
     fonts.fontconfig.enable = true;
