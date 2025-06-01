@@ -103,7 +103,6 @@ in {
       };
       scx = {
         enable = mkDefault true;
-        scheduler = mkDefault "scx_lavd";
       };
     };
     nix.settings = let
