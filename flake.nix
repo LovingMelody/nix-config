@@ -21,7 +21,6 @@
       inputs.hyprpanel.overlay
       inputs.nix-topology.overlays.default
       inputs.rust-overlay.overlays.default
-      inputs.chaotic.overlays.default
     ];
     listdir = dir: builtins.attrNames (lib.filterAttrs (_: t: t == "directory") (builtins.readDir dir));
     defineModules = type:
@@ -70,6 +69,7 @@
                       inputs.nvf.homeManagerModules.default
                       inputs.sops-nix.homeManagerModules.sops
                       inputs.impermanence.nixosModules.home-manager.impermanence
+                      inputs.stylix.homeModules.stylix
                     ]
                     ++ (lib.mapAttrsToList (_: m: m) self.homeModules);
                 };
@@ -153,13 +153,6 @@
       url = "github:catppuccin/nix";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-      };
-    };
-    chaotic = {
-      url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        home-manager.follows = "home-manager";
       };
     };
     devshell = {

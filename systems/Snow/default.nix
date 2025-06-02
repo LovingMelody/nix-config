@@ -75,58 +75,58 @@ in {
   virtualisation.docker = {
     enable = true;
   };
-  specialisation = {
-    # Configs has conflits w/ Hyprland
-    hyprland = {
-      inheritParentConfig = true;
-      configuration = {
-        environment.etc."specialisation".text = "hyprland";
-        TM.desktop.gnome.enable = mkForce false;
-        TM.desktop.hyprland.enable = mkForce true;
-      };
-    };
-    cosmic = {
-      inheritParentConfig = true;
-      configuration = {
-        environment.etc."specialisation".text = "cosmic";
-        TM.desktop.gnome.enable = mkForce false;
-        TM.desktop.hyprland.enable = mkForce false;
-        services.desktopManager.cosmic.enable = true;
-        services.displayManager.cosmic-greeter.enable = true;
-      };
-    };
-    # kde = {
-    #   inheritParentConfig = true;
-    #   configuration = {
-    #     environment.etc."specialisation".text = "kde";
-    #     TM.desktop.gnome.enable = mkForce false;
-    #     TM.desktop.hyprland.enable = mkForce false;
-    #     services.desktopManager.plasma6.enable = true;
-    #   };
-    # };
-
-    # openNvidia = {
-    #   inheritParentConfig = true;
-    #   configuration = {
-    #     boot = {
-    #       blacklistedKernelModules = [
-    #         "nvidia"
-    #         "nvidia_uvm"
-    #       ];
-    #       initrd.kernelModules = [ "nouveau" ];
-    #       kernelParams = [
-    #         "nouveau.config=NvGspRm=1"
-    #         "nouveau.debug=info,VBIOS=info,gsp=debug"
-    #       ];
-    #     };
-    #     services.xserver.enable = true;
-    #     services.xserver.videoDrivers = lib.mkForce [ "modesetting" ];
-    #     environment.etc."specialisation".text = "openNvidia";
-    #     TM.MyNextGPUWillNotBeNvidia = mkForce false;
-    #     system.nixos.tags = [ "NVK" ];
-    #   };
-    # };
-  };
+  # specialisation = {
+  #   # Configs has conflits w/ Hyprland
+  #   hyprland = {
+  #     inheritParentConfig = true;
+  #     configuration = {
+  #       environment.etc."specialisation".text = "hyprland";
+  #       TM.desktop.gnome.enable = mkForce false;
+  #       TM.desktop.hyprland.enable = mkForce true;
+  #     };
+  #   };
+  #   cosmic = {
+  #     inheritParentConfig = true;
+  #     configuration = {
+  #       environment.etc."specialisation".text = "cosmic";
+  #       TM.desktop.gnome.enable = mkForce false;
+  #       TM.desktop.hyprland.enable = mkForce false;
+  #       services.desktopManager.cosmic.enable = true;
+  #       services.displayManager.cosmic-greeter.enable = true;
+  #     };
+  #   };
+  #   # kde = {
+  #   #   inheritParentConfig = true;
+  #   #   configuration = {
+  #   #     environment.etc."specialisation".text = "kde";
+  #   #     TM.desktop.gnome.enable = mkForce false;
+  #   #     TM.desktop.hyprland.enable = mkForce false;
+  #   #     services.desktopManager.plasma6.enable = true;
+  #   #   };
+  #   # };
+  #
+  #   # openNvidia = {
+  #   #   inheritParentConfig = true;
+  #   #   configuration = {
+  #   #     boot = {
+  #   #       blacklistedKernelModules = [
+  #   #         "nvidia"
+  #   #         "nvidia_uvm"
+  #   #       ];
+  #   #       initrd.kernelModules = [ "nouveau" ];
+  #   #       kernelParams = [
+  #   #         "nouveau.config=NvGspRm=1"
+  #   #         "nouveau.debug=info,VBIOS=info,gsp=debug"
+  #   #       ];
+  #   #     };
+  #   #     services.xserver.enable = true;
+  #   #     services.xserver.videoDrivers = lib.mkForce [ "modesetting" ];
+  #   #     environment.etc."specialisation".text = "openNvidia";
+  #   #     TM.MyNextGPUWillNotBeNvidia = mkForce false;
+  #   #     system.nixos.tags = [ "NVK" ];
+  #   #   };
+  #   # };
+  # };
 
   boot.plymouth.enable = false;
 

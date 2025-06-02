@@ -1,7 +1,6 @@
 {
   config,
   osConfig,
-  inputs,
   lib,
   pkgs,
   ...
@@ -17,7 +16,7 @@
     ;
 in {
   imports = [
-    (TM.get-shared-module "styles")
+    (import (TM.get-shared-module "styles") {inherit osConfig;})
   ];
   options.TM.styles.followOS =
     mkEnableOption "Follow OS Styling"
@@ -33,9 +32,11 @@ in {
     # We use 99 to allow mkForce to still work
     # But to be higher than the result of stylix.enable
     fonts.fontconfig.enable = mkOverride 99 config.TM.isGui;
-    catppuccin.cursors.enable = false;
-    catppuccin.kvantum.enable = false; # Use stylix theme
-    catppuccin.wezterm.apply = true;
+    catppuccin = {
+      cursors.enable = false;
+      kvantum.enable = false; # Use stylix theme
+      wezterm.apply = true;
+    };
     xdg.enable = true;
     TM.styles = {
       inherit

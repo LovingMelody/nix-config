@@ -10,11 +10,10 @@
     mkDefault
     mkForce
     mkIf
-    toLower
     ;
-  inherit (lib.TM) get-shared-module toTitle;
+  inherit (lib.TM) get-shared-module;
 in {
-  imports = [(get-shared-module "styles")];
+  imports = [(import (get-shared-module "styles") {osConfig = {};})];
   # TODO: Replace stylix some of the enabled styles just dont work
   # Breaks some configs such as waybar by default
 
@@ -47,16 +46,12 @@ in {
       };
     };
     stylix = {
+      homeManagerIntegration.autoImport = false;
       # Catppuccin themes this
       targets = {
         plymouth.enable = false;
         grub.enable = false;
         chromium.enable = config.TM.isGui;
-      };
-      cursor = {
-        name = "catppuccin-${toLower cfg.flavor}-${toLower cfg.accent}-cursors";
-        package = pkgs.catppuccin-cursors."${toLower cfg.flavor}${toTitle config.catppuccin.accent}";
-        size = mkDefault 32;
       };
     };
   };

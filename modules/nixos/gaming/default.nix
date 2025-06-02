@@ -21,7 +21,7 @@ in {
     remotePlay = mkEnableOption "Enable settings for remote play";
     kernel = mkOption {
       type = types.raw;
-      default = pkgs.linuxPackages_cachyos;
+      default = pkgs.linuxPackages_latest;
       description = "Set kernel";
     };
     zram = {

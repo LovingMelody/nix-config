@@ -1,4 +1,4 @@
-{
+{osConfig ? {}}: {
   config,
   pkgs,
   lib,
@@ -15,6 +15,7 @@
     toLower
     types
     ;
+  inherit (lib.TM) toTitle;
   default_flavor = lib.TM.info.flavor;
   default_wallpaper = "${pkgs.hyprland.src}/assets/install/wall2.png";
   cfg = config.TM.styles;
@@ -52,7 +53,7 @@ in {
     enable =
       mkEnableOption "Enable Nebula styles"
       // {
-        default = true;
+        default = osConfig.TM.styles.enable or true;
       };
     flavor = mkOption {
       type = types.enum [
@@ -61,7 +62,7 @@ in {
         "Macchiato"
         "Mocha"
       ];
-      default = default_flavor;
+      default = osConfig.TM.styles.flavor or  default_flavor;
       description = "The catppucin flavor of the theme";
     };
     accent = mkOption {
@@ -81,11 +82,11 @@ in {
         "Teal"
         "Yellow"
       ];
-      default = "Pink";
+      default = osConfig.TM.styles.accent or "Pink";
       description = "Catppucin accent color";
     };
     wallpaper = mkOption {
-      default = default_wallpaper;
+      default = osConfig.TM.styles.wallpaper or default_wallpaper;
       description = "The wallpaper to use";
     };
     polarity = mkOption {
@@ -102,7 +103,7 @@ in {
     editImage =
       mkEnableOption "Edit the image to match the theme by applying LUT"
       // {
-        default = true;
+        default = osConfig.TM.styles.editImage or true;
       };
     # finalImage = mkOption {
     #   type = types.path;
@@ -115,59 +116,59 @@ in {
       serif = {
         package = mkOption {
           type = lib.types.package;
-          default = pkgs.inter;
+          default = osConfig.TM.styles.fonts.serif.package or pkgs.inter;
         };
         name = mkOption {
           type = lib.types.str;
-          default = "Inter";
+          default = osConfig.TM.styles.fonts.serif.name or "Inter";
         };
       };
       sansSerif = {
         package = mkOption {
           type = lib.types.package;
-          default = cfg.fonts.serif.package;
+          default = osConfig.TM.styles.fonts.sansSerif.package or cfg.fonts.serif.package;
         };
         name = mkOption {
           type = lib.types.str;
-          default = cfg.fonts.serif.name;
+          default = osConfig.TM.styles.fonts.sansSerif.name or cfg.fonts.serif.name;
         };
       };
       emoji = {
         package = mkOption {
           type = lib.types.package;
-          default = pkgs.noto-fonts-emoji;
+          default = osConfig.TM.styles.fonts.emoji.package or pkgs.noto-fonts-emoji;
         };
         name = mkOption {
           type = lib.types.str;
-          default = "Noto Color Emoji";
+          default = osConfig.TM.styles.fonts.emoji.name or "Noto Color Emoji";
         };
       };
       monospace = {
         package = mkOption {
           type = lib.types.package;
-          default = pkgs.nerd-fonts.caskaydia-cove;
+          default = osConfig.TM.styles.fonts.monospace.package or pkgs.nerd-fonts.caskaydia-cove;
         };
         name = mkOption {
           type = lib.types.str;
-          default = "CaskaydiaCove Nerd Font";
+          default = osConfig.TM.styles.fonts.monospace.name or "CaskaydiaCove Nerd Font";
         };
       };
       sizes = {
         terminal = mkOption {
           type = lib.types.int;
-          default = 18;
+          default = osConfig.TM.styles.fonts.sizes.terminal or 18;
         };
         desktop = mkOption {
           type = lib.types.int;
-          default = 14;
+          default = osConfig.TM.styles.fonts.sizes.desktop or 14;
         };
         applications = mkOption {
           type = lib.types.int;
-          default = 16;
+          default = osConfig.TM.styles.fonts.sizes.applications or 16;
         };
         popups = mkOption {
           type = lib.types.int;
-          default = 12;
+          default = osConfig.TM.styles.fonts.sizes.popups or 12;
         };
       };
     };
@@ -189,6 +190,11 @@ in {
       stylix = {
         enable = true;
         base16Scheme = palette;
+        cursor = {
+          name = "catppuccin-${toLower cfg.flavor}-${toLower cfg.accent}-cursors";
+          package = pkgs.catppuccin-cursors."${toLower cfg.flavor}${toTitle config.catppuccin.accent}";
+          size = mkDefault 32;
+        };
         # Don't define what defined by catppuccin
         targets = {
           nvf.enable = false;

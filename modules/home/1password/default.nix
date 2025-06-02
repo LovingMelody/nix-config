@@ -33,7 +33,16 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs; [_1password-cli] ++ lib.optional config.TM.isGui _1password-gui;
+    home.packages = with pkgs;
+      [_1password-cli]
+      ++ lib.optionals config.TM.isGui [
+        _1password-gui
+        (makeAutostartItem {
+          name = "1password";
+          package = _1password-gui;
+          appendExtraArgs = ["--silent"];
+        })
+      ];
     programs.git = mkIf (cfg.gpgSign.enable && cfg.sshAgent) {
       extraConfig = {
         "gpg \"ssh\"".program = "${getExe' pkgs._1password-gui "op-ssh-sign"}";

@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "c1aef5b4f9f324f47f6d5e893c51781b2138c4f9",
+      "revision": "ae5ee8cdc3b00ed35082fc3ebb7ca4b647942e8f",
       "url": null,
-      "hash": "0hjx30amil80qn147aliv1rwra0sjpxix8ishb8rxmk7xflr47nq"
+      "hash": "1azl2fmqvmqj00mnrbp6wyld1f9l121bfs3dfskbscjb8sqp22vn"
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -61,9 +61,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "47c7c85f467cf50c74417f1af4379ccf41508a66",
+      "revision": "0b0152b3475f0c3a8ae283840e327c2c3d52859c",
       "url": null,
-      "hash": "1y51qd252wkx291vmq2nj1ihbv3wbnsi5fpxv6z83i81sx0zh847"
+      "hash": "0i0qj4l0n96c1j2b7622g2h9px67rwjylyd1i7gca7jfr2m3la8k"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -135,6 +135,19 @@
       "revision": "4a5d7b31bc2024922b3fc797c23b842e50768b48",
       "url": "https://api.github.com/repos/kovidgoyal/kitty/tarball/v0.42.1",
       "hash": "0nmk2d702pv3a1ynsy7v1l4hq9giv2wwcw79w1265p5yi209cvkm"
+    },
+    "mpv": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "mpv-player",
+        "repo": "mpv"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "6b178e4f5a1d0dcc7b4cdb04ffad2827d07ef4d4",
+      "url": "https://github.com/mpv-player/mpv/archive/6b178e4f5a1d0dcc7b4cdb04ffad2827d07ef4d4.tar.gz",
+      "hash": "1x5fbs264hmim59r92z1rly7b1lxdr9jjbxxa86l78ws3cvmp9h2"
     },
     "npins": {
       "type": "GitRelease",

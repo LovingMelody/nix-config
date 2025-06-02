@@ -48,27 +48,27 @@ in {
     applications = mkForce 12;
     popups = mkForce 10;
   };
-  specialisation = {
-    # Configs has conflits w/ gnome & wayland doesnt run the best w/ nvidia
-    gnome = {
-      inheritParentConfig = true;
-      configuration = {
-        environment.etc."specialisation".text = "gnome";
-        TM.desktop.gnome.enable = mkForce true;
-        TM.desktop.hyprland.enable = mkForce false;
-      };
-    };
-    cosmic = {
-      inheritParentConfig = true;
-      configuration = {
-        environment.etc."specialisation".text = "cosmic";
-        TM.desktop.gnome.enable = mkForce false;
-        TM.desktop.hyprland.enable = mkForce false;
-        services.desktopManager.cosmic.enable = true;
-        services.displayManager.cosmic-greeter.enable = true;
-      };
-    };
-  };
+  # specialisation = {
+  #   # Configs has conflits w/ gnome & wayland doesnt run the best w/ nvidia
+  #   gnome = {
+  #     inheritParentConfig = true;
+  #     configuration = {
+  #       environment.etc."specialisation".text = "gnome";
+  #       TM.desktop.gnome.enable = mkForce true;
+  #       TM.desktop.hyprland.enable = mkForce false;
+  #     };
+  #   };
+  #   cosmic = {
+  #     inheritParentConfig = true;
+  #     configuration = {
+  #       environment.etc."specialisation".text = "cosmic";
+  #       TM.desktop.gnome.enable = mkForce false;
+  #       TM.desktop.hyprland.enable = mkForce false;
+  #       services.desktopManager.cosmic.enable = true;
+  #       services.displayManager.cosmic-greeter.enable = true;
+  #     };
+  #   };
+  # };
   # Use the systemd-boot EFI boot loader.
   boot = {
     loader = {

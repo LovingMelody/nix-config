@@ -75,7 +75,7 @@ in {
         };
       };
       network-manager-applet.enable = true;
-      gpg-agent.pinentryPackage = mkDefault pkgs.pinentry-gnome3;
+      gpg-agent.pinentry.package = mkDefault pkgs.pinentry-gnome3;
       # swaync.enable = true;
       playerctld.enable = true;
       gnome-keyring = {

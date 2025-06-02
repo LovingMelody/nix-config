@@ -6,6 +6,7 @@
 }: let
   inherit (inputs) nixpkgs nix-reshade;
   inherit (lib.TM.package-helper) pins patchLibcuda;
+  shortRev = s: builtins.substring 0 7 s;
 in
   final: prev: let
     pinnedOverlay = pkg:
@@ -13,6 +14,30 @@ in
         src = pins.${pkg};
         version = pins.${pkg}.version or "git+${pins.${pkg}.revision}";
       };
+    discordEnableKrisp = pkg: let
+      patch-krisp = prev.writers.writePython3 "krisp-patcher" {
+        libraries = with prev.python3Packages; [
+          capstone
+          pyelftools
+        ];
+        # Ignore syntax checker error codes that affect krisp-patcher.py
+        flakeIgnore = [
+          "E501"
+          "F403"
+          "F405"
+        ];
+      } (builtins.readFile ./discord-krisp-patcher.py);
+      binaryName = pkg.meta.mainProgram;
+      node_module = "\\$HOME/.config/discord/${prev.discord.version}/modules/discord_krisp/discord_krisp.node";
+    in
+      pkg.overrideAttrs (o: {
+        postInstall =
+          o.postInstall
+          + ''
+            wrapProgramShell $out/opt/${binaryName}/${binaryName} \
+              --run "${patch-krisp} ${node_module}"
+          '';
+      });
   in {
     linuxKernel =
       prev.linuxKernel
@@ -113,18 +138,18 @@ in
     wineprefix-preparer = prev.wineprefix-preparer.override {
       inherit (final) dxvk-w64 dxvk-w32 vkd3d-proton-w64 vkd3d-proton-w32;
     };
-    discord = prev.discord.override {
+    discord = discordEnableKrisp (prev.discord.override {
       withOpenASAR = true;
       withVencord = true;
-    };
-    discord-canary = prev.discord-canary.override {
+    });
+    discord-canary = discordEnableKrisp (prev.discord-canary.override {
       withOpenASAR = true;
       withVencord = true;
-    };
-    discord-ptb = prev.discord-ptb.override {
+    });
+    discord-ptb = discordEnableKrisp (prev.discord-ptb.override {
       withOpenASAR = true;
       withVencord = true;
-    };
+    });
 
     obs-studio = prev.obs-studio.override {ffmpeg = final.ffmpeg-full;};
 
@@ -140,6 +165,17 @@ in
     };
 
     gposingway = final.callPackage "${self}/packages/shaders/gposingway" {inherit pins;};
+
+    mpv-unwrapped =
+      (prev.mpv-unwrapped.override {
+        jackaudioSupport = true;
+        sdl2Support = true;
+        sixelSupport = true;
+        vapoursynthSupport = true;
+      }).overrideAttrs {
+        version = builtins.replaceStrings ["UNKNOWN"] [(shortRev pins.mpv.revision)] (builtins.readFile "${pins.mpv}/MPV_VERSION");
+        src = pins.mpv;
+      };
 
     /*
     Lets use lix :D
