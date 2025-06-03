@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "ae5ee8cdc3b00ed35082fc3ebb7ca4b647942e8f",
+      "revision": "44518bb986a7befc709871b1c8197e27e8ec453d",
       "url": null,
-      "hash": "1azl2fmqvmqj00mnrbp6wyld1f9l121bfs3dfskbscjb8sqp22vn"
+      "hash": "0h2266wmxb6agzz3mhm5l8hzbj284m6g6nlg03zxgrf7gwb08bba"
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -48,9 +48,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "0bcef80fac77ee7a4f13556228bdd5617b83af53",
+      "revision": "62048de8935176cb145f87945a71f255aa9b71b4",
       "url": null,
-      "hash": "1w49m360zia47g1qybgb23c0zbs673ghk4clvc20w80xza2lvjyy"
+      "hash": "1wf0v5cykcjf2g6c336izfmy27jrzmg5jjm8ndwp609vs4bx21i4"
     },
     "gallery-dl": {
       "type": "Git",
@@ -90,9 +90,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "0cc173486db906ef7ce6db5e30c995b81be47d8e",
-      "url": "https://github.com/garglk/garglk/archive/0cc173486db906ef7ce6db5e30c995b81be47d8e.tar.gz",
-      "hash": "0ihzdhkfy9aaac1sjy41kb0n08wfhwv03hd77nnmn9iviwvw2szv"
+      "revision": "feeebd75e465ecca0a96891d10cd27e9070f223e",
+      "url": "https://github.com/garglk/garglk/archive/feeebd75e465ecca0a96891d10cd27e9070f223e.tar.gz",
+      "hash": "1lm5c2kfg79g8lhai2dx2sh4bwvhla3rfgrq4svz4v4n0ffnkyja"
     },
     "getopts.fish": {
       "type": "Git",
@@ -116,9 +116,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "739295f026f1754c07da8de93e79a02411591a22",
-      "url": "https://github.com/gposingway/gposingway/archive/739295f026f1754c07da8de93e79a02411591a22.tar.gz",
-      "hash": "18mqfcjzjwmc23p80pwykpyaxlg96zs4r674rc51fmdb0377mqrc"
+      "revision": "86b58838569220561da63b75120091dd4bada9df",
+      "url": "https://github.com/gposingway/gposingway/archive/86b58838569220561da63b75120091dd4bada9df.tar.gz",
+      "hash": "1smgf94p1vdi8g2xb4c7giq9s1xwpznpc43p83s6xv57s7i4p6mi"
     },
     "kitty": {
       "type": "GitRelease",
@@ -255,9 +255,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "f96654e0b7feb0a28ea243fdf87cc5a7830f2c3b",
+      "revision": "275338477c3da852de7c18ac7fe89dea77c40269",
       "url": null,
-      "hash": "05vhf6bcnqw0zygwha5xvlr8zqhj1npf0czfqcd0fpzywljvmgza"
+      "hash": "1l9l8vmnkahlp0xydn6w2jiq9h8fg2m7prpv551zkr3c6pdi5n6j"
     }
   },
   "version": 5

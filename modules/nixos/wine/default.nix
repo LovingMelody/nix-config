@@ -1,5 +1,5 @@
 {
-  inputs,
+  pkgs,
   config,
   lib,
   ...
@@ -17,7 +17,7 @@ in {
     binfmt = mkEnableOption "Enable Wine binfmt";
     package = mkOption {
       description = "Wine Package to use";
-      default = inputs.nix-gaming.packages.x86_64-linux.wine-tkg;
+      default = pkgs.wine-astral-ntsync;
     };
   };
 
