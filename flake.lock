@@ -901,14 +901,15 @@
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
-        ]
+        ],
+        "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1749526643,
-        "narHash": "sha256-n+FEIYva3gBR44LgznxsR4cdx4bZ8hSC54CZtRq1gmg=",
+        "lastModified": 1749595519,
+        "narHash": "sha256-N54vl1c+Hz/r1Tvx1hIhPSl9z5RmNOTruOPpHkhBQBY=",
         "owner": "LovingMelody",
         "repo": "nix-reshade",
-        "rev": "017d3d319676fabf9343f3eb76ba7bf59898ed60",
+        "rev": "34003b34082d5348f01373595018317f67e0829e",
         "type": "github"
       },
       "original": {
@@ -1103,7 +1104,7 @@
           "stylix",
           "nixpkgs"
         ],
-        "treefmt-nix": "treefmt-nix"
+        "treefmt-nix": "treefmt-nix_2"
       },
       "locked": {
         "lastModified": 1748730660,
@@ -1240,7 +1241,7 @@
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix",
         "systems": "systems_2",
-        "treefmt-nix": "treefmt-nix_2"
+        "treefmt-nix": "treefmt-nix_3"
       }
     },
     "rust-overlay": {
@@ -1485,6 +1486,27 @@
     "treefmt-nix": {
       "inputs": {
         "nixpkgs": [
+          "nix-reshade",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1749194973,
+        "narHash": "sha256-eEy8cuS0mZ2j/r/FE0/LYBSBcIs/MKOIVakwHVuqTfk=",
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "rev": "a05be418a1af1198ca0f63facb13c985db4cb3c5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "treefmt-nix_2": {
+      "inputs": {
+        "nixpkgs": [
           "stylix",
           "nur",
           "nixpkgs"
@@ -1504,7 +1526,7 @@
         "type": "github"
       }
     },
-    "treefmt-nix_2": {
+    "treefmt-nix_3": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
