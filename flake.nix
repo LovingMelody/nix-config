@@ -260,6 +260,7 @@
     nix-reshade = {
       url = "github:LovingMelody/nix-reshade";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.treefmt-nix.follows = "treefmt-nix";
     };
     nix-topology = {
       url = "github:oddlama/nix-topology";
