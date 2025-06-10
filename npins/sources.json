@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "680bf24ffd9ab20a32e23cc1098aead04221ec78",
+      "revision": "d51422e0b0ca832768153ce71c1a572b25df1677",
       "url": null,
-      "hash": "02a3ml8r9sbbnyf9gdvp062fzasgyjim9435gxr6bg1igg2zlk8i"
+      "hash": "1v32xgz1fjx2fif9yphb7x3anxbfbddg8hyglxxw648pdld5ac04"
     },
     "dxvk-gplasync": {
       "type": "Git",

@@ -7,7 +7,8 @@
   inherit (inputs) nixpkgs nix-reshade;
   inherit (lib.TM.package-helper) pins patchLibcuda;
   shortRev = s: builtins.substring 0 7 s;
-  allowGplAsync = pins.dxvk-gplasync.revision != "8a55443c13a5c8b0a09b6859edaa54e3576518b3";
+  allowGplAsync = true; # pins.dxvk-gplasync.revision != "8a55443c13a5c8b0a09b6859edaa54e3576518b3";
+  useUpstreamPatch = pins.dxvk-gplasync.revision != "8a55443c13a5c8b0a09b6859edaa54e3576518b3";
 in
   final: prev: let
     pinnedOverlay = pkg:
@@ -118,7 +119,11 @@ in
       src = pins.dxvk;
       version = "git+${pins.dxvk.revision}";
       patches = lib.optionals allowGplAsync [
-        (pins.dxvk-gplasync + "/patches/dxvk-gplasync-master.patch")
+        (
+          if useUpstreamPatch
+          then (pins.dxvk-gplasync + "/patches/dxvk-gplasync-master.patch")
+          else ./dxvk-gpl-async-master.patch
+        )
         (pins.dxvk-gplasync + "/patches/global-dxvk.conf.patch")
       ];
     };
@@ -130,7 +135,11 @@ in
       src = pins.dxvk;
       version = "git+${pins.dxvk.revision}";
       patches = lib.optionals allowGplAsync [
-        (pins.dxvk-gplasync + "/patches/dxvk-gplasync-master.patch")
+        (
+          if useUpstreamPatch
+          then (pins.dxvk-gplasync + "/patches/dxvk-gplasync-master.patch")
+          else ./dxvk-gpl-async-master.patch
+        )
         (pins.dxvk-gplasync + "/patches/global-dxvk.conf.patch")
       ];
     };

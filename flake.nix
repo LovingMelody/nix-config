@@ -100,6 +100,7 @@
       inherit
         (pkgs)
         star-citizen
+        rsi-launcher
         wine-astral
         wine-astral-ntsync
         catppuccin-base16
