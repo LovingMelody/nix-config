@@ -7,6 +7,7 @@
   inherit (inputs) nixpkgs nix-reshade;
   inherit (lib.TM.package-helper) pins patchLibcuda;
   shortRev = s: builtins.substring 0 7 s;
+  allowGplAsync = pins.dxvk-gplasync.revision != "8a55443c13a5c8b0a09b6859edaa54e3576518b3";
 in
   final: prev: let
     pinnedOverlay = pkg:
@@ -110,19 +111,25 @@ in
       wine = final.wine-astral-ntsync;
     };
     dxvk-w64 = prev.dxvk-w64.overrideAttrs {
-      pname = "dxvk-gplasync";
+      pname =
+        if allowGplAsync
+        then "dxvk-gplasync"
+        else "dxvk";
       src = pins.dxvk;
       version = "git+${pins.dxvk.revision}";
-      patches = lib.optionals (pins.dxvk-gplasync.revision != "8a55443c13a5c8b0a09b6859edaa54e3576518b3") [
+      patches = lib.optionals allowGplAsync [
         (pins.dxvk-gplasync + "/patches/dxvk-gplasync-master.patch")
         (pins.dxvk-gplasync + "/patches/global-dxvk.conf.patch")
       ];
     };
     dxvk-w32 = prev.dxvk-w32.overrideAttrs {
-      pname = "dxvk-gplasync";
+      pname =
+        if allowGplAsync
+        then "dxvk-gplasync"
+        else "dxvk";
       src = pins.dxvk;
       version = "git+${pins.dxvk.revision}";
-      patches = lib.optionals (pins.dxvk-gplasync.revision != "8a55443c13a5c8b0a09b6859edaa54e3576518b3") [
+      patches = lib.optionals allowGplAsync [
         (pins.dxvk-gplasync + "/patches/dxvk-gplasync-master.patch")
         (pins.dxvk-gplasync + "/patches/global-dxvk.conf.patch")
       ];
