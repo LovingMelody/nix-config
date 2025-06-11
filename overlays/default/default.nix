@@ -7,7 +7,7 @@
   inherit (inputs) nixpkgs nix-reshade;
   inherit (lib.TM.package-helper) pins patchLibcuda;
   shortRev = s: builtins.substring 0 7 s;
-  allowGplAsync = true; # pins.dxvk-gplasync.revision != "8a55443c13a5c8b0a09b6859edaa54e3576518b3";
+  allowGplAsync = pins.dxvk-gplasync.revision != "8a55443c13a5c8b0a09b6859edaa54e3576518b3";
   useUpstreamPatch = pins.dxvk-gplasync.revision != "8a55443c13a5c8b0a09b6859edaa54e3576518b3";
 in
   final: prev: let
