@@ -30,7 +30,7 @@ in {
     };
     desktop = {
       hyprland = {
-        enable = true;
+        enable = false;
       };
     };
     impermanence.enable = false;
@@ -48,6 +48,8 @@ in {
     applications = mkForce 12;
     popups = mkForce 10;
   };
+  services.desktopManager.cosmic.enable = true;
+  services.displayManager.cosmic-greeter.enable = true;
   # specialisation = {
   #   # Configs has conflits w/ gnome & wayland doesnt run the best w/ nvidia
   #   gnome = {
