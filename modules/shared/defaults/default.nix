@@ -59,7 +59,6 @@ in {
           "nix-command"
           "flakes"
           "recursive-nix"
-          "repl-flake"
         ];
         auto-optimise-store = isLinux;
         keep-outputs = true;

@@ -196,17 +196,17 @@ in
     /*
     Lets use lix :D
     */
-    nixForLinking = final.nixVersions.stable;
-
-    nixVersions =
-      prev.nixVersions
-      // {
-        stable = final.lix;
-        stable_upstream = prev.nixVersions.stable;
-      };
-
-    nix-doc = prev.nix-doc.override {withPlugin = false;};
-    nix = final.nixVersions.stable;
+    # nixForLinking = final.nixVersions.stable;
+    #
+    # nixVersions =
+    #   prev.nixVersions
+    #   // {
+    #     stable = final.lix;
+    #     stable_upstream = prev.nixVersions.stable;
+    #   };
+    #
+    # nix-doc = prev.nix-doc.override {withPlugin = false;};
+    # nix = final.nixVersions.stable;
 
     /*
     TODO: Changes to to be upstreamed
