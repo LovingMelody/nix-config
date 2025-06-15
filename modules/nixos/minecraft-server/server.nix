@@ -134,6 +134,7 @@ in {
               # "ConcurrentChunkManagementEngine"
               "Krypton"
               "FabricAPI"
+              "Gyser"
               # "Sit!"
             ])));
         };
