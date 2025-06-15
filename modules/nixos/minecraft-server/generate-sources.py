@@ -28,6 +28,7 @@ ENTRIES_TO_FIND = [
     # Dependency for NetherPortalFix, Tectonic, Sit!, Balm
     {"name": "FabricAPI", "id": "P7dR8mSH", "loader": "fabric"},
     {"name": "Sit!", "id": "EsYqsGV4", "loader": "fabric"},
+    {"name": "Gyser", "id": "wKkoqHrH", "loader": "fabric"},
 ]
 
 
