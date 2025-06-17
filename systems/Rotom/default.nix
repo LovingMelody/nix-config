@@ -1,8 +1,8 @@
 # Pokedex: #0479
 # Rotom - Its electric-like body can enter some kinds of machines and take control in order to make mischief.
 {
+  config,
   pkgs,
-  home-manager,
   ...
 }: {
   imports = [./hardware-configuration-extended.nix];
@@ -36,11 +36,37 @@
   services = {
     openssh.enable = true;
     davfs2.enable = true;
+    # mysql = {
+    #   enable = true;
+    #   package = pkgs.mariadb;
+    #   ensureDatabases = ["photoprism"];
+    #   ensureUsers = [
+    #     {
+    #       name = "photoprism";
+    #       ensurePermissions = {"photoprism.*" = "ALL PRIVILEGES";};
+    #       # inherit (config.services.photoprism) passwordFile;
+    #     }
+    #   ];
+    # };
     photoprism = {
       enable = true;
       originalsPath = "/data/photoprism";
       passwordFile = "/.secrets-extra/photoprism-admin";
       address = "0.0.0.0";
+      settings = {
+        PHOTOPRISM_ORIGINALS_LIMIT = builtins.toString (80 * 1023); # file size limit for originals in MB
+        PHOTOPRISM_HTTP_COMPRESSION = "gzip";
+        PHOTOPRISM_READONLY = "true"; # do not modify originals directory (reduced functionality)
+        PHOTOPRISM_EXPERIMENTAL = "true"; # enables experimental features
+        PHOTOPRISM_DISABLE_WEBDAV = "true"; # disables built-in WebDAV server
+        PHOTOPRISM_DETECT_NSFW = "false"; # Doesn't work well
+        PHOTOPRISM_UPLOAD_NSFW = "true"; # Check doesnt work well
+        # PHOTOPRISM_DATABASE_DRIVER = "mysql";
+        # PHOTOPRISM_DATABASE_SERVER = "127.0.0.1:3036"; # MariaDB database server
+        # PHOTOPRISM_DATABASE_NAME = "photoprism";
+        # PHOTOPRISM_DATABASE_USER = "photoprism";
+        # PHOTOPRISM_DATABASE_PASSWORD = config.services.photoprism.passwordFile;
+      };
     };
     flaresolverr.enable = false;
   };
