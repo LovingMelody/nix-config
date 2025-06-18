@@ -59,6 +59,10 @@ in
       version = "${o.version}+${pins.npins.revision}";
       src = pins.npins;
     });
+    photoprism = prev.photoprism.override {
+      ffmpeg = final.ffmpeg-full;
+      imagemagick = final.imagemagickBig;
+    };
     kitty = pinnedOverlay "kitty";
     gargoyle = prev.gargoyle.overrideAttrs {
       src = pins.gargoyle;
