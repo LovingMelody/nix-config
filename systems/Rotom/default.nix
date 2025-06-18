@@ -3,8 +3,12 @@
 {
   config,
   pkgs,
+  lib,
   ...
-}: {
+}: let
+  inherit (builtins) toString;
+  inherit (lib) mkIf;
+in {
   imports = [./hardware-configuration-extended.nix];
 
   TM = {
@@ -36,18 +40,23 @@
   services = {
     openssh.enable = true;
     davfs2.enable = true;
-    # mysql = {
-    #   enable = true;
-    #   package = pkgs.mariadb;
-    #   ensureDatabases = ["photoprism"];
-    #   ensureUsers = [
-    #     {
-    #       name = "photoprism";
-    #       ensurePermissions = {"photoprism.*" = "ALL PRIVILEGES";};
-    #       # inherit (config.services.photoprism) passwordFile;
-    #     }
-    #   ];
-    # };
+    mysql = {
+      enable = true;
+      package = pkgs.mariadb;
+      settings = {
+        mysqld = {
+          port = 3036;
+          bind-address = "127.0.0.1";
+        };
+      };
+      ensureDatabases = ["photoprism"];
+      ensureUsers = [
+        {
+          name = "photoprism";
+          ensurePermissions = {"photoprism.*" = "ALL PRIVILEGES";};
+        }
+      ];
+    };
     photoprism = {
       enable = true;
       originalsPath = "/data/photoprism";
@@ -61,15 +70,18 @@
         PHOTOPRISM_DISABLE_WEBDAV = "true"; # disables built-in WebDAV server
         PHOTOPRISM_DETECT_NSFW = "false"; # Doesn't work well
         PHOTOPRISM_UPLOAD_NSFW = "true"; # Check doesnt work well
-        # PHOTOPRISM_DATABASE_DRIVER = "mysql";
-        # PHOTOPRISM_DATABASE_SERVER = "127.0.0.1:3036"; # MariaDB database server
-        # PHOTOPRISM_DATABASE_NAME = "photoprism";
-        # PHOTOPRISM_DATABASE_USER = "photoprism";
-        # PHOTOPRISM_DATABASE_PASSWORD = config.services.photoprism.passwordFile;
+        PHOTOPRISM_DATABASE_DRIVER = "mysql";
+        PHOTOPRISM_DATABASE_SERVER = with config.services.mysql.settings.mysqld; "${bind-address}:${toString port}"; # MariaDB database server
+        PHOTOPRISM_DATABASE_NAME = "photoprism";
+        PHOTOPRISM_DATABASE_USER = "photoprism";
+        PHOTOPRISM_DATABASE_PASSWORD = config.services.photoprism.passwordFile;
       };
     };
     flaresolverr.enable = false;
   };
+  # systemd.services.photoprism = mkIf config.services.photoprism.enable {
+  #   serviceConfig.EnvironmentFile = "/.secrets-extra/photoprism-db";
+  # };
   programs.mosh.enable = true;
 
   networking = {
