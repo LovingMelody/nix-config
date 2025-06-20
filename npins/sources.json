@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "5270f64d5af7b731ef6deb79b198b27d399aaf2c",
+      "revision": "e668e335e4f92abef277e98311bb16fc27ca6c4d",
       "url": null,
-      "hash": "0vmg05f32fm22anb9b973v485qsy9rvf7m8zww1wwi5758nf64s9"
+      "hash": "1w0h7vmaxnhq1lfjjg4bqk94zkv7h3abkhd23g4ck1p3mmn9x7zj"
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -145,9 +145,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "e8ade130faef6a18971325d49213b8d166935d50",
-      "url": "https://github.com/mpv-player/mpv/archive/e8ade130faef6a18971325d49213b8d166935d50.tar.gz",
-      "hash": "17dvvh0jbmy95hzj7ds62r5m56zncdyk1bvw38zbnnnp519brxfw"
+      "revision": "494afa4115dfe456da0980121d9b263889ddfd64",
+      "url": "https://github.com/mpv-player/mpv/archive/494afa4115dfe456da0980121d9b263889ddfd64.tar.gz",
+      "hash": "0r5mvbqy3424z0apxhf7751vsx32m4fr57cha3pb6ic1bvjv073v"
     },
     "npins": {
       "type": "GitRelease",
@@ -255,9 +255,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "8e33c015af6fc9ccea54f0c0cdc45d1bd0799a72",
+      "revision": "59e50c873ca5c6cbcf09feb25dc52fc271e27edf",
       "url": null,
-      "hash": "19l4cx6cf4kdzwh5z4k0rjngpngwr57fgx1npjddqnwp1dajsn76"
+      "hash": "0zx3cxv0q2v04439n3clcp7pdxgvyfx4g1xsb124nq63g1aap7bg"
     }
   },
   "version": 5
