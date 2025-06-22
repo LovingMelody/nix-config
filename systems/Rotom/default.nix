@@ -7,7 +7,6 @@
   ...
 }: let
   inherit (builtins) toString;
-  inherit (lib) mkIf;
 in {
   imports = [./hardware-configuration-extended.nix];
 
