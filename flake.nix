@@ -18,7 +18,6 @@
       inputs.nix-citizen.overlays.default
       inputs.self.overlays.default
       inputs.nix-minecraft.overlays.default
-      inputs.hyprpanel.overlay
       inputs.nix-topology.overlays.default
       inputs.rust-overlay.overlays.default
     ];
@@ -139,17 +138,6 @@
         flake-compat.follows = "flake-compat";
       };
     };
-    ags = {
-      url = "github:aylur/ags";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        astal.follows = "astal";
-      };
-    };
-    astal = {
-      url = "github:aylur/astal";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     catppuccin = {
       url = "github:catppuccin/nix";
       inputs = {
@@ -180,13 +168,6 @@
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    hyprpanel = {
-      url = "github:Jas-SinghFSU/HyprPanel";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        ags.follows = "ags";
-      };
     };
     impermanence.url = "github:nix-community/impermanence";
     ini-merger = {

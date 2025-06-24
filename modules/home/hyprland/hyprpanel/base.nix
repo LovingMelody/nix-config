@@ -13,7 +13,6 @@
   usingUWSM = osConfig.programs.hyprland.withUWSM or false;
   exec = lib.optionalString usingUWSM "uwsm app -- ";
 in {
-  imports = [inputs.hyprpanel.homeManagerModules.hyprpanel];
   config = mkIf config.wayland.windowManager.hyprland.enable {
     wayland.windowManager.hyprland.settings.exec-once = [
       "${exec} ${getExe pkgs.hyprpanel}"
