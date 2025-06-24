@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "e4989d11ab1437efb469bcc63301bfe7f1a4da92",
+      "revision": "9a13726fa34104641a8a49daacc423bde56ab4a1",
       "url": null,
-      "hash": "1dv55lhpl6nd4hxrvi713wfnwqk490mzkdvi8win4b56i4hs7yi6"
+      "hash": "1jnza8ni3qghxk0d4yvlr8g50f80pn6a9f3w4h28i2m6k4s077zp"
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -61,9 +61,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "fc1ed0348409cc56e62081a140daac4530d19848",
+      "revision": "578aea51eda1ab3773748c1aa05d50475dff85e4",
       "url": null,
-      "hash": "1za6rin4ghg15accymcfgm69cyw4x92l3gwgnfdkwgdv10qg1qv0"
+      "hash": "130khr8wpzl1943dhwmj7s9dyrikwb9shcwrmnxmmfma4v63d2hz"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -255,9 +255,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "59e50c873ca5c6cbcf09feb25dc52fc271e27edf",
+      "revision": "f007f3b74f412000327ae9378c84282f61264e77",
       "url": null,
-      "hash": "0zx3cxv0q2v04439n3clcp7pdxgvyfx4g1xsb124nq63g1aap7bg"
+      "hash": "1mlydlg8rjdqs9byynsl41n5yafdabraa9hx53zvf7c2zxln6539"
     }
   },
   "version": 5
