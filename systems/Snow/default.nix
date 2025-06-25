@@ -175,7 +175,6 @@ in {
       cmdLine = "init=${build.toplevel}/init loglevel=4";
       debug = true;
     };
-    scrutiny.enable = true;
     xserver = {
       enable = true;
       # displayManager.sddm.enable = true;
