@@ -10,6 +10,14 @@
 in {
   imports = [./hardware-configuration-extended.nix];
 
+  sops.secrets.prism = {
+    owner = config.systemd.services.photoprism.serviceConfig.User;
+    group = config.systemd.services.photoprism.serviceConfig.Group;
+    path = "/.secrets-extra/photoprism-admin";
+    restartUnits = ["photoprism.service"];
+    sopsFile = lib.TM.get-secret-file "hosts/Rotom/prism.yaml";
+  };
+
   TM = {
     pokemon = {
       name = "Rotom";
@@ -59,7 +67,7 @@ in {
     photoprism = {
       enable = true;
       originalsPath = "/data/photoprism";
-      passwordFile = "/.secrets-extra/photoprism-admin";
+      passwordFile = config.sops.secrets.prism.path;
       address = "0.0.0.0";
       settings = {
         PHOTOPRISM_ORIGINALS_LIMIT = builtins.toString (80 * 1023); # file size limit for originals in MB
