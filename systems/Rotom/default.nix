@@ -44,6 +44,15 @@ in {
     useUserPackages = true;
   };
 
+  users = {
+    groups.photoprism = {};
+    users.photoprism = {
+      name = "photoprism";
+      group = "photoprism";
+      isSystemUser = true;
+    };
+  };
+
   services = {
     openssh.enable = true;
     davfs2.enable = true;
