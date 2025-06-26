@@ -22,6 +22,7 @@ in {
   };
 
   config = mkIf cfg.binfmt {
+    environment.systemPackages = [cfg.package];
     boot.binfmt = {
       emulatedSystems = ["x86_64-windows"];
       registrations.x86_64-windows = {
