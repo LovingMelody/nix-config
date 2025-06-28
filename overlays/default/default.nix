@@ -108,6 +108,12 @@ in
       wine = final.wine-astral-ntsync;
     };
     rsi-launcher = prev.rsi-launcher.override {
+      extraEnvVars = {
+        DXVK_HUD = "compiler";
+        MANGO_HUD = 1;
+        DXVK_HDR = 1;
+        NVPRESENT_ENABLE_SMOOTH_MOTION = 1;
+      };
       preCommands = ''
         export DXVK_LOG_LEVEL=debug
         export WINEDEBUG=
