@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "dd46e48bb572a240754656036d1f772aa3f9624f",
+      "revision": "c2d59b066021e729922f56d73cce9e8bf1c4686a",
       "url": null,
-      "hash": "1r2kykpfvjxvgbg0ypm36g2pf6zrg2x7nb1y8fzllvgnb0sanndg"
+      "hash": "1i85hgfyk6nkcm0j4csjkf2maik8sm76a7d4ssixx9pva3qclm1f"
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -35,9 +35,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "8a55443c13a5c8b0a09b6859edaa54e3576518b3",
-      "url": "https://gitlab.com/api/v4/projects/Ph42oN%2Fdxvk-gplasync/repository/archive.tar.gz?sha=8a55443c13a5c8b0a09b6859edaa54e3576518b3",
-      "hash": "006r555jzr2zsxws0prnhyx7xxiaig750i9bbd9490x58jiqy3gm"
+      "revision": "36d811356f59c0d0668621187fd3aa4d4ce6ce93",
+      "url": "https://gitlab.com/api/v4/projects/Ph42oN%2Fdxvk-gplasync/repository/archive.tar.gz?sha=36d811356f59c0d0668621187fd3aa4d4ce6ce93",
+      "hash": "19qcigj3m8kk69i981am5fiis1dcnjp6f4ylwghlj8zz1z5ig986"
     },
     "dxvk-nvapi": {
       "type": "Git",
@@ -145,9 +145,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "18defc8530caf7694b132a501e9c34476d4cef80",
-      "url": "https://github.com/mpv-player/mpv/archive/18defc8530caf7694b132a501e9c34476d4cef80.tar.gz",
-      "hash": "0xy27qr55gj56dwzms857hrjgnnmkvpf9hci2wa3w65i5v7isys0"
+      "revision": "ed8954e8cf2d92d7f2df22aeeb9b6087f76ef89e",
+      "url": "https://github.com/mpv-player/mpv/archive/ed8954e8cf2d92d7f2df22aeeb9b6087f76ef89e.tar.gz",
+      "hash": "1ffbv3nnjnl35vnx4f3ywd0gl70h74zk44il8qj1h0akw6m8b8zk"
     },
     "npins": {
       "type": "GitRelease",
