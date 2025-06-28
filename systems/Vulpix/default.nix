@@ -48,8 +48,9 @@ in {
     applications = mkForce 12;
     popups = mkForce 10;
   };
-  services.desktopManager.cosmic.enable = true;
-  services.displayManager.cosmic-greeter.enable = true;
+  # services.desktopManager.cosmic.enable = true;
+  # services.displayManager.cosmic-greeter.enable = true;
+  TM.desktop.gnome.enable = true;
   # specialisation = {
   #   # Configs has conflits w/ gnome & wayland doesnt run the best w/ nvidia
   #   gnome = {
