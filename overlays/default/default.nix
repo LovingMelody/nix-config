@@ -199,7 +199,7 @@ in
         sixelSupport = true;
         vapoursynthSupport = true;
       }).overrideAttrs {
-        version = builtins.replaceStrings ["UNKNOWN"] [(shortRev pins.mpv.revision)] (builtins.readFile "${pins.mpv}/MPV_VERSION");
+        version = lib.removeSuffix "-" (builtins.replaceStrings ["UNKNOWN"] [(shortRev pins.mpv.revision)] (builtins.readFile "${pins.mpv}/MPV_VERSION"));
         src = pins.mpv;
       };
 
