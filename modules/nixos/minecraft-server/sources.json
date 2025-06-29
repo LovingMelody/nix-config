@@ -36,12 +36,12 @@
     "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/neW85eWt/krypton-0.2.9.jar"
   },
   "FabricAPI": {
-    "sha512": "82da395a335e926970cb1e47f976a352bd6e32730596d8bfc233930fe02dd20b75e3eaaf3e5cf05399cd667cfe6c72981e24ea539bbdc8faa18f4330d82e9a88",
-    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/EcYmlIw5/fabric-api-0.128.0%2B1.21.5.jar"
+    "sha512": "9ee7377f1d085d34363f3025a8ea55e3bf6e31732453a9e5ba3c5bd11dcb055636818c85bd55f17ec5f9078d6fa15361a8c302ed093677f5e9d09b4c17d74a41",
+    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/aQqNHHfZ/fabric-api-0.128.1%2B1.21.5.jar"
   },
   "Sit!": {
-    "sha512": "da84ef83d9bbfaa173966c748041fb56351c0d1279a1cb31cf171d888840e8ea54d4de712548ba82c5271f0d42cbecd5a8b764d1b00d6a1290f9d7b17f78bccb",
-    "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/6djKdeDX/sit%21-1.2.4.3%2B1.21.5.jar"
+    "sha512": "5fd0ce26fabee166c6bcf3426b5cf6c59530a619244e9c710c84b7408cc4f721bbd2d54cc24d22e115de0a08150ef03063f6858ebad283546cac54f309fd277c",
+    "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/gKYxphmy/sit%21-1.2.4.5%2B1.21.5.jar"
   },
   "Gyser": {
     "sha512": "dfac055ffc8dfe55933801f65e23277f1e0ca19259de0336b294079fcf98e25d997628cd804612695a0367ec5fe88030fcb67788483180d52e2884a551aa6fd3",
