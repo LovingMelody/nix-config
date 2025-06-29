@@ -61,9 +61,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "3084ba1243e835b858184a12bb63a1e5d4f93ed8",
+      "revision": "f77e98b57dd92ea78d7745e1bff96cfc899a1d17",
       "url": null,
-      "hash": "1ipk747ak8m9h41qyrq17awqr9cmy6v33grib0m72hia4ayf3qav"
+      "hash": "0q7acd8ks9z0wy3fdj73sa1xdz51s7g2x449dyx6d6g5mqn7sr9a"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -145,9 +145,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "ed8954e8cf2d92d7f2df22aeeb9b6087f76ef89e",
-      "url": "https://github.com/mpv-player/mpv/archive/ed8954e8cf2d92d7f2df22aeeb9b6087f76ef89e.tar.gz",
-      "hash": "1ffbv3nnjnl35vnx4f3ywd0gl70h74zk44il8qj1h0akw6m8b8zk"
+      "revision": "591522c38fcae403980989c060e332227aa5c04e",
+      "url": "https://github.com/mpv-player/mpv/archive/591522c38fcae403980989c060e332227aa5c04e.tar.gz",
+      "hash": "0c2k6ahipdjwhamr0dylxdv9aclrx55bmqq9cc2f6kg1g8ypqcm7"
     },
     "npins": {
       "type": "GitRelease",
