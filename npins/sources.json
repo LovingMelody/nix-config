@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "c2d59b066021e729922f56d73cce9e8bf1c4686a",
+      "revision": "eb0d67a0111f4263b0fbb84948eb875ec225d848",
       "url": null,
-      "hash": "1i85hgfyk6nkcm0j4csjkf2maik8sm76a7d4ssixx9pva3qclm1f"
+      "hash": "1pjlivmjh74agzg2vliqi1nrw9qa8gwh65wq33ff64jcdwkfvsml"
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -35,9 +35,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "36d811356f59c0d0668621187fd3aa4d4ce6ce93",
-      "url": "https://gitlab.com/api/v4/projects/Ph42oN%2Fdxvk-gplasync/repository/archive.tar.gz?sha=36d811356f59c0d0668621187fd3aa4d4ce6ce93",
-      "hash": "19qcigj3m8kk69i981am5fiis1dcnjp6f4ylwghlj8zz1z5ig986"
+      "revision": "94eb0399ee647efdf630454ee1efe53130ed3fab",
+      "url": "https://gitlab.com/api/v4/projects/Ph42oN%2Fdxvk-gplasync/repository/archive.tar.gz?sha=94eb0399ee647efdf630454ee1efe53130ed3fab",
+      "hash": "1g4c7ca96g8h586sy1fjj8vs8r5z2zxd2803sqdyxrc29jchzybl"
     },
     "dxvk-nvapi": {
       "type": "Git",
@@ -61,9 +61,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "f77e98b57dd92ea78d7745e1bff96cfc899a1d17",
+      "revision": "a4fb9e6d3388ae7984c15df9bed2a90bba0c5aa1",
       "url": null,
-      "hash": "0q7acd8ks9z0wy3fdj73sa1xdz51s7g2x449dyx6d6g5mqn7sr9a"
+      "hash": "18lcjdvx0xmw45w19apy9r2k4jd2j7kic84mca4j36l29n77j75a"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -145,9 +145,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "591522c38fcae403980989c060e332227aa5c04e",
-      "url": "https://github.com/mpv-player/mpv/archive/591522c38fcae403980989c060e332227aa5c04e.tar.gz",
-      "hash": "0c2k6ahipdjwhamr0dylxdv9aclrx55bmqq9cc2f6kg1g8ypqcm7"
+      "revision": "a043624ea6a3ae21e62e74d4905034095a7fca16",
+      "url": "https://github.com/mpv-player/mpv/archive/a043624ea6a3ae21e62e74d4905034095a7fca16.tar.gz",
+      "hash": "1waix0zbppidbfj0mgz46n1b1zf8wd5k7hayr51im604fdm6ji76"
     },
     "npins": {
       "type": "GitRelease",
