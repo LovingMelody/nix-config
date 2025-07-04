@@ -48,9 +48,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "5fa4b3c7cddc3c8cd6a55b4489f12433703a208b",
+      "revision": "8703d5c57fe57d13f289592d8c7f793b942c6cea",
       "url": null,
-      "hash": "0gp4vfpjnkliam7njv0rdmyxicknvng68ib76rnc1xqn6swk9yv9"
+      "hash": "10b4y1p92g23a70szfq46995rysypgbrgvic3jvikifhpdcxd9v2"
     },
     "gallery-dl": {
       "type": "Git",
@@ -61,9 +61,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "a4fb9e6d3388ae7984c15df9bed2a90bba0c5aa1",
+      "revision": "d349c248c079cc70d043a8f312e427fe4c7c03a1",
       "url": null,
-      "hash": "18lcjdvx0xmw45w19apy9r2k4jd2j7kic84mca4j36l29n77j75a"
+      "hash": "1w335wj4kbypxdlbra07hsv8j9pj2vz8bid9zkbqayvr0f4npkaw"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -145,9 +145,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "a043624ea6a3ae21e62e74d4905034095a7fca16",
-      "url": "https://github.com/mpv-player/mpv/archive/a043624ea6a3ae21e62e74d4905034095a7fca16.tar.gz",
-      "hash": "1waix0zbppidbfj0mgz46n1b1zf8wd5k7hayr51im604fdm6ji76"
+      "revision": "614e3c42239d771adede547fbf4d4d364dbd8c68",
+      "url": "https://github.com/mpv-player/mpv/archive/614e3c42239d771adede547fbf4d4d364dbd8c68.tar.gz",
+      "hash": "101wfdhj0vsw41k56pv8dkx1nv5wdfhcvvg5fa47mqgh4f91b8mg"
     },
     "npins": {
       "type": "GitRelease",
@@ -213,9 +213,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "c67e577638f91522d33d03a547da335f0470e970",
-      "url": "https://github.com/dougg3/obs-ios-camera-source/archive/c67e577638f91522d33d03a547da335f0470e970.tar.gz",
-      "hash": "04zd7mjmcf0bqzm2zpa146zvalzw44mk472pc5msgdjx164m2vl9"
+      "revision": "7fd6cf4ee5f289fdb424ef4c118b2920805f35f9",
+      "url": "https://github.com/dougg3/obs-ios-camera-source/archive/7fd6cf4ee5f289fdb424ef4c118b2920805f35f9.tar.gz",
+      "hash": "1fwlnrr3r4biqrp12gncgm8v3pqqpdgb50jqfgwg65dn4b6yw1vn"
     },
     "replay.fish": {
       "type": "Git",
