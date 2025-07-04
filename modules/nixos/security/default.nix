@@ -33,6 +33,7 @@ in {
 
   config = mkMerge [
     (mkIf cfg.enable {
+      services.pcscd.enable = true;
       networking.firewall.enable = true;
       boot = {
         kernel.sysctl = {
