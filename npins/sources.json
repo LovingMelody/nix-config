@@ -145,9 +145,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "db7bc5949a7f6742131285f1383ff5a90d918a84",
-      "url": "https://github.com/mpv-player/mpv/archive/db7bc5949a7f6742131285f1383ff5a90d918a84.tar.gz",
-      "hash": "0fm4c98phjpd4njyff4wvlq4dbg9mhi0a4brv70yzrzsj1f3m353"
+      "revision": "7df09125f3b2e39d11debd3fc99ee88590663f32",
+      "url": "https://github.com/mpv-player/mpv/archive/7df09125f3b2e39d11debd3fc99ee88590663f32.tar.gz",
+      "hash": "1cws1dqk14mg2gh1lyxbv8isrscxffkvf5h91lf5vwd987g51dwf"
     },
     "npins": {
       "type": "GitRelease",
