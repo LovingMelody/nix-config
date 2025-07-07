@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }: let
   cfg = config.TM.programs.firefox;
@@ -28,7 +27,7 @@ in {
       "application/x-extension-xhtml" = "firefox.desktop";
       "application/x-extension-xht" = "firefox.desktop";
     };
-    stylix.targets.firefox.profileNames = ["homeManager"];
+    stylix.targets.firefox.profileNames = ["default"];
     programs.firefox = {
       enable = true;
       policies = {
@@ -84,8 +83,9 @@ in {
           };
         };
       };
-      profiles.homeManager = {
+      profiles.default = {
         isDefault = true;
+        extensions.force = true;
         settings = {
           "apz.overscroll.enabled" = true;
           "browser.aboutConfig.showWarning" = false;
