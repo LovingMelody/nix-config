@@ -51,7 +51,7 @@ in {
       inherit (cfg.starCitizen) enable;
       package = pkgs.star-citizen;
       umu.enable = false;
-      disableEAC = true;
+      disableEAC = false;
       preCommands = let
         vars = {
           DXVK_HUD = "compiler";
