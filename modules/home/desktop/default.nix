@@ -19,6 +19,7 @@ in {
       programs = {
         chromium.enable = true;
         firefox.enable = true;
+        thunderbird.enable = true;
         geeqie.enable = true;
         # FIXME: Disable due to build errors
         kitty.enable = false;
