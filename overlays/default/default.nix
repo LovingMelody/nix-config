@@ -7,7 +7,7 @@
   inherit (inputs) nixpkgs nix-reshade;
   inherit (lib.TM.package-helper) pins patchLibcuda;
   shortRev = s: builtins.substring 0 7 s;
-  allowGplAsync = pins.dxvk-gplasync.revision != "36d811356f59c0d0668621187fd3aa4d4ce6ce93";
+  allowGplAsync = false; # pins.dxvk-gplasync.revision != "36d811356f59c0d0668621187fd3aa4d4ce6ce93";
   useUpstreamPatch = pins.dxvk-gplasync.revision != "8a55443c13a5c8b0a09b6859edaa54e3576518b3";
 in
   final: prev: let
@@ -108,6 +108,7 @@ in
       wine = final.wine-astral-ntsync;
     };
     rsi-launcher = prev.rsi-launcher.override {
+      disableEac = true;
       extraEnvVars = {
         DXVK_HUD = "compiler";
         MANGO_HUD = 1;
