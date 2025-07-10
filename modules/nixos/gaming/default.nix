@@ -51,7 +51,7 @@ in {
       inherit (cfg.starCitizen) enable;
       package = pkgs.star-citizen;
       umu.enable = false;
-      disableEAC = true;
+      disableEAC = false;
       preCommands = let
         vars = {
           DXVK_HUD = "compiler";
@@ -125,18 +125,27 @@ in {
     #   "vm.max_map_count" = 16777216;
     #   "fs.file-max" = 524288;
     # };
-    # security.pam.loginLimits = [{
-    #   domain = "*";
-    #   type = "soft";
-    #   item = "nofile";
-    #   value = "16777216";
-    # }];
+    security.pam.loginLimits = [
+      {
+        domain = "*";
+        type = "soft";
+        item = "memlock";
+        value = "unlimited";
+      }
+      {
+        domain = "*";
+        type = "hard";
+        item = "memlock";
+        value = "unlimited";
+      }
+    ];
     environment.systemPackages = [
       pkgs.lug-helper
       pkgs.mangohud
       pkgs.moonlight-qt
       pkgs.steam
       pkgs.gargoyle
+      pkgs.rpcs3
       (pkgs.rsi-launcher.override (_: {
         extraLibs = config.hardware.graphics.extraPackages ++ [config.hardware.graphics.package];
         extraEnvVars = {
