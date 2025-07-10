@@ -89,6 +89,7 @@ in
       reshade-shaders-full
       ;
     reshade-max = nix-reshade.system.packages.${prev.system}.complete;
+    rpcs3 = prev.rpcs3.override {enableDiscordRpc = true;};
     # nix = prev.lix;
     # Overlays go here
     catppuccin-base16 = final.callPackage "${self}/packages/catppuccin-base16" {inherit pins;};
