@@ -64,11 +64,11 @@ in {
         forEach cfg.packages (p: p.override {inherit withVencord withOpenASAR;});
     }
     (mkIf cfg.vencord.enable (mkMerge [
-      {home.file."${cfg.vencord.directory}/settings/quickCss.css".text = cfg.vencord.css;}
-      (mkIf (!builtins.isNull cfg.vencord.config) {
-        home.file."${cfg.vencord.directory}/settings/settings.json".text =
-          builtins.toJSON cfg.vencord.config;
-      })
+      # {home.file."${cfg.vencord.directory}/settings/quickCss.css".text = cfg.vencord.css;}
+      # (mkIf (!builtins.isNull cfg.vencord.config) {
+      #   home.file."${cfg.vencord.directory}/settings/settings.json".text =
+      #     builtins.toJSON cfg.vencord.config;
+      # })
     ]))
   ]);
 }
