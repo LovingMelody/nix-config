@@ -112,6 +112,7 @@
         unique-basenames
         xivlauncher-rb
         gposingway
+        slower
         ;
       inherit (pkgs.obs-studio-plugins) obs-ios-camera-source obs-image-reaction;
       topology-map =

@@ -6,16 +6,15 @@
 }:
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "slower";
-  version = "0.1.0";
+  version = "0.1.2";
 
   src = fetchFromGitHub {
     owner = "LovingMelody";
     repo = "slower";
     rev = "refs/tags/v${finalAttrs.version}";
-    hash = "sha256-gQeQqXPjZDGJTnU3v2Xkxnw5F2KYvxwZjHDK2JOJ7OI=";
+    hash = "sha256-cNnU4I6u5Ual1RBehCJxYJ1d/7nbZaZJNOVfhuPqYHM=";
   };
-
-  cargoSha256 = "04mbjikjwq2w6l2yx60y50ppdnw3l6y9bawik2hy6bq68ajnzvsv";
+  cargoLock.lockFile = finalAttrs.src + "/Cargo.lock";
 
   meta = {
     description = "Rate limit stdout";
