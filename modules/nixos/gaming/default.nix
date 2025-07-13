@@ -142,7 +142,7 @@ in {
     environment.systemPackages = [
       (pkgs.makeAutostartItem {
         name = "Steam";
-        package = config.programs.steam.package;
+        inherit (config.programs.steam) package;
         appendExtraArgs = ["--silent"];
       })
       pkgs.lug-helper
