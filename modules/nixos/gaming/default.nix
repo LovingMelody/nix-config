@@ -141,9 +141,8 @@ in {
     ];
     environment.systemPackages = [
       (pkgs.makeAutostartItem {
-        name = "Steam";
+        name = "steam";
         inherit (config.programs.steam) package;
-        appendExtraArgs = ["--silent"];
       })
       pkgs.lug-helper
       pkgs.mangohud
