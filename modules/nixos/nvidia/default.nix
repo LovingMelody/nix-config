@@ -5,7 +5,7 @@
 }: let
   cfg = config.TM.MyNextGPUWillNotBeNvidia;
   inherit (lib) mkDefault mkEnableOption mkIf;
-  # inherit (lib.TM.package-helper) patchLibcuda;
+  inherit (lib.TM.package-helper) patchLibcuda;
 in {
   options.TM.MyNextGPUWillNotBeNvidia = mkEnableOption "Fix nvidia nonsense";
 
@@ -24,7 +24,7 @@ in {
     };
     hardware = {
       nvidia = {
-        package = mkDefault config.boot.kernelPackages.nvidiaPackages.beta;
+        package = mkDefault (patchLibcuda config.boot.kernelPackages.nvidiaPackages.beta);
         modesetting.enable = mkDefault true;
         nvidiaSettings = mkDefault true;
         powerManagement.enable = mkDefault true;
