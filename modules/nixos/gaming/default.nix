@@ -140,6 +140,11 @@ in {
       }
     ];
     environment.systemPackages = [
+      (pkgs.makeAutostartItem {
+        name = "Steam";
+        package = config.programs.steam.package;
+        appendExtraArgs = ["--silent"];
+      })
       pkgs.lug-helper
       pkgs.mangohud
       pkgs.moonlight-qt
