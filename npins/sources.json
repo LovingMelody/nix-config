@@ -48,9 +48,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "8703d5c57fe57d13f289592d8c7f793b942c6cea",
+      "revision": "0ea231734d60b3ddb22c3a831b1142e3f035de91",
       "url": null,
-      "hash": "10b4y1p92g23a70szfq46995rysypgbrgvic3jvikifhpdcxd9v2"
+      "hash": "0rmhm2sqwgpjpykya4lzaka2ibsjqiqpmvpw6dl3bn63pb0icib6"
     },
     "gallery-dl": {
       "type": "Git",
@@ -61,9 +61,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "0210ffcdd8c8055eadfc97ad38aaac05b3532eb5",
+      "revision": "1686f32a0d04c032bb50f600c74189d67c90e887",
       "url": null,
-      "hash": "1bxq944zgsmwgp2z5k930qhdgxk8f6vb6a2gwk0015zxz3a0kj8s"
+      "hash": "1d6bq5k4jvkn3h0dmnslkhw01m3j0kmf2p5p5s55dbkxl4vlnv00"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -90,9 +90,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "cb5ba18fd1688622eff03488ab7dea9ad44aca33",
-      "url": "https://github.com/garglk/garglk/archive/cb5ba18fd1688622eff03488ab7dea9ad44aca33.tar.gz",
-      "hash": "1s33cdszf7ibajs4s69zxhz18ymi7wzkg7f0p7kq3x5dl2c331zh"
+      "revision": "e39b059804f96639fefd02e6780b7f0c76e09588",
+      "url": "https://github.com/garglk/garglk/archive/e39b059804f96639fefd02e6780b7f0c76e09588.tar.gz",
+      "hash": "1mvglj6r3g67ylzf9mi2vhr8h03ng5i1sqhvpcff09x0jh1iajry"
     },
     "getopts.fish": {
       "type": "Git",
@@ -145,9 +145,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "f471f8cfa51105bee1f887a6f1006e338f125040",
-      "url": "https://github.com/mpv-player/mpv/archive/f471f8cfa51105bee1f887a6f1006e338f125040.tar.gz",
-      "hash": "1lqdh5im2hd7izpngdss7n5zlspsixq9ys0i3hz453k5jj3ymx41"
+      "revision": "bd2118026b9b46da5633724b34e7849eec80f72c",
+      "url": "https://github.com/mpv-player/mpv/archive/bd2118026b9b46da5633724b34e7849eec80f72c.tar.gz",
+      "hash": "19ky4ih0wz8mx1fqi79z6vs0yl2qvr05q7snv66r98ki04sdrjax"
     },
     "npins": {
       "type": "GitRelease",
@@ -241,10 +241,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v0.1.0",
-      "revision": "791341bc012ac26da357f406ee8b77bcb757306f",
-      "url": "https://api.github.com/repos/lovingmelody/slower/tarball/v0.1.0",
-      "hash": "1qpci69xijkhihcirgwqc8bkjz66wijvydvm9s4k2r73fflr01w1"
+      "version": "v0.1.2",
+      "revision": "c2a9796970fabd2e0f57e7f5c977ad32630d1335",
+      "url": "https://api.github.com/repos/lovingmelody/slower/tarball/v0.1.2",
+      "hash": "0wv0xbiqcpz56i4scrfvp7zmv7b0f4i88phhsnjldrdfivhd9nbh"
     },
     "vkd3d-proton": {
       "type": "Git",
