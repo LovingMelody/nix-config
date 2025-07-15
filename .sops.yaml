@@ -9,57 +9,57 @@ creation_rules:
     key_groups:
       - pgp:
         age:
-          - *admin_Melody 
-          - *admin_Melody2 
-          - *host_Snow 
-          - *host_Rotom 
+          - *admin_Melody
+          - *admin_Melody2
+          - *host_Snow
+          - *host_Rotom
   - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
     key_groups:
       - pgp:
         age:
-          - *admin_Melody 
-          - *admin_Melody2 
-          - *host_Snow 
-          - *host_Rotom 
+          - *admin_Melody
+          - *admin_Melody2
+          - *host_Snow
+          - *host_Rotom
   - path_regex: secrets/longview/[^/]+\.(yaml|json|env|ini)$
     key_groups:
       - pgp:
         age:
-          - *admin_Melody 
-          - *admin_Melody2 
+          - *admin_Melody
+          - *admin_Melody2
   - path_regex: secrets/Minecraft/[^/]+\.(yaml|json|env|ini)$
     key_groups:
       - pgp:
         age:
-          - *admin_Melody 
-          - *admin_Melody2 
-          - *host_Snow 
-          - *host_Rotom 
+          - *admin_Melody
+          - *admin_Melody2
+          - *host_Snow
+          - *host_Rotom
   - path_regex: secrets/UPS/[^/]+\.(yaml|json|env|ini)$
     key_groups:
       - ppg:
         age:
-          - *admin_Melody 
-          - *admin_Melody2 
-          - *host_Snow 
+          - *admin_Melody
+          - *admin_Melody2
+          - *host_Snow
   - path_regex: secrets/hosts/Vulpix/[^/]+\.(yaml|json|env|ini)$
     key_groups:
       - pgp:
         age:
-          - *admin_Melody 
-          - *admin_Melody2 
-          - *host_Vulpix 
+          - *admin_Melody
+          - *admin_Melody2
+          - *host_Vulpix
   - path_regex: secrets/hosts/Snow/[^/]+\.(yaml|json|env|ini|bin)$
     key_groups:
       - pgp:
         age:
-          - *admin_Melody 
-          - *admin_Melody2 
-          - *host_Snow 
+          - *admin_Melody
+          - *admin_Melody2
+          - *host_Snow
   - path_regex: secrets/hosts/Rotom/[^/]+\.(yaml|json|env|ini|bin)$
     key_groups:
       - pgp:
         age:
-          - *admin_Melody 
-          - *admin_Melody2 
-          - *host_Rotom 
+          - *admin_Melody
+          - *admin_Melody2
+          - *host_Rotom
