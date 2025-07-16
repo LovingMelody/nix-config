@@ -102,7 +102,7 @@ in {
         packages = [game-devices-udev-rules];
       };
       scx = {
-        enable = mkDefault true;
+        enable = mkDefault false;
       };
     };
     nix.settings = let
