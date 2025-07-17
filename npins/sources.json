@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "614d6a7dfce1a3475cd237442f79916345fcd02e",
+      "revision": "35aa75e68af0927ad5860eb69a5411a08adc20dd",
       "url": null,
-      "hash": "0jinmbsr2cyz5as28wxvj1n9vkkpp6xznh8i6gavn5s2ajy6isql"
+      "hash": "03czzbay0x5p992i58f5dar2ybl9h9r2ylysrmjkxcl8zv7rzkpj"
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -131,10 +131,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v0.42.1",
-      "revision": "4a5d7b31bc2024922b3fc797c23b842e50768b48",
-      "url": "https://api.github.com/repos/kovidgoyal/kitty/tarball/v0.42.1",
-      "hash": "0nmk2d702pv3a1ynsy7v1l4hq9giv2wwcw79w1265p5yi209cvkm"
+      "version": "v0.42.2",
+      "revision": "8f77680bed1d577c4173b71d90ecadb314227d34",
+      "url": "https://api.github.com/repos/kovidgoyal/kitty/tarball/v0.42.2",
+      "hash": "0fkpvh3zvwd5s4m591fgi1dqrc7pm09a9552bmsiqbgr71iwldv0"
     },
     "mpv": {
       "type": "Git",
@@ -145,9 +145,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "5c4c27e6b1c9650134ef5dc122b05e0120333caf",
-      "url": "https://github.com/mpv-player/mpv/archive/5c4c27e6b1c9650134ef5dc122b05e0120333caf.tar.gz",
-      "hash": "1s2ffyvq5caq0zcl2bv8v48km7il76pq7pzq8qsykmf21fydn4qg"
+      "revision": "440f35a26db3fd9f25282bff0f06f4e86e8133c2",
+      "url": "https://github.com/mpv-player/mpv/archive/440f35a26db3fd9f25282bff0f06f4e86e8133c2.tar.gz",
+      "hash": "1f4rdq02vhr99dsjbr9zd33yxvk46sams1rzh985d5f7mybppprr"
     },
     "npins": {
       "type": "GitRelease",
