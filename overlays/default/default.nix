@@ -108,7 +108,7 @@ in
       wine = final.wine-astral-ntsync;
     };
     rsi-launcher = prev.rsi-launcher.override {
-      disableEac = true;
+      disableEac = false;
       extraEnvVars = {
         DXVK_HUD = "compiler";
         MANGO_HUD = 1;
