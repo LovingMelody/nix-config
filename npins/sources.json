@@ -61,9 +61,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "acc89ed59faf5a1117dfe85ac88e8daa78fdf458",
+      "revision": "e0599d35dcfa8c2ccd79f3d88753c4b63a6cc0f3",
       "url": null,
-      "hash": "0fspri45g6b6abb2f1wb4435gzfhb3fck140b9lj12rcnqkg9szj"
+      "hash": "131pac3vklw4bbixg8ky3hm28g0hwxvwkh3vpvznqkp1v5vcahi7"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
