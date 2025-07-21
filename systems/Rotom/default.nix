@@ -91,6 +91,7 @@ in {
         PHOTOPRISM_DATABASE_NAME = "photoprism";
         PHOTOPRISM_DATABASE_USER = "photoprism";
         PHOTOPRISM_DATABASE_PASSWORD = config.services.photoprism.passwordFile;
+        PHOTOPRISM_INDEX_SCHEDULE = "@every 42h";
       };
     };
     flaresolverr.enable = false;
