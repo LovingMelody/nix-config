@@ -78,7 +78,7 @@
               inputs.home-manager.nixosModules.home-manager
               inputs.nix-gaming.nixosModules.pipewireLowLatency
               inputs.nix-gaming.nixosModules.platformOptimizations
-              inputs.nix-gaming.nixosModules.ntsync
+              inputs.nix-gaming.nixosModules.wine
               inputs.nix-citizen.nixosModules.StarCitizen
               inputs.nix-minecraft.nixosModules.minecraft-servers
               # inputs.nixos-cosmic.nixosModules.default

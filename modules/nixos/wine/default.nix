@@ -8,9 +8,9 @@
   inherit
     (lib)
     mkIf
-    getExe'
     mkEnableOption
     mkOption
+    mkDefault
     ;
 in {
   options.TM.programs.wine = {
@@ -23,12 +23,10 @@ in {
 
   config = mkIf cfg.binfmt {
     environment.systemPackages = [cfg.package];
-    boot.binfmt = {
-      emulatedSystems = ["x86_64-windows"];
-      registrations.x86_64-windows = {
-        interpreter = getExe' cfg.package "wine";
-        interpreterSandboxPath = "${cfg.package}/";
-      };
+    programs.wine = {
+      binfmt = true;
+      enable = true;
+      package = cfg.package;
     };
   };
 }

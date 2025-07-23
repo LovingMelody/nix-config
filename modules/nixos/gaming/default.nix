@@ -94,7 +94,12 @@ in {
         platformOptimizations.enable = true;
       };
     };
-    programs.wine.ntsync.enable = true;
+    programs.wine = {
+      ntsync = true;
+      enable = true;
+      package = mkDefault pkgs.wine-astral-ntsync;
+      binfmt = true;
+    };
 
     services = with pkgs; {
       xserver.modules = [xorg.xf86inputjoystick];
