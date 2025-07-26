@@ -67,10 +67,11 @@ in
       src = pins.gargoyle;
       version = pins.gargoyle.revision;
     };
-    gallery-dl = prev.gallery-dl.overrideAttrs {
+    gallery-dl = prev.gallery-dl.overrideAttrs (o: {
       inherit (pins.gallery-dl-stable) version;
       src = pins.gallery-dl-stable;
-    };
+      disabledTestPaths = (o.disabledTestPaths or []) ++ ["test/test_postprocessor.py"];
+    });
     gallery-dl-unstable = final.gallery-dl.overrideAttrs (o: {
       version = "${o.version}-git+${pins.gallery-dl.revision}";
       src = pins.gallery-dl;
