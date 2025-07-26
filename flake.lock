@@ -575,11 +575,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1753304605,
-        "narHash": "sha256-OqoGn+QtxM/Hid1u3CcUEoRNEU82eVRwJYAVUP6+Rvc=",
+        "lastModified": 1753507718,
+        "narHash": "sha256-5H6htbW7ED9vIMA7/5FppKsGmjboece0AtnsyBm/tN4=",
         "owner": "LovingMelody",
         "repo": "nix-citizen",
-        "rev": "7138cc9a8089fc436005e5524f375fe840af24b9",
+        "rev": "79364cbeb4df9fc9ef9a2ac88eca24a71a9aee59",
         "type": "github"
       },
       "original": {
@@ -914,11 +914,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1753418588,
-        "narHash": "sha256-pdpkbarGU0sP38sWt56FQRRGnpOy6pGfVkoRNP3fhRw=",
+        "lastModified": 1753505055,
+        "narHash": "sha256-jQKnNATDGDeuIeUf7r0yHnmirfYkYPHeF0N2Lv8rjPE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "a0a889d240ff8fda7209aec00d1877d440b23735",
+        "rev": "7be0239edbf0783ff959f94f9728db414be73002",
         "type": "github"
       },
       "original": {
