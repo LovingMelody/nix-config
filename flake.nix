@@ -16,6 +16,7 @@
       // inputs.home-manager.lib);
     nixpkgs-overlays = [
       inputs.nix-citizen.overlays.default
+      inputs.nix-citizen.overlays.updated-vulkan-sdk
       inputs.self.overlays.default
       inputs.nix-minecraft.overlays.default
       inputs.nix-topology.overlays.default
