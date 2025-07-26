@@ -20,7 +20,8 @@ in {
         chromium.enable = true;
         firefox.enable = true;
         thunderbird.enable = true;
-        geeqie.enable = true;
+        # FIXME: disabled due to https://github.com/NixOS/nixpkgs/pull/427813
+        geeqie.enable = false;
         # FIXME: Disable due to build errors
         kitty.enable = false;
         mpv.enable = true;
