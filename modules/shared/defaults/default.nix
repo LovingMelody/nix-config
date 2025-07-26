@@ -29,7 +29,8 @@ in {
     qt.enable = config.TM.isGui;
     nixpkgs.config = {
       allowUnfree = true;
-      permittedInsecurePackages = [];
+      # FIXME: Remove once darktable no longer requires this
+      permittedInsecurePackages = ["libsoup-2.74.3"];
       cudaSupport = config.TM.MyNextGPUWillNotBeNvidia or false;
       overlays = mkIf (! (osConfig.home-manager.useGlobalPkgs or false)) nixpkgs-overlays;
     };
