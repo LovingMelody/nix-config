@@ -10,7 +10,6 @@
     mkIf
     mkEnableOption
     mkOption
-    mkDefault
     ;
 in {
   options.TM.programs.wine = {
@@ -26,7 +25,7 @@ in {
     programs.wine = {
       binfmt = true;
       enable = true;
-      package = cfg.package;
+      inherit (cfg) package;
     };
   };
 }

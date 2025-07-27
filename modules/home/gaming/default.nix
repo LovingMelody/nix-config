@@ -112,5 +112,14 @@ in {
         onChange = lib.getExe smart-link;
       };
     };
+    home.file.".wine/.wineprefix-preparer" = {
+      source = pkgs.wineprefix-preparer-git;
+      executable = true;
+      onChange = lib.getExe (pkgs.writeShellScriptBin "update-prefix" ''
+        PATH="${lib.strings.makeBinPath [pkgs.wine-astral]}:$PATH"
+        WINEPREFIX="$HOME/.wine"
+        ${lib.getExe config.home.file.".wine/.wineprefix-preparer".source}
+      '');
+    };
   };
 }
