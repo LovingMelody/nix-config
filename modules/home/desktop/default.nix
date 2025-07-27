@@ -225,7 +225,7 @@ in {
       };
       packages = with pkgs; [
         zathura
-        audacity
+        # audacity
         blanket
         cryptomator
         #
