@@ -42,7 +42,7 @@ in {
     # TM.reshade.enable = true;
     programs.mangohud = {
       enable = true;
-      enableSessionWide = mkDefault true;
+      enableSessionWide = mkDefault false; # Disabled since it's rendering on Gnome Shell
       settings = {
         alpha = mkForce 0.6;
         cpu_temp = true;
