@@ -159,6 +159,7 @@ in
     wineprefix-preparer = final.callPackage ./wineprefix-preparer.nix {
       inherit (final) dxvk-w64 dxvk-w32 vkd3d-proton-w64 vkd3d-proton-w32;
     };
+    wineprefix-preparer-git = final.wineprefix-preparer;
     discord = discordEnableKrisp (prev.discord.override {
       withOpenASAR = true;
       withVencord = true;
