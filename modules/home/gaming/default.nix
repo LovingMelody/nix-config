@@ -37,6 +37,18 @@ in {
       };
       smartLink = mkEnableOption "Smartly link nvapi to wine & ~/Games" // {default = cfg.dxvk-nvapi.enable;};
     };
+    prepareWinePrefix = {
+      enable = mkEnableOption "Prepare Wine prefix for gaming" // {default = true;};
+      package = mkOption {
+        type = lib.types.package;
+        default = pkgs.wineprefix-preparer-git;
+      };
+      paths = mkOption {
+        type = lib.types.attrsOf lib.types.str;
+        default = {default = "${config.home.homeDirectory}/.wine";};
+        description = "Paths to prepare for gaming, defaults to $HOME/.wine";
+      };
+    };
   };
   config = mkIf cfg.enable {
     # TM.reshade.enable = true;
@@ -112,14 +124,28 @@ in {
         onChange = lib.getExe smart-link;
       };
     };
-    home.file.".wine/.wineprefix-preparer" = {
-      source = pkgs.wineprefix-preparer-git;
-      executable = true;
-      onChange = lib.getExe (pkgs.writeShellScriptBin "update-prefix" ''
-        PATH="${lib.strings.makeBinPath [pkgs.wine-astral]}:$PATH"
-        WINEPREFIX="$HOME/.wine"
-        ${lib.getExe config.home.file.".wine/.wineprefix-preparer".source}
-      '');
-    };
+
+    # TODO: Check if wineprefix is already running
+    systemd.user.services = mkIf cfg.prepareWinePrefix.enable (lib.attrsets.mapAttrs' (name: value:
+      lib.attrsets.nameValuePair ("update-wine-prefix-" + name) {
+        Unit = {
+          Description = "Update default wine prefix";
+          requiresMountsFor = [value];
+        };
+        Service = {
+          Type = "oneshot";
+          RemainsAfterExit = false;
+          ExecStart = lib.getExe (pkgs.writeShellScriptBin "update-wine-prefix" ''
+            # This will check if the wine server is currently running
+            wineserver -k20 || ${lib.getExe cfg.prepareWinePrefix.package}
+          '');
+
+          Environment = [
+            ''WINEPREFIX=${value}''
+            ''PATH="${lib.strings.makeBinPath [pkgs.wine-astral cfg.prepareWinePrefix.package]}:$PATH"''
+          ];
+        };
+      })
+    cfg.prepareWinePrefix.paths);
   };
 }
