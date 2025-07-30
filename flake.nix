@@ -206,6 +206,7 @@
         nixpkgs.follows = "nixpkgs";
         systems.follows = "systems";
         treefmt-nix.follows = "treefmt-nix";
+        flake-parts.follows = "flake-parts";
       };
     };
     nix-eval-jobs = {
@@ -304,6 +305,7 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs = {
         nixpkgs.follows = "nixpkgs";
+        systems.follows = "systems";
       };
     };
     stylix = {
@@ -314,6 +316,7 @@
         nixpkgs.follows = "nixpkgs";
         systems.follows = "systems";
         tinted-schemes.follows = "schemes";
+        flake-parts.follows = "flake-parts";
       };
     };
     systems.url = "github:nix-systems/default";
