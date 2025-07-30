@@ -139,6 +139,7 @@
       inputs = {
         nixpkgs.follows = "nixpkgs";
         flake-compat.follows = "flake-compat";
+        rust-overlay.follows = "rust-overlay";
       };
     };
     catppuccin = {
