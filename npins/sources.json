@@ -61,9 +61,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "15517ad45cf63ae59f499318eb1e7491eb6b6a8b",
+      "revision": "78f81ee48a3a71377b474b88473a997084eca5d0",
       "url": null,
-      "hash": "15sgvk81s61v4yzzv1s5ksr4z77qhmv7ynyn34zrx5x41g72hgpz"
+      "hash": "125b9wdjbxqdvb9hdivgpaml8cmxxlhnq3wwgxc5yvayji65679y"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -174,9 +174,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "58a80435caf1ff4f62b94592f508fba4c3776c97",
-      "url": "https://github.com/catppuccin/obs/archive/58a80435caf1ff4f62b94592f508fba4c3776c97.tar.gz",
-      "hash": "03s7mnpi490123bq0bbx3vvc5lwnapmdfyygy2sp465xvwqrlayq"
+      "revision": "05c55ffe499c183c98be469147f602c3f8e84b87",
+      "url": "https://github.com/catppuccin/obs/archive/05c55ffe499c183c98be469147f602c3f8e84b87.tar.gz",
+      "hash": "03wh3m87x6y4ny3i3ddx16y642m3rpw0qid5amr5rrjfxixgfg3v"
     },
     "obs-backgroundremoval": {
       "type": "Git",
@@ -255,9 +255,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "6f32f627b37c6779904e38d2d65ea7589d0977f5",
+      "revision": "e42f95cbd56ea91e92f9b4398ccd2b882b35e6ef",
       "url": null,
-      "hash": "0a0dr1945paipwy68bvi0238rmlkvicwglb48pg6jlixwyfzw9k9"
+      "hash": "00yiir5f5fc8kynnw196jgshaim6mab6fff0vhymghlvv81c0j4j"
     }
   },
   "version": 5
