@@ -90,6 +90,7 @@ in {
         enable = true;
         remotePlay.openFirewall = true;
         extraCompatPackages = with pkgs; [proton-ge-bin];
+        extraPackages = [config.services.lsfg-vk.package];
         protontricks.enable = true;
         platformOptimizations.enable = true;
       };
@@ -102,6 +103,10 @@ in {
     };
 
     services = with pkgs; {
+      lsfg-vk = {
+        enable = true;
+        ui.enable = true; # installs gui for configuring lsfg-vk
+      };
       xserver.modules = [xorg.xf86inputjoystick];
       udev = {
         packages = [game-devices-udev-rules];
@@ -152,11 +157,11 @@ in {
       pkgs.lug-helper
       pkgs.mangohud
       pkgs.moonlight-qt
-      pkgs.steam
+      config.programs.steam.package
       pkgs.gargoyle
       pkgs.rpcs3
       (pkgs.rsi-launcher.override (_: {
-        extraLibs = _: config.hardware.graphics.extraPackages ++ [config.hardware.graphics.package];
+        extraLibs = _: config.hardware.graphics.extraPackages ++ [config.hardware.graphics.package config.services.lsfg-vk.package];
         extraEnvVars = {
           DXVK_HUD = "compiler";
           MANGO_HUD = 1;

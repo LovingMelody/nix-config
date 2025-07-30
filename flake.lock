@@ -486,6 +486,27 @@
         "type": "github"
       }
     },
+    "lsfg-vk-flake": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1753906499,
+        "narHash": "sha256-9J/lWQcE3+wCQFBlujQ4t52AC1xa+wHBdP0Z+dk7sJA=",
+        "owner": "pabloaul",
+        "repo": "lsfg-vk-flake",
+        "rev": "754f64f7e489ba16ebc3e77ad8f480c50b5a428c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pabloaul",
+        "ref": "main",
+        "repo": "lsfg-vk-flake",
+        "type": "github"
+      }
+    },
     "mnw": {
       "locked": {
         "lastModified": 1748710831,
@@ -1012,6 +1033,7 @@
         "ini-merger": "ini-merger",
         "lanzaboote": "lanzaboote",
         "lib-aggregate": "lib-aggregate",
+        "lsfg-vk-flake": "lsfg-vk-flake",
         "nix-citizen": "nix-citizen",
         "nix-eval-jobs": "nix-eval-jobs",
         "nix-gaming": "nix-gaming",
