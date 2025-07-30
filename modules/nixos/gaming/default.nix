@@ -156,7 +156,7 @@ in {
       pkgs.gargoyle
       pkgs.rpcs3
       (pkgs.rsi-launcher.override (_: {
-        extraLibs = config.hardware.graphics.extraPackages ++ [config.hardware.graphics.package];
+        extraLibs = _: config.hardware.graphics.extraPackages ++ [config.hardware.graphics.package];
         extraEnvVars = {
           DXVK_HUD = "compiler";
           MANGO_HUD = 1;
