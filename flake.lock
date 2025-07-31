@@ -493,11 +493,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1753906499,
-        "narHash": "sha256-9J/lWQcE3+wCQFBlujQ4t52AC1xa+wHBdP0Z+dk7sJA=",
+        "lastModified": 1753922661,
+        "narHash": "sha256-Svali4SeFf64KRU3Plhr/BFa7mmjtpDkLhyaUxtAFqg=",
         "owner": "pabloaul",
         "repo": "lsfg-vk-flake",
-        "rev": "754f64f7e489ba16ebc3e77ad8f480c50b5a428c",
+        "rev": "cdcec1d2be7541113d9b5ce40a28856458b1fad8",
         "type": "github"
       },
       "original": {
@@ -700,11 +700,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1753842237,
-        "narHash": "sha256-hbDXVQBilvccF8SrbwNO3LhM1zMZlVqhAJBE5bkpT2Y=",
+        "lastModified": 1753928630,
+        "narHash": "sha256-ASqyvmJ2EEUCyDJGMHRQ1ZqWnCd4SiVd7hi7dGBuSvw=",
         "owner": "Infinidoge",
         "repo": "nix-minecraft",
-        "rev": "75d4eacfb24ffb1b0b9fee2d64d45dd689400e16",
+        "rev": "30af81148ee29a4a13c938c25d3e68877b1b27fb",
         "type": "github"
       },
       "original": {
@@ -1162,11 +1162,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1753896214,
-        "narHash": "sha256-oHSPFAGuIx1VwKS8j0ADEtO8rteZY9EMSMvj1SaoxFA=",
+        "lastModified": 1753919664,
+        "narHash": "sha256-U7Ts8VbVD4Z6n67gFx00dkpQJu27fMu173IUopX3pNI=",
         "owner": "nix-community",
         "repo": "stylix",
-        "rev": "3b6731f6f065fa9936d94f188b0c8cf7a33cf04c",
+        "rev": "30f5022236cf8dd257941cb0f910e198e7e464c7",
         "type": "github"
       },
       "original": {
