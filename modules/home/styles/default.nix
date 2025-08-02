@@ -50,17 +50,17 @@ in {
     };
     gtk = {
       enable = mkDefault config.TM.isGui;
-      iconTheme = {
-        package = mkDefault pkgs.adwaita-icon-theme;
-        name = mkDefault "adwaita-icon-theme";
-      };
     };
+    catppuccin.gtk.icon.enable = false;
     stylix = {
       iconTheme = {
         enable = true;
-        package = pkgs.adwaita-icon-theme;
-        light = "Adwaita";
-        dark = "Adwaita";
+        package = pkgs.catppuccin-papirus-folders.override {
+          accent = lib.toLower config.TM.styles.accent;
+          flavor = lib.toLower config.TM.styles.flavor;
+        };
+        light = "Papirus-Light";
+        dark = "Papirus-Dark";
       };
       targets = {
         kitty.enable = false;

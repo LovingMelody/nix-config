@@ -195,7 +195,7 @@ in {
           package = pkgs.catppuccin-cursors."${toLower cfg.flavor}${toTitle config.catppuccin.accent}";
           size = mkDefault 32;
         };
-        # Don't define what defined by catppuccin
+        # HINT: Don't define what defined by catppuccin
         targets = {
           nvf.enable = false;
           gtk.enable = mkDefault config.TM.isGui;
