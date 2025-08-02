@@ -13,10 +13,6 @@ in {
     services.syncthing = {
       enable = true;
       tray.enable = config.TM.isGui;
-      settings.options = {
-        relaysEnabled = false;
-        urAccepted = 0;
-      };
     };
   };
 }
