@@ -178,6 +178,12 @@ in {
 
     boot = {
       kernelPackages = cfg.kernel;
+      kernelPatches = [
+        {
+          name = "0001-cachyos-base-all";
+          patch = "${lib.TM.package-helper.pins.cachy-kernel-patches}/${lib.versions.majorMinor config.boot.kernelPackages.kernel.version}/all/0001-cachyos-base-all.patch";
+        }
+      ];
     };
 
     hardware = {

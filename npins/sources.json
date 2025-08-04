@@ -13,6 +13,19 @@
       "url": "https://github.com/catppuccin/base16/archive/99aa911b29c9c7972f7e1d868b6242507efd508c.tar.gz",
       "hash": "0bg48rvad507dr293z6q9kgjgxajp943gk2d31b1aw75386isyhw"
     },
+    "cachy-kernel-patches": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "cachyos",
+        "repo": "kernel-patches"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "476c1b87e2e92c1fa02a14f2a22cd94d2ecd4183",
+      "url": "https://github.com/cachyos/kernel-patches/archive/476c1b87e2e92c1fa02a14f2a22cd94d2ecd4183.tar.gz",
+      "hash": "1n1ind5l5xla38q95hskc1vs8aqmr42q7yjrlzijvm20v6yl9811"
+    },
     "dxvk": {
       "type": "Git",
       "repository": {
