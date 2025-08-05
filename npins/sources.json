@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "efd782107507ff797c0803dc12dcff1219eeb68d",
+      "revision": "9dfdeb05a7df0d8428c1ffdc9809d1ce855dafbc",
       "url": null,
-      "hash": "1sykrl9j144km6qv57b7vygg1wcqd72qifrgzqr7x7b56a0k6bvx"
+      "hash": "10nl5mx4v5zpnv7fv2knpc0jvasrmq1rmhcpihw4hf1mlir4sr7q"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -103,9 +103,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "e39b059804f96639fefd02e6780b7f0c76e09588",
-      "url": "https://github.com/garglk/garglk/archive/e39b059804f96639fefd02e6780b7f0c76e09588.tar.gz",
-      "hash": "1mvglj6r3g67ylzf9mi2vhr8h03ng5i1sqhvpcff09x0jh1iajry"
+      "revision": "645ee4da41e3a165c67482e61b68a56f448f5083",
+      "url": "https://github.com/garglk/garglk/archive/645ee4da41e3a165c67482e61b68a56f448f5083.tar.gz",
+      "hash": "1wdpximaxnv838lki8rlkypmiyw2xys4qy99abadafyfgdibflwl"
     },
     "getopts.fish": {
       "type": "Git",
@@ -158,9 +158,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "86e12929aa0bbc61946d3804982acf887786a7cb",
-      "url": "https://github.com/mpv-player/mpv/archive/86e12929aa0bbc61946d3804982acf887786a7cb.tar.gz",
-      "hash": "0vddfdh84h2q98g6pmicnshlrz740paiwrjay2rnpal9gib7yqv1"
+      "revision": "1d71523407bc1386ff2226331a8034dd26edf435",
+      "url": "https://github.com/mpv-player/mpv/archive/1d71523407bc1386ff2226331a8034dd26edf435.tar.gz",
+      "hash": "1fb2mrdchk12p1rl6p3b5ajkfspi9r6yf33nsvi57cpjvsrmzzsz"
     },
     "npins": {
       "type": "GitRelease",
@@ -268,9 +268,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "e42f95cbd56ea91e92f9b4398ccd2b882b35e6ef",
+      "revision": "923127f70032741e3455d075d1998a5c5c00f6b6",
       "url": null,
-      "hash": "00yiir5f5fc8kynnw196jgshaim6mab6fff0vhymghlvv81c0j4j"
+      "hash": "0g3c14n63mzds4djarfhiyg3lkzz8agyap0qf1s1gsly2x5czyjr"
     }
   },
   "version": 5
