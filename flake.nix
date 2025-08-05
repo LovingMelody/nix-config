@@ -98,37 +98,37 @@
         };
     in
       builtins.mapAttrs (name: _: mkHost name) (filterAttrs (n: t: t == "directory" && (! builtins.elem n ["Melodys-MBP"])) (builtins.readDir "${self}/systems"));
-    packages =
-      forAllSystems (pkgs: {
-        inherit
-          (pkgs)
-          star-citizen
-          rsi-launcher
-          wine-astral
-          wine-astral-ntsync
-          catppuccin-base16
-          gargoyle
-          gallery-dl
-          gallery-dl-unstable
-          nitch
-          rename-padded-numbers
-          textools
-          unique-basenames
-          xivlauncher-rb
-          gposingway
-          slower
-          ;
-        inherit (pkgs.obs-studio-plugins) obs-ios-camera-source obs-image-reaction;
-        topology-map =
-          (import inputs.nix-topology {
-            inherit pkgs;
-            modules = [
-              ./topology
-              {inherit (self) nixosConfigurations;}
-            ];
-          }).config.output;
-      })
-      // {x86_64-linux.installer-iso = self.nixosConfigurations.installer.config.system.build.images.iso-installer;};
+    packages = forAllSystems (pkgs: {
+      inherit
+        (pkgs)
+        star-citizen
+        rsi-launcher
+        wine-astral
+        wine-astral-ntsync
+        catppuccin-base16
+        gargoyle
+        gallery-dl
+        gallery-dl-unstable
+        nitch
+        rename-padded-numbers
+        textools
+        unique-basenames
+        xivlauncher-rb
+        gposingway
+        slower
+        ;
+      inherit (pkgs.obs-studio-plugins) obs-ios-camera-source obs-image-reaction;
+      topology-map =
+        (import inputs.nix-topology {
+          inherit pkgs;
+          modules = [
+            ./topology
+            {inherit (self) nixosConfigurations;}
+          ];
+        }).config.output;
+
+      installer-iso = self.nixosConfigurations.installer.config.system.build.images.iso-installer;
+    });
   };
   nixConfig = {
     extra-substituters = ["https://cache.garnix.io"];
