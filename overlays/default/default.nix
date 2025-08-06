@@ -100,7 +100,7 @@ in
     catppuccin-obs = final.callPackage "${self}/packages/catppuccin-obs" {inherit pins;};
     nitch = final.callPackage "${self}/packages/nitch" {};
     unique-basenames = final.callPackage "${self}/packages/unique-basenames" {};
-    textools = final.callPackage "${self}/packages/textools" {};
+    textools = final.callPackage "${self}/packages/textools" {wine = final.wine-astral;};
     star-citizen = prev.star-citizen.override {
       preCommands = ''
         export DXVK_LOG_LEVEL=debug
