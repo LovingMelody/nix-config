@@ -116,6 +116,10 @@
         xivlauncher-rb
         gposingway
         slower
+        firefox
+        brave
+        chromium
+        discord
         ;
       inherit (pkgs.obs-studio-plugins) obs-ios-camera-source obs-image-reaction;
       topology-map =
