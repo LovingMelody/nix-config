@@ -158,6 +158,7 @@ in {
   };
 
   services = {
+    gnome.gnome-remote-desktop.enable = true;
     hardware.openrgb = {
       enable = true;
       motherboard = "intel";
