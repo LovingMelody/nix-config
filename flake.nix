@@ -121,6 +121,7 @@
         chromium
         discord
         ;
+      inherit (pkgs.kdePackages) qtwebengine;
       inherit (pkgs.obs-studio-plugins) obs-ios-camera-source obs-image-reaction;
       topology-map =
         (import inputs.nix-topology {
