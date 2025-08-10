@@ -109,7 +109,7 @@ in
       inherit (final) wineprefix-preparer;
       wine = final.wine-astral-ntsync;
     };
-    rsi-launcher = prev.rsi-launcher.override {
+    rsi-launcher = prev.rsi-launcher-git.override {
       disableEac = false;
       extraEnvVars = {
         DXVK_HUD = "compiler";
