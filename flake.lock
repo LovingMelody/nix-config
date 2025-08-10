@@ -559,11 +559,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1754771580,
-        "narHash": "sha256-Taxw38uhwSEYn0foJUj8gYfCqvLebXxcNFNAcknGLJ4=",
+        "lastModified": 1754602155,
+        "narHash": "sha256-lpsJkT6hnP7ORXihHs8O7oVU4r+OxZHc3SH8LRueDFU=",
         "owner": "LovingMelody",
         "repo": "nix-citizen",
-        "rev": "d8b22c9aa05e6871b0eec6fb021049b1e7bd85d6",
+        "rev": "b67e1bc88be59175a154bcceef263e7a30e63f1c",
         "type": "github"
       },
       "original": {
@@ -1079,11 +1079,11 @@
     "schemes": {
       "flake": false,
       "locked": {
-        "lastModified": 1754664340,
-        "narHash": "sha256-mpOzHOsADgh17tGekyuXxUbUEqXVv4An1vTDvx5pXOI=",
+        "lastModified": 1754779259,
+        "narHash": "sha256-8KG2lXGaXLUE0F/JVwLQe7kOVm21IDfNEo0gfga5P4M=",
         "owner": "tinted-theming",
         "repo": "schemes",
-        "rev": "6486b6b01cbc5421a9f4a64f726ef4ad97a5b09e",
+        "rev": "097d751b9e3c8b97ce158e7d141e5a292545b502",
         "type": "github"
       },
       "original": {
