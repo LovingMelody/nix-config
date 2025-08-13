@@ -94,7 +94,7 @@ in
     # nix = prev.lix;
     # Overlays go here
     catppuccin-base16 = final.callPackage "${self}/packages/catppuccin-base16" {inherit pins;};
-    xivlauncher-rb = final.callPackage "${self}/packages/xivlauncher-rb" {};
+    xivlauncher-rb = final.callPackage "${self}/packages/xivlauncher-rb" {inherit pins;};
     rename-padded-numbers = final.callPackage "${self}/packages/rename-padded-numbers" {};
     slower = final.callPackage "${self}/packages/slower" {};
     catppuccin-obs = final.callPackage "${self}/packages/catppuccin-obs" {inherit pins;};

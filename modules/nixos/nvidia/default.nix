@@ -20,6 +20,7 @@ in {
       NIXOS_OZONE_WL = mkDefault "1";
       ELECTRON_OZONE_PLATFORM_HINT = mkDefault "auto";
       NVIDIA_WINE_DLL_DIR = "${config.hardware.nvidia.package}/lib/nvidia/wine/";
+      XL_NVNGXPATH = "${config.hardware.nvidia.package}/lib/nvidia/wine/";
     };
     hardware = {
       nvidia = {

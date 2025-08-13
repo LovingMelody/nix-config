@@ -1,72 +1,42 @@
 {
   lib,
-  buildDotnetModule,
-  fetchFromGitHub,
-  dotnetCorePackages,
-  SDL2,
-  libsecret,
-  glib,
-  gnutls,
-  aria2,
-  steam,
-  gst_all_1,
-  copyDesktopItems,
+  xivlauncher,
+  pins,
   makeDesktopItem,
-  makeWrapper,
-  useSteamRun ? true,
+  steam,
+  aria2,
   useGameMode ? false,
+  useSteamRun ? true,
   nvngxPath ? "",
 }: let
-  tag = "1.1.2.4";
+  inherit (pins) xivlauncher-rb;
+  version = lib.strings.removePrefix "rb-v" xivlauncher-rb.version;
 in
-  buildDotnetModule rec {
+  (xivlauncher.override {inherit useSteamRun;}).overrideAttrs (o: {
     pname = "xivlauncher-rb";
-    version = tag;
-
-    src = fetchFromGitHub {
-      owner = "rankynbass";
-      repo = "XIVLauncher.Core";
-      rev = "rb-v${tag}";
-      hash = "sha256-JT+1n6i8l3kYMLXfguQrKtLqudXc59xCacXjHzZ3irM=";
-      fetchSubmodules = true;
-    };
-
-    nativeBuildInputs = [
-      copyDesktopItems
-      makeWrapper
-    ];
-
-    buildInputs = with gst_all_1; [
-      gstreamer
-      gst-plugins-base
-      gst-plugins-good
-      gst-plugins-bad
-      gst-plugins-ugly
-      gst-libav
-    ];
-
-    projectFile = "src/XIVLauncher.Core/XIVLauncher.Core.csproj";
+    src = pins.xivlauncher-rb;
+    inherit version;
     nugetDeps = ./deps.json; # File generated with `nix-build -A xivlauncher-rb.passthru.fetch-deps`
 
     # please do not unpin these even if they match the defaults, xivlauncher is sensitive to .NET versions
-    dotnet-sdk = dotnetCorePackages.sdk_8_0;
-    dotnet-runtime = dotnetCorePackages.runtime_8_0;
-
     dotnetFlags = [
-      "-p:BuildHash=${tag}"
+      "-p:BuildHash=${version}"
       "-p:PublishSingleFile=false"
     ];
 
-    postPatch = ''
-      substituteInPlace lib/FFXIVQuickLauncher/src/XIVLauncher.Common/Game/Patch/Acquisition/Aria/AriaHttpPatchAcquisition.cs \
-        --replace-fail 'ariaPath = "aria2c"' 'ariaPath = "${aria2}/bin/aria2c"'
-    '';
+    executables = ["XIVLauncher.Core"];
 
-    postInstall = ''
-      mkdir -p $out/share/pixmaps
-      cp src/XIVLauncher.Core/Resources/logo.png $out/share/pixmaps/xivlauncher.png
-    '';
-
+    desktopItems = [
+      (makeDesktopItem {
+        name = "xivlauncher-rb";
+        exec = "XIVLauncher.Core";
+        icon = "xivlauncher";
+        desktopName = "XIVLauncher-RB";
+        comment = o.meta.description;
+        categories = ["Game"];
+        startupWMClass = "XIVLauncher.Core";
+      })
+    ];
     postFixup =
       lib.optionalString useSteamRun (
         let
@@ -93,33 +63,4 @@ in
         mkdir -p $out/nix-support
         echo ${aria2} >> $out/nix-support/depends
       '';
-
-    executables = ["XIVLauncher.Core"];
-
-    runtimeDeps = [
-      SDL2
-      libsecret
-      glib
-      gnutls
-    ];
-
-    desktopItems = [
-      (makeDesktopItem {
-        name = "xivlauncher-rb";
-        exec = "XIVLauncher.Core";
-        icon = "xivlauncher";
-        desktopName = "XIVLauncher-RB";
-        comment = meta.description;
-        categories = ["Game"];
-        startupWMClass = "XIVLauncher.Core";
-      })
-    ];
-
-    meta = with lib; {
-      description = "Custom launcher for FFXIV";
-      homepage = "https://github.com/rankynbass/XIVLauncher.Core";
-      license = licenses.gpl3;
-      platforms = ["x86_64-linux"];
-      mainProgram = "XIVLauncher.Core";
-    };
-  }
+  })

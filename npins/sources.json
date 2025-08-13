@@ -271,6 +271,22 @@
       "revision": "2da9dd57b3d078a844d9f4d9842f22c33757debe",
       "url": null,
       "hash": "0mnx2vy5s70k0jknhgwi7bh5hvkwr4ng6knk7qk2h5rgdpvsiavi"
+    },
+    "xivlauncher-rb": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "rankynbass",
+        "repo": "XIVLauncher.Core"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": "rb-",
+      "submodules": true,
+      "version": "rb-v1.1.2.5",
+      "revision": "42174213de92580b12f3ff5e3b1e00a9b7bd606f",
+      "url": null,
+      "hash": "0zwyywgh2hn0pz0ymlwlmab16cl7qp1b7ljd9zzixskn0h0w0gsj"
     }
   },
   "version": 5
