@@ -1,3 +1,4 @@
 packages/ini-merger/target
 /result
 .direnv
+bisect.log
