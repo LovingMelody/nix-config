@@ -194,7 +194,7 @@ in {
     gitkraken
     prismlauncher
     nil
-    telegram-desktop
+    # telegram-desktop
     vscode
     wl-clipboard
     # yubioath-flutter
