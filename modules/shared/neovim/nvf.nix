@@ -255,7 +255,7 @@ in {
     assistant = {
       chatgpt.enable = false;
       copilot = {
-        enable = true;
+        enable = false;
         cmp.enable = true;
       };
     };
