@@ -122,7 +122,7 @@ in {
     spotify
     vscode
     nil
-    yubioath-flutter
+    # yubioath-flutter
     miru
   ];
 
