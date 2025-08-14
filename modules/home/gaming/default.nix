@@ -82,47 +82,50 @@ in {
         "wine-Warframe" = enableMangoHud;
       };
     };
-    xdg.configFile = {
-      "dxvk-nvapi/x32" = {
-        inherit (cfg.dxvk-nvapi) enable;
-        source = "${cfg.dxvk-nvapi.package}/x32";
+    xdg = {
+      configFile = {
+        "dxvk-nvapi/x32" = {
+          inherit (cfg.dxvk-nvapi) enable;
+          source = "${cfg.dxvk-nvapi.package}/x32";
+        };
+        "dxvk-nvapi/x64" = {
+          inherit (cfg.dxvk-nvapi) enable;
+          source = "${cfg.dxvk-nvapi.package}/x64";
+        };
+        "dxvk-nvapi/deps/nvngx.dll" = {
+          inherit (cfg.dxvk-nvapi) enable;
+          source = "${osConfig.hardware.nvidia.package}/lib/nvidia/wine/nvngx.dll";
+        };
+        "dxvk-nvapi/deps/_nvngx.dll" = {
+          inherit (cfg.dxvk-nvapi) enable;
+          source = "${osConfig.hardware.nvidia.package}/lib/nvidia/wine/_nvngx.dll";
+        };
+        "dxvk-nvapi/utils/smart-link.sh" = let
+          nvngx = config.xdg.configFile."dxvk-nvapi/deps/nvngx.dll".source;
+          _nvngx = config.xdg.configFile."dxvk-nvapi/deps/_nvngx.dll".source;
+          smart-link =
+            pkgs.writeShellScriptBin "smart-link.sh"
+            ''
+              #!/usr/bin/env bash
+              link-files() {
+                ${lib.getExe pkgs.findutils} ~/Games ~/.local/share/Steam/steamapps/compatdata -name "$1" -print0 |
+                  while IFS= read -r -d "" line; do
+                    rm -v "$line"
+                    ln -sv "$2" "$line"
+                  done
+              }
+              link-files 'nvngx.dll' '${nvngx}'
+              link-files '_nvngx.dll' '${_nvngx}'
+            '';
+        in {
+          enable = cfg.dxvk-nvapi.smartLink;
+          executable = true;
+          source = lib.getExe smart-link;
+          # Update links with driver updates
+          onChange = lib.getExe smart-link;
+        };
       };
-      "dxvk-nvapi/x64" = {
-        inherit (cfg.dxvk-nvapi) enable;
-        source = "${cfg.dxvk-nvapi.package}/x64";
-      };
-      "dxvk-nvapi/deps/nvngx.dll" = {
-        inherit (cfg.dxvk-nvapi) enable;
-        source = "${osConfig.hardware.nvidia.package}/lib/nvidia/wine/nvngx.dll";
-      };
-      "dxvk-nvapi/deps/_nvngx.dll" = {
-        inherit (cfg.dxvk-nvapi) enable;
-        source = "${osConfig.hardware.nvidia.package}/lib/nvidia/wine/_nvngx.dll";
-      };
-      "dxvk-nvapi/utils/smart-link.sh" = let
-        nvngx = config.xdg.configFile."dxvk-nvapi/deps/nvngx.dll".source;
-        _nvngx = config.xdg.configFile."dxvk-nvapi/deps/_nvngx.dll".source;
-        smart-link =
-          pkgs.writeShellScriptBin "smart-link.sh"
-          ''
-            #!/usr/bin/env bash
-            link-files() {
-              ${lib.getExe pkgs.findutils} ~/Games ~/.local/share/Steam/steamapps/compatdata -name "$1" -print0 |
-                while IFS= read -r -d "" line; do
-                  rm -v "$line"
-                  ln -sv "$2" "$line"
-                done
-            }
-            link-files 'nvngx.dll' '${nvngx}'
-            link-files '_nvngx.dll' '${_nvngx}'
-          '';
-      in {
-        enable = cfg.dxvk-nvapi.smartLink;
-        executable = true;
-        source = lib.getExe smart-link;
-        # Update links with driver updates
-        onChange = lib.getExe smart-link;
-      };
+      dataFile."wine-astral".source = pkgs.wine-astral;
     };
 
     # TODO: Check if wineprefix is already running
