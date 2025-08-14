@@ -33,12 +33,15 @@ in {
       packages = lib.optionals config.TM.isGui [
         config.stylix.fonts.monospace.package
         config.stylix.fonts.serif.package
-        pkgs.nerd-fonts.symbols-only
+        pkgs.font-awesome
+        pkgs.inter
         pkgs.nerd-fonts.caskaydia-cove
         pkgs.nerd-fonts.caskaydia-mono
-        pkgs.font-awesome
+        pkgs.nerd-fonts.open-dyslexic
+        pkgs.nerd-fonts.symbols-only
         pkgs.noto-fonts-cjk-sans
         pkgs.noto-fonts-cjk-serif
+        pkgs.open-dyslexic
       ];
       fontconfig = {
         hinting.style = "medium";
