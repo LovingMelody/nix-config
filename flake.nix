@@ -90,7 +90,6 @@
               inputs.stylix.nixosModules.stylix
               inputs.catppuccin.nixosModules.catppuccin
               inputs.lanzaboote.nixosModules.lanzaboote
-              inputs.lsfg-vk-flake.nixosModules.default
               inputs.impermanence.nixosModules.impermanence
               inputs.nix-topology.nixosModules.default
             ]
@@ -206,10 +205,6 @@
         flake-utils.follows = "flake-utils";
         nixpkgs-lib.follows = "nixpkgs";
       };
-    };
-    lsfg-vk-flake = {
-      url = "github:pabloaul/lsfg-vk-flake/main";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-citizen = {
       url = "github:LovingMelody/nix-citizen";

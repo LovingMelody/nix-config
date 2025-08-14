@@ -8,6 +8,8 @@
   useGameMode ? false,
   useSteamRun ? true,
   nvngxPath ? "",
+  extraPkgs ? _pkgs: [],
+  extraLibraries ? _pkgs: [],
 }: let
   inherit (pins) xivlauncher-rb;
   version = lib.strings.removePrefix "rb-v" xivlauncher-rb.version;
@@ -41,9 +43,11 @@ in
       lib.optionalString useSteamRun (
         let
           steam-run =
-            (steam.override {
+            (steam.override (o: {
               extraPkgs = pkgs:
-                [
+                o.extraPkgs pkgs
+                ++ extraPkgs pkgs
+                ++ [
                   pkgs.libunwind
                   pkgs.zstd
                 ]
@@ -51,7 +55,8 @@ in
               extraProfile = ''
                 unset TZ
               '';
-            }).run;
+              extraLibraries = pkgs: o.extraLibraries pkgs ++ extraLibraries pkgs;
+            })).run;
         in ''
           substituteInPlace $out/bin/XIVLauncher.Core \
             --replace 'exec' 'exec ${steam-run}/bin/steam-run'

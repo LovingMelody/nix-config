@@ -90,7 +90,7 @@ in {
         enable = true;
         remotePlay.openFirewall = true;
         extraCompatPackages = with pkgs; [proton-ge-bin];
-        extraPackages = [config.services.lsfg-vk.package];
+        extraPackages = [pkgs.lsfg-vk pkgs.lsfg-vk-ui];
         protontricks.enable = true;
         platformOptimizations.enable = true;
       };
@@ -103,10 +103,6 @@ in {
     };
 
     services = with pkgs; {
-      lsfg-vk = {
-        enable = true;
-        ui.enable = true; # installs gui for configuring lsfg-vk
-      };
       xserver.modules = [xorg.xf86inputjoystick];
       udev = {
         packages = [game-devices-udev-rules];
@@ -149,32 +145,38 @@ in {
         value = "unlimited";
       }
     ];
-    environment.systemPackages = [
-      (pkgs.makeAutostartItem {
-        name = "steam";
-        inherit (config.programs.steam) package;
-      })
-      pkgs.lug-helper
-      pkgs.mangohud
-      pkgs.moonlight-qt
-      config.programs.steam.package
-      pkgs.gargoyle
-      pkgs.rpcs3
-      (pkgs.rsi-launcher.override (_: {
-        extraLibs = _: config.hardware.graphics.extraPackages ++ [config.hardware.graphics.package config.services.lsfg-vk.package];
-        extraEnvVars = {
-          DXVK_HUD = "compiler";
-          MANGO_HUD = 1;
-          DXVK_HDR =
-            if config.TM.hasHDRDisplay
-            then 1
-            else 0;
-          NVPRESENT_ENABLE_SMOOTH_MOTION = 1;
-        };
-      }))
-      pkgs.teamspeak6-client
-      pkgs.mumble
-    ];
+    environment = {
+      etc."vulkan/implicit_layer.d/VkLayer_LS_frame_generation.json".source = "${pkgs.lsfg-vk}/share/vulkan/implicit_layer.d/VkLayer_LS_frame_generation.json";
+      systemPackages = [
+        pkgs.lsfg-vk
+        pkgs.lsfg-vk-ui
+
+        (pkgs.makeAutostartItem {
+          name = "steam";
+          inherit (config.programs.steam) package;
+        })
+        pkgs.lug-helper
+        pkgs.mangohud
+        pkgs.moonlight-qt
+        config.programs.steam.package
+        pkgs.gargoyle
+        pkgs.rpcs3
+        (pkgs.rsi-launcher.override (_: {
+          extraLibs = _: config.hardware.graphics.extraPackages ++ [config.hardware.graphics.package pkgs.lsfg-vk];
+          extraEnvVars = {
+            DXVK_HUD = "compiler";
+            MANGO_HUD = 1;
+            DXVK_HDR =
+              if config.TM.hasHDRDisplay
+              then 1
+              else 0;
+            NVPRESENT_ENABLE_SMOOTH_MOTION = 1;
+          };
+        }))
+        pkgs.teamspeak6-client
+        pkgs.mumble
+      ];
+    };
 
     boot = {
       kernelPackages = cfg.kernel;
