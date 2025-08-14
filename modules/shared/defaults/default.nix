@@ -48,10 +48,12 @@ in {
           "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
           # "hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs="
           "chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8="
+          "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         ];
         substituters = [
           "https://cache.nixos.org"
           "https://nix-gaming.cachix.org"
+          "nix-community.cachix.org"
           "https://nix-citizen.cachix.org"
           "https://cache.garnix.io"
           "https://cosmic.cachix.org/"
