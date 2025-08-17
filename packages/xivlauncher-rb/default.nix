@@ -45,7 +45,7 @@ in
           steam-run =
             (steam.override (o: {
               extraPkgs = pkgs:
-                o.extraPkgs pkgs
+                (o.extraPkgs or (_: [])) pkgs
                 ++ extraPkgs pkgs
                 ++ [
                   pkgs.libunwind
@@ -55,7 +55,7 @@ in
               extraProfile = ''
                 unset TZ
               '';
-              extraLibraries = pkgs: o.extraLibraries pkgs ++ extraLibraries pkgs;
+              extraLibraries = pkgs: (o.extraLibraries or (_: [])) pkgs ++ extraLibraries pkgs;
             })).run;
         in ''
           substituteInPlace $out/bin/XIVLauncher.Core \
