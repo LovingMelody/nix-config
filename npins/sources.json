@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "9accae16b975063b8cba073e1e9267da7dc7445d",
+      "revision": "257b87a239a6c80d950a70d73ef64502fa86f96c",
       "url": null,
-      "hash": "0xkld211fl5c3k4jfvwvgda6ykqf2cplq24frbjsaiq4bygqyk6f"
+      "hash": "0a6gvxgfn561xs22s4k3d2ll5z01iw0bv9637n06zwvsg43ysckw"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -89,10 +89,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": true,
-      "version": "v1.30.3",
-      "revision": "15d44ea933dd1c458679a582bc17902a8f5464fd",
+      "version": "v1.30.4",
+      "revision": "ecc12a65fe7ebbedfee8b729796e826c1af47104",
       "url": null,
-      "hash": "0xkld211fl5c3k4jfvwvgda6ykqf2cplq24frbjsaiq4bygqyk6f"
+      "hash": "0a6gvxgfn561xs22s4k3d2ll5z01iw0bv9637n06zwvsg43ysckw"
     },
     "gargoyle": {
       "type": "Git",
@@ -103,9 +103,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "fde41bd9b746233949a5bdc982b5ad408f084664",
-      "url": "https://github.com/garglk/garglk/archive/fde41bd9b746233949a5bdc982b5ad408f084664.tar.gz",
-      "hash": "0rxgwz0wkrmmqvzyxmabi9flrpm8vmxyfl1a0aygmd87dh7bvvxg"
+      "revision": "a5b522d4d2f736c77c3e102999cc4c86ecab9205",
+      "url": "https://github.com/garglk/garglk/archive/a5b522d4d2f736c77c3e102999cc4c86ecab9205.tar.gz",
+      "hash": "1lqi7nqh7ziggcnh20381lv4z0s3ivyz1ynj56qw43xqmaq7620k"
     },
     "getopts.fish": {
       "type": "Git",
@@ -283,10 +283,10 @@
       "version_upper_bound": null,
       "release_prefix": "rb-",
       "submodules": true,
-      "version": "rb-v1.1.2.5",
-      "revision": "42174213de92580b12f3ff5e3b1e00a9b7bd606f",
+      "version": "rb-v1.2.1.2",
+      "revision": "d440ef8fb124f88b129fed8dce029df0f35a54f8",
       "url": null,
-      "hash": "0zwyywgh2hn0pz0ymlwlmab16cl7qp1b7ljd9zzixskn0h0w0gsj"
+      "hash": "1gjf2x6dkmbv1kmp0db2s7ksfh92zcqkzw7xp0ws5cq29820xdpw"
     }
   },
   "version": 5
