@@ -139,7 +139,7 @@
     extra-trusted-public-keys = ["cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="];
   };
   # TODO: Migrate server configs to this flake
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable-small";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   inputs = {
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
