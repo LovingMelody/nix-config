@@ -17,7 +17,7 @@
     nixpkgs-overlays = [
       inputs.nix-citizen.overlays.default
       # NOTE: Disabled breaks CI, changes upstream in pr#425870
-      inputs.nix-citizen.overlays.updated-vulkan-sdk
+      # inputs.nix-citizen.overlays.updated-vulkan-sdk
       inputs.self.overlays.default
       inputs.nix-minecraft.overlays.default
       inputs.nix-topology.overlays.default
