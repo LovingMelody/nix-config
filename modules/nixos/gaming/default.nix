@@ -13,12 +13,16 @@
     mkOption
     options
     types
+    optional
+    versions
     ;
   inherit (lib.strings) toShellVars optionalString;
+  inherit (lib.TM.package-helper) pins;
 in {
   options.TM.gaming = {
     enable = mkEnableOption "Enable gaming specific configs";
     remotePlay = mkEnableOption "Enable settings for remote play";
+    cachyPatches = mkEnableOption "Enable CachyOS Patches";
     kernel = mkOption {
       type = types.raw;
       default = pkgs.linuxPackages_latest;
@@ -180,10 +184,10 @@ in {
 
     boot = {
       kernelPackages = cfg.kernel;
-      kernelPatches = [
+      kernelPatches = optional cfg.cachyPatches [
         {
           name = "0001-cachyos-base-all";
-          patch = "${lib.TM.package-helper.pins.cachy-kernel-patches}/${lib.versions.majorMinor config.boot.kernelPackages.kernel.version}/all/0001-cachyos-base-all.patch";
+          patch = "${pins.cachy-kernel-patches}/${versions.majorMinor config.boot.kernelPackages.kernel.version}/all/0001-cachyos-base-all.patch";
         }
       ];
     };
