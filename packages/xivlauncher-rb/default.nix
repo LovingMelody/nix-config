@@ -5,7 +5,6 @@
   makeDesktopItem,
   steam,
   aria2,
-  useGameMode ? false,
   useSteamRun ? true,
   nvngxPath ? "",
   extraPkgs ? _pkgs: [],
@@ -50,12 +49,13 @@ in
                 ++ [
                   pkgs.libunwind
                   pkgs.zstd
-                ]
-                ++ lib.optional useGameMode pkgs.gamemode;
+                  pkgs.mangohud
+                  pkgs.gamemode
+                ];
               extraProfile = ''
                 unset TZ
               '';
-              extraLibraries = pkgs: (o.extraLibraries or (_: [])) pkgs ++ extraLibraries pkgs;
+              extraLibraries = pkgs: (o.extraLibraries or (_: [])) pkgs ++ extraLibraries pkgs ++ [pkgs.mangohud];
             })).run;
         in ''
           substituteInPlace $out/bin/XIVLauncher.Core \

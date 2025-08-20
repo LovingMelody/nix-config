@@ -75,11 +75,6 @@ in {
       // {
         default = gamingCfg.enable or false;
       };
-    useGameMode =
-      mkEnableOption "Enable gamemode support"
-      // {
-        default = osConfig.programs.gamemode.enable or false;
-      };
     reshade = {
       enable =
         mkEnableOption "Enable reshade"
@@ -140,9 +135,8 @@ in {
     home = {
       packages = [
         (pkgs.xivlauncher-rb.override {
-          inherit (cfg) useGameMode;
           nvngxPath = optionalString osConfig.TM.MyNextGPUWillNotBeNvidia "${osConfig.hardware.nvidia.package}/lib/nvidia/wine/";
-          extraLibraries = _: osConfig.hardware.graphics.extraPackages ++ [osConfig.hardware.graphics.package pkgs.lsfg-vk];
+          # extraLibraries = _: osConfig.hardware.graphics.extraPackages ++ [osConfig.hardware.graphics.package pkgs.lsfg-vk];
           steam = osConfig.programs.steam.package or pkgs.steam;
         })
         pkgs.rsync
