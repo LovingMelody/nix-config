@@ -139,7 +139,7 @@ in
           enable = mkDefault true;
           clean = {
             enable = mkDefault true;
-            extraArgs = mkDefault "--keep-since 7d";
+            extraArgs = mkDefault "--keep-since 30d --keep 30";
           };
         };
         starship = {
