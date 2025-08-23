@@ -53,7 +53,7 @@ in {
         substituters = [
           "https://cache.nixos.org"
           "https://nix-gaming.cachix.org"
-          "nix-community.cachix.org"
+          "https://nix-community.cachix.org"
           "https://nix-citizen.cachix.org"
           "https://cache.garnix.io"
           "https://cosmic.cachix.org/"
