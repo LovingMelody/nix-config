@@ -94,7 +94,7 @@ in {
         enable = true;
         remotePlay.openFirewall = true;
         extraCompatPackages = with pkgs; [proton-ge-bin];
-        extraPackages = [pkgs.lsfg-vk pkgs.lsfg-vk-ui];
+        extraPackages = [pkgs.lsfg-vk pkgs.lsfg-vk-ui pkgs.gale];
         protontricks.enable = true;
         platformOptimizations.enable = true;
       };
@@ -152,6 +152,7 @@ in {
     environment = {
       etc."vulkan/implicit_layer.d/VkLayer_LS_frame_generation.json".source = "${pkgs.lsfg-vk}/share/vulkan/implicit_layer.d/VkLayer_LS_frame_generation.json";
       systemPackages = [
+        pkgs.gale
         pkgs.lsfg-vk
         pkgs.lsfg-vk-ui
 
