@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "448fd8fa081e14b2241c723e9226e61c8899f0a6",
+      "revision": "402c290e650aba3df2d1b0264c45f87247545e82",
       "url": null,
-      "hash": "0lh57ib77hpkl2qk558sq024qymnk2ks7fb1c40s8vsk80g7qb0g"
+      "hash": "0l9s89d2lvx26xnca8vadlg3hx9ridpsgvqqj6lqljp25c5jrv16"
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "3939954cbd928664ea8e93bb6a1bc8fabc98e738",
+      "revision": "ba5c080f0b364dacbd0132aae25526238238fa4c",
       "url": null,
-      "hash": "1xid8zlvf2pacf4nf895xla9f883nw2ll1r85zfhxnj3g05m87ww"
+      "hash": "1ilvi35vhi3340092kva8b2wvfipw8z2a02wavba01x26kf21ij6"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -89,10 +89,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": true,
-      "version": "v1.30.4",
-      "revision": "ecc12a65fe7ebbedfee8b729796e826c1af47104",
+      "version": "v1.30.5",
+      "revision": "c269017a3092c9bf1de9e4360ae65b4576d932e6",
       "url": null,
-      "hash": "0a6gvxgfn561xs22s4k3d2ll5z01iw0bv9637n06zwvsg43ysckw"
+      "hash": "1ilvi35vhi3340092kva8b2wvfipw8z2a02wavba01x26kf21ij6"
     },
     "gargoyle": {
       "type": "Git",
@@ -283,10 +283,10 @@
       "version_upper_bound": null,
       "release_prefix": "rb-",
       "submodules": true,
-      "version": "rb-v1.2.1.3",
-      "revision": "01cbc5f23ea67f430244187f10578e743765b6b0",
+      "version": "rb-v1.2.1.4",
+      "revision": "b016db8683293486767a2de54ff5c18823305df4",
       "url": null,
-      "hash": "0aq8fbazax3qm6kn98si8rq59qi5qwp6h8gm5jfs65qx90438n8a"
+      "hash": "15dwj247ns3y2sw044p3mrwcyj4jwbpzymvvqz3pk7i14l7vsya4"
     }
   },
   "version": 5
