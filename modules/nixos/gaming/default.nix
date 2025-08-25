@@ -153,6 +153,7 @@ in {
       etc."vulkan/implicit_layer.d/VkLayer_LS_frame_generation.json".source = "${pkgs.lsfg-vk}/share/vulkan/implicit_layer.d/VkLayer_LS_frame_generation.json";
       systemPackages = [
         pkgs.gale
+        pkgs.r2modman
         pkgs.lsfg-vk
         pkgs.lsfg-vk-ui
 
