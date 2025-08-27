@@ -12,7 +12,7 @@ in {
     programs.ssh = {
       enable = true;
       compression = mkDefault true;
-      forwardAgent = mkDefault true;
+      forwardAgent = true;
       matchBlocks = {
         "eu.nixbuild.net" = {
           identitiesOnly = true;
