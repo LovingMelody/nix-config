@@ -39,13 +39,10 @@ in {
           "git@github.com:".insteadOf = "github:";
         };
       };
-      signing =
-        {
-          signByDefault = config.programs.gpg.enable;
-        }
-        // mkIf (!config.TM.programs._1password.gpgSign.enable) {
-          key = "52c78a112121b1c150ca5c626e2223885f29dea5";
-        };
+      signing = {
+        signByDefault = config.programs.gpg.enable;
+        key = lib.removeSuffix "\n" (builtins.readFile (lib.TM.get-ssh-key-file "melody" "primary"));
+      };
     };
   };
 }
