@@ -58,6 +58,10 @@ in
       version = "${o.version}+${pins.npins.revision}";
       src = pins.npins;
     });
+    osm-gps-map = prev.osm-gps-map.overrideAttrs (o: {
+      buildInputs = o.buildInputs ++ [final.gtk-doc];
+      nativeBuildInputs = (o.nativeBuildInputs or []) ++ [final.autoreconfHook];
+    });
     photoprism = prev.photoprism.override {
       ffmpeg = final.ffmpeg-full;
       imagemagick = final.imagemagickBig;
