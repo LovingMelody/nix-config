@@ -11,7 +11,7 @@ in {
   config = mkIf cfg.enable {
     programs.ssh = {
       enable = true;
-      compression = mkDefault true;
+      compression = true;
       forwardAgent = true;
       matchBlocks = {
         "eu.nixbuild.net" = {
