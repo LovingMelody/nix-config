@@ -123,7 +123,6 @@ in {
     vscode
     nil
     # yubioath-flutter
-    miru
   ];
 
   security.polkit.enable = true;

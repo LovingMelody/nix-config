@@ -204,7 +204,6 @@ in {
   ];
 
   environment.systemPackages = with pkgs; [
-    miru
     tetex
     texstudio
     #libvert
