@@ -55,11 +55,12 @@ in {
     };
   };
 
+  environment.systemPackages = [pkgs.headsetcontrol];
   services = {
     blueman.enable = true;
     fwupd.enable = true;
     udev = {
-      packages = with pkgs; [liquidctl];
+      packages = with pkgs; [liquidctl headsetcontrol];
       extraRules = ''
         SUBSYSTEM=="usb", ATTR{idVendor}=="2104", ATTR{idProduct}=="0313", MODE="0666"
       '';
