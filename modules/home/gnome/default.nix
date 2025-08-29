@@ -33,6 +33,7 @@ in {
       # pkgs.gnomeExtensions.bluetooth-quick-connect # Quick connect to bluetooth devices
       # pkgs.gnomeExtensions.blur-my-shell
       pkgs.gnomeExtensions.user-themes
+      pkgs.gnomeExtensions.headsetcontrol
     ];
     # ++ (optional (config.TM.styles.polarity == "light")) pkgs.gnomeExtensions.luminus-desktop-y;
 
