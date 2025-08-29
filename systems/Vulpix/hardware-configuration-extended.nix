@@ -2,6 +2,7 @@
   lib,
   inputs,
   config,
+  pkgs,
   ...
 }: {
   imports = with inputs; [
@@ -19,10 +20,12 @@
     binfmt.emulatedSystems = ["aarch64-linux"];
   };
   #TM.MyNextGPUWillNotBeNvidia = true;
+  environment.systemPackages = [pkgs.headsetcontrol];
   services = {
     fprintd.enable = true;
     asusd.enable = lib.mkDefault true;
     fwupd.enable = true;
+    udev.packages = [pkgs.headsetcontrol];
   };
   networking = {
     hostName = "Vulpix"; # Define your hostname.
