@@ -4,7 +4,7 @@
   ...
 }: let
   cfg = config.TM.programs.ssh;
-  inherit (lib) mkDefault mkEnableOption mkIf;
+  inherit (lib) mkEnableOption mkIf;
 in {
   options.TM.programs.ssh.enable = mkEnableOption "ssh";
 
