@@ -51,6 +51,7 @@ in {
       "org/gnome/shell/extensions/blur-my-shell/panel".blur = true;
 
       "org/gnome/shell/extensions/gsconnect".show-indicators = true;
+      "org/gnome/shell/extensions/HeadsetControl".headsetcontrol-executable = lib.getExe pkgs.headsetcontrol;
 
       "org/gnome/shell/extensions/bluetooth-quick-connect" = {
         keep-menu-on-toggle = false;
