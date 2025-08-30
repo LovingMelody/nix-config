@@ -67,7 +67,7 @@ in
       imagemagick = final.imagemagickBig;
     };
     kitty = pinnedOverlay "kitty";
-    gargoyle = prev.gargoyle.overrideAttrs {
+    gargoyle = (prev.gargoyle.override {stdenv = final.clangStdenv;}).overrideAttrs {
       src = pins.gargoyle;
       version = pins.gargoyle.revision;
     };
