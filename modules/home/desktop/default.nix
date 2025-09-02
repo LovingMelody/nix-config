@@ -35,7 +35,7 @@ in {
           ];
           openASAR.enable = true;
           vencord = {
-            enable = true;
+            enable = false;
             config = {
               notifyAboutUpdates = false;
               autoUpdate = false;

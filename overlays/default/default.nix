@@ -58,6 +58,7 @@ in
       version = "${o.version}+${pins.npins.revision}";
       src = pins.npins;
     });
+    inherit (inputs.moonlight-mod.packages.${prev.system}) moonlight;
     osm-gps-map = prev.osm-gps-map.overrideAttrs (o: {
       buildInputs = o.buildInputs ++ [final.gtk-doc];
       nativeBuildInputs = (o.nativeBuildInputs or []) ++ [final.autoreconfHook];
@@ -166,15 +167,18 @@ in
     wineprefix-preparer-git = final.wineprefix-preparer;
     discord = discordEnableKrisp (prev.discord.override {
       withOpenASAR = true;
-      withVencord = true;
+      withVencord = false;
+      withMoonlight = true;
     });
     discord-canary = discordEnableKrisp (prev.discord-canary.override {
       withOpenASAR = true;
       withVencord = true;
+      withMoonlight = false;
     });
     discord-ptb = discordEnableKrisp (prev.discord-ptb.override {
       withOpenASAR = true;
-      withVencord = true;
+      withVencord = false;
+      withMoonlight = false;
     });
 
     obs-studio = prev.obs-studio.override {ffmpeg = final.ffmpeg-full;};

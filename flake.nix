@@ -296,6 +296,13 @@
         systems.follows = "systems";
       };
     };
+    moonlight-mod = {
+      url = "github:moonlight-mod/moonlight";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-utils.follows = "flake-utils";
+      };
+    };
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -501,6 +501,29 @@
         "type": "github"
       }
     },
+    "moonlight-mod": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1755894023,
+        "narHash": "sha256-feWRxpNfnBj110DMlBqipe7wunqDZ8SvUvrtnnlePgk=",
+        "owner": "moonlight-mod",
+        "repo": "moonlight",
+        "rev": "aca625e816a5b3acdbaaf2f2bd8ca1c43435afd9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "moonlight-mod",
+        "repo": "moonlight",
+        "type": "github"
+      }
+    },
     "nix": {
       "flake": false,
       "locked": {
@@ -1012,6 +1035,7 @@
         "ini-merger": "ini-merger",
         "lanzaboote": "lanzaboote",
         "lib-aggregate": "lib-aggregate",
+        "moonlight-mod": "moonlight-mod",
         "nix-citizen": "nix-citizen",
         "nix-eval-jobs": "nix-eval-jobs",
         "nix-gaming": "nix-gaming",
