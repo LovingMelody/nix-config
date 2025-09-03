@@ -211,9 +211,9 @@ in
         ];
       };
       services = {
-        # Enable flatpk by default
+        # Enable flatpk by default if xdg portal is enabled
         # Allows running things that nix wont run easily
-        flatpak.enable = mkDefault true;
+        flatpak.enable = mkDefault config.xdg.portal.enable;
         resolved = {
           enable = mkDefault true;
           dnsovertls = mkDefault "opportunistic";
