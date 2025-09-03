@@ -211,6 +211,9 @@ in
         ];
       };
       services = {
+        # Enable flatpk by default
+        # Allows running things that nix wont run easily
+        flatpak.enable = mkDefault true;
         resolved = {
           enable = mkDefault true;
           dnsovertls = mkDefault "opportunistic";
