@@ -221,7 +221,7 @@ in {
       wget
       tidal-hifi
     ]
-    ++ [fuzzel];
+    ++ [fuzzel xwayland-satellite];
 
   virtualisation = {
     libvirtd.enable = true;
