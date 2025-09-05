@@ -21,6 +21,7 @@
     impermanence.enable = true;
     # defaults.enable = true;
     programs = {
+      waybar.enable = true;
       _1password = {
         enable = true;
         sshAgent = true;

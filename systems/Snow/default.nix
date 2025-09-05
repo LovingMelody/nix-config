@@ -221,7 +221,7 @@ in {
       wget
       tidal-hifi
     ]
-    ++ [fuzzel waybar];
+    ++ [fuzzel];
 
   virtualisation = {
     libvirtd.enable = true;
