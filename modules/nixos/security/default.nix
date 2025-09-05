@@ -33,6 +33,11 @@ in {
 
   config = mkMerge [
     (mkIf cfg.enable {
+      security.sudo-rs = {
+        execWheelOnly = true;
+        enable = true;
+      };
+
       services.pcscd.enable = true;
       networking.firewall.enable = true;
       boot = {

@@ -287,6 +287,5 @@ in
         #   options = mkDefault "--delete-older-than 30d";
         # };
       };
-      security.sudo.execWheelOnly = true;
     };
   }
