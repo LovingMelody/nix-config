@@ -70,7 +70,7 @@ in {
         btop.enable = false;
         helix.enable = false;
         yazi.enable = false;
-        alacritty.enable = false;
+        alacritty.enable = true;
         hyprland.enable = false;
         mako.enable = false;
         swaylock.enable = false;
