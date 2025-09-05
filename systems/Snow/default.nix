@@ -227,6 +227,7 @@ in {
   };
   # Disable autosleep
   programs = {
+    niri.enable = true;
     gamemode.enable = mkForce false;
     coolercontrol = {
       enable = false;
