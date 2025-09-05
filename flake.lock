@@ -524,6 +524,29 @@
         "type": "github"
       }
     },
+    "niri": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": [
+          "rust-overlay"
+        ]
+      },
+      "locked": {
+        "lastModified": 1756926064,
+        "narHash": "sha256-5/1vyFRLvJWxhBgpPaV2orC0pjSgIny6JM6+joLyZok=",
+        "owner": "YaLTeR",
+        "repo": "niri",
+        "rev": "c69464c1288789020d9a086f86c970a7dc49b8c7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "YaLTeR",
+        "repo": "niri",
+        "type": "github"
+      }
+    },
     "nix": {
       "flake": false,
       "locked": {
@@ -1036,6 +1059,7 @@
         "lanzaboote": "lanzaboote",
         "lib-aggregate": "lib-aggregate",
         "moonlight-mod": "moonlight-mod",
+        "niri": "niri",
         "nix-citizen": "nix-citizen",
         "nix-eval-jobs": "nix-eval-jobs",
         "nix-gaming": "nix-gaming",

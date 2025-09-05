@@ -15,6 +15,7 @@
       }
       // inputs.home-manager.lib);
     nixpkgs-overlays = [
+      inputs.niri.overlays.default
       inputs.nix-citizen.overlays.default
       # NOTE: Disabled breaks CI, changes upstream in pr#425870
       # inputs.nix-citizen.overlays.updated-vulkan-sdk
@@ -204,6 +205,13 @@
       inputs = {
         flake-utils.follows = "flake-utils";
         nixpkgs-lib.follows = "nixpkgs";
+      };
+    };
+    niri = {
+      url = "github:YaLTeR/niri";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        rust-overlay.follows = "rust-overlay";
       };
     };
     nix-citizen = {
