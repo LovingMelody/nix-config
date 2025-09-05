@@ -203,23 +203,25 @@ in {
     # inputs.ags.packages.${pkgs.stdenv.hostPlatform.system}.agsFull
   ];
 
-  environment.systemPackages = with pkgs; [
-    tetex
-    texstudio
-    #libvert
-    #qemu
-    abaddon
-    # cava
-    # geeqie # https://github.com/NixOS/nixpkgs/pull/427813
-    gh
-    git
-    pamixer
-    spotify
-    # star-citizen
-    tmux
-    wget
-    tidal-hifi
-  ];
+  environment.systemPackages = with pkgs;
+    [
+      tetex
+      texstudio
+      #libvert
+      #qemu
+      abaddon
+      cava
+      geeqie # https://github.com/NixOS/nixpkgs/pull/427813
+      gh
+      git
+      pamixer
+      spotify
+      # star-citizen
+      tmux
+      wget
+      tidal-hifi
+    ]
+    ++ [fuzzel waybar];
 
   virtualisation = {
     libvirtd.enable = true;
