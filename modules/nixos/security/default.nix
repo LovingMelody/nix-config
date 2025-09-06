@@ -33,9 +33,12 @@ in {
 
   config = mkMerge [
     (mkIf cfg.enable {
-      security.sudo-rs = {
-        execWheelOnly = true;
-        enable = true;
+      security = {
+        sudo.enable = false;
+        sudo-rs = {
+          execWheelOnly = true;
+          enable = true;
+        };
       };
 
       services.pcscd.enable = true;
