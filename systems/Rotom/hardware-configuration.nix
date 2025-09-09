@@ -39,10 +39,11 @@
     avx2Support = true;
     fmaSupport = true;
     avxSupport = true;
+    sse3Support = true;
     ssse3Support = true;
     sse4_1Support = true;
     sse4_2Support = true;
-
+    aesSupport = true;
     # gcc.tune = "zen2";
   };
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

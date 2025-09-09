@@ -66,6 +66,7 @@
                   extraSpecialArgs = specialArgs // {osConfig = config;};
                   sharedModules =
                     [
+                      {nixpkgs.config.hostPlatform = lib.mkDefault config.nixpkgs.hostPlatform;}
                       inputs.catppuccin.homeModules.catppuccin
                       inputs.nix-index-database.hmModules.nix-index
                       inputs.nvf.homeManagerModules.default

@@ -27,14 +27,16 @@ in {
 
   config = mkIf cfg.enable {
     qt.enable = config.TM.isGui;
-    nixpkgs.config = {
-      allowUnfree = true;
-      # FIXME: Remove once darktable no longer requires this
-      permittedInsecurePackages = ["libsoup-2.74.3"];
-      cudaSupport = config.TM.MyNextGPUWillNotBeNvidia or false;
-      cudaCapabilities = ["7.5" "8.0" "8.6"];
+    nixpkgs = {
+      config = {
+        allowUnfree = true;
+        # FIXME: Remove once darktable no longer requires this
+        permittedInsecurePackages = ["libsoup-2.74.3"];
+        cudaSupport = config.TM.MyNextGPUWillNotBeNvidia or false;
+        cudaCapabilities = ["7.5" "8.0" "8.6"];
 
-      overlays = mkIf (! (osConfig.home-manager.useGlobalPkgs or false)) nixpkgs-overlays;
+        overlays = mkIf (! (osConfig.home-manager.useGlobalPkgs or false)) nixpkgs-overlays;
+      };
     };
     nix = {
       registry = mapAttrs (_: v: {flake = v;}) inputs;
