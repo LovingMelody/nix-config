@@ -34,6 +34,16 @@
   networking.hostId = "46dbfa49";
   # networking.interfaces.enp7s0.useDHCP = lib.mkDefault true;
 
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  nixpkgs.hostPlatform = {
+    system = "x86_64-linux";
+    avx2Support = true;
+    fmaSupport = true;
+    avxSupport = true;
+    ssse3Support = true;
+    sse4_1Support = true;
+    sse4_2Support = true;
+
+    # gcc.tune = "zen2";
+  };
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
