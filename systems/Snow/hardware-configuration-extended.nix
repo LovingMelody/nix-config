@@ -26,8 +26,8 @@ in {
       emulatedSystems = [
         "aarch64-linux"
         "x86_64-windows"
-        "wasm32-wasi"
-        "wasm64-wasi"
+        # "wasm32-wasi"
+        # "wasm64-wasi"
       ];
     };
     kernelModules = [
