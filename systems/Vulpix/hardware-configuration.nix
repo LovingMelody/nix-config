@@ -43,16 +43,5 @@
 
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-  nixpkgs.hostPlatform = {
-    system = "x86_64-linux";
-
-    avx2Support = true;
-    avxSupport = true;
-    aesSupport = true;
-    fmaSupport = true;
-    sse4_1Support = true;
-    sse4_2Support = true;
-    ssse3Support = true;
-    sse3Support = true;
-  };
+  TM.simd.arch = "znver3";
 }

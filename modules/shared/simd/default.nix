@@ -24,14 +24,19 @@ in {
             "simd"
             "enable"
           ]
-          false;
+          true;
+      };
+    partial =
+      mkEnableOption "Dont set gcc options reducing builds. Features will still be added"
+      // {
+        default = fromOS ["sind" "partial"] true;
       };
     arch = mkOption {
       type = with types; str;
       default = fromOS [
         "simd"
         "arch"
-      ] "x86-64-v3";
+      ] "x86-64-v2";
       description = ''
         Microarchetecture string for gcc march
         Can be determined with ``nix run nixpkgs#gcc -- -march=native -Q --help=target | grep march";
@@ -52,15 +57,25 @@ in {
           "gccarch-${arch}"
         ]
         ++ map (x: "gccarch-${x}") architectures.inferiors.${arch};
-      nixpkgs.hostPlatform = {
-        gcc.arch = arch;
-        gcc.tune = arch;
-        inherit system;
-      };
-      nixpkgs.localSystem = {
-        gcc.arch = arch;
-        gcc.tune = arch;
-        inherit system;
-      };
+      nixpkgs.hostPlatform =
+        {
+          gcc = mkIf (! cfg.partial) {
+            inherit arch;
+            tune = arch;
+          };
+
+          inherit system;
+        }
+        // (builtins.mapAttrs
+          (_name: function: function arch)
+          lib.systems.architectures.predicates);
+      # legacy
+      # nixpkgs.localSystem = {
+      #   gcc = mkIf (! cfg.partial) {
+      #     inherit arch;
+      #     tune = arch;
+      #   };
+      #   inherit system;
+      # };
     };
 }

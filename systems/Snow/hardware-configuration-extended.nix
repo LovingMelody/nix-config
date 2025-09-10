@@ -98,10 +98,6 @@ in {
     hasHDRDisplay = mkDefault true;
     # Enable Nvidia stuff
     MyNextGPUWillNotBeNvidia = true;
-    simd = {
-      enable = false;
-      arch = "x86-64-v3";
-    };
     services.liquidctl = {
       enable = true;
       config = {
