@@ -58,7 +58,6 @@ in {
   config = mkIf cfg.enable {
     topology.self.services.minecraft = {
       name = "Minecraft (${cfg.worldName})";
-      inherit (pkgs.minecraft) icon;
     };
     users.users.minecraft = {
       description = "Minecraft server service user";
