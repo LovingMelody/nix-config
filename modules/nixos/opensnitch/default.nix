@@ -7,7 +7,6 @@
   cfg = config.TM.security.opensnitch;
   inherit
     (lib)
-    getExe
     getExe'
     mkEnableOption
     mkIf
