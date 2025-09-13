@@ -55,7 +55,7 @@ in {
 
   services = {
     openssh.enable = true;
-    davfs2.enable = true;
+    davfs2.enable = false;
     mysql = {
       enable = true;
       package = pkgs.mariadb;
