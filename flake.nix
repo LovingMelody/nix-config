@@ -300,7 +300,6 @@
       url = "github:NotAShelf/nvf";
       inputs = {
         flake-parts.follows = "flake-parts";
-        flake-utils.follows = "flake-utils";
         nixpkgs.follows = "nixpkgs";
         systems.follows = "systems";
       };
@@ -309,7 +308,6 @@
       url = "github:moonlight-mod/moonlight";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        flake-utils.follows = "flake-utils";
       };
     };
     rust-overlay = {
@@ -334,8 +332,6 @@
     stylix = {
       url = "github:nix-community/stylix";
       inputs = {
-        flake-compat.follows = "flake-compat";
-        home-manager.follows = "home-manager";
         nixpkgs.follows = "nixpkgs";
         systems.follows = "systems";
         tinted-schemes.follows = "schemes";
