@@ -202,6 +202,7 @@ in
         sdl2Support = true;
         sixelSupport = true;
         vapoursynthSupport = true;
+        ffmpeg = final.ffmpeg_8-full;
       }).overrideAttrs {
         version = lib.removeSuffix "-" (builtins.replaceStrings ["UNKNOWN"] [(shortRev pins.mpv.revision)] (builtins.readFile "${pins.mpv}/MPV_VERSION"));
         src = pins.mpv;
