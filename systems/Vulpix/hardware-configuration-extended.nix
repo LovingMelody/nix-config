@@ -41,6 +41,10 @@
     rocmSupport = true;
     cudaSupport = true;
   };
+  programs.gamemode.enable = true;
+  environment.sessionVariables = lib.mkIf config.programs.gamemode.enable {
+    GAMEMODERUNEXEC = lib.mkIf config.hardware.nvidia.prime.offload.enableOffloadCmd "nvidia-offload";
+  };
   hardware = {
     nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
     # uni-sync = { enable = true; };
