@@ -13,8 +13,8 @@ in {
 
   config = mkIf cfg.enable {
     virtualisation = {
-      lxc.enable = true;
-      lxd.enable = true;
+      # lxc.enable = true;
+      # lxd.enable = true;
       libvirtd = {
         enable = mkDefault true;
         qemu = {
