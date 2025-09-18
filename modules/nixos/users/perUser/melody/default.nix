@@ -21,24 +21,22 @@ in {
       isNormalUser = true;
       initialPassword = "Nixtastic!23";
       group = "melody";
-      extraGroups =
-        [
-          "adbusers"
-          "audio"
-          "bluetooth"
-          "games"
-          "libvirtd"
-          "lp"
-          "plugdev"
-          "podman"
-          "docker"
-          "ssh"
-          "tss"
-          "video"
-          "virtualization"
-          "wheel"
-        ]
-        ++ optional config.virtualisation.lxd.enable "lxd";
+      extraGroups = [
+        "adbusers"
+        "audio"
+        "bluetooth"
+        "games"
+        "libvirtd"
+        "lp"
+        "plugdev"
+        "podman"
+        "docker"
+        "ssh"
+        "tss"
+        "video"
+        "virtualization"
+        "wheel"
+      ];
       shell = mkForce pkgs.zsh;
       description = "Melody Renata";
       openssh.authorizedKeys.keyFiles = [
