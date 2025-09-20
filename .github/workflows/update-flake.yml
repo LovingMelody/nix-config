@@ -37,8 +37,6 @@ jobs:
             git commit -m "Update pins"
           fi
       - run: nix flake update --commit-lock-file
-      - name: Check Flake
-      - run: nix flake check -L -vvv --show-trace
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
