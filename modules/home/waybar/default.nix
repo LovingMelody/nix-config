@@ -54,7 +54,7 @@ in {
             format-ethernet = "{ifname} ";
             format-disconnected = "";
             max-length = 50;
-            on-click = "${pkgs.networkmanagerapplet}/bin/nm-connection-editor";
+            on-click = lib.getExe' pkgs.networkmanagerapplet "nm-connection-editor";
           };
           idle_inhibitor = {
             format = "{icon}";
@@ -127,7 +127,7 @@ in {
                 ""
               ];
             };
-            on-click = "${pkgs.pavucontrol}/bin/pavucontrol";
+            on-click = lib.getExe pkgs.pwvucontrol;
           };
           mpris = {
             format = "{player_icon} {status_icon} {dynamic}";
@@ -166,9 +166,9 @@ in {
           "custom/power" = {
             format = "";
             on-click = let
-              power-menu = pkgs.writeScript "wofi-powermenu.sh" ''
+              power-menu = pkgs.writeScript "rofi-powermenu.sh" ''
                 entries="⇠ Logout\n⏾ Suspend\n⭮ Reboot\n⭮ Firmware \n⏻ Shutdown"
-                selected=$(echo -e $entries|${pkgs.wofi}/bin/wofi --width 250 --height 210 --dmenu --cache-file /dev/null | awk '{print tolower($2)}')
+                selected=$(echo -e $entries|${lib.getExe pkgs.rofi} --width 250 --height 210 --dmenu --cache-file /dev/null | awk '{print tolower($2)}')
 
                 case $selected in
                   logout)
