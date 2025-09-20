@@ -8,8 +8,8 @@
     "url": "https://cdn.modrinth.com/data/8oi3bsk5/versions/BhiTK9tz/Terralith_1.21.x_v2.5.11.jar"
   },
   "Tectonic": {
-    "sha512": "26ce93c798bce5a98a84fc427189430104be2f6761d1421ffd8f014cdc8c6d8867f3764f08c3d738def91231ebc212d405300ec088fbfe6dff796a25f7829f78",
-    "url": "https://cdn.modrinth.com/data/lWDHr9jE/versions/96BO8leD/tectonic-3.0.1-fabric-1.21.5.jar"
+    "sha512": "dac4f2d9835a293f1bb6643491226412bf541bb5d7d864a4749726e61acc57ee9b73b7fcadacb073ba8de8bcf3c5fce6e46081f7980796a7140188811b95457c",
+    "url": "https://cdn.modrinth.com/data/lWDHr9jE/versions/GraxbWKG/tectonic-3.0.3-fabric-1.21.6.jar"
   },
   "Nullscape": {
     "sha512": "869540da8f56885c576c8933f4b737599f6e724b3df7e5112e23d1b0d295f96035aab92090611332b2de46696c40092cee6d13cb9d34bc0c42dcc640d3feda67",
@@ -20,31 +20,31 @@
     "url": "https://cdn.modrinth.com/data/ZVzW5oNS/versions/eTXZb5Wq/Incendium_1.21.x_v5.4.8.jar"
   },
   "Balm": {
-    "sha512": "9c3a9c58bc2dbd7a73b9175df0ae60c553121ca99b8e24bdb89a8120343ed6fa77ab70970a0b792eff612e41bcae4aecde9abdc4d487c4ea6c080435600958a3",
-    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/LWDB3V6h/balm-fabric-1.21.5-21.5.22.jar"
+    "sha512": "9abb52110b4c1190192672590ee9c36d06b437379d25911a4bcd8990e041574a40f7c37caab11872f0f15d84cc34c34dc74af26c1dabc73b231af4d3d546a5bb",
+    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/c8Bb5uUc/balm-fabric-1.21.8-21.8.8.jar"
   },
   "NetherPortalFix": {
-    "sha512": "267ed5768d1a232bad907cbd5b1f226309ad1953f7267b6308c3172cad842bb5ab51d34c4530b373ab24c54e3d97a9cba33832eac1bf9fa3cf362bfd754ae7c3",
-    "url": "https://cdn.modrinth.com/data/nPZr02ET/versions/3xwbxqcv/netherportalfix-fabric-1.21.5-21.5.1.jar"
+    "sha512": "d4bda547aa53738a2eb0eeff4819d159368e5176c3a6ae8dc6e4f60476bf01d47817b1c99285f5af9c1a592a77fe4fb5ab9b08546bb250af979f399e97752bd0",
+    "url": "https://cdn.modrinth.com/data/nPZr02ET/versions/wKtrSBPH/netherportalfix-fabric-1.21.7-21.7.1.jar"
   },
   "ConcurrentChunkManagementEngine": {
-    "sha512": "fd02367780cc0ff379074bef649c2ca463eaddec356827de6ef9d1ff02154d98f2d44ea2a787ca78b1728db6cb59e4beeed05577e7f92b39e5d4134e6bcada74",
-    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/OvXvTD3H/c2me-fabric-mc1.21.5-0.3.4%2Balpha.0.20.jar"
+    "sha512": "30cbc520cb8349036d55a1cb1f26964cf02410cf6d6a561d9cc07164d7566a3a7564367de62510f2bab50723c2c7c401718001153fa833560634ce4b2e212767",
+    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/tlZRTK1v/c2me-fabric-mc1.21.8-0.3.4.0.0.jar"
   },
   "Krypton": {
     "sha512": "2e2304b1b17ecf95783aee92e26e54c9bfad325c7dfcd14deebf9891266eb2933db00ff77885caa083faa96f09c551eb56f93cf73b357789cb31edad4939ffeb",
     "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/neW85eWt/krypton-0.2.9.jar"
   },
   "FabricAPI": {
-    "sha512": "0e42b72d1a63a45c1b64cdabafd15f4d236bbda5521964d687afa1f833d4022f96c7ffab5dd4471aba0190be588f092d156bf14a50b794895fb3286ec899bcf7",
-    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/kKEGlsne/fabric-api-0.128.2%2B1.21.5.jar"
+    "sha512": "43bf6af145a6b450503a6d7e7ec9a34912bd1494969b5d8861067f0f846cf710805415fb0fbc93c9ae9f5164d45c7649342f84b4f34552b2abdd892fd3b9838e",
+    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/JntuF9Ul/fabric-api-0.129.0%2B1.21.7.jar"
   },
   "Sit!": {
-    "sha512": "06163d9ceff05a4396fbde9d74fc6489ab45669678250c2a5b8089fee77609d89cf968542cef6df4334be7c2a4fb32e344b3086f5de740594f9ccd4a4f71fb1d",
-    "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/EbFBtGda/sit%21-1.2.4.7%2B1.21.5.jar"
+    "sha512": "041fa46958a57ee13007532cda292e6919cacb4f82228d4850e70841a7c9611e606debc3555458294a4fb18533c2cda2e787121cff3a48442ec1279bf6d967d9",
+    "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/yGaQnuwV/sit%21-1.2.5.0%2B1.21.8.jar"
   },
   "Gyser": {
-    "sha512": "dfac055ffc8dfe55933801f65e23277f1e0ca19259de0336b294079fcf98e25d997628cd804612695a0367ec5fe88030fcb67788483180d52e2884a551aa6fd3",
-    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/qAROYTN2/geyser-fabric-Geyser-Fabric-2.7.2-b862.jar"
+    "sha512": "3e1f3287e11ca6e2953924c6cbd995fb6d2ca6a091685afc25de885489f2523fc9cf0f3e9f620ac60bc756259fccfde860a414e19a404f87b4b3f69ce1c9b884",
+    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/lZxJ5WPi/geyser-fabric-Geyser-Fabric-2.8.3-b935.jar"
   }
 }
