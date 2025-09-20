@@ -28,7 +28,7 @@
   pgrep = getExe' pkgs.procps "pgrep";
   runOnce = program: "${pgrep} ${builtins.baseNameOf program} || ${exec} ${program}";
   lockScript = import ./lockscript.nix {inherit pkgs lib config;};
-  grimBlast = runOnce (lib.getExe pkgs.grimblast);
+  grimBlast = runOnce (getExe pkgs.grimblast);
   saveArea = "~/Pictures/$(date '+%Y-%m-%d'T'%H:%M:%S_no_watermark').png";
   inherit (config.wayland.windowManager.hyprland.settings.general) gaps_in gaps_out;
 in {
@@ -47,7 +47,7 @@ in {
         "$mod, F, fullscreen,"
         "$mod, G, togglegroup,"
         "$mod SHIFT, Q, killactive"
-        "$mod SHIFT, C, exec, ${exec} ${lib.getExe pkgs.zenity} --question --text='Are you sure you want to exit hyprland' && ${
+        "$mod SHIFT, C, exec, ${exec} ${getExe pkgs.zenity} --question --text='Are you sure you want to exit hyprland' && ${
           if usingUWSM
           then "uwsm stop"
           else "hyprctl dispatch exit"
@@ -103,27 +103,23 @@ in {
       ++ workspaces;
     /*
     # control volume,brightness,media players
-    ", XF86AudioRaiseVolume,exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"
-    ", XF86AudioLowerVolume,exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-"
-    ", XF86MonBrightnessUp,exec, ${pkgs.light}/bin/light -A 5"
-    ", XF86MonBrightnessDown, exec, ${pkgs.light}/bin/light -U 5"
     */
     bindl = [
       # Media Controls
-      ", XF86AudioPlay,exec, ${pkgs.playerctl}/bin/playerctl play-pause"
-      ", XF86AudioNext,exec, ${pkgs.playerctl}/bin/playerctl next"
-      ", XF86AudioPrev,exec, ${pkgs.playerctl}/bin/playerctl previous"
+      ", XF86AudioPlay,exec, ${getExe pkgs.playerctl} play-pause"
+      ", XF86AudioNext,exec, ${getExe pkgs.playerctl} next"
+      ", XF86AudioPrev,exec, ${getExe pkgs.playerctl} previous"
       # Volume
-      ", XF86AudioMute,exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-      ", XF86AudioMicMute,exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle "
+      ", XF86AudioMute,exec, ${getExe' pkgs.wireplumber "wpctl"} set-mute @DEFAULT_AUDIO_SINK@ toggle"
+      ", XF86AudioMicMute,exec, ${getExe' pkgs.wireplumber "wpctl"} set-mute @DEFAULT_AUDIO_SOURCE@ toggle "
     ];
     bindle = [
       # control volume
-      ", XF86AudioRaiseVolume,exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"
-      ", XF86AudioLowerVolume,exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-"
+      ", XF86AudioRaiseVolume,exec, ${getExe' pkgs.wireplumber "wpctl"} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"
+      ", XF86AudioLowerVolume,exec, ${getExe' pkgs.wireplumber "wpctl"} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-"
       # Brightness
-      ", XF86MonBrightnessUp,exec, ${pkgs.light}/bin/light -A 5"
-      ", XF86MonBrightnessDown, exec, ${pkgs.light}/bin/light -U 5"
+      ", XF86MonBrightnessUp,exec, ${getExe pkgs.light} -A 5"
+      ", XF86MonBrightnessDown, exec, ${getExe pkgs.light} -U 5"
     ];
     bindr = ["$mod,SPACE, exec, ${runOnce "rofi"} -show drun"];
   };

@@ -24,7 +24,7 @@
       # Check if playing before suspending
       ${getExe pkgs.playerctl} status | ${getExe pkgs.gnugrep} -qv "Playing" && \
       ${lockScript.outPath} && \
-      ${pkgs.systemd}/bin/systemctl suspend
+      ${lib.getExe' pkgs.systemd "systemctl"} suspend
     ''
   );
 in {
@@ -36,13 +36,13 @@ in {
         general = {
           ignore_dbus_inhibit = false;
           lock_cmd = lockScript.outPath;
-          before_sleep_cmd = "${pkgs.systemd}/bin/loginctl lock-session";
+          before_sleep_cmd = "${lib.getExe' pkgs.systemd "loginctl"} lock-session";
           after_sleep_cmd = "hyprctl dispatch dpms on";
         };
         listener = [
           {
             timeout = minutes 15;
-            on-timeout = "${pkgs.systemd}/bin/loginctl lock-session";
+            on-timeout = "${lib.getExe' pkgs.systemd "loginctl"} lock-session";
           }
           {
             timeout = minutes 20;

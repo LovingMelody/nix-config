@@ -18,7 +18,7 @@
     pkgs.runCommandLocal "reshade-stylix.ttf"
     {FONTCONFIG_FILE = pkgs.makeFontsConf {fontDirectories = [font.package];};}
     ''
-      font=$(${pkgs.fontconfig}/bin/fc-match -v "${font.name}" | grep "file:" | cut -d '"' -f 2)
+      font=$(${lib.getExe' pkgs.fontconfig "fc-match"} -v "${font.name}" | grep "file:" | cut -d '"' -f 2)
       cp $font $out
     '';
 

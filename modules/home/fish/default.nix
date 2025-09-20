@@ -20,7 +20,7 @@ in {
     programs.fish = {
       enable = true;
       interactiveShellInit = "fish_hybrid_key_bindings";
-      shellAliases = ((import "${self}/shellAliases.nix") {inherit pkgs;}) // {};
+      shellAliases = ((import "${self}/shellAliases.nix") {inherit pkgs lib;}) // {};
       plugins = with pkgs; [
         {
           name = "grc";

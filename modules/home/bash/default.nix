@@ -29,7 +29,7 @@ in {
         "checkwinsize"
         "checkjobs"
       ];
-      shellAliases = ((import "${self}/shellAliases.nix") {inherit pkgs;}) // {};
+      shellAliases = ((import "${self}/shellAliases.nix") {inherit pkgs lib;}) // {};
     };
   };
 }

@@ -96,7 +96,7 @@ in {
             workspaces = 1;
           };
         };
-        hyprpanel.restartCommand = "${pkgs.procps}/bin/pkill -u $USER -USR1 hyprpanel; ${pkgs.hyprpanel}/bin/hyprpanel";
+        hyprpanel.restartCommand = "${lib.getExe' pkgs.procps "pkill"} -u $USER -USR1 hyprpanel; ${lib.getExe pkgs.hyprpanel}";
         menus = {
           # bluetooth.showBattery = true;
           clock = {
@@ -159,6 +159,6 @@ in {
         };
       };
     };
-    xdg.configFile.hyprpanel.onChange = "${pkgs.procps}/bin/pkill -u $USER -USR1 hyprpanel || true";
+    xdg.configFile.hyprpanel.onChange = "${lib.getExe' pkgs.procps "pkill"} -u $USER -USR1 hyprpanel || true";
   };
 }

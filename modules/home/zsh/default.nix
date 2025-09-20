@@ -17,7 +17,7 @@ in {
   config = mkIf cfg.enable {
     programs.zsh = {
       enable = true;
-      shellAliases = (import "${self}/shellAliases.nix") {inherit pkgs;};
+      shellAliases = (import "${self}/shellAliases.nix") {inherit pkgs lib;};
     };
   };
 }

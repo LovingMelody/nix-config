@@ -207,7 +207,7 @@ in
         enableEmergencyMode = !config.TM.isServer;
         services.NetworkManager-wait-online.serviceConfig.ExecStart = mkDefault [
           ""
-          "${pkgs.networkmanager}/bin/nm-online -q"
+          "${lib.getExe' pkgs.networkmanager "nm-online"} -q"
         ];
       };
       services = {

@@ -30,7 +30,7 @@
         baseName = builtins.baseNameOf img;
       in
         pkgs.runCommand baseName {} ''
-          ${pkgs.lutgen}/bin/lutgen apply '${img}' -o $out -- ${colors}
+          ${lib.getExe pkgs.lutgen} apply '${img}' -o $out -- ${colors}
         ''
     else
       img:

@@ -69,11 +69,10 @@ in {
         };
         ".local/bin/set-title" = mkDefault {
           text = ''
-            #!${pkgs.bash}/bin/bash
+            #!/usr/bin/env bash
             set-title() {
               echo -ne "\033]0;$@\007"
             }
-
             set-title $@
           '';
           executable = true;

@@ -59,7 +59,7 @@ in
             })).run;
         in ''
           substituteInPlace $out/bin/XIVLauncher.Core \
-            --replace 'exec' 'exec ${steam-run}/bin/steam-run'
+            --replace 'exec' 'exec ${lib.getExe steam-run}'
         ''
       )
       + ''
