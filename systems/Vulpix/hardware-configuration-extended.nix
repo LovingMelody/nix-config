@@ -41,7 +41,13 @@
     rocmSupport = true;
     cudaSupport = true;
   };
-  programs.gamemode.enable = true;
+  programs = {
+    gamemode.enable = true;
+    rog-control-center = {
+      enable = true;
+      autoStart = true;
+    };
+  };
   environment.sessionVariables = lib.mkIf config.programs.gamemode.enable {
     GAMEMODERUNEXEC = lib.mkIf config.hardware.nvidia.prime.offload.enableOffloadCmd "nvidia-offload";
   };

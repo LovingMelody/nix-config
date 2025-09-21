@@ -142,10 +142,6 @@ in
             extraArgs = mkDefault "--keep-since 30d --keep 30";
           };
         };
-        rog-control-center = {
-          enable = mkDefault (config.asusd.enable && config.TM.isGui);
-          autoStart = mkDefault true;
-        };
         starship = {
           enable = mkDefault true;
           settings = {
