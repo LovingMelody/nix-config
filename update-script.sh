@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Note: flake inputs should be run before running this
 echo "Updating MC sources"
-python3 ./modules/nixos/minecraft-server/generate-sources.py "$MC_VERSION" >./modules/nixos/minecraft-server/sources.json
+python3 ./modules/nixos/minecraft-server/generate-sources.py >./modules/nixos/minecraft-server/sources.json
 
 echo "Updating npins"
 npins update
