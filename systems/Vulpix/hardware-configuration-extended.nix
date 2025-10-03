@@ -36,6 +36,7 @@
     programs.wine.binfmt = true;
     zfs.enable = false;
     isLaptop = true;
+    virt.enable = true;
   };
   nixpkgs.config = {
     rocmSupport = true;

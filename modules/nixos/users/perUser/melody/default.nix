@@ -21,22 +21,24 @@ in {
       isNormalUser = true;
       initialPassword = "Nixtastic!23";
       group = "melody";
-      extraGroups = [
-        "adbusers"
-        "audio"
-        "bluetooth"
-        "games"
-        "libvirtd"
-        "lp"
-        "plugdev"
-        "podman"
-        "docker"
-        "ssh"
-        "tss"
-        "video"
-        "virtualization"
-        "wheel"
-      ];
+      extraGroups =
+        [
+          "adbusers"
+          "audio"
+          "bluetooth"
+          "games"
+          "libvirtd"
+          "lp"
+          "plugdev"
+          "podman"
+          "docker"
+          "ssh"
+          "tss"
+          "video"
+          "virtualisation"
+          "wheel"
+        ]
+        ++ optional config.virtualisation.incus.enable "incus-admin";
       shell = mkForce pkgs.zsh;
       description = "Melody Renata";
       openssh.authorizedKeys.keyFiles = [

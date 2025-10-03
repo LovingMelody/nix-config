@@ -13,6 +13,16 @@ in {
 
   config = mkIf cfg.enable {
     virtualisation = {
+      incus = {
+        enable = mkDefault config.networking.nftables.enable;
+        socketActivation = mkDefault true;
+        agent.enable = mkDefault true;
+        ui.enable = mkDefault true;
+      };
+      podman = {
+        enable = mkDefault true;
+        dockerCompat = mkDefault true;
+      };
       # lxc.enable = true;
       # lxd.enable = true;
       libvirtd = {
