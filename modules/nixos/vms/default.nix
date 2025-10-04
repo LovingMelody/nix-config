@@ -20,8 +20,8 @@ in {
         ui.enable = mkDefault true;
       };
       podman = {
-        enable = mkDefault true;
-        dockerCompat = mkDefault true;
+        enable = mkDefault (! config.virtualisation.docker.enable);
+        dockerCompat = mkDefault (! config.virtualisation.docker.enable);
       };
       # lxc.enable = true;
       # lxd.enable = true;
