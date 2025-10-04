@@ -16,7 +16,7 @@ in {
     binfmt = mkEnableOption "Enable Wine binfmt";
     package = mkOption {
       description = "Wine Package to use";
-      default = pkgs.wine-astral-ntsync;
+      default = pkgs.wine-astral;
     };
   };
 
