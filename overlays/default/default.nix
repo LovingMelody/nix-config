@@ -112,7 +112,7 @@ in
         export WINEDEBUG=
       '';
       inherit (final) wineprefix-preparer;
-      wine = final.wine-astral-ntsync;
+      wine = final.wine-astral;
     };
     rsi-launcher = prev.rsi-launcher.override {
       disableEac = false;
@@ -127,7 +127,7 @@ in
         export WINEDEBUG=
       '';
       inherit (final) wineprefix-preparer;
-      wine = final.wine-astral-ntsync;
+      wine = final.wine-astral;
     };
     dxvk-w64 = prev.dxvk-w64.overrideAttrs {
       pname =

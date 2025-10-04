@@ -105,7 +105,6 @@
         star-citizen
         rsi-launcher
         wine-astral
-        wine-astral-ntsync
         catppuccin-base16
         gargoyle
         gallery-dl

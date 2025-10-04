@@ -102,7 +102,7 @@ in {
     programs.wine = {
       ntsync = true;
       enable = true;
-      package = mkDefault pkgs.wine-astral-ntsync;
+      package = mkDefault pkgs.wine-astral;
       binfmt = true;
     };
 
