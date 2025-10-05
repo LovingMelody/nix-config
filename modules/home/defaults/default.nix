@@ -47,7 +47,9 @@ in {
         ]
         ++ optional config.TM.isGui pkgs.ffmpeg-full
         ++ optional (!config.TM.isGui) pkgs.ffmpeg-headless;
-      file = {
+      file = let
+        wallpaper-ext = builtins.match ".*\\.([^.]+)$" config.stylix.image;
+      in {
         # TODO: Make this a variable
         ".face" = mkIf (config.home.username == "melody") {
           source = builtins.fetchurl {
@@ -56,6 +58,13 @@ in {
           };
         };
         ".wallpaper" = mkDefault {source = config.stylix.image;};
+
+        ".wallpaper.${
+          if wallpaper-ext != null
+          then builtins.head wallpaper-ext
+          else ""
+        }".source =
+          config.stylix.image;
         ".cargo/config.toml" = mkDefault {
           text = ''
             [alias]
