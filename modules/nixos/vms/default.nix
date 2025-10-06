@@ -16,7 +16,7 @@ in {
       incus = {
         enable = mkDefault config.networking.nftables.enable;
         socketActivation = mkDefault true;
-        agent.enable = mkDefault true;
+        agent.enable = mkDefault config.virtualisation.incus.enable;
         ui.enable = mkDefault true;
       };
       podman = {
@@ -30,16 +30,6 @@ in {
         qemu = {
           package = mkDefault pkgs.qemu_kvm;
           swtpm.enable = mkDefault true;
-          ovmf = {
-            enable = true;
-            packages = [
-              (pkgs.OVMF.override {
-                secureBoot = true;
-                tpmSupport = true;
-              })
-              .fd
-            ];
-          };
         };
       };
     };
