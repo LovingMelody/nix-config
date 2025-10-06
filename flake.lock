@@ -419,11 +419,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1753646701,
-        "narHash": "sha256-+9adl7BYjaYuAqlY2S8Jq0d43OHxxYnLF0S9PXjRp14=",
+        "lastModified": 1759769124,
+        "narHash": "sha256-4JD5rAtxP0zgPIMQScmrxS+YRFgETxKqw4ybicwxXjQ=",
         "owner": "LovingMelody",
         "repo": "ini-merger",
-        "rev": "dee88296422068b42edd172fe8577f8f3a85a848",
+        "rev": "1621b32ecc2a0eef05a55cb221c87b7c489d05c6",
         "type": "github"
       },
       "original": {
@@ -745,11 +745,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1757599242,
-        "narHash": "sha256-MwdfONJbzn0m0K7AxTgjLN+KrvQEs95jVPlDDLRtRak=",
+        "lastModified": 1759769116,
+        "narHash": "sha256-6fbX+Q6zWEINAwEaFuWjryt37EjoMkSeG6KAFKsyVRM=",
         "owner": "LovingMelody",
         "repo": "nix-reshade",
-        "rev": "be3b12990854733d1b6a55c1ca8fd359b86a298b",
+        "rev": "4bfd2069b8fedc9135492eb62b1cf77acccab3e1",
         "type": "github"
       },
       "original": {
@@ -920,11 +920,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1759670943,
-        "narHash": "sha256-JBjTDfwzAwtd8+5X/Weg27WE/3hVYOP3uggP2JPaQVQ=",
+        "lastModified": 1759756860,
+        "narHash": "sha256-7QLUQZein1TbpouPOAsTka8vQLujHRmmTqze2IkdrqY=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "21980a9c20f34648121f60bda15f419fa568db21",
+        "rev": "d3baaf296366efdea6737124f05b65d1cf25fa7c",
         "type": "github"
       },
       "original": {
