@@ -227,9 +227,6 @@ in
     TODO: Changes to to be upstreamed
     Anthing below this line should potentially be upstreamed
     */
-    qgnomeplatform-qt6 = prev.qgnomeplatform-qt6.overrideAttrs (o: {
-      cmakeFlags = (o.cmakeFlags or []) ++ ["-DCMAKE_POLICY_VERSION_MINIMUM=3.5"];
-    });
     obs-studio-plugins =
       prev.obs-studio-plugins
       // {
