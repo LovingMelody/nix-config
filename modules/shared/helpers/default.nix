@@ -17,6 +17,7 @@ in {
     isServer = mkEnableTarget "Environment is on a server" ["isServer"];
     isWSL = mkEnableTarget "Environment is running through WSL" ["isWSL"];
     hasHDRDisplay = mkEnableTarget "System has a HDR capable Display" ["hasHDRDisplay"];
+    knowsHiddenMove = mkEnableTarget "Host uses shared secrets" ["knowsHiddenMove"];
     libExtra = mkOption {
       description = "Libs from TM that are required to be loaded in with the config";
       type = types.attrs;

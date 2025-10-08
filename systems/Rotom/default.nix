@@ -23,6 +23,7 @@ in {
       name = "Rotom";
       pokedex = 479;
     };
+    knowsHiddenMove = true;
     users.enable = true;
     time.enable = true;
     sound.enable = true;

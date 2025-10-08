@@ -9,14 +9,14 @@ in {
   # NVIDIA : pci-0000:01:00.0-card
   imports = [./hardware-configuration-extended.nix];
   TM = {
-    services.ai.ollama.enable = true;
-    isGui = true;
-    isLaptop = true;
-    defaultNetworkAdapter = "wlp2s0";
     pokemon = {
       name = "Vulpix";
       pokedex = 37;
     };
+    knowsHiddenMove = true;
+    isGui = true;
+    isLaptop = true;
+    defaultNetworkAdapter = "wlp2s0";
     autoUpgrade.enable = true;
     # ZFS Cannot safely be suspended & hibernate.
     # Making it not suitable for laptops
@@ -41,6 +41,7 @@ in {
       };
     };
     gaming.enable = true;
+    services.ai.ollama.enable = true;
   };
   stylix.fonts.sizes = {
     terminal = mkForce 14;
