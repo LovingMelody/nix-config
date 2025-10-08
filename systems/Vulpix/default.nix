@@ -13,7 +13,7 @@ in {
       name = "Vulpix";
       pokedex = 37;
     };
-    knowsHiddenMove = true;
+    knowsHiddenMove = false;
     isGui = true;
     isLaptop = true;
     defaultNetworkAdapter = "wlp2s0";

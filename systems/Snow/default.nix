@@ -16,7 +16,7 @@ in {
       pokedex = 37;
       variant = "Alolan";
     };
-    knowsHiddenMove = true;
+    knowsHiddenMove = false;
     defaultNetworkAdapter = "enp7s0";
     services.ai = {
       ollama.enable = true;

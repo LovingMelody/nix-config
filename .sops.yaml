@@ -13,6 +13,7 @@ creation_rules:
           - *admin_Melody2
           - *host_Snow
           - *host_Rotom
+          - *host_Vulpix
   - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
     key_groups:
       - pgp:
@@ -21,6 +22,7 @@ creation_rules:
           - *admin_Melody2
           - *host_Snow
           - *host_Rotom
+          - *host_Vulpix
   - path_regex: secrets/longview/[^/]+\.(yaml|json|env|ini)$
     key_groups:
       - pgp:
