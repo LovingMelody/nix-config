@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "d99ad9a54bdea6733d18ce041694e350354cb428",
-      "url": "https://github.com/cachyos/kernel-patches/archive/d99ad9a54bdea6733d18ce041694e350354cb428.tar.gz",
-      "hash": "0pa5pxlrl69cxy6053apm748x8jbs401mz2hq9rqf43ap91zp1r4"
+      "revision": "caa1cd9122cedc84961c357c39e82784d8265542",
+      "url": "https://github.com/cachyos/kernel-patches/archive/caa1cd9122cedc84961c357c39e82784d8265542.tar.gz",
+      "hash": "11n2a0qmz60am8aq33i1n68fcx0r6nb1p1jvd36hv7slbbqm7jy6"
     },
     "dxvk": {
       "type": "Git",
@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "8bd72bb2be83d2974c097cfa978b0aade474769d",
+      "revision": "1c25c0a517d86e2bdea82730589a38eab17451c4",
       "url": null,
-      "hash": "1dk05lj2diw42vfsq3cgrlbkv9a9xmkqk2x68ybvnngfdc2y771a"
+      "hash": "0danx3x50p0gv54970l35v3dwcqph3bivaff6bl04pq13wd3fna8"
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "4d9b30bcb00d15fc68b99920de9a1ee3b6e20db0",
+      "revision": "d49b8198866777396754d1ecedc33091cba5a442",
       "url": null,
-      "hash": "0v8iwrd8nyc3j2xlz1cdylgsn6ymij4s2i8fqw697aihnqm4rv6b"
+      "hash": "0r8klkq7f9vwnmsndi6sj6ihc8s7ll05l9mayvf2wmq00r2kxs9k"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -158,9 +158,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "17a3ac4cf2b8bfc5dee912fb35568f3de6825991",
-      "url": "https://github.com/mpv-player/mpv/archive/17a3ac4cf2b8bfc5dee912fb35568f3de6825991.tar.gz",
-      "hash": "1xaimmid72b4abh554lds9c7xijwyq37jn9cq1g0akrzs375h83d"
+      "revision": "e70bb8802fbf8f7edcd24a036c5ff2b5bf04fd27",
+      "url": "https://github.com/mpv-player/mpv/archive/e70bb8802fbf8f7edcd24a036c5ff2b5bf04fd27.tar.gz",
+      "hash": "0vs5ysa08vfcdpvd3wx3zmcdhww2s958h04cfvkm8g8zp1zqd76q"
     },
     "npins": {
       "type": "GitRelease",
