@@ -25,7 +25,7 @@ in {
     };
     qt = {
       enable = mkDefault config.TM.isGui;
-      # platformTheme = mkDefault "gnome";
+      platformTheme = mkDefault "kde";
       style = mkForce "adwaita${lib.strings.optionalString (config.stylix.polarity == "dark") "-dark"}";
     };
     fonts = {

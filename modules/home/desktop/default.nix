@@ -235,7 +235,7 @@ in {
         fractal
         freetube
         gnome-text-editor
-        lite-xl
+        # lite-xl
         gimp3-with-plugins
         krita
         haruna

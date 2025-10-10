@@ -39,6 +39,7 @@ in
               --run "${patch-krisp} ${node_module}"
           '';
       });
+    cmakeCompatFix = pkg: brokenVersion: pkg.overrideAttrs (o: {cmakeFlags = (o.cmakeFlags or []) ++ lib.optional ((brokenVersion == true) || (lib.versionOlder o.version brokenVersion)) "-DCMAKE_POLICY_VERSION_MINIMUM=3.5";});
   in {
     linuxKernel =
       prev.linuxKernel
@@ -222,6 +223,15 @@ in
     #
     # nix-doc = prev.nix-doc.override {withPlugin = false;};
     # nix = final.nixVersions.stable;
+
+    /*
+    Temp Fixes
+    https://github.com/NixOS/nixpkgs/issues/445447
+    */
+
+    # BUGFIX: https://github.com/NixOS/nixpkgs/issues/449595
+    qgnomeplatform = cmakeCompatFix prev.qgnomeplatform true;
+    qgnomeplatform-qt6 = cmakeCompatFix prev.qgnomeplatform-qt6 true;
 
     /*
     TODO: Changes to to be upstreamed
