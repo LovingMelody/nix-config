@@ -39,7 +39,7 @@ in
               --run "${patch-krisp} ${node_module}"
           '';
       });
-    cmakeCompatFix = pkg: brokenVersion: pkg.overrideAttrs (o: {cmakeFlags = (o.cmakeFlags or []) ++ lib.optional ((brokenVersion == true) || (lib.versionOlder o.version brokenVersion)) "-DCMAKE_POLICY_VERSION_MINIMUM=3.5";});
+    cmakeCompatFix = pkg: brokenVersion: pkg.overrideAttrs (o: {cmakeFlags = (o.cmakeFlags or []) ++ lib.optional (brokenVersion || (lib.versionOlder o.version brokenVersion)) "-DCMAKE_POLICY_VERSION_MINIMUM=3.5";});
   in {
     linuxKernel =
       prev.linuxKernel
