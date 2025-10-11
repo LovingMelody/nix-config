@@ -34,6 +34,7 @@ in {
       };
     };
     impermanence.enable = false;
+    airplay.client.enable = true;
     # defaults.enable = true;
     programs = {
       _1password = {
