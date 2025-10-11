@@ -27,6 +27,13 @@ in {
       // {
         default = true;
       };
+    userManaged = {
+      enable = mkEnableOption "Enable" // {default = config.TM.isGui;};
+      user = mkOption {
+        type = types.str;
+        default = "melody";
+      };
+    };
     autoConnect = mkEnableOption "Autoconnect to tailscale";
   };
 
@@ -34,7 +41,7 @@ in {
     key = "TailScale/authKey";
   in
     mkIf cfg.enable (mkMerge [
-      (mkIf cfg.enable {
+      {
         topology.networks.tailScale = {
           name = "TailScale";
           cidrv4 = "100.64.0.0/10";
@@ -52,13 +59,14 @@ in {
         services.tailscale = {
           enable = true;
           extraUpFlags = optional cfg.manageSSH "--ssh";
+          extraSetFlags = optional cfg.userManaged.enable "--operator=${cfg.userManaged.user}";
         };
         networking.firewall = {
           trustedInterfaces = ["tailscale0"];
           checkReversePath = "loose";
           allowedUDPPorts = [config.services.tailscale.port];
         };
-      })
+      }
       (mkIf cfg.autoConnect {
         sops.secrets."${key}" = {
           sopsFile = lib.TM.get-secret "hosts/${config.networking.hostName}/tailscale.yaml";
