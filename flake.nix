@@ -68,7 +68,7 @@
                     [
                       {nixpkgs.config.hostPlatform = lib.mkDefault config.nixpkgs.hostPlatform;}
                       inputs.catppuccin.homeModules.catppuccin
-                      inputs.nix-index-database.hmModules.nix-index
+                      inputs.nix-index-database.homeModules.nix-index
                       inputs.nvf.homeManagerModules.default
                       inputs.sops-nix.homeManagerModules.sops
                       inputs.impermanence.nixosModules.home-manager.impermanence
