@@ -1,7 +1,7 @@
 {
   "VanillaRefresh": {
-    "sha512": "c148e4100dac671d67439246e6ee8ac234f7db5fd850b9aeb537dbef9e002746d98d50df6d2947b1a2fb277819f9d4c449cb9759dda1939d056dc36191e70c66",
-    "url": "https://cdn.modrinth.com/data/gWO6Zqey/versions/L1WNSxKw/vanilla-refresh-1.4.28.jar"
+    "sha512": "8cd5ccfeb7705674ba4c586df7551fbd4651ecdd45bc8c4834699bab03f5c85f452ba7860c6e6f0db2ecbcf4984bd912b2e8259be3c799554939ab24763618a5",
+    "url": "https://cdn.modrinth.com/data/gWO6Zqey/versions/EHjk5kzY/vanilla-refresh-1.4.28a.jar"
   },
   "Terralith": {
     "sha512": "af3ad9cef9a092a35c058eedcc751498052374f7472580a8ace44cb708c90a357559205c39604ecfad533383e3a609b49c9352a25736833bf5948a279559db88",
@@ -44,7 +44,7 @@
     "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/yGaQnuwV/sit%21-1.2.5.0%2B1.21.8.jar"
   },
   "Gyser": {
-    "sha512": "4e3a935266bd086c6c7d8fa7639ee860f237a90cc5923464c5fcf29cffae9bdd2e44b45d7d43e5f4eab798bbc72ba00b3f009e90d391e9c76e91333b1286fd1b",
-    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/AXaKkJMf/geyser-fabric-Geyser-Fabric-2.8.4-b948.jar"
+    "sha512": "456ca2567b3c08e0f628e210b0344d9dbdc514758751cca80f8b6996d78433d765334828e8291b72273c6452840b9dd6f8411d8f00f90c21595d84887db1a184",
+    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/XGxt5MUN/geyser-fabric-Geyser-Fabric-2.9.0-b949.jar"
   }
 }
