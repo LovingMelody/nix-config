@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "c269339dbcd17008165da792ea89b5d35aa9d147",
+      "revision": "00a9e5dc5168a5d43c03106c7820f9e212fe1738",
       "url": null,
-      "hash": "03pbhgd5nwp9px4fk47cgr2rg8ywg63a4jycgnlyvr8qksr41caf"
+      "hash": "1rgzgmw11b0ay1cf42cshn35gvll9iypw7phi389r5ahf56am6h4"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -89,10 +89,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": true,
-      "version": "v1.30.9",
-      "revision": "4512422a6dcc49a1009fb92a29430fd502e7dd83",
+      "version": "v1.30.10",
+      "revision": "ff0624b612eb9db261b8574ce1505cd70975185d",
       "url": null,
-      "hash": "0v8iwrd8nyc3j2xlz1cdylgsn6ymij4s2i8fqw697aihnqm4rv6b"
+      "hash": "1rgzgmw11b0ay1cf42cshn35gvll9iypw7phi389r5ahf56am6h4"
     },
     "gargoyle": {
       "type": "Git",
