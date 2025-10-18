@@ -239,6 +239,8 @@ in {
         gimp3-with-plugins
         krita
         haruna
+
+        protonmail-desktop
       ];
     };
     fonts.fontconfig.enable = true;
