@@ -236,7 +236,8 @@ in {
         freetube
         gnome-text-editor
         # lite-xl
-        gimp3-with-plugins
+        # gimp3-with-plugins
+        gimp3
         krita
         haruna
 

@@ -234,6 +234,12 @@ in
     qgnomeplatform-qt6 = cmakeCompatFix prev.qgnomeplatform-qt6 true;
 
     /*
+    FFMPEG Fixes
+    */
+    # gmic = if lib.versionOlder prev.gmic.version "3.6.3" then
+    #   prev.gmic.overrideAttrs { ffmpeg = final.ffmpeg_7; }
+
+    /*
     TODO: Changes to to be upstreamed
     Anthing below this line should potentially be upstreamed
     */
