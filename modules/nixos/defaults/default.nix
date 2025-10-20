@@ -111,8 +111,8 @@ in
               pkgs.unzip
               pkgs.lazygit
             ]
-            ++ optional config.TM.isGui pkgs.ffmpeg-full
-            ++ optional (!config.TM.isGui) pkgs.ffmpeg-headless;
+            ++ optional config.TM.isGui pkgs.ffmpeg_8-full
+            ++ optional (!config.TM.isGui) pkgs.ffmpeg_8-headless;
           etc.FLAKE_CURRENT_COMMIT = {
             text = "${config.system.configurationRevision}";
           };

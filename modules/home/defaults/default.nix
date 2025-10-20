@@ -45,8 +45,8 @@ in {
           pkgs.nix-output-monitor
           pkgs.gallery-dl-unstable
         ]
-        ++ optional config.TM.isGui pkgs.ffmpeg-full
-        ++ optional (!config.TM.isGui) pkgs.ffmpeg-headless;
+        ++ optional config.TM.isGui pkgs.ffmpeg_8-full
+        ++ optional (!config.TM.isGui) pkgs.ffmpeg_8-headless;
       file = let
         wallpaper-ext = builtins.match ".*\\.([^.]+)$" config.stylix.image;
       in {
