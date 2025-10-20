@@ -17,7 +17,6 @@
     nixpkgs-overlays = [
       inputs.niri.overlays.default
       inputs.nix-citizen.overlays.default
-      inputs.nix-citizen.overlays.latestFFMPEG
       # NOTE: Disabled breaks CI, changes upstream in pr#425870
       # inputs.nix-citizen.overlays.updated-vulkan-sdk
       inputs.self.overlays.default
