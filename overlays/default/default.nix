@@ -65,7 +65,7 @@ in
       nativeBuildInputs = (o.nativeBuildInputs or []) ++ [final.autoreconfHook];
     });
     photoprism = prev.photoprism.override {
-      ffmpeg = final.ffmpeg-full;
+      ffmpeg = final.ffmpeg_8-full;
       imagemagick = final.imagemagickBig;
     };
     kitty = pinnedOverlay "kitty";
@@ -182,7 +182,7 @@ in
       withMoonlight = false;
     });
 
-    obs-studio = prev.obs-studio.override {ffmpeg = final.ffmpeg-full;};
+    obs-studio = prev.obs-studio.override {ffmpeg = final.ffmpeg_8-full;};
 
     lutris = prev.lutris.override {
       steamSupport = true;
