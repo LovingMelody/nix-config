@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "bfcf34bd22aa1fa740c5d60a8f126919cfdacfdf",
-      "url": "https://github.com/cachyos/kernel-patches/archive/bfcf34bd22aa1fa740c5d60a8f126919cfdacfdf.tar.gz",
-      "hash": "0m1dzckl8hmm7xrf85z6j9s3ihiv3d1inr7p0qw766j1q95npn31"
+      "revision": "000995d912232aa2658d55e34be5e53978aad847",
+      "url": "https://github.com/cachyos/kernel-patches/archive/000995d912232aa2658d55e34be5e53978aad847.tar.gz",
+      "hash": "18vgvfribbr5dhx2cw78k2vwzcjm496hf0ralv6ymlb98vair0lv"
     },
     "dxvk": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "e2fb2c009cba39fa5329155945f6a0fcb011bb88",
+      "revision": "06e3126bba555aeeb8f7242916b984324ed8011d",
       "url": null,
-      "hash": "0arasibmjsrcd5bds5j2ni1czkqbv6dl7fqdsm4w80wm9wnzjg14"
+      "hash": "1dnm0gcmprk27jd15ixksb9c6bgb3a9xjzaf7j5va9q2zcmjng71"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -103,9 +103,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "67d246f7a77528905a6481e106d682452d697e95",
-      "url": "https://github.com/garglk/garglk/archive/67d246f7a77528905a6481e106d682452d697e95.tar.gz",
-      "hash": "0j5cp648nj62inhvf83bkfp8hp0j98nklkjvp7kfh4bmx4s4kz1l"
+      "revision": "52e48f195be7bace8ae9f6f26c376708284de4f6",
+      "url": "https://github.com/garglk/garglk/archive/52e48f195be7bace8ae9f6f26c376708284de4f6.tar.gz",
+      "hash": "0r85jkg5vm5n5dmfmp9ifgi23sb0vacb8bc1n83xng6dzka2sf3f"
     },
     "getopts.fish": {
       "type": "Git",
@@ -158,9 +158,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "233e89698e69242209645f61472445bffb36fa42",
-      "url": "https://github.com/mpv-player/mpv/archive/233e89698e69242209645f61472445bffb36fa42.tar.gz",
-      "hash": "0nipf5b2v6fp0d9a9bhbsg6mpvkrd85c8h88ad3105n7cydc6wwv"
+      "revision": "99d6d4c1c21c51ffac5f7b6d6e733a0b05a216ad",
+      "url": "https://github.com/mpv-player/mpv/archive/99d6d4c1c21c51ffac5f7b6d6e733a0b05a216ad.tar.gz",
+      "hash": "1cr1akd8rg03prbjmq3g4sx8cy5gjz6n61f8vaj0xifavzap5jyx"
     },
     "npins": {
       "type": "GitRelease",
@@ -268,9 +268,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "f92d8c6e283d613601de49f368edb1e0a248caaf",
+      "revision": "8798a03dfe1c4d279f9ba245d9b9ab5ad730636c",
       "url": null,
-      "hash": "13zshmx8fixf58yayi7hzs49ikd50j18jwkmyvanvjmmr8h8h0ff"
+      "hash": "1pq1rd19mc4lmz01kcy4hpqq4v33y52xmdcca4jcpds7xx6rgsw4"
     },
     "xivlauncher-rb": {
       "type": "GitRelease",
