@@ -14,12 +14,10 @@ in {
     };
 
   config = mkIf cfg.enable {
+    programs.delta.enable = true;
     programs.git = {
       package = pkgs.gitAndTools.gitFull;
       enable = true;
-      userName = "Melody Renata";
-      userEmail = "me@lovingmelody.io";
-      delta.enable = true;
       lfs = {
         enable = true;
       };
@@ -28,7 +26,11 @@ in {
         "*.swp"
         ".DS_Store"
       ];
-      extraConfig = {
+      settings = {
+        user = {
+          name = "Melody Renata";
+          email = "me@lovingmelody.io";
+        };
         init.defaultBranch = "main";
         core = {
           whitespace = "trailing-space,space-before-tab";

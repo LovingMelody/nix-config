@@ -44,7 +44,7 @@ in {
         })
       ];
     programs.git = mkIf (cfg.gpgSign.enable && cfg.sshAgent) {
-      extraConfig = {
+      settings = {
         "gpg \"ssh\"".program = "${getExe' pkgs._1password-gui "op-ssh-sign"}";
         gpg.format = "ssh";
       };

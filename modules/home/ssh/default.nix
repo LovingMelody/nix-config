@@ -11,9 +11,11 @@ in {
   config = mkIf cfg.enable {
     programs.ssh = {
       enable = true;
-      compression = true;
-      forwardAgent = true;
       matchBlocks = {
+        "*" = {
+          forwardAgent = true;
+          compression = true;
+        };
         "eu.nixbuild.net" = {
           identitiesOnly = true;
           identityFile = "~/.ssh/nixbuild.pub";
