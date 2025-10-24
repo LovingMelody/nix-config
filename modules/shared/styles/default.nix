@@ -9,6 +9,7 @@
     importJSON
     mkDefault
     mkEnableOption
+    mkForce
     mkIf
     mkMerge
     mkOption
@@ -199,10 +200,14 @@ in {
         targets = {
           nvf.enable = false;
           gtk.enable = mkDefault config.TM.isGui;
-          qt.enable = mkDefault config.TM.isGui;
+          qt = {
+            enable = mkDefault config.TM.isGui;
+            platform = mkForce "qtct";
+          };
         };
         opacity.desktop = mkDefault 0.70;
         image = (editImage cfg.wallpaper).outPath;
+
         inherit (cfg) polarity fonts;
       };
     }

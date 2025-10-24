@@ -39,7 +39,10 @@ in
               --run "${patch-krisp} ${node_module}"
           '';
       });
+    /*
+    # https://github.com/NixOS/nixpkgs/issues/445447
     cmakeCompatFix = pkg: brokenVersion: pkg.overrideAttrs (o: {cmakeFlags = (o.cmakeFlags or []) ++ lib.optional (brokenVersion || (lib.versionOlder o.version brokenVersion)) "-DCMAKE_POLICY_VERSION_MINIMUM=3.5";});
+    */
   in {
     linuxKernel =
       prev.linuxKernel
@@ -228,10 +231,6 @@ in
     Temp Fixes
     https://github.com/NixOS/nixpkgs/issues/445447
     */
-
-    # BUGFIX: https://github.com/NixOS/nixpkgs/issues/449595
-    qgnomeplatform = cmakeCompatFix prev.qgnomeplatform true;
-    qgnomeplatform-qt6 = cmakeCompatFix prev.qgnomeplatform-qt6 true;
 
     /*
     FFMPEG Fixes

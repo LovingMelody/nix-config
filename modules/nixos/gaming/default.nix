@@ -163,7 +163,6 @@ in {
         })
         pkgs.lug-helper
         pkgs.mangohud
-        pkgs.moonlight-qt
         config.programs.steam.package
         pkgs.gargoyle
         pkgs.rpcs3
