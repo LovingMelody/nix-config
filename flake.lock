@@ -581,11 +581,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1760718549,
-        "narHash": "sha256-ujjzJTZx3sESddtYXlmiaxnaOd+ZvB3Q7ScOWEO8gDg=",
+        "lastModified": 1761309656,
+        "narHash": "sha256-JOL8ZXBTVeNKSaIjtSapC7lwUG8E/9JJEHnNDcS2uUk=",
         "owner": "LovingMelody",
         "repo": "nix-citizen",
-        "rev": "1ccbef1a142f983499a604c9cf2bd6a72170278f",
+        "rev": "6f9fadc5a2f2d130ed48ae38b691008e7aa22bb7",
         "type": "github"
       },
       "original": {
@@ -1285,11 +1285,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1760945191,
-        "narHash": "sha256-ZRVs8UqikBa4Ki3X4KCnMBtBW0ux1DaT35tgsnB1jM4=",
+        "lastModified": 1761311587,
+        "narHash": "sha256-Msq86cR5SjozQGCnC6H8C+0cD4rnx91BPltZ9KK613Y=",
         "owner": "numtide",
         "repo": "treefmt-nix",
-        "rev": "f56b1934f5f8fcab8deb5d38d42fd692632b47c2",
+        "rev": "2eddae033e4e74bf581c2d1dfa101f9033dbd2dc",
         "type": "github"
       },
       "original": {
