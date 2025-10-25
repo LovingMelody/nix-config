@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "719c67f34bbfcaca5df640aea7078419f6010510",
-      "url": "https://github.com/cachyos/kernel-patches/archive/719c67f34bbfcaca5df640aea7078419f6010510.tar.gz",
-      "hash": "08dln7s67a9gsxw34gmsk7kr76vpasbfpyz6m6qqmsb059v65l96"
+      "revision": "b6045ec5a50b75b2553f65314a651a2aa953dc13",
+      "url": "https://github.com/cachyos/kernel-patches/archive/b6045ec5a50b75b2553f65314a651a2aa953dc13.tar.gz",
+      "hash": "1w3p1map0rk5776a8hbb45sb293sr1kclh2dczwqvdqm3drapn80"
     },
     "dxvk": {
       "type": "Git",
