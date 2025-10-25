@@ -165,7 +165,6 @@ in {
         pkgs.mangohud
         config.programs.steam.package
         pkgs.gargoyle
-        pkgs.rpcs3
         (pkgs.rsi-launcher.override (_: {
           extraLibs = _: config.hardware.graphics.extraPackages ++ [config.hardware.graphics.package pkgs.lsfg-vk];
           extraEnvVars = {
