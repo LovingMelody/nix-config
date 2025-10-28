@@ -8,7 +8,7 @@
   cfg = config.TM.programs.appimage;
 in {
   options.TM.programs.appimage = {
-    enable = mkEnableOption "Enable Appimage & binfmt" // {default = config.TM.isDesktop;};
+    enable = mkEnableOption "Enable Appimage & binfmt" // {default = ! config.TM.isServer;};
     extraPkgs = mkOption {
       description = "Extra packages for appimage-run";
       default = _pkgs: [];
@@ -23,7 +23,7 @@ in {
   config = mkIf cfg.enable {
     programs.appimage = {
       enable = true;
-      binfmt.enable = true;
+      binfmt = true;
       inherit (cfg) package;
     };
   };
