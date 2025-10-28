@@ -41,6 +41,7 @@
   in {
     inherit lib;
     namespace = "TM";
+    revision = self.rev or self.dirtyRev;
     nixosModules = defineModules "nixos";
     homeModules = defineModules "home";
     formatter = builtins.mapAttrs (_n: v: v.config.build.wrapper) treefmtEval;
