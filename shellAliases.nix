@@ -10,7 +10,7 @@
   t = "${lib.getExe pkgs.tig} status";
   e = "$EDITOR";
   ee = "${lib.getExe pkgs.fzf} --print0 | xargs -0 $EDITOR";
-  download = lib.getExe pkgs.aria;
+  download = lib.getExe pkgs.aria2;
   ".." = "cd ..";
   "..." = "cd ../..";
   "...." = "cd ../../../";
