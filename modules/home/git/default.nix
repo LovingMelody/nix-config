@@ -16,7 +16,7 @@ in {
   config = mkIf cfg.enable {
     programs.delta.enable = true;
     programs.git = {
-      package = pkgs.gitAndTools.gitFull;
+      package = pkgs.gitFull;
       enable = true;
       lfs = {
         enable = true;

@@ -93,7 +93,7 @@ in
               pkgs.btop
               pkgs.comma
               pkgs.file
-              pkgs.git
+              pkgs.gitFull
               pkgs.htop
               pkgs.imagemagickBig
               # pkgs.kitty.terminfo

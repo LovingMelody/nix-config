@@ -137,7 +137,7 @@ in {
       emoji = {
         package = mkOption {
           type = lib.types.package;
-          default = osConfig.TM.styles.fonts.emoji.package or pkgs.noto-fonts-emoji;
+          default = osConfig.TM.styles.fonts.emoji.package or pkgs.noto-fonts-color-emoji;
         };
         name = mkOption {
           type = lib.types.str;
