@@ -100,7 +100,7 @@ in {
       };
     };
     programs.wine = {
-      ntsync = true;
+      ntsync = lib.versionAtLeast config.boot.kernelPackages.kernel.version "6.14";
       enable = true;
       package = mkDefault pkgs.wine-astral;
       binfmt = true;
