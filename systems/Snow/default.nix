@@ -232,10 +232,7 @@ in {
   programs = {
     niri.enable = true;
     gamemode.enable = mkForce false;
-    coolercontrol = {
-      enable = false;
-      nvidiaSupport = true;
-    };
+    coolercontrol.enable = false;
     adb.enable = true;
     fuse.userAllowOther = true;
     honkers-railway-launcher.enable = true;
