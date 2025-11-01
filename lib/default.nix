@@ -18,6 +18,16 @@ in rec {
       package.overrideAttrs (old: {
         patches = patches ++ lib.optionals (builtins.hasAttr "patches" old) old.patches;
       });
+    blacklistPatches = package: blacklist:
+      package.overrideAttrs (o: {
+        patches =
+          if (builtins.hasAttr "patches" o)
+          then
+            if o.patches == []
+            then []
+            else builtins.filter (patch: lib.lists.any (b: (builtins.baseNameOf patch) == b) blacklist) (o.patches or [])
+          else [];
+      });
     patchLibcuda = package:
       package.overrideAttrs (old: {
         postInstall = ''

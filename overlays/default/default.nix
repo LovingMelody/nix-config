@@ -5,7 +5,7 @@
   ...
 }: let
   inherit (inputs) nixpkgs nix-reshade;
-  inherit (lib.TM.package-helper) pins patchLibcuda;
+  inherit (lib.TM.package-helper) pins patchLibcuda blacklistPatches;
   shortRev = s: builtins.substring 0 7 s;
   allowGplAsync = pins.dxvk-gplasync.revision != "36d811356f59c0d0668621187fd3aa4d4ce6ce93";
 in
@@ -72,10 +72,10 @@ in
       imagemagick = final.imagemagickBig;
     };
     kitty = pinnedOverlay "kitty";
-    gargoyle = (prev.gargoyle.override {stdenv = final.clangStdenv;}).overrideAttrs {
+    gargoyle = blacklistPatches ((prev.gargoyle.override {stdenv = final.clangStdenv;}).overrideAttrs {
       src = pins.gargoyle;
       version = pins.gargoyle.revision;
-    };
+    }) ["ftbfs_gcc14.patch" "cmake4-fix"];
     gallery-dl = prev.gallery-dl.overrideAttrs (o: {
       inherit (pins.gallery-dl-stable) version;
       src = pins.gallery-dl-stable;
