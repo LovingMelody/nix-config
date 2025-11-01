@@ -34,11 +34,11 @@ in {
         default = "melody";
       };
     };
-    autoConnect = mkEnableOption "Autoconnect to tailscale";
+    autoConnect = mkEnableOption "Autoconnect to tailscale" // {default = config.TM.knowsHiddenMove;};
   };
 
   config = let
-    key = "TailScale/authKey";
+    key = "Networking/TailScale/AuthKey";
   in
     mkIf cfg.enable (mkMerge [
       {
@@ -69,9 +69,13 @@ in {
       }
       (mkIf cfg.autoConnect {
         sops.secrets."${key}" = {
-          sopsFile = lib.TM.get-secret "hosts/${config.networking.hostName}/tailscale.yaml";
           owner = config.users.users.root.name;
           reloadUnits = ["tailscale-autoconnect.service"];
+
+          sopsFile =
+            if config.TM.knowsHiddenMove
+            then config.sops.defaultSopsFile
+            else lib.TM.get-secret "hosts/${config.networking.hostName}/tailscale.yaml";
         };
 
         # Autoconnect
