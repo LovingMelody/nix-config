@@ -247,8 +247,8 @@ in
       prev.obs-studio-plugins
       // {
         obs-backgroundremoval = prev.obs-studio-plugins.obs-backgroundremoval.overrideAttrs {
-          version = "git+${pins.obs-backgroundremoval.revision}";
-          src = pins.obs-backgroundremoval;
+          # version = "git+${pins.obs-backgroundremoval.revision}";
+          # src = pins.obs-backgroundremoval;
           CUDA_BIN_PATH = "${final.cudaPackages.cudatoolkit}";
           CUDA_TOOLKIT_ROOT_DIR = "${final.cudaPackages.cudatoolkit}";
         };
