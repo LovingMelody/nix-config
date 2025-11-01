@@ -14,7 +14,7 @@ creation_rules:
           - *host_Snow
           - *host_Rotom
           - *host_Vulpix
-  - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
+  - path_regex: secrets/[^/]+\.(yaml|json|env|ini|bin)$
     key_groups:
       - pgp:
         age:

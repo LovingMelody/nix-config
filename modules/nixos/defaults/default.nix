@@ -292,38 +292,14 @@ in
       })
       (mkIf
         config.TM.knowsHiddenMove {
-          sops.secrets."Networking/Wireless/Home/ssid" = {
-            sopsFile = TM.get-secret-file "generic.yaml";
-            key = "Networking.Wireless.Home.ssid";
-            format = "yaml";
-          };
-          sops.secrets."Networking/Wireless/Home/pass" = {
-            sopsFile = TM.get-secret-file "generic.yaml";
-            key = "Networking.Wireless.Home.pass";
-            format = "yaml";
-          };
-          sops.secrets."Networking/Wireless/MothersHome/ssid" = {
-            sopsFile = TM.get-secret-file "generic.yaml";
-            key = "Networking.Wireless.MothersHome.ssid";
-            format = "yaml";
-          };
-          sops.secrets."Networking/Wireless/MothersHome/pass" = {
-            sopsFile = TM.get-secret-file "generic.yaml";
-            key = "Networking.Wireless.MothersHome.pass";
-            format = "yaml";
-          };
-          sops.templates."wifi.env" = {
-            content = ''
-              WIFI_HOME_SSID=${config.sops.placeholder."Networking/Wireless/Home/ssid"}
-              WIFI_HOME_PSK=${config.sops.placeholder."Networking/Wireless/Home/pass"}
-              WIFI_MOM_SSID=${config.sops.placeholder."Networking/Wireless/MothersHome/ssid"}
-              WIFI_MOM_PSK=${config.sops.placeholder."Networking/Wireless/MothersHome/pass"}
-            '';
+          sops.secrets."wifi.env" = {
+            sopsFile = TM.get-secret-file "wifi.env";
+            format = "dotenv";
             owner = "root";
             mode = "0400";
           };
           networking.networkmanager.ensureProfiles = {
-            environmentFiles = [config.sops.templates."wifi.env".path];
+            environmentFiles = [config.sops.secrets."wifi.env".path];
             profiles = {
               Home = {
                 connection = {
@@ -361,6 +337,44 @@ in
                 "wifi-security" = {
                   "key-mgmt" = "wpa-psk";
                   psk = "$WIFI_MOM_PSK";
+                };
+                ipv4.method = "auto";
+                ipv6.method = "auto";
+              };
+              Hotspot_A = {
+                connection = {
+                  id = "HotspotA";
+                  type = "wifi";
+                  autoconnect = "true";
+                  "autoconnect-priority" = "30";
+                };
+                wifi = {
+                  ssid = "$WIFI_HOTSPOT_A_SSID";
+                  mode = "infrastructure";
+                  hidden = "false";
+                };
+                "wifi-security" = {
+                  "key-mgmt" = "wpa-psk";
+                  psk = "$WIFI_HOTSPOT_A_PSK";
+                };
+                ipv4.method = "auto";
+                ipv6.method = "auto";
+              };
+              Hotspot_B = {
+                connection = {
+                  id = "HotspotB";
+                  type = "wifi";
+                  autoconnect = "true";
+                  "autoconnect-priority" = "20";
+                };
+                wifi = {
+                  ssid = "$WIFI_HOTSPOT_B_SSID";
+                  mode = "infrastructure";
+                  hidden = "false";
+                };
+                "wifi-security" = {
+                  "key-mgmt" = "wpa-psk";
+                  psk = "$WIFI_HOTSPOT_B_PSK";
                 };
                 ipv4.method = "auto";
                 ipv6.method = "auto";
