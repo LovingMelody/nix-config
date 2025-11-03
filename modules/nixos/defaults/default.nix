@@ -245,7 +245,7 @@ in
         nixpkgs = {
           config = {
             allowUnfree = true;
-            cudaSupport = config.TM.MyNextGPUWillNotBeNvidia;
+            cudaSupport = config.TM.MyNextGPUWillNotBeNvidia or false;
           };
           overlays = nixpkgs-overlays;
         };

@@ -240,28 +240,6 @@ in
     #   prev.gmic.overrideAttrs { ffmpeg = final.ffmpeg_7; }
 
     # Apply Fix from NixOS/nixpkgs#457803
-    cudaPackages =
-      prev.cudaPackages
-      // {
-        nccl = prev.cudaPackages.nccl.overrideAttrs (o: let
-          applyCheck =
-            o.postFixup
-            == ''
-              _overrideFirst outputStatic "static" "lib" "out"
-              moveToOutput lib/libnccl_static.a "''${!outputStatic:?}"
-            '';
-        in {
-          nativeBuildInputs = o.nativeBuildInputs ++ lib.optional applyCheck final.removeReferencesTo;
-          postFixup =
-            if applyCheck
-            then
-              ''
-                remove-references-to -t "${final.cudaPackages.cuda_nvcc}" $out/lib/libnccl.so.*
-              ''
-              + o.postFixup
-            else o.postFixup;
-        });
-      };
     /*
     TODO: Changes to to be upstreamed
     Anthing below this line should potentially be upstreamed
