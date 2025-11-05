@@ -2,6 +2,7 @@
   config,
   lib,
   modulesPath,
+  pkgs,
   ...
 }: {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
@@ -26,7 +27,10 @@
     kernelModules = ["kvm-intel"];
     extraModulePackages = [];
   };
-  TM.zfs.enable = true;
+  TM.zfs = {
+    enable = true;
+    useUnstable = lib.versionOlder pkgs.zfs.version "2.4.0";
+  };
 
   disko.devices = import ./disko.nix {inherit lib;};
   environment.etc.crypttab.text = let
