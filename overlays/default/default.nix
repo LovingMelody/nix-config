@@ -207,11 +207,12 @@ in
         sixelSupport = true;
         vapoursynthSupport = true;
         ffmpeg = final.ffmpeg_8-full;
-      }).overrideAttrs {
+      }).overrideAttrs (o: {
         version = lib.removeSuffix "-" (builtins.replaceStrings ["UNKNOWN"] [(shortRev pins.mpv.revision)] (builtins.readFile "${pins.mpv}/MPV_VERSION"));
         src = pins.mpv;
         patches = [];
-      };
+        mesonFlags = builtins.filter (flag: ! (builtins.elem flag [(lib.mesonEnable "sdl2" false) (lib.mesonEnable "sdl2" true)])) (o.mesonFlags or []);
+      });
 
     /*
     Lets use lix :D
