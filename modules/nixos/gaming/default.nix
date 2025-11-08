@@ -53,7 +53,7 @@ in {
     fonts.packages = [pkgs.wineWowPackages.fonts];
     nix-citizen.starCitizen = {
       inherit (cfg.starCitizen) enable;
-      package = pkgs.star-citizen;
+      package = pkgs.rsi-launcher-unwrapped-git;
       umu.enable = false;
       disableEAC = false;
       preCommands = let
@@ -165,18 +165,6 @@ in {
         pkgs.mangohud
         config.programs.steam.package
         pkgs.gargoyle
-        (pkgs.rsi-launcher.override (_: {
-          extraLibs = _: config.hardware.graphics.extraPackages ++ [config.hardware.graphics.package pkgs.lsfg-vk];
-          extraEnvVars = {
-            DXVK_HUD = "compiler";
-            MANGO_HUD = 1;
-            DXVK_HDR =
-              if config.TM.hasHDRDisplay
-              then 1
-              else 0;
-            NVPRESENT_ENABLE_SMOOTH_MOTION = 1;
-          };
-        }))
         pkgs.teamspeak6-client
         pkgs.mumble
       ];
