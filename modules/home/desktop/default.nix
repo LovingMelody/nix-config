@@ -227,7 +227,7 @@ in {
         zathura
         # audacity
         blanket
-        cryptomator
+        # cryptomator
         #
         # element-desktop
         epiphany
