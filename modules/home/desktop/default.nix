@@ -246,6 +246,7 @@ in {
     };
     fonts.fontconfig.enable = true;
     services.easyeffects = {
+      package = pkgs.easyeffects;
       enable = true;
     };
   };

@@ -214,6 +214,9 @@ in
         mesonFlags = builtins.filter (flag: ! (builtins.elem flag [(lib.mesonEnable "sdl2" false) (lib.mesonEnable "sdl2" true)])) (o.mesonFlags or []);
       });
 
+    # EasyEffects on OpenSuse uses clang, mimic that
+    easyeffects = prev.easyeffects.override {stdenv = final.clangStdenv;};
+
     /*
     Lets use lix :D
     */
