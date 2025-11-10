@@ -46,6 +46,17 @@
     homeModules = defineModules "home";
     formatter = builtins.mapAttrs (_n: v: v.config.build.wrapper) treefmtEval;
     overlays.default = import ./overlays/default {inherit inputs self lib;};
+    # androidImages = {
+    #   dumpling = inputs.robotnix.lib.robotnixSystem {
+    #     flavor = "lineageos";
+    #     device = "dumpling";
+    #     apps = {
+    #       fdroid.enable = true;
+    #       seedvault.enable = true;
+    #     };
+    #     nixpkgs.overlays = nixpkgs-overlays;
+    #   };
+    # };
     nixosConfigurations = let
       inherit (inputs.nixpkgs.lib) nixosSystem filterAttrs;
       mkHost = host:
@@ -310,6 +321,10 @@
         nixpkgs.follows = "nixpkgs";
       };
     };
+    # robotnix = {
+    #   url = "github:nix-community/robotnix";
+    #   # inputs.nixpkgs.follows = "nixpkgs";
+    # };
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";

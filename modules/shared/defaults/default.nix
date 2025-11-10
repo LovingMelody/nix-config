@@ -61,6 +61,7 @@ in {
           "https://cosmic.cachix.org/"
           # "https://hydra.nixos.org"
           "https://chaotic-nyx.cachix.org/"
+          # "https://robotnix.cachix.org"
         ];
         experimental-features = [
           "nix-command"
