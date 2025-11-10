@@ -46,17 +46,17 @@
     homeModules = defineModules "home";
     formatter = builtins.mapAttrs (_n: v: v.config.build.wrapper) treefmtEval;
     overlays.default = import ./overlays/default {inherit inputs self lib;};
-    # androidImages = {
-    #   dumpling = inputs.robotnix.lib.robotnixSystem {
-    #     flavor = "lineageos";
-    #     device = "dumpling";
-    #     apps = {
-    #       fdroid.enable = true;
-    #       seedvault.enable = true;
-    #     };
-    #     nixpkgs.overlays = nixpkgs-overlays;
-    #   };
-    # };
+    androidImages = {
+      dumpling = inputs.robotnix.lib.robotnixSystem {
+        flavor = "lineageos";
+        device = "dumpling";
+        apps = {
+          fdroid.enable = true;
+          seedvault.enable = true;
+        };
+        nixpkgs.overlays = nixpkgs-overlays;
+      };
+    };
     nixosConfigurations = let
       inherit (inputs.nixpkgs.lib) nixosSystem filterAttrs;
       mkHost = host:
@@ -160,6 +160,14 @@
         nixpkgs.follows = "nixpkgs";
         flake-compat.follows = "flake-compat";
         rust-overlay.follows = "rust-overlay";
+      };
+    };
+    androidPkgs = {
+      url = "github:tadfisher/android-nixpkgs";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        devshell.follows = "devshell";
+        flake-utils.follows = "flake-utils";
       };
     };
     catppuccin = {
@@ -321,10 +329,14 @@
         nixpkgs.follows = "nixpkgs";
       };
     };
-    # robotnix = {
-    #   url = "github:nix-community/robotnix";
-    #   # inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    robotnix = {
+      url = "github:nix-community/robotnix";
+      inputs = {
+        # nixpkgs.follows = "nixpkgs";
+        androidPkgs.follows = "androidPkgs";
+        flake-compat.follows = "flake-compat";
+      };
+    };
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";

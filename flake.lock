@@ -26,6 +26,32 @@
         "type": "github"
       }
     },
+    "androidPkgs": {
+      "inputs": {
+        "devshell": [
+          "devshell"
+        ],
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1762719576,
+        "narHash": "sha256-M+IIK1lR1UMGsmesqR+4L1y5zRO5OOJz1oFMDE9tHa8=",
+        "owner": "tadfisher",
+        "repo": "android-nixpkgs",
+        "rev": "ea132d251c246491cf2d6b61e35334e39b175c78",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tadfisher",
+        "repo": "android-nixpkgs",
+        "type": "github"
+      }
+    },
     "base16": {
       "inputs": {
         "fromYaml": "fromYaml"
@@ -934,6 +960,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1762756533,
+        "narHash": "sha256-HiRDeUOD1VLklHeOmaKDzf+8Hb7vSWPVFcWwaTrpm+U=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "c2448301fb856e351aab33e64c33a3fc8bcf637d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-25.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nur": {
       "inputs": {
         "flake-parts": [
@@ -1040,9 +1082,34 @@
         "type": "github"
       }
     },
+    "robotnix": {
+      "inputs": {
+        "androidPkgs": [
+          "androidPkgs"
+        ],
+        "flake-compat": [
+          "flake-compat"
+        ],
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1762780346,
+        "narHash": "sha256-JydrysW0S2lQGGUupLjkTOJFtx6t6q+Ier0JFj1dhMY=",
+        "owner": "nix-community",
+        "repo": "robotnix",
+        "rev": "a4c3747287feb1e7e6f44499ebd73fda3c714644",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "robotnix",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "aagl": "aagl",
+        "androidPkgs": "androidPkgs",
         "catppuccin": "catppuccin",
         "devshell": "devshell",
         "disko": "disko",
@@ -1070,6 +1137,7 @@
         "nixos-wsl": "nixos-wsl",
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
+        "robotnix": "robotnix",
         "rust-overlay": "rust-overlay",
         "schemes": "schemes",
         "sops-nix": "sops-nix",
