@@ -7,14 +7,10 @@
   cfg = config.TM.zfs;
   inherit
     (lib)
-    filterAttrs
-    last
     mkDefault
     mkEnableOption
     mkForce
     mkIf
-    sort
-    versionOlder
     ;
 in {
   options.TM.zfs = {
@@ -50,25 +46,7 @@ in {
     We will just use LTS instead of using `config.boot.zfs.package.latestCompatibleLinuxPackages`
     This shouldn't cause anything to break...
     */
-    boot.kernelPackages =
-      let
-        zfsCompatibleKernelPackages =
-          filterAttrs (
-            name: kernelPackages:
-              (builtins.match "linux_[0-9]+_[0-9]+" name)
-              != null
-              && (builtins.tryEval kernelPackages).success
-              && (!kernelPackages.${config.boot.zfs.package.kernelModuleAttribute}.meta.broken)
-          )
-          pkgs.linuxKernel.packages;
-        latestKernelPackage = last (
-          sort (a: b: (versionOlder a.kernel.version b.kernel.version)) (
-            builtins.attrValues zfsCompatibleKernelPackages
-          )
-        );
-      in
-        mkForce latestKernelPackage
-      # (if isServer then pkgs.linuxPackages else pkgs.linuxPackages_xanmod)
-      ;
+    boot.kernelPackages = mkForce (lib.TM.latestZFSKernel pkgs config.boot.zfs.package);
+    # (if isServer then pkgs.linuxPackages else pkgs.linuxPackages_xanmod)
   };
 }

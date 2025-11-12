@@ -29,7 +29,7 @@
   };
   TM.zfs = {
     enable = true;
-    useUnstable = lib.versionOlder pkgs.zfs.version "2.4.0";
+    useUnstable = lib.versionAtLeast "6.14" (lib.TM.latestZFSKernel pkgs pkgs.zfs).kernel.version;
   };
 
   disko.devices = import ./disko.nix {inherit lib;};
