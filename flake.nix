@@ -132,6 +132,7 @@
         brave
         chromium
         discord
+        nixpkgs-using
         ;
       inherit (pkgs.kdePackages) qtwebengine;
       inherit (pkgs.obs-studio-plugins) obs-ios-camera-source obs-image-reaction;
@@ -314,6 +315,10 @@
         nixpkgs.follows = "nixpkgs";
         flake-compat.follows = "flake-compat";
       };
+    };
+    nixpkgs-using = {
+      url = "github:uncenter/nixpkgs-using";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nvf = {
       url = "github:NotAShelf/nvf";

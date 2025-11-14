@@ -62,7 +62,8 @@ in
       version = "${o.version}+${pins.npins.revision}";
       src = pins.npins;
     });
-    inherit (inputs.moonlight-mod.packages.${prev.system}) moonlight;
+    inherit (inputs.nixpkgs-using.packages.${final.stdenv.hostPlatform.system}) nixpkgs-using;
+    inherit (inputs.moonlight-mod.packages.${final.stdenv.hostPlatform.system}) moonlight;
     osm-gps-map = prev.osm-gps-map.overrideAttrs (o: {
       buildInputs = o.buildInputs ++ [final.gtk-doc];
       nativeBuildInputs = (o.nativeBuildInputs or []) ++ [final.autoreconfHook];
@@ -92,13 +93,13 @@ in
     dxvk = final.callPackage "${nixpkgs}/pkgs/by-name/dx/dxvk/package.nix" {};
     dxvk-nvapi = final.callPackage "${self}/packages/dxvk-nvapi" {inherit pins;};
     inherit
-      (nix-reshade.system.packages.${prev.system})
+      (nix-reshade.system.packages.${final.stdenv.hostPlatform.system})
       reshade
       reshade-full
       reshade-shaders-full
       ;
     firefox-unwrapped = prev.firefox-unwrapped.override {pipewireSupport = true;};
-    reshade-max = nix-reshade.system.packages.${prev.system}.complete;
+    reshade-max = nix-reshade.system.packages.${final.stdenv.hostPlatform.system}.complete;
     rpcs3 = prev.rpcs3.override {enableDiscordRpc = true;};
     # nix = prev.lix;
     # Overlays go here
