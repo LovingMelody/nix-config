@@ -68,7 +68,7 @@ in
       nativeBuildInputs = (o.nativeBuildInputs or []) ++ [final.autoreconfHook];
     });
     photoprism = prev.photoprism.override {
-      ffmpeg = final.ffmpeg_8-full;
+      ffmpeg = final.ffmpeg-full;
       imagemagick = final.imagemagickBig;
     };
     kitty = pinnedOverlay "kitty";
@@ -185,7 +185,7 @@ in
       withMoonlight = false;
     });
 
-    obs-studio = prev.obs-studio.override {ffmpeg = final.ffmpeg_8-full;};
+    obs-studio = prev.obs-studio.override {ffmpeg = final.ffmpeg-full;};
 
     lutris = prev.lutris.override {
       steamSupport = true;
@@ -206,13 +206,18 @@ in
         sdl2Support = true;
         sixelSupport = true;
         vapoursynthSupport = true;
-        ffmpeg = final.ffmpeg_8-full;
+        ffmpeg = final.ffmpeg-full;
+        stdenv = final.clangStdenv;
       }).overrideAttrs (o: {
         version = lib.removeSuffix "-" (builtins.replaceStrings ["UNKNOWN"] [(shortRev pins.mpv.revision)] (builtins.readFile "${pins.mpv}/MPV_VERSION"));
         src = pins.mpv;
         patches = [];
         mesonFlags = builtins.filter (flag: ! (builtins.elem flag [(lib.mesonEnable "sdl2" false) (lib.mesonEnable "sdl2" true)])) (o.mesonFlags or []);
       });
+    mpv-mpris = prev.mpv-mpris.override {
+      ffmpeg = final.ffmpeg-full;
+      stdenv = final.clangStdenv;
+    };
 
     # EasyEffects on OpenSuse uses clang, mimic that
     easyeffects = prev.easyeffects.override {stdenv = final.clangStdenv;};
