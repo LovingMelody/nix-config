@@ -116,6 +116,7 @@ in {
     openssh.enable = true;
   };
 
+  users.users.melody.packages = [pkgs.nmap];
   environment.systemPackages = with pkgs; [
     firefox
     git

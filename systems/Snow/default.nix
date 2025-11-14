@@ -201,6 +201,7 @@ in {
     # yubioath-flutter
     bitwarden-cli
     czkawka
+    nmap
     # inputs.ags.packages.${pkgs.stdenv.hostPlatform.system}.agsFull
   ];
 
