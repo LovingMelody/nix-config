@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "b05e58eac15a42b9e32e3d1af408e46f397d872b",
-      "url": "https://github.com/cachyos/kernel-patches/archive/b05e58eac15a42b9e32e3d1af408e46f397d872b.tar.gz",
-      "hash": "05jadj3r8cwp8pym62hq1dnixl4jl3l09gic4hiz3lrdq7668j2k"
+      "revision": "98d8f106514925031a0be1fedaa78462f2d08ad3",
+      "url": "https://github.com/cachyos/kernel-patches/archive/98d8f106514925031a0be1fedaa78462f2d08ad3.tar.gz",
+      "hash": "0996id0ygph8x7cbv1l6jwhh0aw5wssd03wjq5ig2asfz3gjipmi"
     },
     "dxvk": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "d75a135e036e404656c1db8909fbcfa35d0b8396",
+      "revision": "65c4f00939ed2bc8b9cb31e5bfc92cf5add6e6f4",
       "url": null,
-      "hash": "1b9anzkrxi4p1lkhmmvzr823046n2x8bq3wcryiwmf3pff9mlbbi"
+      "hash": "04yvigc48q110dr2r12smnkdh18nj8fnlinik7gdsjall4li3b1m"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -158,9 +158,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "2e5e2938dd3f367b73fb58276208aa616e5d37a0",
-      "url": "https://github.com/mpv-player/mpv/archive/2e5e2938dd3f367b73fb58276208aa616e5d37a0.tar.gz",
-      "hash": "06gg3llig3qf5n78ygkz9fqq00ymvpaww17nblqq3klmk6wcqac7"
+      "revision": "7815181b19e29a887a7105330768b9078e99a42e",
+      "url": "https://github.com/mpv-player/mpv/archive/7815181b19e29a887a7105330768b9078e99a42e.tar.gz",
+      "hash": "1bbifcxk8jrhmsqg8n6ds89q6i7s3hd63132wrv443c21jd85nva"
     },
     "npins": {
       "type": "GitRelease",
@@ -200,9 +200,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "a5ebc9e9b6f0ffc7901c3545d13c3621b6620acc",
-      "url": "https://github.com/royshil/obs-backgroundremoval/archive/a5ebc9e9b6f0ffc7901c3545d13c3621b6620acc.tar.gz",
-      "hash": "0k0z581mm1bvw4gp9bnhnnkqvrv8jf32400kqlq823i11g086ib3"
+      "revision": "0078e370fdc197c17d3cd19b0e88a0bf3e5ba2ad",
+      "url": "https://github.com/royshil/obs-backgroundremoval/archive/0078e370fdc197c17d3cd19b0e88a0bf3e5ba2ad.tar.gz",
+      "hash": "02jkx8cc7k6nwsw6bpcx8a6bqsksbd3ydasiib6cjmg743bbndrl"
     },
     "obs-image-reaction": {
       "type": "Git",
@@ -268,9 +268,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "4acd2271319df0ca06b7c0429d371cc8a0504037",
+      "revision": "25c8bbf0ebaf7bc543e6ac1ae4e7a653f038f814",
       "url": null,
-      "hash": "1q03axm0g1jw89ppy0q3p6rsiw0p071s1hi60f7pvxm14g8s6ih2"
+      "hash": "01j4v6hqjm5s4sgnwn50h8aink1caagmmpsqffyna12v9d8a80mq"
     },
     "xivlauncher-rb": {
       "type": "GitRelease",
