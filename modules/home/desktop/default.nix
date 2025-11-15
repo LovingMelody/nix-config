@@ -225,7 +225,7 @@ in {
       };
       packages = with pkgs; [
         zathura
-        # audacity
+        audacity
         blanket
         # cryptomator
         #
@@ -236,8 +236,8 @@ in {
         freetube
         gnome-text-editor
         # lite-xl
-        # gimp3-with-plugins
-        gimp3
+        gimp3-with-plugins
+        # gimp3
         krita
         haruna
 
