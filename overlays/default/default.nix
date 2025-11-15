@@ -7,7 +7,7 @@
   inherit (inputs) nixpkgs nix-reshade;
   inherit (lib.TM.package-helper) pins patchLibcuda blacklistPatches;
   shortRev = s: builtins.substring 0 7 s;
-  allowGplAsync = pins.dxvk-gplasync.revision != "36d811356f59c0d0668621187fd3aa4d4ce6ce93";
+  allowGplAsync = pins.dxvk-gplasync.revision != "159ee8ef743d18769dfea284ea95393aca6b8421";
 in
   final: prev: let
     pinnedOverlay = pkg:
