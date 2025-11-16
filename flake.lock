@@ -39,11 +39,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1763151771,
-        "narHash": "sha256-UHtc0khPVSdNfOzP9XQqUsxuHFOOxC59fQWm0H0p+ec=",
+        "lastModified": 1763238025,
+        "narHash": "sha256-QDn7kfv8XdN7mUbT4mkgzi9la9lkATlNvOqOao4cgm0=",
         "owner": "tadfisher",
         "repo": "android-nixpkgs",
-        "rev": "3806def1b06689b6c50a53c27359d6853fb2c6cb",
+        "rev": "ab5b491a285d64b44d261a835fce1daf504244af",
         "type": "github"
       },
       "original": {
@@ -381,18 +381,20 @@
     "gnome-shell": {
       "flake": false,
       "locked": {
-        "lastModified": 1748186689,
-        "narHash": "sha256-UaD7Y9f8iuLBMGHXeJlRu6U1Ggw5B9JnkFs3enZlap0=",
+        "host": "gitlab.gnome.org",
+        "lastModified": 1762869044,
+        "narHash": "sha256-nwm/GJ2Syigf7VccLAZ66mFC8mZJFqpJmIxSGKl7+Ds=",
         "owner": "GNOME",
         "repo": "gnome-shell",
-        "rev": "8c88f917db0f1f0d80fa55206c863d3746fa18d0",
-        "type": "github"
+        "rev": "680e3d195a92203f28d4bf8c6e8bb537cc3ed4ad",
+        "type": "gitlab"
       },
       "original": {
+        "host": "gitlab.gnome.org",
         "owner": "GNOME",
-        "ref": "48.2",
+        "ref": "gnome-49",
         "repo": "gnome-shell",
-        "type": "github"
+        "type": "gitlab"
       }
     },
     "home-manager": {
@@ -946,11 +948,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1763187301,
-        "narHash": "sha256-VgArs7MjFH0XRjZ/dWrUA1bDiJTld9Q824HQdLD3eFU=",
+        "lastModified": 1762977756,
+        "narHash": "sha256-4PqRErxfe+2toFJFgcRKZ0UI9NSIOJa+7RXVtBhy4KE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "66d930cb8792aea66f1bb2562f26f08d2ce8c3db",
+        "rev": "c5ae371f1a6a7fd27823bc500d9390b38c05fa55",
         "type": "github"
       },
       "original": {
@@ -1274,11 +1276,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1763151783,
-        "narHash": "sha256-ZMPERWDbF0PqTWH4nJcsFv/ItgfhusB2cxo8T6sNZAw=",
+        "lastModified": 1763245881,
+        "narHash": "sha256-0q+4x1Gx3AMIRV8MIN2/WOJOAVMtfqnkY1m3k0iIDkI=",
         "owner": "nix-community",
         "repo": "stylix",
-        "rev": "d8def6e86c78eb9cbfcef098f346385c29aae4f8",
+        "rev": "29dc3dd858c507bfd1038716197f84f40e41f28d",
         "type": "github"
       },
       "original": {
