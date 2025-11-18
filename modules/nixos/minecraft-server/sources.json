@@ -8,8 +8,8 @@
     "url": "https://cdn.modrinth.com/data/8oi3bsk5/versions/JKg71Gq0/Terralith_1.21.x_v2.5.13.jar"
   },
   "Tectonic": {
-    "sha512": "dac4f2d9835a293f1bb6643491226412bf541bb5d7d864a4749726e61acc57ee9b73b7fcadacb073ba8de8bcf3c5fce6e46081f7980796a7140188811b95457c",
-    "url": "https://cdn.modrinth.com/data/lWDHr9jE/versions/GraxbWKG/tectonic-3.0.3-fabric-1.21.6.jar"
+    "sha512": "1b23ef8f59661ed9a9e8e45c71efa29ba879b2861482daf7c7ec41ca34d4acd2ea0ece4e71f16bbe46083c7d5bc40b4d8e8297d4b0142a4133347c39f223b372",
+    "url": "https://cdn.modrinth.com/data/lWDHr9jE/versions/kL6i6vRY/tectonic-3.0.17-fabric-1.21.10.jar"
   },
   "Nullscape": {
     "sha512": "b35a9dfdc7180ca851aea378ee4687e18b3aae717c16870a7762afc67dc0c77598fb2c4a62cb12d6ed0eacf7c9166520e0a3e7dce20da09817065d27e62c8b44",
@@ -20,31 +20,31 @@
     "url": "https://cdn.modrinth.com/data/ZVzW5oNS/versions/PovCtpuw/Incendium_1.21.x_v5.4.9.jar"
   },
   "Balm": {
-    "sha512": "5d7459d885e34b6b056144d3ec6a2b7b2e34adbf2f5e368329b2fa5066d33b1f686ccd16e5c7d647d90206c65537560f8a6fb423f6ea779dfcad391f342f085e",
-    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/6STx1UB9/balm-fabric-1.21.8-21.8.10.jar"
+    "sha512": "744a9a8395f019d6f22199f5a6847b767e2f9aa9366fd20ebf08225d8a768a86364203eb7ec612190684bd3bdd90aadfe52e49af72fc8c32aa76350dcd9b3c2a",
+    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/cU1Vn9qw/balm-fabric-1.21.10-21.10.8.jar"
   },
   "NetherPortalFix": {
-    "sha512": "d4bda547aa53738a2eb0eeff4819d159368e5176c3a6ae8dc6e4f60476bf01d47817b1c99285f5af9c1a592a77fe4fb5ab9b08546bb250af979f399e97752bd0",
-    "url": "https://cdn.modrinth.com/data/nPZr02ET/versions/wKtrSBPH/netherportalfix-fabric-1.21.7-21.7.1.jar"
+    "sha512": "6e8d8569c4ce93f2c8487a4a496199cdb5a0b1d254901c1c2629e071322a1c3f213436eaaf1f52b8aef69953950c1252ae8b52d16c71c936a9a4961f17d49698",
+    "url": "https://cdn.modrinth.com/data/nPZr02ET/versions/EQ03E7hB/netherportalfix-fabric-1.21.10-21.10.1.jar"
   },
   "ConcurrentChunkManagementEngine": {
-    "sha512": "30cbc520cb8349036d55a1cb1f26964cf02410cf6d6a561d9cc07164d7566a3a7564367de62510f2bab50723c2c7c401718001153fa833560634ce4b2e212767",
-    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/tlZRTK1v/c2me-fabric-mc1.21.8-0.3.4.0.0.jar"
+    "sha512": "71e193ecaa38e927a9f943eac6cac5b5dcb4ce6934aae994da9fe34cace5941fe25258056d8b9fdedbda87c5eb3787cad4c74e68ea39048cb6e86202a56dd7ec",
+    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/2EKX8Hiv/c2me-fabric-mc1.21.10-0.3.6%2Balpha.0.9.jar"
   },
   "Krypton": {
-    "sha512": "2e2304b1b17ecf95783aee92e26e54c9bfad325c7dfcd14deebf9891266eb2933db00ff77885caa083faa96f09c551eb56f93cf73b357789cb31edad4939ffeb",
-    "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/neW85eWt/krypton-0.2.9.jar"
+    "sha512": "4dcd7228d1890ddfc78c99ff284b45f9cf40aae77ef6359308e26d06fa0d938365255696af4cc12d524c46c4886cdcd19268c165a2bf0a2835202fe857da5cab",
+    "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/O9LmWYR7/krypton-0.2.10.jar"
   },
   "FabricAPI": {
-    "sha512": "43bf6af145a6b450503a6d7e7ec9a34912bd1494969b5d8861067f0f846cf710805415fb0fbc93c9ae9f5164d45c7649342f84b4f34552b2abdd892fd3b9838e",
-    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/JntuF9Ul/fabric-api-0.129.0%2B1.21.7.jar"
+    "sha512": "dc73a3653c299476d1f70cb692c4e35ac3f694b3b0873e3d0b729e952e992b878d1a8e0b1d1049a442a0d483d3068073194f15af52ea9938544616e20433cc38",
+    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/dQ3p80zK/fabric-api-0.138.3%2B1.21.10.jar"
   },
   "Sit!": {
-    "sha512": "b848f376262dfbaa7bb2688671f62e2131cf68255932a1b667af96914c409e24c29c340fe7d5eb9641125455eecbeeb5bdbb7a691816689fc496f78d9e19dd1a",
-    "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/1LyZIoNv/sit%21-1.2.5.1%2B1.21.8.jar"
+    "sha512": "d261b5790a8ac0a17ed0c9bd26849af26ec520da0af1b3835edee189cde5796a9d3d3e616a2662a37fa406316a2982147d434f1425d4132530823d535ca4f4cb",
+    "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/cJvlmbfO/sit%21-1.2.5.0%2B1.21.9-1.21.10.jar"
   },
   "Gyser": {
-    "sha512": "4e3a935266bd086c6c7d8fa7639ee860f237a90cc5923464c5fcf29cffae9bdd2e44b45d7d43e5f4eab798bbc72ba00b3f009e90d391e9c76e91333b1286fd1b",
-    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/AXaKkJMf/geyser-fabric-Geyser-Fabric-2.8.4-b948.jar"
+    "sha512": "cdd08c2563e9c3a004e240efbc0f29b79e28571dc4f784926297e5b22f6b44b306d925eea9628ef3c20499d3873327a0bdc9b07879f999d6465c27bdaba8e50f",
+    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/FTRyt29Z/geyser-fabric-Geyser-Fabric-2.9.0-b984.jar"
   }
 }
