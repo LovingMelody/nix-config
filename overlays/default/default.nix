@@ -221,27 +221,8 @@ in
     };
 
     # EasyEffects on OpenSuse uses clang, mimic that
-    easyeffects = prev.easyeffects.override {stdenv = final.clangStdenv;};
+    # easyeffects = prev.easyeffects.override {stdenv = final.clangStdenv;};
 
-    # easyeffects = (
-    #   if (lib.versionOlder prev.easyeffects.version "8.0")
-    #   then
-    #     (final.callPackage (final.fetchurl {
-    #       url = "https://raw.githubusercontent.com/NixOS/nixpkgs/418d81a8be6396d6345e7d3c45d3439ce746ce6f/pkgs/by-name/ea/easyeffects/package.nix";
-    #       hash = "sha256-ClhzyUBwdi2fRNcRtteIIoh43sLsuuyrBmC59NOL/w4=";
-    #     }) {}).overrideAttrs {
-    #       patches = [
-    #         (final.fetchurl {
-    #           url = "https://raw.githubusercontent.com/NixOS/nixpkgs/418d81a8be6396d6345e7d3c45d3439ce746ce6f/pkgs/by-name/ea/easyeffects/qmlmodule-fix.patch";
-    #           hash = "sha256-cR64InN/5wOAQerZf/TwLSPJF4auWvsiGmwmdbYQPvo=";
-    #         })
-    #       ];
-    #       QML_IMPORT_PATH = lib.makeSearchPath final.qt6.qtbase.qtQmlPrefix [
-    #         final.kdePackages.kirigami
-    #       ];
-    #     }
-    #   else prev.easyeffects
-    # ).override {stdenv = final.clangStdenv;};
     /*
     Lets use lix :D
     */
