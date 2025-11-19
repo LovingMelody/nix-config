@@ -133,6 +133,7 @@
         chromium
         discord
         nixpkgs-using
+        r2modman
         ;
       inherit (pkgs.kdePackages) qtwebengine;
       inherit (pkgs.obs-studio-plugins) obs-ios-camera-source obs-image-reaction;

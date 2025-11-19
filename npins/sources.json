@@ -230,6 +230,22 @@
       "url": "https://github.com/dougg3/obs-ios-camera-source/archive/7fd6cf4ee5f289fdb424ef4c118b2920805f35f9.tar.gz",
       "hash": "1fwlnrr3r4biqrp12gncgm8v3pqqpdgb50jqfgwg65dn4b6yw1vn"
     },
+    "r2modman": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "ebkr",
+        "repo": "r2modmanPlus"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v3.2.10",
+      "revision": "7f329847aa2db61be1ceb94d7a34148ddceb09e3",
+      "url": "https://api.github.com/repos/ebkr/r2modmanPlus/tarball/v3.2.10",
+      "hash": "01xi42xkip29h877v4855511b9l11r4k4gqmpnsphv742iwq5qk7"
+    },
     "replay.fish": {
       "type": "Git",
       "repository": {
