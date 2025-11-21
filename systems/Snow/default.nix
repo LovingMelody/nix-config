@@ -159,6 +159,11 @@ in {
   };
 
   services = {
+    desktopManager.cosmic.enable = true;
+    displayManager = {
+      gdm.enable = false;
+      cosmic-greeter.enable = true;
+    };
     gnome.gnome-remote-desktop.enable = true;
     hardware.openrgb = {
       enable = true;
@@ -231,7 +236,7 @@ in {
   };
   # Disable autosleep
   programs = {
-    niri.enable = true;
+    niri.enable = false;
     gamemode.enable = mkForce false;
     coolercontrol.enable = false;
     adb.enable = true;
