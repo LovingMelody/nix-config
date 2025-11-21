@@ -240,7 +240,7 @@ in
 
     r2modman = prev.r2modman.overrideAttrs {
       src = pins.r2modman;
-      version = pins.r2modman.version;
+      inherit (pins.r2modman) version;
       offlineCache = final.fetchYarnDeps {
         yarnLock = "${pins.r2modman}/yarn.lock";
         hash = "sha256-V6N0RIjT3etoP6XdZhnQv4XViLRypp/JWxnb0sBc6Oo=";
