@@ -19,6 +19,7 @@ in {
     users.groups.melody = {};
     users.users.melody = {
       isNormalUser = true;
+      createHome = true;
       initialPassword = "Nixtastic!23";
       group = "melody";
       extraGroups =
@@ -46,5 +47,11 @@ in {
         (lib.TM.get-ssh-key-file "melody" "primary")
       ];
     };
+    systemd.tmpfiles.rules = let
+      faceImg = pkgs.fetchurl {
+        url = "https://cdn.little-melody.net/Public/face.png";
+        hash = "sha256-vVuFZINh5fobX6FLy4WVVadwNYyf6w8Wa+vTkTNCA7M=";
+      };
+    in ["L+ /share/faces/melody - - - - ${faceImg}"];
   };
 }

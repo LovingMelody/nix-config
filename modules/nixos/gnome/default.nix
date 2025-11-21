@@ -21,7 +21,10 @@ in {
       colord.enable = true;
       blueman.enable = true;
       desktopManager.gnome.enable = true;
-      displayManager.gdm.enable = mkDefault true;
+      displayManager.gdm = {
+        enable = mkDefault true;
+        settings.greeter.Welcome = "$h %s %r";
+      };
     };
     hardware.bluetooth = {
       enable = true;
