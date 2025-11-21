@@ -159,6 +159,7 @@ in {
   };
 
   services = {
+    orca.enable = false;
     desktopManager.cosmic.enable = true;
     displayManager = {
       gdm.enable = false;
