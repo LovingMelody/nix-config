@@ -27,7 +27,7 @@ in {
     isDesktop = true;
     isGui = true;
     autoUpgrade.operation = "boot";
-    virt.enable = true;
+    virt.enable = false;
     autoUpgrade.enable = false;
     users.enable = true;
     time.enable = true;
@@ -74,7 +74,7 @@ in {
     };
   };
   virtualisation.docker = {
-    enable = true;
+    enable = false;
   };
   # specialisation = {
   #   # Configs has conflits w/ Hyprland
@@ -228,7 +228,7 @@ in {
     ++ [fuzzel xwayland-satellite];
 
   virtualisation = {
-    libvirtd.enable = true;
+    libvirtd.enable = false;
     # waydroid.enable = true;
   };
   # Disable autosleep
