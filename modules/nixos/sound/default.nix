@@ -17,7 +17,7 @@ in {
     enable = mkEnableOption "Enable sound";
     lowLatency = mkOption {
       type = types.bool;
-      default = true;
+      default = false;
       description = "Enable low latency mode";
     };
     support32Bit = mkEnableOption {
@@ -40,7 +40,10 @@ in {
         pulse.enable = true;
         jack.enable = true;
         wireplumber.enable = true;
-        lowLatency.enable = cfg.lowLatency;
+        lowLatency = {
+          enable = cfg.lowLatency;
+          rate = 48000;
+        };
       };
     };
   };
