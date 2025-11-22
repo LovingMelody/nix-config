@@ -161,10 +161,6 @@ in {
   services = {
     orca.enable = false;
     desktopManager.cosmic.enable = true;
-    displayManager = {
-      gdm.enable = false;
-      cosmic-greeter.enable = true;
-    };
     gnome.gnome-remote-desktop.enable = true;
     hardware.openrgb = {
       enable = true;
@@ -268,4 +264,6 @@ in {
     enable = true;
     enableGraphical = true;
   };
+
+  boot.kernel.sysctl."vm.max_map_count" = lib.mkForce 16777216;
 }
