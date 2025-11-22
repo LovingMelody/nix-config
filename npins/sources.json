@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "6401c69e878090f370bc6138a6b77f8d3034c59c",
-      "url": "https://github.com/cachyos/kernel-patches/archive/6401c69e878090f370bc6138a6b77f8d3034c59c.tar.gz",
-      "hash": "0m2vx1wpc3k131fikfhsidm8w8kzikqphsq976h69frg9ab6p8ms"
+      "revision": "e721e0c58c77f7c0b4316d07e346222efd56c658",
+      "url": "https://github.com/cachyos/kernel-patches/archive/e721e0c58c77f7c0b4316d07e346222efd56c658.tar.gz",
+      "hash": "17gfhsdnd6j2iyszc6rfwf0l1si80lyd4ihp3hys2jixxgy1xqar"
     },
     "dxvk": {
       "type": "Git",
@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "1bd5f20a72f53da32ae7d8eeee8a5e5be6f4b565",
+      "revision": "1925f04435062fa64689e782b481275227914820",
       "url": null,
-      "hash": "0rcg6gsrs6gvgkls13mk14ylfgqpmmanssx7bxjky1pkxfy57qw0"
+      "hash": "0scfhqgbijq1s3lwn2a7ar180p3qaw1fmv5czl3cpp10qz2nf13h"
     },
     "dxvk-gplasync": {
       "type": "Git",
