@@ -137,7 +137,7 @@ in {
         (pkgs.xivlauncher-rb.override {
           nvngxPath = optionalString osConfig.TM.MyNextGPUWillNotBeNvidia "${osConfig.hardware.nvidia.package}/lib/nvidia/wine/";
           # extraLibraries = _: osConfig.hardware.graphics.extraPackages ++ [osConfig.hardware.graphics.package pkgs.lsfg-vk];
-          steam = osConfig.programs.steam.package or pkgs.steam;
+          # steam = osConfig.programs.steam.package or pkgs.steam;
         })
         pkgs.rsync
         pkgs.textools
