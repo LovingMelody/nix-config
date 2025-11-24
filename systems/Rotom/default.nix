@@ -5,9 +5,7 @@
   pkgs,
   lib,
   ...
-}: let
-  inherit (builtins) toString;
-in {
+}: {
   imports = [./hardware-configuration-extended.nix];
 
   sops.secrets.prism = {
@@ -78,7 +76,7 @@ in {
       enable = true;
       originalsPath = "/data/photoprism";
       passwordFile = config.sops.secrets.prism.path;
-      databasePasswordFile = config.sops.secrets.prism.path;
+      # databasePasswordFile = config.sops.secrets.prism.path;
       address = "0.0.0.0";
       settings = {
         PHOTOPRISM_ORIGINALS_LIMIT = builtins.toString (80 * 1023); # file size limit for originals in MB
@@ -89,7 +87,7 @@ in {
         PHOTOPRISM_DETECT_NSFW = "false"; # Doesn't work well
         PHOTOPRISM_UPLOAD_NSFW = "true"; # Check doesnt work well
         PHOTOPRISM_DATABASE_DRIVER = "mysql";
-        PHOTOPRISM_DATABASE_SERVER = with config.services.mysql.settings.mysqld; "${bind-address}:${toString port}"; # MariaDB database server
+        PHOTOPRISM_DATABASE_SERVER = "/run/mysqld/mysqld.sock"; # MariaDB database server
         PHOTOPRISM_DATABASE_NAME = "photoprism";
         PHOTOPRISM_DATABASE_USER = "photoprism";
         PHOTOPRISM_INDEX_SCHEDULE = "@every 42h";
