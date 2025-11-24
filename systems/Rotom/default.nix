@@ -78,6 +78,7 @@ in {
       enable = true;
       originalsPath = "/data/photoprism";
       passwordFile = config.sops.secrets.prism.path;
+      databasePasswordFile = config.sops.secrets.prism.path;
       address = "0.0.0.0";
       settings = {
         PHOTOPRISM_ORIGINALS_LIMIT = builtins.toString (80 * 1023); # file size limit for originals in MB
@@ -91,7 +92,6 @@ in {
         PHOTOPRISM_DATABASE_SERVER = with config.services.mysql.settings.mysqld; "${bind-address}:${toString port}"; # MariaDB database server
         PHOTOPRISM_DATABASE_NAME = "photoprism";
         PHOTOPRISM_DATABASE_USER = "photoprism";
-        PHOTOPRISM_DATABASE_PASSWORD = config.services.photoprism.passwordFile;
         PHOTOPRISM_INDEX_SCHEDULE = "@every 42h";
       };
     };
