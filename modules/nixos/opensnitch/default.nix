@@ -22,6 +22,10 @@ in {
       settings = {
         LogLevel = 1;
         DefaultAction = "allow";
+        Firewall =
+          if config.networking.nftables.enable
+          then "nftables"
+          else "iptables";
       };
       rules = {
         _1password-gui = {
@@ -97,16 +101,40 @@ in {
             data = lib.getExe' pkgs.openssh "ssh";
           };
         };
-        XIVLauncher = {
-          name = "XIVLauncher";
-          enabled = true;
+        Wine = {
+          name = "wine";
+          enabled = config.programs.wine.enable;
+          action = "allow";
+          duration = "always";
+          operator = {
+            type = "regex";
+            sensitive = false;
+            operand = "process.parent.path";
+            data = "^${lib.getBin config.programs.wine.package}/bin/.*";
+          };
+        };
+        syncthing = {
+          name = "syncthing";
+          enabled = config.home-manager.users.melody.services.syncthing.enable or false;
           action = "allow";
           duration = "always";
           operator = {
             type = "simple";
             sensitive = false;
             operand = "process.path";
-            data = lib.getExe pkgs.xivlauncher;
+            data = lib.getExe (config.home-manager.users.melody.services.syncthing.package or pkgs.syncthing);
+          };
+        };
+        XIVLauncher = {
+          name = "XIVLauncher";
+          enabled = config.home-manager.users.melody.TM.gaming.games.ffxiv.enable;
+          action = "allow";
+          duration = "always";
+          operator = {
+            type = "simple";
+            sensitive = false;
+            operand = "process.parent.path";
+            data = lib.getExe (config.home-manager.users.melody.TM.gaming.games.ffxiv.package or pkgs.xivlauncher);
           };
         };
         nix = {
@@ -130,7 +158,7 @@ in {
             type = "simple";
             sensitive = false;
             operand = "process.path";
-            data = lib.getExe pkgs.firefox;
+            data = lib.getExe (config.config.home-manager.users.melody.programs.firefox.finalPackage or config.programs.firefox.package);
           };
         };
         git = {

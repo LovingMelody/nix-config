@@ -75,6 +75,15 @@ in {
       // {
         default = gamingCfg.enable or false;
       };
+    package = mkOption {
+      type = types.package;
+      default = pkgs.xivlauncher-rb.override {
+        nvngxPath = optionalString osConfig.TM.MyNextGPUWillNotBeNvidia "${osConfig.hardware.nvidia.package}/lib/nvidia/wine/";
+        # extraLibraries = _: osConfig.hardware.graphics.extraPackages ++ [osConfig.hardware.graphics.package pkgs.lsfg-vk];
+        # steam = osConfig.programs.steam.package or pkgs.steam;
+      };
+      description = "FFXIV Launcher package";
+    };
     reshade = {
       enable =
         mkEnableOption "Enable reshade"
@@ -134,11 +143,7 @@ in {
     # If this is linked in the script, the script will run when rsync is updated
     home = {
       packages = [
-        (pkgs.xivlauncher-rb.override {
-          nvngxPath = optionalString osConfig.TM.MyNextGPUWillNotBeNvidia "${osConfig.hardware.nvidia.package}/lib/nvidia/wine/";
-          # extraLibraries = _: osConfig.hardware.graphics.extraPackages ++ [osConfig.hardware.graphics.package pkgs.lsfg-vk];
-          # steam = osConfig.programs.steam.package or pkgs.steam;
-        })
+        cfg.package
         pkgs.rsync
         pkgs.textools
       ];
