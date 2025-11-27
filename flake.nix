@@ -216,8 +216,6 @@
     lanzaboote = {
       url = "github:nix-community/lanzaboote";
       inputs = {
-        flake-compat.follows = "flake-compat";
-        flake-parts.follows = "flake-parts";
         nixpkgs.follows = "nixpkgs";
         rust-overlay.follows = "rust-overlay";
       };
