@@ -7,6 +7,7 @@
   cfg = config.TM.security.opensnitch;
   inherit
     (lib)
+    getExe
     getExe'
     mkEnableOption
     mkIf
@@ -50,6 +51,18 @@ in {
             sensitive = false;
             operand = "process.path";
             data = getExe' pkgs._1password-cli "op";
+          };
+        };
+        ntpd-rs = {
+          name = "ntpd-rs";
+          enabled = config.services.ntpd-rs.enable;
+          action = "allow";
+          duration = "allways";
+          operator = {
+            type = true;
+            sensitive = false;
+            operand = "process.path";
+            data = getExe config.services.ntpd-rs.package;
           };
         };
         mosh-client = {
@@ -123,6 +136,30 @@ in {
             sensitive = false;
             operand = "process.path";
             data = lib.getExe (config.home-manager.users.melody.services.syncthing.package or pkgs.syncthing);
+          };
+        };
+        Tailscaled = {
+          name = "tailscaled";
+          enabled = config.services.tailscale.enable;
+          action = "allow";
+          duration = "always";
+          operator = {
+            type = "simple";
+            sensitive = false;
+            operand = "process.path";
+            data = lib.getExe' config.services.tailscale.package "tailscaled";
+          };
+        };
+        Tailscale = {
+          name = "tailscale";
+          enabled = config.services.tailscale.enable;
+          action = "allow";
+          duration = "always";
+          operator = {
+            type = "simple";
+            sensitive = false;
+            operand = "process.path";
+            data = lib.getExe' config.services.tailscale.package "tailscale";
           };
         };
         XIVLauncher = {
