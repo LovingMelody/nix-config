@@ -97,7 +97,7 @@ in rec {
     + lib.toLower (builtins.substring 1 (builtins.stringLength str) str);
 
   stateVersion = {
-    nixos = "25.05";
+    nixos = "25.11";
     # This should be the same as nixos
     home = stateVersion.nixos;
     darwin = 6;
