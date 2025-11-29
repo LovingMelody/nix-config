@@ -8,6 +8,7 @@
   cfg = config.TM.networking.tailscale;
   inherit
     (lib)
+    mkDefault
     mkOption
     mkEnableOption
     mkMerge
@@ -56,10 +57,17 @@ in {
             hash = "sha256-gOzd4IwqTN2qZER/y/r6uBMmhkZxzTO3/D1AxMhmHfw=";
           };
         };
-        services.tailscale = {
-          enable = true;
-          extraUpFlags = optional cfg.manageSSH "--ssh";
-          extraSetFlags = optional cfg.userManaged.enable "--operator=${cfg.userManaged.user}";
+        services = {
+          tailscale = {
+            enable = true;
+            extraUpFlags = optional cfg.manageSSH "--ssh";
+            extraSetFlags = optional cfg.userManaged.enable "--operator=${cfg.userManaged.user}";
+            useRoutingFeatures = mkDefault "both";
+          };
+          resolved = {
+            enable = mkDefault true;
+            # domains = ["~."];
+          };
         };
         networking.firewall = {
           trustedInterfaces = ["tailscale0"];
