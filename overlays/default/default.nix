@@ -6,7 +6,7 @@
 }: let
   inherit (inputs) nixpkgs nix-reshade;
   inherit (lib.TM.package-helper) pins patchLibcuda blacklistPatches;
-  shortRev = s: builtins.substring 0 7 s;
+  # shortRev = s: builtins.substring 0 7 s;
   allowGplAsync = pins.dxvk-gplasync.revision != "159ee8ef743d18769dfea284ea95393aca6b8421";
 in
   final: prev: let
@@ -210,9 +210,9 @@ in
         ffmpeg = final.ffmpeg-full;
         stdenv = final.clangStdenv;
       }).overrideAttrs (o: {
-        version = lib.removeSuffix "-" (builtins.replaceStrings ["UNKNOWN"] [(shortRev pins.mpv.revision)] (builtins.readFile "${pins.mpv}/MPV_VERSION"));
-        src = pins.mpv;
-        patches = [];
+        # version = lib.removeSuffix "-" (builtins.replaceStrings ["UNKNOWN"] [(shortRev pins.mpv.revision)] (builtins.readFile "${pins.mpv}/MPV_VERSION"));
+        # src = pins.mpv;
+        # patches = [];
         mesonFlags = builtins.filter (flag: ! (builtins.elem flag [(lib.mesonEnable "sdl2" false) (lib.mesonEnable "sdl2" true)])) (o.mesonFlags or []);
       });
     mpv-mpris = prev.mpv-mpris.override {
