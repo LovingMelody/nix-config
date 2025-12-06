@@ -28,7 +28,7 @@ in {
         async-dns = true;
         stop = 0;
         allow-piece-length-change = true;
-        parameterized-url = true;
+        parameterized-uri = true;
         optimize-concurrent-downloads = true;
         deferred-input = true;
         continue = true;
