@@ -27,7 +27,7 @@ in {
     isDesktop = true;
     isGui = true;
     autoUpgrade.operation = "boot";
-    virt.enable = false;
+    virt.enable = true;
     autoUpgrade.enable = false;
     users.enable = true;
     time.enable = true;

@@ -14,14 +14,14 @@ in {
   config = mkIf cfg.enable {
     virtualisation = {
       incus = {
-        enable = mkDefault config.networking.nftables.enable;
+        enable = mkDefault false; # config.networking.nftables.enable;
         socketActivation = mkDefault true;
-        agent.enable = mkDefault config.virtualisation.incus.enable;
-        ui.enable = mkDefault true;
+        agent.enable = mkDefault false; #config.virtualisation.incus.enable;
+        ui.enable = mkDefault false; #true;
       };
       podman = {
-        enable = mkDefault (! config.virtualisation.docker.enable);
-        dockerCompat = mkDefault (! config.virtualisation.docker.enable);
+        enable = mkDefault false; #(! config.virtualisation.docker.enable);
+        dockerCompat = mkDefault false; # (! config.virtualisation.docker.enable);
       };
       # lxc.enable = true;
       # lxd.enable = true;
