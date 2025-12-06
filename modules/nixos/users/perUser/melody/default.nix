@@ -38,6 +38,8 @@ in {
           "video"
           "virtualisation"
           "wheel"
+          "vboxusers"
+          "kvm"
         ]
         ++ optional config.virtualisation.incus.enable "incus-admin";
       shell = mkForce pkgs.zsh;
