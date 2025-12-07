@@ -103,9 +103,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "52e48f195be7bace8ae9f6f26c376708284de4f6",
-      "url": "https://github.com/garglk/garglk/archive/52e48f195be7bace8ae9f6f26c376708284de4f6.tar.gz",
-      "hash": "0r85jkg5vm5n5dmfmp9ifgi23sb0vacb8bc1n83xng6dzka2sf3f"
+      "revision": "8bfba044d7986c497781c8a0a95c35393dedd21b",
+      "url": "https://github.com/garglk/garglk/archive/8bfba044d7986c497781c8a0a95c35393dedd21b.tar.gz",
+      "hash": "0wh1ncd8gns3k4mzarll6cv5mlmpvc168gcrdwsg686hv1ibjqiv"
     },
     "getopts.fish": {
       "type": "Git",
