@@ -44,7 +44,7 @@
     "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/cJvlmbfO/sit%21-1.2.5.0%2B1.21.9-1.21.10.jar"
   },
   "Gyser": {
-    "sha512": "aa359884076447b8508a8ee2c4f1ee47c00e620b012530350df334dc86520f198245ef3bdf95cb95125925927f47067988bf0b555bb177b8c0c2bd283e8dcede",
-    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/WRvXSuOz/geyser-fabric-Geyser-Fabric-2.9.1-b999.jar"
+    "sha512": "8f9410c4a3ff88d10d9c75f79a85d61c64b7017ce28fe95540284ef87747532331056c4ec0c3b7de188c5b79ca61cda43ffee1f294fad505642d5e611a979b69",
+    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/WvcBMqtc/geyser-fabric-Geyser-Fabric-2.9.1-b1003.jar"
   }
 }
