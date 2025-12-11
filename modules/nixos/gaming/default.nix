@@ -72,6 +72,7 @@ in {
         ${hdrVars}
       '';
       patchXwayland = false;
+      enforceWaylandDrv = true;
     };
     zramSwap = {
       inherit (cfg.zram) enable memoryPercent;
