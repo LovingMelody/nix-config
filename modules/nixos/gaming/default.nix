@@ -53,7 +53,7 @@ in {
     fonts.packages = [pkgs.wineWowPackages.fonts];
     programs.rsi-launcher = {
       inherit (cfg.starCitizen) enable;
-      package = pkgs.rsi-launcher-unwrapped-git;
+      package = pkgs.rsi-launcher-git;
       umu.enable = false;
       disableEAC = false;
       preCommands = let
