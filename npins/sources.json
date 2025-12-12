@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "21eb344f2fd38a2e999706bcdcb0b3cc38cfd752",
+      "revision": "1a70f104683eda0f265019b8cb2a397ecc04e5ef",
       "url": null,
-      "hash": "0bamh5ha9p1l273ljl4w8w53nc36z6kv56sbl9q79nmi8cvkfvkd"
+      "hash": "11mxzyvr27l82jawnbk051rdj9i1lg0xwx5gjxqnrwsq4g9qhnfc"
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "ab2c03b39eacc897736046c7d67ea3f4a1d7efbc",
+      "revision": "d36a441e92aa99143ffb341cf7e82626ede8bce5",
       "url": null,
-      "hash": "0fjc6xvf8gb8m42lysm69cqixl956r5j9cbs8kj6f69svnj8czp7"
+      "hash": "0qbbclpd0np9lksrg8kpglm18vkbwy2qvxpzlxk9gd91ladhq6sz"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -89,10 +89,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": true,
-      "version": "v1.30.10",
-      "revision": "ff0624b612eb9db261b8574ce1505cd70975185d",
+      "version": "v1.31.0",
+      "revision": "8baacff21d791a40140baec12b4057a86084cc02",
       "url": null,
-      "hash": "1rgzgmw11b0ay1cf42cshn35gvll9iypw7phi389r5ahf56am6h4"
+      "hash": "0qbbclpd0np9lksrg8kpglm18vkbwy2qvxpzlxk9gd91ladhq6sz"
     },
     "gargoyle": {
       "type": "Git",
@@ -285,9 +285,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "54fd70241d1524239ec1116fd5db1e36d20d66f0",
+      "revision": "734bcaaa0527efb9b2d6a1a62dc01d4186e5a6b8",
       "url": null,
-      "hash": "1wwaljhsd1xz49d11dpcsffhi0l2phim14v3b9vcjd9ghklw9z5h"
+      "hash": "1ggcbl5mbjy8qznjxyj1223dyiasly7hcwkq3gcvwyn31m03ndgb"
     },
     "xivlauncher-rb": {
       "type": "GitRelease",
