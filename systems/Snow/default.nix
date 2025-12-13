@@ -35,7 +35,7 @@ in {
     streaming.enable = true;
     sound.enable = true;
     security = {
-      opensnitch.enable = true;
+      opensnitch.enable = false;
       enable = true;
       # TPM2 unlock is currently broken
       # https://github.com/NixOS/nixpkgs/issues/265366
