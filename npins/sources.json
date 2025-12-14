@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "5f5c847f252b91bc7127af8a3430b1153c28533d",
-      "url": "https://github.com/cachyos/kernel-patches/archive/5f5c847f252b91bc7127af8a3430b1153c28533d.tar.gz",
-      "hash": "1qkvba8svpxc2fn35bwa9snnamb4y69y6g3v0nzfdjcgknz237hq"
+      "revision": "8a5e89d346af4221d7426b45da65a677a1ff5582",
+      "url": "https://github.com/cachyos/kernel-patches/archive/8a5e89d346af4221d7426b45da65a677a1ff5582.tar.gz",
+      "hash": "0zyb4lh20zx9780dc0qxhdwgbyxfl4vyn6mma53l9saqyl0sip3v"
     },
     "dxvk": {
       "type": "Git",
@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "1a70f104683eda0f265019b8cb2a397ecc04e5ef",
+      "revision": "fa6b0864c7226ca0154e2acf8f145bd86733f3ed",
       "url": null,
-      "hash": "11mxzyvr27l82jawnbk051rdj9i1lg0xwx5gjxqnrwsq4g9qhnfc"
+      "hash": "1dqfadc7apanyz2nkz09k2z9i7kzgjvfq06rdng0vr9f063ky65z"
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -158,9 +158,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "95c7599c41a4c7e332848fdb7e594650c1564e45",
-      "url": "https://github.com/mpv-player/mpv/archive/95c7599c41a4c7e332848fdb7e594650c1564e45.tar.gz",
-      "hash": "062p669r322w1lyp35ccakbva2c3c31l52kk7bf3kd8z9kw5d2m7"
+      "revision": "f7be2ee3e9f24fcd633d1fd82339c4219a109cee",
+      "url": "https://github.com/mpv-player/mpv/archive/f7be2ee3e9f24fcd633d1fd82339c4219a109cee.tar.gz",
+      "hash": "164cnabv3cr0q9mcamhigf4k0qdzfv4k4dczggrvdr9xgvlagfl7"
     },
     "npins": {
       "type": "GitRelease",
