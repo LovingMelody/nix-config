@@ -91,6 +91,7 @@
         PHOTOPRISM_DATABASE_NAME = "photoprism";
         PHOTOPRISM_DATABASE_USER = "photoprism";
         PHOTOPRISM_INDEX_SCHEDULE = "@every 42h";
+        PHOTOPRISM_AUTH_MODE = "public";
       };
     };
     flaresolverr.enable = false;
