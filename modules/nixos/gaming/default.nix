@@ -94,8 +94,8 @@ in {
       steam = {
         enable = true;
         remotePlay.openFirewall = true;
-        extraCompatPackages = with pkgs; [proton-ge-bin];
-        extraPackages = [pkgs.lsfg-vk pkgs.lsfg-vk-ui];
+        extraCompatPackages = with pkgs; [proton-ge-bin umu-launcher];
+        extraPackages = with pkgs; [lsfg-vk lsfg-vk-ui umu-launcher mangohud];
         protontricks.enable = true;
         platformOptimizations.enable = true;
       };
