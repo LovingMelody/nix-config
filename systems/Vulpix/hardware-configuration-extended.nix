@@ -57,9 +57,6 @@
     # uni-sync = { enable = true; };
     bluetooth = {
       enable = true;
-      settings.general = {
-        enable = "Source,Sink,Media,Socket";
-      };
     };
     # openrazer = {
     #   enable = true;

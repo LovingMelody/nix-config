@@ -71,7 +71,7 @@ in {
     bluetooth = {
       enable = true;
       settings.general = {
-        enable = "Source,Sink,Media,Socket";
+        Experimental = true;
       };
     };
     openrazer = {
