@@ -81,7 +81,7 @@ in {
       typst.enable = true;
       rust = {
         enable = true;
-        crates.enable = true;
+        extensions.crates-nvim.enable = true;
       };
 
       # Language modules that are not as common.
