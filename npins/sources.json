@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "5304f84ed103bfdff2321254e5f6526a643c48ab",
+      "revision": "b650faef2604bbb55c769ed5cb0dbff9a5e449fb",
       "url": null,
-      "hash": "19hsj36xfq2wnkvzsxz12jb423zg7pidvmf7b20hrfgvnkjyknn6"
+      "hash": "19n5qg14chd5r2vy5jgddv1xa7l4gcxbvlwd4ji5lk4xzmvf76nr"
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -87,9 +87,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "c3d8602418b057496e5e9ce4afb78c59469d0cbf",
+      "revision": "575bf7a9f91885448c4f208e3d58f268d6700fd6",
       "url": null,
-      "hash": "11fzqlksb51wn5ps57cjvvkhacvhf52disrlwpjm5vjcx2m55ari"
+      "hash": "0gvrh2wpi6x5arc44a3wmaqrzhsqq21jqrgncy0r68lwcxh05q96"
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -102,10 +102,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": true,
-      "version": "v1.31.0",
-      "revision": "8baacff21d791a40140baec12b4057a86084cc02",
+      "version": "v1.31.1",
+      "revision": "135adec9c67ce9ffee901666dbe35634bdc9b5c8",
       "url": null,
-      "hash": "0qbbclpd0np9lksrg8kpglm18vkbwy2qvxpzlxk9gd91ladhq6sz"
+      "hash": "0gvrh2wpi6x5arc44a3wmaqrzhsqq21jqrgncy0r68lwcxh05q96"
     },
     "gargoyle": {
       "type": "Git",
@@ -171,9 +171,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "6739fd490b63ae8092da511c2fb81a94f5ae1efc",
-      "url": "https://github.com/mpv-player/mpv/archive/6739fd490b63ae8092da511c2fb81a94f5ae1efc.tar.gz",
-      "hash": "1khikx9wnldyb9mk86yfjxax5a1ql4dwhashgwr10fkz5hj2d0wn"
+      "revision": "08dbdd84868abdbe88578769d0b1e249cb4eee91",
+      "url": "https://github.com/mpv-player/mpv/archive/08dbdd84868abdbe88578769d0b1e249cb4eee91.tar.gz",
+      "hash": "19im1y7xb8vqpkarl2axh2jv8qajfhcqw8wvfbskhdfrxxd5swrn"
     },
     "npins": {
       "type": "GitRelease",
@@ -298,9 +298,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "6290e69f77d89e5f5b5770ccaf0337ebbc08fbac",
+      "revision": "4d4abaa230fed54c2bf12b56cf4e4cd2286bd034",
       "url": null,
-      "hash": "14a1i0a4ksdax5yxdfbz0zjrkmh33062lnpzkx76qdq8pqsarx77"
+      "hash": "1r09a92snsbf03rr83sxyqfr6vlhklvc6cmiibq8mi5w2dh2803r"
     },
     "xivlauncher-rb": {
       "type": "GitRelease",
