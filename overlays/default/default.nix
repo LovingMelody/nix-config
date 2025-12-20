@@ -244,14 +244,14 @@ in
     # nix-doc = prev.nix-doc.override {withPlugin = false;};
     # nix = final.nixVersions.stable;
 
-    r2modman = prev.r2modman.overrideAttrs {
-      src = pins.r2modman;
-      inherit (pins.r2modman) version;
-      offlineCache = final.fetchYarnDeps {
-        yarnLock = "${pins.r2modman}/yarn.lock";
-        hash = "sha256-V6N0RIjT3etoP6XdZhnQv4XViLRypp/JWxnb0sBc6Oo=";
-      };
-    };
+    # r2modman = prev.r2modman.overrideAttrs {
+    #   src = pins.r2modman;
+    #   inherit (pins.r2modman) version;
+    #   offlineCache = final.fetchYarnDeps {
+    #     yarnLock = "${pins.r2modman}/yarn.lock";
+    #     hash = "sha256-V6N0RIjT3etoP6XdZhnQv4XViLRypp/JWxnb0sBc6Oo=";
+    #   };
+    # };
 
     /*
     Temp Fixes
