@@ -26,12 +26,6 @@ in {
         settings.greeter.Welcome = "$h %s %r";
       };
     };
-    hardware.bluetooth = {
-      enable = true;
-      settings.general = {
-        enable = "Source,Sink,Media,Socket";
-      };
-    };
     security.polkit.enable = true;
     programs = {
       _1password-gui.polkitPolicyOwners = ["melody"];
