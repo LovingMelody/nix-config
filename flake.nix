@@ -118,6 +118,7 @@
         rsi-launcher
         wine-astral
         catppuccin-base16
+        npins
         gargoyle
         gallery-dl
         gallery-dl-unstable
