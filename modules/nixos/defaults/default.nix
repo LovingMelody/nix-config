@@ -311,22 +311,89 @@ in
           networking.networkmanager.ensureProfiles = {
             environmentFiles = [config.sops.secrets."wifi.env".path];
             profiles = {
-              Home = {
+              Home_Milo = {
                 connection = {
-                  id = "Home";
+                  id = "Home-Milo";
                   type = "wifi";
-                  autoconnect = "true";
-                  "autoconnect-priority" = "100"; # prefer Home
+                  autoconnect =
+                    if config.TM.hasWifi7
+                    then "true"
+                    else "false";
+                  "autoconnect-priority" =
+                    if config.TM.hasWifi7
+                    then "98"
+                    else "0";
                   # "interface-name" = "wlan0";     # uncomment to pin a NIC
                 };
                 wifi = {
-                  ssid = "$WIFI_HOME_SSID";
+                  ssid = "$WIFI_HOME_D_SSID";
                   mode = "infrastructure";
                   hidden = "false";
                 };
                 "wifi-security" = {
                   "key-mgmt" = "wpa-psk";
-                  psk = "$WIFI_HOME_PSK";
+                  psk = "$WIFI_HOME_D_PSK";
+                };
+                ipv4.method = "auto";
+                ipv6.method = "auto";
+              };
+
+              Home = {
+                connection = {
+                  id = "Home";
+                  type = "wifi";
+                  autoconnect = "true";
+                  "autoconnect-priority" = "95";
+                  # "interface-name" = "wlan0";     # uncomment to pin a NIC
+                };
+                wifi = {
+                  ssid = "$WIFI_HOME_C_SSID";
+                  mode = "infrastructure";
+                  hidden = "false";
+                };
+                "wifi-security" = {
+                  "key-mgmt" = "wpa-psk";
+                  psk = "$WIFI_HOME_C_PSK";
+                };
+                ipv4.method = "auto";
+                ipv6.method = "auto";
+              };
+              Home_Legacy = {
+                connection = {
+                  id = "Home - Legacy";
+                  type = "wifi";
+                  autoconnect = "true";
+                  "autoconnect-priority" = "90";
+                  # "interface-name" = "wlan0";     # uncomment to pin a NIC
+                };
+                wifi = {
+                  ssid = "$WIFI_HOME_A_SSID";
+                  mode = "infrastructure";
+                  hidden = "false";
+                };
+                "wifi-security" = {
+                  "key-mgmt" = "wpa-psk";
+                  psk = "$WIFI_HOME_A_PSK";
+                };
+                ipv4.method = "auto";
+                ipv6.method = "auto";
+              };
+              Home_Fallback = {
+                connection = {
+                  id = "Home - Fallback";
+                  type = "wifi";
+                  autoconnect = "true";
+                  "autoconnect-priority" = "80"; # prefer Home
+                  # "interface-name" = "wlan0";     # uncomment to pin a NIC
+                };
+                wifi = {
+                  ssid = "$WIFI_HOME_A_SSID";
+                  mode = "infrastructure";
+                  hidden = "false";
+                };
+                "wifi-security" = {
+                  "key-mgmt" = "wpa-psk";
+                  psk = "$WIFI_HOME_A_PSK";
                 };
                 ipv4.method = "auto";
                 ipv6.method = "auto";
