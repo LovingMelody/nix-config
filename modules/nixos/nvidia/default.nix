@@ -9,6 +9,7 @@ in {
   options.TM.MyNextGPUWillNotBeNvidia = mkEnableOption "Fix nvidia nonsense";
 
   config = mkIf cfg {
+    boot.blacklistedKernelModules = ["nova_core" "nova_drm" "nouveau"];
     services.xserver.videoDrivers = mkDefault ["nvidia"];
     environment.sessionVariables = {
       LIBVA_DRIVER_NAME = mkDefault "nvidia";
