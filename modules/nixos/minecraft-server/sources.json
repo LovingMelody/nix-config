@@ -36,15 +36,15 @@
     "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/O9LmWYR7/krypton-0.2.10.jar"
   },
   "FabricAPI": {
-    "sha512": "dc73a3653c299476d1f70cb692c4e35ac3f694b3b0873e3d0b729e952e992b878d1a8e0b1d1049a442a0d483d3068073194f15af52ea9938544616e20433cc38",
-    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/dQ3p80zK/fabric-api-0.138.3%2B1.21.10.jar"
+    "sha512": "5e64c53391dfd1c059777d671c52be17a4e27a29d9bd7340ea9e3f55ce7a770b38db0a15e0966e981ee8c1b9372fb89543a278521624689268acebb85bd5c6e9",
+    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/tV4Gc0Zo/fabric-api-0.138.4%2B1.21.10.jar"
   },
   "Sit!": {
     "sha512": "d261b5790a8ac0a17ed0c9bd26849af26ec520da0af1b3835edee189cde5796a9d3d3e616a2662a37fa406316a2982147d434f1425d4132530823d535ca4f4cb",
     "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/cJvlmbfO/sit%21-1.2.5.0%2B1.21.9-1.21.10.jar"
   },
   "Gyser": {
-    "sha512": "5ea3dd4baaa769d4add0cf7db61739f836fc41581dd8ab80cf453177fbb4a1eb12becee77088cf029988b842bcb329f0fac9bfd3d2488be6986b71635ca1c7b3",
-    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/AEbLjpyK/geyser-fabric-Geyser-Fabric-2.9.2-b1006.jar"
+    "sha512": "a1b358b58c9a584e247865b1e6f3eb04a49c996d0846b7884b1f8439c056f4eb2f81a665c325d054b6b0b2f85711a79f424920504e9902093570497e7af6ad4f",
+    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/ahzEdvn0/geyser-fabric-Geyser-Fabric-2.9.2-b1008.jar"
   }
 }
