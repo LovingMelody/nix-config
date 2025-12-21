@@ -96,6 +96,7 @@ in {
     isGui = mkDefault true;
     isDesktop = mkDefault true;
     hasHDRDisplay = mkDefault true;
+    hasWifi7 = mkDefault true;
     # Enable Nvidia stuff
     MyNextGPUWillNotBeNvidia = true;
     services.liquidctl = {
