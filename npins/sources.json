@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "e266fbc7f36273ebbc62a9bffda02e3882eb8f6c",
-      "url": "https://github.com/cachyos/kernel-patches/archive/e266fbc7f36273ebbc62a9bffda02e3882eb8f6c.tar.gz",
-      "hash": "sha256-LezfhAfTdfhvjiHSWe258SMUIs+cP8SHT8BiPou0A4w="
+      "revision": "a0f67557573aa13c028aea2a84a7a68e0d5477e8",
+      "url": "https://github.com/cachyos/kernel-patches/archive/a0f67557573aa13c028aea2a84a7a68e0d5477e8.tar.gz",
+      "hash": "sha256-kUCl6N3+e0CGn2tAci0WRr14L+01JYpcbN9HeCvWt3E="
     },
     "dxvk": {
       "type": "Git",
@@ -87,9 +87,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "575bf7a9f91885448c4f208e3d58f268d6700fd6",
+      "revision": "9c50c10f1a5fa022bd529fd09a5d54207f7c3892",
       "url": null,
-      "hash": "sha256-JuECYGecIpOBZ/ZlLIPAWMOfsap8KEJYVqWbeLmAeT8="
+      "hash": "sha256-UJXGxPgO8K/kBxE9gxugm0GuEdTwFz9ZWAZJ5qOnaDE="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -171,9 +171,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "d0e24ab17acc85d9f222d3bad4f15b42b00c634d",
-      "url": "https://github.com/mpv-player/mpv/archive/d0e24ab17acc85d9f222d3bad4f15b42b00c634d.tar.gz",
-      "hash": "sha256-NSqIqEvBCGszTGbntzKIlH4htf3cx9t2NSGswkb4m0Y="
+      "revision": "6dff941c71f0fb9790a8ed96e0bb2c3acd2ed92d",
+      "url": "https://github.com/mpv-player/mpv/archive/6dff941c71f0fb9790a8ed96e0bb2c3acd2ed92d.tar.gz",
+      "hash": "sha256-qPxT22M8EEE5WLJSYI/9QLvNTneHrW/qeskBTMJ1g2k="
     },
     "npins": {
       "type": "GitRelease",
@@ -313,10 +313,10 @@
       "version_upper_bound": null,
       "release_prefix": "rb-",
       "submodules": true,
-      "version": "rb-v1.2.1.5",
-      "revision": "7daa10913059d24a43092b13fb82fb37377d2c0c",
+      "version": "rb-v1.2.1.7",
+      "revision": "36a9b4ff8e647f586fdfca493c3c62dfdb8003de",
       "url": null,
-      "hash": "sha256-L3Z6MNtzq88ol3hSgWRbl5+R5NCNCN0pU/DqAe2o+Rc="
+      "hash": "sha256-PEX1a8ITB53hWoqnshDxvjWcabY9mq52jBILyfxSZ+w="
     }
   },
   "version": 7
