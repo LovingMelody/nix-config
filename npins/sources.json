@@ -157,10 +157,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v0.44.0",
-      "revision": "7021e5d833abf6a616acfe2a9de964d2b1878bcd",
-      "url": "https://api.github.com/repos/kovidgoyal/kitty/tarball/v0.44.0",
-      "hash": "sha256-5MBYj1d/KhTFcijLMLXpmHPeuSAXuOjzjganUpWnVF4="
+      "version": "v0.45.0",
+      "revision": "976ca1dcaf9ea7d5fc6f6301c15933a4e7cb1281",
+      "url": "https://api.github.com/repos/kovidgoyal/kitty/tarball/refs/tags/v0.45.0",
+      "hash": "sha256-3XQWmLd8F0ndzzLOcV/7144M9enqc/7FULVLeM2Kpts="
     },
     "mpv": {
       "type": "Git",
@@ -171,9 +171,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "6dff941c71f0fb9790a8ed96e0bb2c3acd2ed92d",
-      "url": "https://github.com/mpv-player/mpv/archive/6dff941c71f0fb9790a8ed96e0bb2c3acd2ed92d.tar.gz",
-      "hash": "sha256-qPxT22M8EEE5WLJSYI/9QLvNTneHrW/qeskBTMJ1g2k="
+      "revision": "c0d989c83913fb9c990d961c44da4816b8d2de18",
+      "url": "https://github.com/mpv-player/mpv/archive/c0d989c83913fb9c990d961c44da4816b8d2de18.tar.gz",
+      "hash": "sha256-Gl6UxE9XbFqCjPaz3uLRpSNQF4eZ9wTre0sd4d7HW5g="
     },
     "npins": {
       "type": "GitRelease",
