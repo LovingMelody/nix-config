@@ -126,7 +126,7 @@
         rename-padded-numbers
         textools
         unique-basenames
-        xivlauncher-rb
+        # xivlauncher-rb
         gposingway
         slower
         firefox
