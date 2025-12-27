@@ -177,17 +177,17 @@ in
     };
     wineprefix-preparer-git = final.wineprefix-preparer;
     discord = discordEnableKrisp (prev.discord.override {
-      withOpenASAR = true;
+      withOpenASAR = false;
       withVencord = false;
       withMoonlight = true;
     });
     discord-canary = discordEnableKrisp (prev.discord-canary.override {
-      withOpenASAR = true;
+      withOpenASAR = false;
       withVencord = true;
       withMoonlight = false;
     });
     discord-ptb = discordEnableKrisp (prev.discord-ptb.override {
-      withOpenASAR = true;
+      withOpenASAR = false;
       withVencord = false;
       withMoonlight = false;
     });
