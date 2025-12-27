@@ -7,10 +7,10 @@
   winetricks,
   location ? "$HOME/Games/TexToolsFFXIV",
 }: let
-  version = "3.1.0.1";
+  version = "3.1.0.2";
   src = fetchurl {
     url = "https://github.com/TexTools/FFXIV_TexTools_UI/releases/download/v${version}/Install_TexTools.exe";
-    hash = "sha512-ht7ML8T7o+ihHbhsRj4FAd0A2W4HYN4dLj5WGq4EkWX0eqQlYQnFex9KsnJh2CgAfpV3LTMGofDKa/Ly7Lx+GQ==";
+    hash = "sha256-tL8Ym1WTfPsR/VS552Kqd/q39IpAFCPLY6VKziBsoVM=";
   };
 in
   writeShellScriptBin "textools" ''
