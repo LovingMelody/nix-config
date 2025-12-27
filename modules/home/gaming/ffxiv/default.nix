@@ -16,7 +16,6 @@
     concatStringsSep
     escapeShellArg
     hasPrefix
-    optionalString
     splitString
     ;
   inherit (lib.attrsets) mergeAttrsList;
