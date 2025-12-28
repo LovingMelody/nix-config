@@ -226,6 +226,11 @@ in
       stdenv = final.clangStdenv;
     };
 
+    vivaldi = prev.vivaldi.override {
+      proprietaryCodecs = true;
+      vivaldi-ffmpeg-codecs = final.vivaldi-ffmpeg-codecs;
+    };
+
     # EasyEffects on OpenSuse uses clang, mimic that
     # easyeffects = prev.easyeffects.override {stdenv = final.clangStdenv;};
 
