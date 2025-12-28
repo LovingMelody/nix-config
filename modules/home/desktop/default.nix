@@ -242,6 +242,8 @@ in {
         haruna
 
         protonmail-desktop
+        protonmail-bridge-gui
+        vivaldi
       ];
     };
     fonts.fontconfig.enable = true;
