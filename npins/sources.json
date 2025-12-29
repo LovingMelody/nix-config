@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "34c9301f5e6fa2817163e4134b0e71c7a7372634",
-      "url": "https://github.com/cachyos/kernel-patches/archive/34c9301f5e6fa2817163e4134b0e71c7a7372634.tar.gz",
-      "hash": "sha256-G3eG5SmTiHz5VkMssfFTfLCGfvijTPDDkLiU9VI97TM="
+      "revision": "dd86f5f1e1c87b8bc3d8cabf2c655fe2b2c5e144",
+      "url": "https://github.com/cachyos/kernel-patches/archive/dd86f5f1e1c87b8bc3d8cabf2c655fe2b2c5e144.tar.gz",
+      "hash": "sha256-l3FEhseehO2On1FPlDbtFUc94LEc1ZvmUxQpLID119g="
     },
     "dxvk": {
       "type": "Git",
@@ -48,9 +48,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "159ee8ef743d18769dfea284ea95393aca6b8421",
-      "url": "https://gitlab.com/api/v4/projects/Ph42oN%2Fdxvk-gplasync/repository/archive.tar.gz?sha=159ee8ef743d18769dfea284ea95393aca6b8421",
-      "hash": "sha256-vm8OOpThGXpukaB5EXsYr4PxU9u8nkRVIw34gD7JZYU="
+      "revision": "1f900f20857b676d314e78d4f352f700c00b4a8b",
+      "url": "https://gitlab.com/api/v4/projects/Ph42oN%2Fdxvk-gplasync/repository/archive.tar.gz?sha=1f900f20857b676d314e78d4f352f700c00b4a8b",
+      "hash": "sha256-VzHryAzu9rR0CB5e0gwK26EUF0XFLxT/Vug9u0/UGJk="
     },
     "dxvk-gplasync-pr-13": {
       "type": "Git",
@@ -87,9 +87,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "bea0e169703a3a142b6bddf514b53cffb5c3683c",
+      "revision": "c8c4575c7f9147c7161026e8179a9ab4e1b0ccbf",
       "url": null,
-      "hash": "sha256-ctPNmMDmWufg85xqg/4M5A5yU1lOS30wEQ6NsUjlzUM="
+      "hash": "sha256-Hw0r/2eGOLO6e82sulJ91eCbqPxdrWv+/M/ecP5N358="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -171,9 +171,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "a58dd8ac410a6316acc522d2b4a97eca4413beaa",
-      "url": "https://github.com/mpv-player/mpv/archive/a58dd8ac410a6316acc522d2b4a97eca4413beaa.tar.gz",
-      "hash": "sha256-xGjcVXl2Yp2ZSQwoi4sbYAkeHywjPNNrkIjiJoO30tE="
+      "revision": "468e2a8475eb91502b0452996f501fac16a60b27",
+      "url": "https://github.com/mpv-player/mpv/archive/468e2a8475eb91502b0452996f501fac16a60b27.tar.gz",
+      "hash": "sha256-uL7U7FW6Ms1ccpgOy7uPVqLoueq0b8sgQLpvSSvXmMI="
     },
     "npins": {
       "type": "GitRelease",

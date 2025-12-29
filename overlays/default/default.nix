@@ -7,12 +7,7 @@
   inherit (inputs) nixpkgs nix-reshade;
   inherit (lib.TM.package-helper) pins patchLibcuda blacklistPatches;
   # shortRev = s: builtins.substring 0 7 s;
-  useAsyncPR13 = pins.dxvk-gplasync.revision == "159ee8ef743d18769dfea284ea95393aca6b8421";
-  allowGplAsync = useAsyncPR13 || (pins.dxvk-gplasync.revision != "159ee8ef743d18769dfea284ea95393aca6b8421");
-  dxvk-gplasync-patches =
-    if useAsyncPR13
-    then pins.dxvk-gplasync-pr-13
-    else pins.dxvk-gplasync;
+  allowGplAsync = pins.dxvk-gplasync.revision != "159ee8ef743d18769dfea284ea95393aca6b8421";
 in
   final: prev: let
     pinnedOverlay = pkg:
@@ -148,8 +143,8 @@ in
       src = pins.dxvk;
       version = "git+${pins.dxvk.revision}";
       patches = lib.optionals allowGplAsync [
-        "${dxvk-gplasync-patches}/patches/dxvk-gplasync-master.patch"
-        "${dxvk-gplasync-patches}/patches/global-dxvk.conf.patch"
+        "${pins.dxvk-gplasync}/patches/dxvk-gplasync-master.patch"
+        "${pins.dxvk-gplasync}/patches/global-dxvk.conf.patch"
       ];
     };
     dxvk-w32 = prev.dxvk-w32.overrideAttrs {
@@ -160,8 +155,8 @@ in
       src = pins.dxvk;
       version = "git+${pins.dxvk.revision}";
       patches = lib.optionals allowGplAsync [
-        "${dxvk-gplasync-patches}/patches/dxvk-gplasync-master.patch"
-        "${dxvk-gplasync-patches}/patches/global-dxvk.conf.patch"
+        "${pins.dxvk-gplasync}/patches/dxvk-gplasync-master.patch"
+        "${pins.dxvk-gplasync}/patches/global-dxvk.conf.patch"
       ];
     };
     vkd3d-proton-w64 = prev.vkd3d-proton-w64.overrideAttrs {
