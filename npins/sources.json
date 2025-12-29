@@ -52,19 +52,6 @@
       "url": "https://gitlab.com/api/v4/projects/Ph42oN%2Fdxvk-gplasync/repository/archive.tar.gz?sha=1f900f20857b676d314e78d4f352f700c00b4a8b",
       "hash": "sha256-VzHryAzu9rR0CB5e0gwK26EUF0XFLxT/Vug9u0/UGJk="
     },
-    "dxvk-gplasync-pr-13": {
-      "type": "Git",
-      "repository": {
-        "type": "GitLab",
-        "repo_path": "brittyazel/dxvk-gplasync",
-        "server": "https://gitlab.com/"
-      },
-      "branch": "2.8_Updates",
-      "submodules": false,
-      "revision": "f70987e660db90e1a2733f19d9b935ef8ae958c5",
-      "url": "https://gitlab.com/api/v4/projects/brittyazel%2Fdxvk-gplasync/repository/archive.tar.gz?sha=f70987e660db90e1a2733f19d9b935ef8ae958c5",
-      "hash": "sha256-f92subKpi7onCNZvSvTlpI+/ex8yrGRZ+ZT2OUsk924="
-    },
     "dxvk-nvapi": {
       "type": "Git",
       "repository": {
