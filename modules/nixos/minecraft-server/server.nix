@@ -133,6 +133,9 @@ in {
               # "ConcurrentChunkManagementEngine"
               "Krypton"
               "FabricAPI"
+              "ClothConfigAPI"
+              "ServerCore"
+              "Lithium"
               "Gyser"
               # "Sit!"
             ])));

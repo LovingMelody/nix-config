@@ -39,6 +39,10 @@
     "sha512": "5e64c53391dfd1c059777d671c52be17a4e27a29d9bd7340ea9e3f55ce7a770b38db0a15e0966e981ee8c1b9372fb89543a278521624689268acebb85bd5c6e9",
     "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/tV4Gc0Zo/fabric-api-0.138.4%2B1.21.10.jar"
   },
+  "ClothConfigAPI": {
+    "sha512": "df1d9e0349dc64fc0859f17b65b67b0d7745a26b4905e87fc148ddebc0285de51a3255848599f0d5ee24f6aab00fbac4849d40bb9052936eaa452d216c7ada62",
+    "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/qMxkrrmq/cloth-config-20.0.149-fabric.jar"
+  },
   "Sit!": {
     "sha512": "d261b5790a8ac0a17ed0c9bd26849af26ec520da0af1b3835edee189cde5796a9d3d3e616a2662a37fa406316a2982147d434f1425d4132530823d535ca4f4cb",
     "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/cJvlmbfO/sit%21-1.2.5.0%2B1.21.9-1.21.10.jar"
@@ -46,5 +50,13 @@
   "Gyser": {
     "sha512": "a1b358b58c9a584e247865b1e6f3eb04a49c996d0846b7884b1f8439c056f4eb2f81a665c325d054b6b0b2f85711a79f424920504e9902093570497e7af6ad4f",
     "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/ahzEdvn0/geyser-fabric-Geyser-Fabric-2.9.2-b1008.jar"
+  },
+  "ServerCore": {
+    "sha512": "d6113cedae8d0852c7341d8bb016732b03cea2d3729cb9140549bde6004aee1dd48634e16b3727b8cd4e8d101675672e43e6cc205958b4b41d4658ab3eb69b12",
+    "url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/TTQGy6U8/servercore-fabric-1.5.14%2B1.21.9.jar"
+  },
+  "Lithium": {
+    "sha512": "79b2892d123f3bb12649927dd8fccc25c955ff38a19f3aba7cd0180c4cf5506c2a76d49418b13050f90bba7bb59f3623af06e8a275e2ae8c63808084043902bb",
+    "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/NsswKiwi/lithium-fabric-0.20.1%2Bmc1.21.10.jar"
   }
 }

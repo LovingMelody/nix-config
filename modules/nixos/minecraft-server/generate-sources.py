@@ -27,8 +27,11 @@ ENTRIES_TO_FIND = [
     {"name": "Krypton", "id": "fQEb0iXm", "loader": "fabric"},
     # Dependency for NetherPortalFix, Tectonic, Sit!, Balm
     {"name": "FabricAPI", "id": "P7dR8mSH", "loader": "fabric"},
+    {"name": "ClothConfigAPI", "id": "9s6osm5g", "loader": "fabric"},
     {"name": "Sit!", "id": "EsYqsGV4", "loader": "fabric"},
     {"name": "Gyser", "id": "wKkoqHrH", "loader": "fabric"},
+    {"name": "ServerCore", "id": "4WWQxlQP", "loader": "fabric"},
+    {"name": "Lithium", "id": "gvQqBUqZ", "loader": "fabric"},
 ]
 
 
