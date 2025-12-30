@@ -137,6 +137,7 @@ in {
               "ServerCore"
               "Lithium"
               "Gyser"
+              "SoundPhysicsRemastered"
               # "Sit!"
             ])));
         };

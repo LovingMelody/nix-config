@@ -32,6 +32,7 @@ ENTRIES_TO_FIND = [
     {"name": "Gyser", "id": "wKkoqHrH", "loader": "fabric"},
     {"name": "ServerCore", "id": "4WWQxlQP", "loader": "fabric"},
     {"name": "Lithium", "id": "gvQqBUqZ", "loader": "fabric"},
+    {"name": "SoundPhysicsRemastered", "id": "qyVF9oeo", "loader": "fabric"},
 ]
 
 
