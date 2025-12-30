@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "b650faef2604bbb55c769ed5cb0dbff9a5e449fb",
+      "revision": "584041f1422b49da590c5fe9024e9e9ab0180e76",
       "url": null,
-      "hash": "sha256-2Zrjdv2dTFqiJI3TvTp7hB7Vw27tyeK3yKVBRsLDxaY="
+      "hash": "sha256-TA9Mg55k6DNM4nkKH67NBwyj3xYeYiFG+qNUNbs91vY="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "c8c4575c7f9147c7161026e8179a9ab4e1b0ccbf",
+      "revision": "a6c845bdc8c21a6f514a1677ae9c0e6bc0ace3f8",
       "url": null,
-      "hash": "sha256-Hw0r/2eGOLO6e82sulJ91eCbqPxdrWv+/M/ecP5N358="
+      "hash": "sha256-U/QPB1xCcDLWf3kCmAkbXGSz6jOSjohSEl7j3AmHiZo="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -158,9 +158,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "468e2a8475eb91502b0452996f501fac16a60b27",
-      "url": "https://github.com/mpv-player/mpv/archive/468e2a8475eb91502b0452996f501fac16a60b27.tar.gz",
-      "hash": "sha256-uL7U7FW6Ms1ccpgOy7uPVqLoueq0b8sgQLpvSSvXmMI="
+      "revision": "5cc1094ad6fae47d520bbc2fc6a0671b7e4be2c9",
+      "url": "https://github.com/mpv-player/mpv/archive/5cc1094ad6fae47d520bbc2fc6a0671b7e4be2c9.tar.gz",
+      "hash": "sha256-PGtFYsQWFKrTtsyirrfy+KL28VnnLp1mvY7we93ZtCc="
     },
     "npins": {
       "type": "GitRelease",
