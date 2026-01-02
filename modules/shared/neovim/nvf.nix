@@ -70,7 +70,8 @@ in {
       clang.enable = true;
       css.enable = true;
       html.enable = true;
-      sql.enable = true;
+      # Currently broken & rarely used
+      sql.enable = false;
       java.enable = true;
       kotlin.enable = true;
       ts.enable = true;
