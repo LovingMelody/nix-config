@@ -215,7 +215,6 @@ in {
       #qemu
       abaddon
       cava
-      geeqie # https://github.com/NixOS/nixpkgs/pull/427813
       gh
       git
       pamixer
