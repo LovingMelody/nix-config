@@ -36,6 +36,7 @@ in {
           pkgs.file
           pkgs.imagemagickBig
           pkgs.kitty.terminfo
+          pkgs.kitty.kitten
           pkgs.nh
           pkgs.rclone
           pkgs.ripgrep
