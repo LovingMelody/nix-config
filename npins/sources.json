@@ -200,9 +200,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "67b9b045222b73dc073ae238ae86b605b680de95",
-      "url": "https://github.com/royshil/obs-backgroundremoval/archive/67b9b045222b73dc073ae238ae86b605b680de95.tar.gz",
-      "hash": "sha256-q8nqIiS4doInf2ih41/Typd0rhgo1pv5sVUheHRt/1I="
+      "revision": "84b864d695878371922090b73a601434e52d5e9a",
+      "url": "https://github.com/royshil/obs-backgroundremoval/archive/84b864d695878371922090b73a601434e52d5e9a.tar.gz",
+      "hash": "sha256-/Tz6N7zbubkLOkBOXzvysoY3mIHHKBj3RaJqz0bK8TU="
     },
     "obs-image-reaction": {
       "type": "Git",
