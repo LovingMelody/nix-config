@@ -222,7 +222,6 @@ in {
       # star-citizen
       tmux
       wget
-      tidal-hifi
     ]
     ++ [fuzzel xwayland-satellite];
 
