@@ -169,9 +169,7 @@ in {
     telescope.enable = true;
 
     git = {
-      # FIXME: NVF currently causes an evaluation error if this is enabled
-      # This should be re-enabled at a later time
-      enable = false; # Disable git for now
+      enable = true;
       gitsigns.enable = true;
       gitsigns.codeActions.enable = false; # throws an annoying debug message
     };
