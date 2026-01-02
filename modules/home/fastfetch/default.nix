@@ -59,13 +59,15 @@ in {
           "disk"
           "memory"
           "swap"
-          "display"
-          "brightness"
-          "battery"
-          "poweradapter"
-          "bluetooth"
+          # "display"
+          # "brightness"
+          # "battery"
+          # "poweradapter"
+          # "bluetooth"
           "sound"
           "gamepad"
+          # "mouse"
+          # "keyboard"
           {
             type = "custom";
             format = "├{$1} {#1}Software Information{#} {$1}┤";
@@ -78,31 +80,31 @@ in {
           }
           "os"
           "kernel"
-          "lm"
-          "de"
-          "wm"
+          # "lm"
+          # "de"
+          # "wm"
           "shell"
           "terminal"
           "terminalfont"
-          "theme"
-          "icons"
-          "wallpaper"
+          # "theme"
+          # "icons"
+          # "wallpaper"
           "packages"
           "uptime"
           "media"
-          {
-            type = "localip";
-            compact = true;
-          }
-          {
-            type = "publicip";
-            timeout = 1000;
-          }
-          {
-            type = "wifi";
-            format = "{ssid}";
-          }
-          "locale"
+          # {
+          #   type = "localip";
+          #   compact = true;
+          # }
+          # {
+          #   type = "publicip";
+          #   timeout = 1000;
+          # }
+          # {
+          #   type = "wifi";
+          #   format = "{ssid}";
+          # }
+          # "locale"
           {
             type = "custom";
             format = "└{$1}──────────────────────{$1}┘";
