@@ -207,23 +207,24 @@ in {
     # inputs.ags.packages.${pkgs.stdenv.hostPlatform.system}.agsFull
   ];
 
-  environment.systemPackages = with pkgs;
-    [
-      tetex
-      texstudio
-      #libvert
-      #qemu
-      abaddon
-      cava
-      gh
-      git
-      pamixer
-      spotify
-      # star-citizen
-      tmux
-      wget
-    ]
-    ++ [fuzzel xwayland-satellite];
+  environment.systemPackages = with pkgs; [
+    tetex
+    texstudio
+    #libvert
+    #qemu
+    abaddon
+    cava
+    gh
+    git
+    pamixer
+    spotify
+    # star-citizen
+    tmux
+    wget
+    android-tools
+    fuzzel
+    xwayland-satellite
+  ];
 
   virtualisation = {
     libvirtd.enable = false;
@@ -234,7 +235,6 @@ in {
     niri.enable = false;
     gamemode.enable = mkForce false;
     coolercontrol.enable = false;
-    adb.enable = true;
     fuse.userAllowOther = true;
     honkers-railway-launcher.enable = true;
     wavey-launcher = {

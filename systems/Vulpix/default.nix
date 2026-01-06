@@ -86,7 +86,6 @@ in {
   };
   programs = {
     _1password-gui.polkitPolicyOwners = ["melody"];
-    adb.enable = true;
     gamemode.settings.gpu.gpu_device = 0;
     gnome-disks.enable = true;
     gnupg.agent = {
@@ -125,6 +124,7 @@ in {
     spotify
     vscode
     nil
+    android-tools
     # yubioath-flutter
   ];
 

@@ -17,12 +17,12 @@ in {
   config = mkIf cfg.enable {
     # Disable stylix module
     stylix.targets.waybar.enable = false;
+    catppuccin.waybar = {
+      enable = true;
+      mode = "prependImport";
+    };
 
     programs.waybar = {
-      catppuccin = {
-        enable = true;
-        mode = "prependImport";
-      };
       package = pkgs.waybar.overrideAttrs (prev: {
         mesonFlags = (prev.mesonFlags or []) ++ ["-Dexperimental=true"];
       });
