@@ -17,11 +17,10 @@
     nixpkgs-overlays = [
       inputs.niri.overlays.default
       inputs.nix-citizen.overlays.default
-      # NOTE: Disabled breaks CI, changes upstream in pr#425870
-      # inputs.nix-citizen.overlays.updated-vulkan-sdk
       inputs.self.overlays.default
       inputs.nix-minecraft.overlays.default
       inputs.nix-topology.overlays.default
+      inputs.prismlauncher.overlays.default
       inputs.rust-overlay.overlays.default
     ];
     listdir = dir: builtins.attrNames (lib.filterAttrs (_: t: t == "directory") (builtins.readDir dir));
@@ -333,6 +332,10 @@
       inputs = {
         nixpkgs.follows = "nixpkgs";
       };
+    };
+    prismlauncher = {
+      url = "github:PrismLauncher/PrismLauncher";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     robotnix = {
       url = "github:nix-community/robotnix";
