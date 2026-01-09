@@ -82,7 +82,6 @@
                       inputs.nix-index-database.homeModules.nix-index
                       inputs.nvf.homeManagerModules.default
                       inputs.sops-nix.homeManagerModules.sops
-                      inputs.impermanence.nixosModules.home-manager.impermanence
                       inputs.stylix.homeModules.stylix
                     ]
                     ++ (lib.mapAttrsToList (_: m: m) self.homeModules);
