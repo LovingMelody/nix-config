@@ -18,6 +18,7 @@ in {
     };
     knowsHiddenMove = true;
     defaultNetworkAdapter = "wlp7s0f0";
+    vr.enable = true;
     services.ai = {
       ollama.enable = true;
       # Disabled till this issue is resolved

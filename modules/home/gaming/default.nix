@@ -51,6 +51,27 @@ in {
     };
   };
   config = mkIf cfg.enable {
+    xdg.configFile."openvr/openvrpaths.vrpath" = {
+      enable = osConfig.TM.vr.enable or false;
+      text = let
+        steam = "${config.xdg.dataHome}/Steam";
+      in
+        builtins.toJSON {
+          version = 1;
+          jsonid = "vrpathreg";
+
+          external_drivers = null;
+          config = ["${steam}/config"];
+
+          log = ["${steam}/logs"];
+
+          "runtime" = [
+            "${pkgs.xrizer}/lib/xrizer"
+            # OR
+            #"${pkgs.opencomposite}/lib/opencomposite"
+          ];
+        };
+    };
     # TM.reshade.enable = true;
     programs.mangohud = {
       enable = true;
