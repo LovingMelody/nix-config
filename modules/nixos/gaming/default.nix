@@ -167,6 +167,7 @@ in {
         pkgs.gargoyle
         pkgs.teamspeak6-client
         pkgs.mumble
+        pkgs.umu-launcher
       ];
     };
 

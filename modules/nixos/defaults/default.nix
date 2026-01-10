@@ -257,7 +257,20 @@ in
             allowUnfree = true;
             cudaSupport = config.TM.MyNextGPUWillNotBeNvidia or false;
           };
-          overlays = nixpkgs-overlays;
+          overlays =
+            nixpkgs-overlays
+            ++ [
+              (final: prev: {
+                umu-launcher = prev.umu-launcher.override {
+                  steam = config.programs.steam.package;
+                };
+                steam-run = config.programs.steam.package.run;
+                steam-run-free =
+                  if config.nixpkgs.config.allowUnfree
+                  then final.steam-run
+                  else config.programs.steam.package.run-free;
+              })
+            ];
         };
         nix = {
           daemonIOSchedClass = mkDefault (

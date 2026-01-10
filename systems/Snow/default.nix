@@ -18,7 +18,7 @@ in {
     };
     knowsHiddenMove = true;
     defaultNetworkAdapter = "wlp7s0f0";
-    vr.enable = true;
+    vr.enable = false;
     services.ai = {
       ollama.enable = true;
       # Disabled till this issue is resolved
@@ -265,14 +265,4 @@ in {
   };
 
   boot.kernel.sysctl."vm.max_map_count" = lib.mkForce 16777216;
-  boot.kernelPatches = [
-    {
-      name = "amdgpu-ignore-ctx-privileges";
-      patch = pkgs.fetchpatch {
-        name = "cap_sys_nice_begone.patch";
-        url = "https://github.com/Frogging-Family/community-patches/raw/master/linux61-tkg/cap_sys_nice_begone.mypatch";
-        hash = "sha256-Y3a0+x2xvHsfLax/uwycdJf3xLxvVfkfDVqjkxNaYEo=";
-      };
-    }
-  ];
 }
