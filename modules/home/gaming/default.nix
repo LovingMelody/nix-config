@@ -51,8 +51,7 @@ in {
     };
   };
   config = mkIf cfg.enable {
-    xdg.configFile."openvr/openvrpaths.vrpath" = {
-      enable = osConfig.TM.vr.enable or false;
+    xdg.configFile."openvr/openvrpaths.vrpath" = mkIf ((osConfig.TM.vr.enable or false) && (osConfig.TM.vr.useWivrn or false)) {
       text = let
         steam = "${config.xdg.dataHome}/Steam";
       in
