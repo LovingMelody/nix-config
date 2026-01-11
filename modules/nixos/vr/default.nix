@@ -10,13 +10,13 @@ in {
   options.TM.vr = {
     enable = mkEnableOption "Enable VR";
     patchKernel = mkEnableOption "Patch kernel remove CAP_SYS_NICE";
-    wireless = mkEnableOption "Wireless VR" // {default = true;};
+    useWivrn = mkEnableOption "Wivrn instead of ALVR" // {default = false;};
     autoStart = mkEnableOption "Autostart services";
   };
 
   config = mkIf cfg.enable {
     services.wivrn = {
-      enable = cfg.wireless;
+      enable = cfg.useWivrn;
       openFirewall = true;
       defaultRuntime = mkDefault true;
       autoStart = mkDefault cfg.autoStart;
@@ -25,6 +25,11 @@ in {
         inherit (config.programs.steam) package;
       };
     };
+    programs.alvr = {
+      enable = ! cfg.useWivrn;
+      openFirewall = true;
+    };
+    environment.systemPackages = [pkgs.wlx-overlay-s];
     boot.kernelPatches = optional cfg.patchKernel [
       {
         name = "amdgpu-ignore-ctx-privileges";
