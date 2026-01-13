@@ -44,6 +44,10 @@ in
     cmakeCompatFix = pkg: brokenVersion: pkg.overrideAttrs (o: {cmakeFlags = (o.cmakeFlags or []) ++ lib.optional (brokenVersion || (lib.versionOlder o.version brokenVersion)) "-DCMAKE_POLICY_VERSION_MINIMUM=3.5";});
     */
   in {
+    alvr = (prev.alvr.overrideAttrs
+      (prev: {
+        nativeBuildInputs = prev.nativeBuildInputs ++ lib.optional final.config.cudaSupport final.cudaPackages.cuda_nvcc;
+      })).override {ffmpeg = final.ffmpeg-full;};
     linuxKernel =
       prev.linuxKernel
       // {
