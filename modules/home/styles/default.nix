@@ -52,6 +52,21 @@ in {
       enable = mkDefault config.TM.isGui;
     };
     catppuccin.gtk.icon.enable = false;
+    home.file = let
+      wallpaper-ext =
+        if config.stylix.image == null
+        then [""]
+        else (builtins.match ".*\\.([^.]+)$" config.stylix.image);
+    in {
+      ".wallpaper" = mkDefault {source = config.stylix.image;};
+
+      ".wallpaper.${
+        if wallpaper-ext != null
+        then builtins.head wallpaper-ext
+        else ""
+      }".source =
+        config.stylix.image;
+    };
     stylix = {
       iconTheme = {
         enable = true;
