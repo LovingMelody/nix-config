@@ -51,6 +51,7 @@ in {
     qt.style.name = "kvantum";
     gtk = {
       enable = mkDefault config.TM.isGui;
+      gtk2.force = true;
     };
     catppuccin.gtk.icon.enable = false;
     home.file = let
