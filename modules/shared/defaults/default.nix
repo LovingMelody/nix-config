@@ -26,7 +26,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    qt.enable = config.TM.isGui;
+    qt.enable = lib.mkForce config.TM.isGui;
     nixpkgs = {
       config = {
         allowUnfree = true;
