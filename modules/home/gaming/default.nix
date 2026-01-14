@@ -66,6 +66,7 @@ in {
 
           "runtime" = [
             "${pkgs.xrizer}/lib/xrizer"
+            "${config.home.homeDirectory}/.local/share/Steam/steamapps/common/SteamVR"
             # OR
             #"${pkgs.opencomposite}/lib/opencomposite"
           ];
