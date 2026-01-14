@@ -9,7 +9,6 @@
     importJSON
     mkDefault
     mkEnableOption
-    mkForce
     mkIf
     mkMerge
     mkOption
@@ -202,7 +201,7 @@ in {
           gtk.enable = mkDefault config.TM.isGui;
           qt = {
             enable = mkDefault config.TM.isGui;
-            platform = mkForce "qtct";
+            # platform = mkForce "qtct";
           };
         };
         opacity.desktop = mkDefault 0.70;

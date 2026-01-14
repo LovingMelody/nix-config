@@ -8,7 +8,6 @@
   inherit
     (lib)
     mkDefault
-    mkForce
     mkIf
     ;
   inherit (lib.TM) get-shared-module;
@@ -18,6 +17,7 @@ in {
   # Breaks some configs such as waybar by default
 
   config = mkIf cfg.enable {
+    environment.systemPackages = [pkgs.kdePackages.qtstyleplugin-kvantum];
     programs.dconf.enable = true;
     boot.plymouth.logo = builtins.fetchurl {
       url = "https://raw.githubusercontent.com/catppuccin/catppuccin/b3584ebc7a74fed37bd7d0dda494d88c17248439/assets/footers/gray0_ctp_on_line.png";
@@ -25,8 +25,8 @@ in {
     };
     qt = {
       enable = mkDefault config.TM.isGui;
-      # platformTheme = mkForce "qt5ct";
-      style = mkForce "adwaita${lib.strings.optionalString (config.stylix.polarity == "dark") "-dark"}";
+      # platformTheme = "kvantum";
+      # style = mkForce "adwaita${lib.strings.optionalString (config.stylix.polarity == "dark") "-dark"}";
     };
     fonts = {
       fontDir.enable = config.TM.isGui;
@@ -55,6 +55,7 @@ in {
         plymouth.enable = false;
         grub.enable = false;
         chromium.enable = config.TM.isGui;
+        qt.enable = true;
       };
     };
   };

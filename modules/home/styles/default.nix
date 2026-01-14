@@ -34,7 +34,7 @@ in {
     fonts.fontconfig.enable = mkOverride 99 config.TM.isGui;
     catppuccin = {
       cursors.enable = false;
-      kvantum.enable = false; # Use stylix theme
+      kvantum.enable = true; # Use stylix theme
       wezterm.apply = true;
     };
     xdg.enable = true;
@@ -48,6 +48,7 @@ in {
         editImage
         ;
     };
+    qt.style.name = "kvantum";
     gtk = {
       enable = mkDefault config.TM.isGui;
     };
@@ -89,8 +90,9 @@ in {
         hyprland.enable = false;
         mako.enable = false;
         swaylock.enable = false;
-        kde.enable = mkDefault config.TM.isGui;
+        kde.enable = true;
         starship.enable = false;
+        qt.enable = false;
       };
     };
   };
