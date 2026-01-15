@@ -114,6 +114,7 @@ in
     slower = final.callPackage "${self}/packages/slower" {};
     catppuccin-obs = final.callPackage "${self}/packages/catppuccin-obs" {inherit pins;};
     nitch = final.callPackage "${self}/packages/nitch" {};
+    iw3 = final.callPackage "${self}/packages/iw3" {inherit pins;};
     unique-basenames = final.callPackage "${self}/packages/unique-basenames" {};
     textools = final.callPackage "${self}/packages/textools" {wine = final.wine-astral;};
     star-citizen = prev.star-citizen.override {

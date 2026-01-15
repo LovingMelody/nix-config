@@ -212,6 +212,7 @@ in {
     bitwarden-cli
     czkawka
     nmap
+    iw3
     # inputs.ags.packages.${pkgs.stdenv.hostPlatform.system}.agsFull
   ];
 

@@ -1,0 +1,316 @@
+diff --git a/cliqa/download_models.py b/cliqa/download_models.py
+index fe37064..7967c54 100644
+--- a/cliqa/download_models.py
++++ b/cliqa/download_models.py
+@@ -2,10 +2,12 @@ import shutil
+ from os import path
+ from nunif.utils.downloader import ArchiveDownloader
+ from nunif.logger import logger
++from pathlib import Path
+ 
+-
++HOME_DIR = Path.home()
++CONFIG_DIR = path.join(HOME_DIR, ".config", "nunif")
+ VERSION = "20240212"
+-MODEL_DIR = path.join(path.dirname(__file__), "pretrained_models")
++MODEL_DIR = path.join(CONFIG_DIR, "pretrained_models")
+ VERSION_FILE = path.join(MODEL_DIR, VERSION)
+ MODEL_URL = f"https://github.com/nagadomi/nunif/releases/download/0.0.0/cliqa_pretrained_models_{VERSION}.zip"
+ 
+diff --git a/cliqa/filter_low_quality_jpeg.py b/cliqa/filter_low_quality_jpeg.py
+index 5d99089..f54ee5b 100644
+--- a/cliqa/filter_low_quality_jpeg.py
++++ b/cliqa/filter_low_quality_jpeg.py
+@@ -11,9 +11,11 @@ from nunif.models import load_model
+ from nunif.logger import logger
+ from .utils import predict_jpeg_quality, create_patch_loader, copyfile
+ from .models import jpeg_quality  # noqa
++from pathlib import Path
+ 
+-
+-DEFAULT_CHECKPOINT_FILE = path.join(path.dirname(__file__), "pretrained_models", "jpeg_quality.pth")
++HOME_DIR = Path.home()
++CONFIG_DIR = path.join(HOME_DIR, ".config", "nunif")
++DEFAULT_CHECKPOINT_FILE = path.join(CONFIG_DIR, "pretrained_models", "jpeg_quality.pth")
+ 
+ 
+ def main():
+diff --git a/cliqa/filter_low_quality_resize.py b/cliqa/filter_low_quality_resize.py
+index 781d5c5..4980564 100644
+--- a/cliqa/filter_low_quality_resize.py
++++ b/cliqa/filter_low_quality_resize.py
+@@ -10,9 +10,11 @@ from nunif.models import load_model
+ from nunif.logger import logger
+ from .utils import predict_resize_quality, create_patch_loader, copyfile
+ from .models import scale_factor  # noqa
++from pathlib import Path
+ 
+-
+-DEFAULT_CHECKPOINT_FILE = path.join(path.dirname(__file__), "pretrained_models", "scale_factor.pth")
++HOME_DIR = Path.home()
++CONFIG_DIR = path.join(HOME_DIR, ".config", "nunif")
++DEFAULT_CHECKPOINT_FILE = path.join(CONFIG_DIR, "pretrained_models", "scale_factor.pth")
+ 
+ 
+ def main():
+diff --git a/cliqa/filter_noisy_photo.py b/cliqa/filter_noisy_photo.py
+index 012a360..203419f 100644
+--- a/cliqa/filter_noisy_photo.py
++++ b/cliqa/filter_noisy_photo.py
+@@ -11,9 +11,11 @@ from nunif.models import load_model
+ from nunif.logger import logger
+ from .utils import predict_grain_noise_psnr, create_patch_loader, copyfile
+ from .models import grain_noise_level  # noqa
++from pathlib import Path
+ 
+-
+-DEFAULT_CHECKPOINT_FILE = path.join(path.dirname(__file__), "pretrained_models", "grain_noise_level.pth")
++HOME_DIR = Path.home()
++CONFIG_DIR = path.join(HOME_DIR, ".config", "nunif")
++DEFAULT_CHECKPOINT_FILE = path.join(CONFIG_DIR, "pretrained_models", "grain_noise_level.pth")
+ 
+ 
+ def main():
+diff --git a/iw3/base_depth_model.py b/iw3/base_depth_model.py
+index b3994ae..c4d9332 100644
+--- a/iw3/base_depth_model.py
++++ b/iw3/base_depth_model.py
+@@ -12,9 +12,11 @@ from PIL import Image
+ from PIL.PngImagePlugin import PngInfo
+ from torchvision.transforms import functional as TF
+ from . depth_scaler import EMAMinMaxScaler
++from pathlib import Path
+ 
+-
+-HUB_MODEL_DIR = path.join(path.dirname(__file__), "pretrained_models", "hub")
++HOME_DIR = Path.home()
++CONFIG_DIR = path.join(HOME_DIR, ".config", "nunif")
++HUB_MODEL_DIR = path.join(CONFIG_DIR, "pretrained_models", "hub")
+ 
+ 
+ class _CompileContext():
+diff --git a/iw3/desktop/gui.py b/iw3/desktop/gui.py
+index f711956..b220a76 100644
+--- a/iw3/desktop/gui.py
++++ b/iw3/desktop/gui.py
+@@ -44,8 +44,10 @@ from .utils import (
+     IW3U, ENABLE_GPU_JPEG,
+ )
+ 
++from pathlib import Path
+ 
+-CONFIG_DIR = path.join(path.dirname(__file__), "..", "..", "tmp")
++HOME_DIR = Path.home()
++CONFIG_DIR = path.join(HOME_DIR, ".config", "nunif")
+ CONFIG_PATH = path.join(CONFIG_DIR, "iw3-desktop.cfg")
+ LANG_CONFIG_PATH = path.join(CONFIG_DIR, "iw3-gui-desktop-lang.cfg")
+ PRESET_DIR = path.join(CONFIG_DIR, "presets")
+diff --git a/iw3/gui.py b/iw3/gui.py
+index 12e1c93..b3d14f4 100644
+--- a/iw3/gui.py
++++ b/iw3/gui.py
+@@ -47,12 +47,13 @@ from .depth_pro_model import DepthProModel
+ from .depth_pro_model import MODEL_FILES as DEPTH_PRO_MODELS
+ from . import export_config
+ import torch
++from pathlib import Path
+ 
+-
++HOME_DIR = Path.home()
+ IMAGE_EXTENSIONS = extension_list_to_wildcard(LOADER_SUPPORTED_EXTENSIONS)
+ VIDEO_EXTENSIONS = extension_list_to_wildcard(KNOWN_VIDEO_EXTENSIONS)
+ YAML_EXTENSIONS = extension_list_to_wildcard((".yml", ".yaml"))
+-CONFIG_DIR = path.join(path.dirname(__file__), "..", "tmp")
++CONFIG_DIR = path.join(HOME_DIR, ".config", "nunif")
+ CONFIG_PATH = path.join(CONFIG_DIR, "iw3-gui.cfg")
+ LANG_CONFIG_PATH = path.join(CONFIG_DIR, "iw3-gui-lang.cfg")
+ PRESET_DIR = path.join(CONFIG_DIR, "presets")
+diff --git a/iw3/stereo_model_factory.py b/iw3/stereo_model_factory.py
+index 1276621..db31911 100644
+--- a/iw3/stereo_model_factory.py
++++ b/iw3/stereo_model_factory.py
+@@ -1,9 +1,11 @@
+ from nunif.models import load_model
+ from nunif.utils.ui import TorchHubDir
+ from os import path
++from pathlib import Path
+ 
+-
+-HUB_MODEL_DIR = path.join(path.dirname(__file__), "pretrained_models", "hub")
++HOME_DIR = Path.home()
++CONFIG_DIR = path.join(HOME_DIR, ".config", "nunif")
++HUB_MODEL_DIR = path.join(CONFIG_DIR, "pretrained_models", "hub")
+ 
+ 
+ def pth_url(filename):
+diff --git a/iw3/utils.py b/iw3/utils.py
+index 75cbb20..1a52e1d 100644
+--- a/iw3/utils.py
++++ b/iw3/utils.py
+@@ -34,9 +34,11 @@ from .backward_warp import (
+     apply_divergence_nn_LR,
+ )
+ from .stereo_model_factory import create_stereo_model
++from pathlib import Path
+ 
+-
+-HUB_MODEL_DIR = path.join(path.dirname(__file__), "pretrained_models", "hub")
++HOME_DIR = Path.home()
++CONFIG_DIR = path.join(HOME_DIR, ".config", "nunif")
++HUB_MODEL_DIR = path.join(CONFIG_DIR, "pretrained_models", "hub")
+ ROW_FLOW_V2_MAX_DIVERGENCE = 2.5
+ ROW_FLOW_V3_MAX_DIVERGENCE = 5.0
+ ROW_FLOW_V2_AUTO_STEP_DIVERGENCE = 2.0
+diff --git a/stlizer/multipass_pipeline.py b/stlizer/multipass_pipeline.py
+index 59dad7d..5da66e5 100644
+--- a/stlizer/multipass_pipeline.py
++++ b/stlizer/multipass_pipeline.py
+@@ -12,7 +12,7 @@ from nunif.utils.ui import TorchHubDir
+ from . import models  # noqa
+ from tqdm import tqdm
+ import scipy
+-
++from pathlib import Path
+ 
+ DEFAULT_RESOLUTION = 320
+ 
+@@ -30,7 +30,9 @@ SUPERPOINT_CONF = {
+ ANGLE_MAX_HARD = 90.0
+ KEYPOINT_COSINE_THRESHOLD = 0.3
+ 
+-TORCH_HUB_DIR = path.join(path.dirname(__file__), "pretrained_models", "hub")
++HOME_DIR = Path.home()
++CONFIG_DIR = path.join(HOME_DIR, ".config", "nunif")
++TORCH_HUB_DIR = path.join(CONFIG_DIR, "pretrained_models", "hub")
+ OUTPAINT_MODEL_URL = "https://github.com/nagadomi/nunif/releases/download/torchhub/stlizer_light_outpaint_v1_20241230.pth"
+ 
+ 
+diff --git a/waifu2x/download_models.py b/waifu2x/download_models.py
+index bf85805..fcb8ecb 100644
+--- a/waifu2x/download_models.py
++++ b/waifu2x/download_models.py
+@@ -2,10 +2,12 @@ import shutil
+ from os import path
+ from nunif.utils.downloader import ArchiveDownloader
+ from nunif.logger import logger
++from pathlib import Path
+ 
+-
++HOME_DIR = Path.home()
++CONFIG_DIR = path.join(HOME_DIR, ".config", "nunif")
+ VERSION = "20250502"
+-MODEL_DIR = path.join(path.dirname(__file__), "pretrained_models")
++MODEL_DIR = path.join(CONFIG_DIR, "pretrained_models")
+ VERSION_FILE = path.join(MODEL_DIR, VERSION)
+ MODEL_URL = f"https://github.com/nagadomi/nunif/releases/download/0.0.0/waifu2x_pretrained_models_{VERSION}.zip"
+ 
+diff --git a/waifu2x/gui.py b/waifu2x/gui.py
+index 6818bb8..a22fa39 100644
+--- a/waifu2x/gui.py
++++ b/waifu2x/gui.py
+@@ -33,11 +33,13 @@ from nunif.gui import (
+ from .locales import LOCALES
+ from . import models # noqa
+ import torch
++from pathlib import Path
+ 
+-
++HOME_DIR = Path.home()
++CONFIG_DIR = path.join(HOME_DIR, ".config", "nunif")
+ IMAGE_EXTENSIONS = extension_list_to_wildcard(LOADER_SUPPORTED_EXTENSIONS)
+ VIDEO_EXTENSIONS = extension_list_to_wildcard(KNOWN_VIDEO_EXTENSIONS)
+-CONFIG_PATH = path.join(path.dirname(__file__), "..", "tmp", "waifu2x-gui.cfg")
++CONFIG_PATH = path.join(CONFIG_DIR, "waifu2x-gui.cfg")
+ os.makedirs(path.dirname(CONFIG_PATH), exist_ok=True)
+ 
+ 
+diff --git a/waifu2x/hub.py b/waifu2x/hub.py
+index 195c97a..e8eed05 100644
+--- a/waifu2x/hub.py
++++ b/waifu2x/hub.py
+@@ -4,9 +4,11 @@ from .utils import Waifu2x
+ from .download_models import main as download_main
+ from nunif.utils import pil_io
+ import PIL
++from pathlib import Path
+ 
+-
+-MODEL_DIR = path.join(path.dirname(path.abspath(__file__)), "pretrained_models")
++HOME_DIR = Path.home()
++CONFIG_DIR = path.join(HOME_DIR, ".config", "nunif")
++MODEL_DIR = path.join(CONFIG_DIR, "pretrained_models")
+ MODEL_TYPES = {
+     # default models.
+     "art": path.join(MODEL_DIR, "swin_unet", "art"),
+diff --git a/waifu2x/ui_utils.py b/waifu2x/ui_utils.py
+index 17ec57d..bc31b1e 100644
+--- a/waifu2x/ui_utils.py
++++ b/waifu2x/ui_utils.py
+@@ -18,9 +18,11 @@ from nunif.utils.ui import (
+     is_image, is_video, is_text, is_output_dir, make_parent_dir, list_subdir)
+ from .utils import Waifu2x
+ from .download_models import main as download_main
++from pathlib import Path
+ 
+-
+-MODEL_DIR = path.join(path.dirname(path.abspath(__file__)), "pretrained_models")
++HOME_DIR = Path.home()
++CONFIG_DIR = path.join(HOME_DIR, ".config", "nunif")
++MODEL_DIR = path.join(CONFIG_DIR, "pretrained_models")
+ DEFAULT_ART_MODEL_DIR = path.join(MODEL_DIR, "swin_unet", "art")
+ DEFAULT_ART_SCAN_MODEL_DIR = path.join(MODEL_DIR, "swin_unet", "art_scan")
+ DEFAULT_PHOTO_MODEL_DIR = path.join(MODEL_DIR, "swin_unet", "photo")
+@@ -363,7 +365,7 @@ def waifu2x_main(args):
+         args.method = "noise_scale"
+ 
+     # download models
+-    pretrained_model_dir = path.join(path.dirname(__file__), "pretrained_models")
++    pretrained_model_dir = path.join(CONFIG_DIR, "pretrained_models")
+     if not path.exists(pretrained_model_dir):
+         download_main()
+ 
+diff --git a/waifu2x/web/__main__.py b/waifu2x/web/__main__.py
+index aade10d..8122e39 100644
+--- a/waifu2x/web/__main__.py
++++ b/waifu2x/web/__main__.py
+@@ -2,8 +2,12 @@ if __name__ == "__main__":
+     from os import path
+     from ..download_models import main as download_main
+     from .webgen.gen import main as webgen_main
++    from pathlib import Path
+ 
+-    model_dir = path.join(path.dirname(__file__), "..", "pretrained_models")
++    HOME_DIR = Path.home()
++    CONFIG_DIR = path.join(HOME_DIR, ".config", "nunif")
++
++    model_dir = path.join(CONFIG_DIR, "pretrained_models")
+     if not path.exists(model_dir):
+         download_main()
+ 
+diff --git a/waifu2x/web/server.py b/waifu2x/web/server.py
+index 4462f9d..1c3b91f 100644
+--- a/waifu2x/web/server.py
++++ b/waifu2x/web/server.py
+@@ -29,16 +29,18 @@ from nunif.logger import logger, set_log_level
+ from nunif.utils.filename import set_image_ext
+ from nunif.device import mps_is_available, xpu_is_available
+ from ..utils import Waifu2x
++from pathlib import Path
+ 
+-
++HOME_DIR = Path.home()
++CONFIG_DIR = path.join(HOME_DIR, ".config", "nunif")
+ DEFAULT_ART_MODEL_DIR = path.abspath(path.join(
+-    path.join(path.dirname(path.abspath(__file__)), "..", "pretrained_models"),
++    path.join(path.dirname(CONFIG_DIR, "pretrained_models"),
+     "swin_unet", "art"))
+ DEFAULT_ART_SCAN_MODEL_DIR = path.abspath(path.join(
+-    path.join(path.dirname(path.abspath(__file__)), "..", "pretrained_models"),
++    path.join(path.dirname(CONFIG_DIR, "pretrained_models"),
+     "swin_unet", "art_scan"))
+ DEFAULT_PHOTO_MODEL_DIR = path.abspath(path.join(
+-    path.join(path.dirname(path.abspath(__file__)), "..", "pretrained_models"),
++    path.join(path.dirname(CONFIG_DIR, "pretrained_models"),
+     "swin_unet", "photo"))
+ BUFF_SIZE = 8192  # buffer block size for io access
+ SIZE_MB = 1024 * 1024

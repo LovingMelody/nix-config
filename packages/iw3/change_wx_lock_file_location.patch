@@ -1,0 +1,21 @@
+diff --git a/iw3/gui.py b/iw3/gui.py
+index 12e1c93..b1c355b 100644
+--- a/iw3/gui.py
++++ b/iw3/gui.py
+@@ -56,6 +56,7 @@ CONFIG_DIR = path.join(path.dirname(__file__), "..", "tmp")
+ CONFIG_PATH = path.join(CONFIG_DIR, "iw3-gui.cfg")
+ LANG_CONFIG_PATH = path.join(CONFIG_DIR, "iw3-gui-lang.cfg")
+ PRESET_DIR = path.join(CONFIG_DIR, "presets")
++RUNTIME_DIR = os.environ.get('XDG_RUNTIME_DIR', "/tmp")
+ os.makedirs(CONFIG_DIR, exist_ok=True)
+ os.makedirs(PRESET_DIR, exist_ok=True)
+ 
+@@ -66,7 +67,7 @@ LAYOUT_DEBUG = False
+ class IW3App(wx.App):
+     def OnInit(self):
+         main_frame = MainFrame()
+-        self.instance = wx.SingleInstanceChecker(main_frame.GetTitle())
++        self.instance = wx.SingleInstanceChecker(main_frame.GetTitle() + ".lock", RUNTIME_DIR)
+         if self.instance.IsAnotherRunning():
+             with wx.MessageDialog(None,
+                                   message=(T("Another instance is running") + "\n" +

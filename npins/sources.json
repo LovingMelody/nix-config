@@ -178,6 +178,22 @@
       "url": "https://api.github.com/repos/andir/npins/tarball/0.4.0",
       "hash": "sha256-ksOXi7u4bpHyWNHwkUR62fdwKowPW5GqBS7MA7Apwh4="
     },
+    "nunif": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nagadomi",
+        "repo": "nunif"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "20241128",
+      "revision": "d9bfb21f78ea5cf08753ef4f84b71bef1e3c5c7e",
+      "url": "https://api.github.com/repos/nagadomi/nunif/tarball/refs/tags/20241128",
+      "hash": "sha256-9QhHM5DCPXW/KYgdglJa3v20rA2O7Nrf2z6KTABG7e4="
+    },
     "obs": {
       "type": "Git",
       "repository": {
