@@ -185,11 +185,11 @@
         "owner": "nagadomi",
         "repo": "nunif"
       },
-      "branch": "master",
+      "branch": "dev",
       "submodules": false,
-      "revision": "c86aabe716017fe4d873d42d1c4254b862b16195",
-      "url": "https://github.com/nagadomi/nunif/archive/c86aabe716017fe4d873d42d1c4254b862b16195.tar.gz",
-      "hash": "sha256-5iwA0BB5HglFSyrV468jIWVmCZ61UYQtf7ECJ+dN8sw="
+      "revision": "8dbc9e4c9140f44a227cb37106a92dafca9c6652",
+      "url": "https://github.com/nagadomi/nunif/archive/8dbc9e4c9140f44a227cb37106a92dafca9c6652.tar.gz",
+      "hash": "sha256-tqERdKrgZwNt3Eq2Y3jb9NCdo/eb1VUHdzu3iV4aceg="
     },
     "obs": {
       "type": "Git",
