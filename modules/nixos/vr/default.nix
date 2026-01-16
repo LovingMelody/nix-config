@@ -29,7 +29,7 @@ in {
       enable = ! cfg.useWivrn;
       openFirewall = true;
     };
-    environment.systemPackages = [pkgs.wlx-overlay-s];
+    environment.systemPackages = [pkgs.wayvr];
     boot.kernelPatches = optional cfg.patchKernel [
       {
         name = "amdgpu-ignore-ctx-privileges";
