@@ -149,6 +149,19 @@
       "url": "https://api.github.com/repos/kovidgoyal/kitty/tarball/refs/tags/v0.45.0",
       "hash": "sha256-3XQWmLd8F0ndzzLOcV/7144M9enqc/7FULVLeM2Kpts="
     },
+    "linux-wallpaperengine": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "Almamu",
+        "repo": "linux-wallpaperengine"
+      },
+      "branch": "main",
+      "submodules": true,
+      "revision": "f79c29f067b2613895419e351033582464577154",
+      "url": null,
+      "hash": "sha256-AISdouVqMXTYErQoT7oM5H+vlrw03NtpI9FqDwZ0J9A="
+    },
     "mpv": {
       "type": "Git",
       "repository": {

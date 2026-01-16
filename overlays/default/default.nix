@@ -194,6 +194,11 @@ in
 
     obs-studio = prev.obs-studio.override {ffmpeg = final.ffmpeg-full;};
 
+    linux-wallpaperengine = prev.linux-wallpaperengine.overrideAttrs {
+      src = pins.linux-wallpaperengine;
+      version = pins.linux-wallpaperengine.revision;
+    };
+
     lutris = prev.lutris.override {
       steamSupport = true;
       extraPkgs = _pkgs: [
