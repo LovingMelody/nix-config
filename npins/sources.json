@@ -179,20 +179,17 @@
       "hash": "sha256-ksOXi7u4bpHyWNHwkUR62fdwKowPW5GqBS7MA7Apwh4="
     },
     "nunif": {
-      "type": "GitRelease",
+      "type": "Git",
       "repository": {
         "type": "GitHub",
         "owner": "nagadomi",
         "repo": "nunif"
       },
-      "pre_releases": false,
-      "version_upper_bound": null,
-      "release_prefix": null,
+      "branch": "master",
       "submodules": false,
-      "version": "20241128",
-      "revision": "d9bfb21f78ea5cf08753ef4f84b71bef1e3c5c7e",
-      "url": "https://api.github.com/repos/nagadomi/nunif/tarball/refs/tags/20241128",
-      "hash": "sha256-9QhHM5DCPXW/KYgdglJa3v20rA2O7Nrf2z6KTABG7e4="
+      "revision": "c86aabe716017fe4d873d42d1c4254b862b16195",
+      "url": "https://github.com/nagadomi/nunif/archive/c86aabe716017fe4d873d42d1c4254b862b16195.tar.gz",
+      "hash": "sha256-5iwA0BB5HglFSyrV468jIWVmCZ61UYQtf7ECJ+dN8sw="
     },
     "obs": {
       "type": "Git",
