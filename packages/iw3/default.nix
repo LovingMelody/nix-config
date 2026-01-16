@@ -19,10 +19,10 @@ in
 
     src = nunif;
 
-    patches = [
-      ./change_wx_lock_file_location.patch
-      ./change_config_dir.patch
-    ];
+    # patches = [
+    #   ./change_wx_lock_file_location.patch
+    #   ./change_config_dir.patch
+    # ];
 
     nativeBuildInputs = [pkgs.makeWrapper copyDesktopItems];
 
