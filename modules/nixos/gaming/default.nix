@@ -52,7 +52,7 @@ in {
   config = mkIf cfg.enable {
     fonts.packages = [pkgs.wineWowPackages.fonts];
     programs.rsi-launcher = {
-      inherit (cfg.starCitizen) enable;
+      inherit (cfg.rsiLauncher) enable;
       package = pkgs.rsi-launcher-git;
       umu.enable = false;
       disableEAC = false;
