@@ -36,13 +36,13 @@ in {
       };
       memoryPercent = mkOption {
         type = types.int;
-        default = 100;
+        default = 30;
         inherit (options.zramSwap.memoryPercent) description;
       };
     };
-    starCitizen = {
+    rsiLauncher = {
       enable =
-        mkEnableOption "Enable Star Citizen"
+        mkEnableOption "Enable RSI Launcher"
         // {
           default = true;
         };
@@ -60,7 +60,12 @@ in {
         vars = {
           DXVK_HUD = "compiler";
           MANGO_HUD = 1;
-          NVPRESENT_ENABLE_SMOOTH_MOTION = 1;
+          PROTON_ENABLE_NGX_UPDATER = "1";
+          DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE = "on";
+          DXVK_NVAPI_DRS_NGX_DLSS_RR_OVERRIDE = "on";
+          DXVK_NVAPI_DRS_NGX_DLSS_FG_OVERRIDE = "on";
+          DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE_RENDER_PRESET_SELECTION = "render_preset_latest";
+          # NVPRESENT_ENABLE_SMOOTH_MOTION = 1;
         };
         hdrVars =
           optionalString config.TM.hasHDRDisplay
