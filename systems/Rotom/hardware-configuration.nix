@@ -19,7 +19,10 @@
     kernelModules = ["kvm-amd"];
     extraModulePackages = [];
   };
-  TM.zfs.enable = true;
+  TM.zfs = {
+    enable = true;
+    useUnstable = lib.versionAtLeast "6.14" (lib.TM.latestZFSKernel pkgs pkgs.zfs).kernel.version;
+  };
   environment.etc."mdadm.conf".text = ''
     MAILADDR root
   '';
