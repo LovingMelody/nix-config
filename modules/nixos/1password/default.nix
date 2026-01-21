@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }: let
   cfg = config.TM.programs._1password;
@@ -16,7 +17,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.etc."1password/custom_allowed_browsers".text = "";
+    environment.etc."1password/custom_allowed_browsers".text = "${pkgs.vivaldi}";
     programs = {
       _1password.enable = true;
       _1password-gui = {
