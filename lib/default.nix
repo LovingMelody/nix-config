@@ -6,6 +6,8 @@
   pins = import "${self}/npins";
 in rec {
   package-helper = {
+
+    shortRev = s: builtins.substring 0 7 s;
     inherit pins;
 
     propegateInputs = package: deps:
