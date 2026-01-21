@@ -17,7 +17,13 @@ in {
   # Breaks some configs such as waybar by default
 
   config = mkIf cfg.enable {
-    environment.systemPackages = [pkgs.kdePackages.qtstyleplugin-kvantum];
+    environment.systemPackages = lib.optionals config.TM.isGui [
+      pkgs.kdePackages.qtstyleplugin-kvantum
+      (pkgs.catppuccin-kde.override {
+        flavour = [config.catppuccin.flavor];
+        accents = [config.catppuccin.accent];
+      })
+    ];
     programs.dconf.enable = true;
     boot.plymouth.logo = builtins.fetchurl {
       url = "https://raw.githubusercontent.com/catppuccin/catppuccin/b3584ebc7a74fed37bd7d0dda494d88c17248439/assets/footers/gray0_ctp_on_line.png";
