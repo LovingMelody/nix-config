@@ -35,6 +35,7 @@ in {
     catppuccin = {
       cursors.enable = false;
       kvantum.enable = config.TM.isGui; # Use stylix theme
+      vivaldi.enable = config.programs.vivaldi.enable;
       wezterm.apply = true;
     };
     xdg.enable = true;

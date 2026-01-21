@@ -181,6 +181,10 @@ in {
     };
     programs = {
       alacritty.enable = true;
+      vivaldi = {
+        enable = true;
+        nativeMessagingHosts = [pkgs.kdePackages.plasma-browser-integration];
+      };
       wezterm = {
         enable = true;
         extraConfig = ''
@@ -241,7 +245,7 @@ in {
 
         protonmail-desktop
         protonmail-bridge-gui
-        vivaldi
+        # vivaldi
       ];
     };
     fonts.fontconfig.enable = true;
