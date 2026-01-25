@@ -61,9 +61,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "4407966514ee83f4b8bce3d2d5c144ed5e1941ed",
+      "revision": "c68c35071128c2bda31916c50080c07062f23fe6",
       "url": null,
-      "hash": "sha256-JmOpbswrVhDeaa+m8tZHOfmVreouwBgRRRnsvS6k/HI="
+      "hash": "sha256-esD6u5PqpQrjjEMqv0fKzVaB09jeYFn06tFuwUF9qwU="
     },
     "gallery-dl": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "1530778bfb512b84961af02c752e971700b211e2",
+      "revision": "3836c2a99f684b32069c6663ced8a8b7d8901b6e",
       "url": null,
-      "hash": "sha256-r6z9sJm9nqxJlMD48YCmIYLYQbQBUk9ToCtw6724Y2g="
+      "hash": "sha256-oK1NgLZc+aTD2zr5L0hkWGrpzCqv1TkupvB47r5nZXs="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -89,10 +89,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": true,
-      "version": "v1.31.3",
-      "revision": "645ccaea1825abdab7762c965797e5e72787a5be",
+      "version": "v1.31.4",
+      "revision": "9c398b7c1f772201d0721800dc81f6fd13ca3fd3",
       "url": null,
-      "hash": "sha256-vheQA67lPeYt7wly/4AbiReDx9ZlUbgqxT5YTxI0gVo="
+      "hash": "sha256-oK1NgLZc+aTD2zr5L0hkWGrpzCqv1TkupvB47r5nZXs="
     },
     "gargoyle": {
       "type": "Git",
@@ -171,9 +171,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "5d6f31f0a8db2747f62c10215416bc65621032cc",
-      "url": "https://github.com/mpv-player/mpv/archive/5d6f31f0a8db2747f62c10215416bc65621032cc.tar.gz",
-      "hash": "sha256-VCqK7hgQLDOUH4Ze3XdfvmZ9hNQ1eeCBAxDQE+rSq3w="
+      "revision": "dc5145c01d35177b42f917a494dfbcc98f8dbed5",
+      "url": "https://github.com/mpv-player/mpv/archive/dc5145c01d35177b42f917a494dfbcc98f8dbed5.tar.gz",
+      "hash": "sha256-CgRab1S0LuAs9usvOdsDiGQGBJKZxhXaSEVQYO29KAo="
     },
     "npins": {
       "type": "GitRelease",
@@ -326,10 +326,10 @@
       "version_upper_bound": null,
       "release_prefix": "rb-",
       "submodules": true,
-      "version": "rb-v1.2.1.7",
-      "revision": "36a9b4ff8e647f586fdfca493c3c62dfdb8003de",
+      "version": "rb-v1.3.1.1",
+      "revision": "c78f1813ff249705017dd5b67d057205a5f258bc",
       "url": null,
-      "hash": "sha256-PEX1a8ITB53hWoqnshDxvjWcabY9mq52jBILyfxSZ+w="
+      "hash": "sha256-+mbnt6QYISMTfHOQLtDJ8EB1QtZC5AhwhbysGuylzNU="
     }
   },
   "version": 7
