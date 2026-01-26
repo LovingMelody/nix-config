@@ -20,6 +20,7 @@
       inputs.self.overlays.default
       inputs.nix-minecraft.overlays.default
       inputs.nix-topology.overlays.default
+      inputs.nixpkgs-xr.overlays.default
       inputs.prismlauncher.overlays.default
       inputs.rust-overlay.overlays.default
     ];
@@ -318,6 +319,16 @@
     nixpkgs-using = {
       url = "github:uncenter/nixpkgs-using";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixpkgs-xr = {
+      url = "github:nix-community/nixpkgs-xr";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        systems.follows = "systems";
+        treefmt-nix.follows = "treefmt-nix";
+        flake-utils.follows = "flake-utils";
+        flake-compat.follows = "flake-compat";
+      };
     };
     nvf = {
       url = "github:NotAShelf/nvf";
