@@ -66,7 +66,6 @@ in
       version = "${o.version}+${pins.npins.revision}";
       src = pins.npins;
     });
-    inherit (final.pkgsLLVM) aria2;
     inherit (inputs.nixpkgs-using.packages.${final.stdenv.hostPlatform.system}) nixpkgs-using;
     inherit (inputs.moonlight-mod.packages.${final.stdenv.hostPlatform.system}) moonlight;
     osm-gps-map = prev.osm-gps-map.overrideAttrs (o: {
