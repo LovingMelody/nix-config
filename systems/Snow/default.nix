@@ -36,7 +36,7 @@ in {
     users.enable = true;
     time.enable = true;
     gaming.enable = true;
-    streaming.enable = true;
+    streaming.enable = false;
     sound.enable = true;
     security = {
       opensnitch.enable = false;

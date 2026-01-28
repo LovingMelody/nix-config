@@ -240,7 +240,7 @@ in {
         # lite-xl
         gimp3-with-plugins
         # gimp3
-        krita
+        # krita
         haruna
 
         protonmail-desktop
