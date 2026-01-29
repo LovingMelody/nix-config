@@ -77,9 +77,11 @@ in {
           };
     };
   };
-  virtualisation.docker = {
-    enable = false;
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
   };
+
   # specialisation = {
   #   # Configs has conflits w/ Hyprland
   #   hyprland = {
