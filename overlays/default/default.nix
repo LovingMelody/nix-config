@@ -47,7 +47,11 @@ in
     alvr = (prev.alvr.overrideAttrs
       (prev: {
         nativeBuildInputs = prev.nativeBuildInputs ++ lib.optional final.config.cudaSupport final.cudaPackages.cuda_nvcc;
-      })).override {ffmpeg = final.ffmpeg-full;};
+      })).override {
+      /*
+      ffmpeg = final.ffmpeg-full;
+      */
+    };
     linuxKernel =
       prev.linuxKernel
       // {
@@ -191,7 +195,9 @@ in
       withMoonlight = false;
     });
 
-    obs-studio = prev.obs-studio.override {ffmpeg = final.ffmpeg-full;};
+    obs-studio = prev.obs-studio.overrideAttrs (o: {
+      buildInputs = o.buildInputs ++ [final.rnnoise final.libsysprof-capture];
+    });
 
     linux-wallpaperengine = prev.linux-wallpaperengine.overrideAttrs {
       src = pins.linux-wallpaperengine;
