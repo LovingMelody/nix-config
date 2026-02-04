@@ -54,7 +54,6 @@ in {
   programs.opengamepadui = {
     enable = true;
     inputplumber.enable = true;
-
   };
   # services.displayManager.cosmic-greeter.enable = true;
   TM.desktop.gnome.enable = true;
