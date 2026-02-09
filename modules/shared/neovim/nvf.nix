@@ -77,7 +77,7 @@ in {
       ts.enable = true;
       go.enable = true;
       lua.enable = true;
-      zig.enable = true;
+      zig.enable = false;
       python.enable = true;
       typst.enable = true;
       rust = {
