@@ -68,18 +68,18 @@ in {
       # Languages that are enabled in the maximal configuration.
       bash.enable = true;
       clang.enable = true;
-      css.enable = true;
-      html.enable = true;
+      css.enable = false;
+      html.enable = false;
       # Currently broken & rarely used
       sql.enable = false;
-      java.enable = true;
-      kotlin.enable = true;
+      java.enable = false;
+      kotlin.enable = false;
       ts.enable = true;
       go.enable = true;
       lua.enable = true;
       zig.enable = false;
       python.enable = true;
-      typst.enable = true;
+      typst.enable = false;
       rust = {
         enable = true;
         extensions.crates-nvim.enable = true;
