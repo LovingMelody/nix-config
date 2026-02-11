@@ -5,7 +5,7 @@
   ...
 }: let
   inherit (inputs) nixpkgs nix-reshade;
-  inherit (lib.TM.package-helper) pins patchLibcuda blacklistPatches;
+  inherit (lib.TM.package-helper) pins patchLibcuda blacklistPatches shortRev;
   # shortRev = s: builtins.substring 0 7 s;
   allowGplAsync = pins.dxvk-gplasync.revision != "159ee8ef743d18769dfea284ea95393aca6b8421";
 in
@@ -67,7 +67,7 @@ in
           prev.linuxKernel.packages;
       };
     npins = (final.callPackage "${pins.npins}/npins.nix" {}).overrideAttrs (o: {
-      version = "${o.version}+${pins.npins.revision}";
+      version = "${o.version}+${shortRev pins.npins.revision}";
       src = pins.npins;
     });
     inherit (inputs.nixpkgs-using.packages.${final.stdenv.hostPlatform.system}) nixpkgs-using;
@@ -83,7 +83,7 @@ in
     kitty = pinnedOverlay "kitty";
     gargoyle = blacklistPatches ((prev.gargoyle.override {stdenv = final.clangStdenv;}).overrideAttrs {
       src = pins.gargoyle;
-      version = pins.gargoyle.revision;
+      version = builtins.replaceStrings ["\n"] [""]  "${builtins.readFile (pins.gargoyle + "/VERSION")}-${shortRev pins.gargoyle.revision}";
     }) ["ftbfs_gcc14.patch" "cmake4-fix"];
     gallery-dl = prev.gallery-dl.overrideAttrs (o: {
       inherit (pins.gallery-dl-stable) version;
