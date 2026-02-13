@@ -110,6 +110,7 @@ in
               pkgs.unique-basenames
               pkgs.unzip
               pkgs.lazygit
+              pkgs.nyaa
             ]
             ++ optional config.TM.isGui pkgs.ffmpeg_8-full
             ++ optional (!config.TM.isGui) pkgs.ffmpeg_8-headless;
