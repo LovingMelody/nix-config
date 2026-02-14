@@ -83,7 +83,7 @@ in
     kitty = pinnedOverlay "kitty";
     gargoyle = blacklistPatches ((prev.gargoyle.override {stdenv = final.clangStdenv;}).overrideAttrs {
       src = pins.gargoyle;
-      version = builtins.replaceStrings ["\n"] [""]  "${builtins.readFile (pins.gargoyle + "/VERSION")}-${shortRev pins.gargoyle.revision}";
+      version = builtins.replaceStrings ["\n"] [""] "${builtins.readFile (pins.gargoyle + "/VERSION")}-${shortRev pins.gargoyle.revision}";
     }) ["ftbfs_gcc14.patch" "cmake4-fix"];
     gallery-dl = prev.gallery-dl.overrideAttrs (o: {
       inherit (pins.gallery-dl-stable) version;
