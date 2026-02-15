@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "866e6df7a8cf3a382365ac6059386589ad12de32",
+      "revision": "7602f2bb1ba2aff6de0c177597ef86c55c465767",
       "url": null,
-      "hash": "sha256-WEJTs+LqCqRrtlc1t0T4kZNbaN5qnWYdM58FOE0Yxoc="
+      "hash": "sha256-cHyOKitxyOtq+Fedt3pDzT61vMhCoWnrg0unZ+etCVw="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -158,9 +158,9 @@
       },
       "branch": "main",
       "submodules": true,
-      "revision": "cf764a88e2fef84c3cf807551f4602985e393928",
+      "revision": "4819f9d6ecd7cba10e3272a848c962203ce98395",
       "url": null,
-      "hash": "sha256-qguiE20nOV4GHCn3a/dzN3QzqtScsXKhwvuzzlJoj5w="
+      "hash": "sha256-hLQxLmfPDRsHdwj9SqsPuQpm4Y+aQTstZDOj2IyOI7U="
     },
     "mpv": {
       "type": "Git",
@@ -171,9 +171,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "102e693f49ce40fa10361d166392068c24fe5f15",
-      "url": "https://github.com/mpv-player/mpv/archive/102e693f49ce40fa10361d166392068c24fe5f15.tar.gz",
-      "hash": "sha256-mx/Mbaxj4XMXPoBVafXxbUSiI6z3wJmeGCkl5TUlpaA="
+      "revision": "aa82213726fe1613d04a77b9fc3bb2ef37b13180",
+      "url": "https://github.com/mpv-player/mpv/archive/aa82213726fe1613d04a77b9fc3bb2ef37b13180.tar.gz",
+      "hash": "sha256-YzJcR8vU76IpII7AXe2LjU3vuugavtLNbTIjK4XYslM="
     },
     "npins": {
       "type": "GitRelease",
@@ -226,9 +226,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "e125e1daeb41c9743dc9134e290e7d3f01699eb6",
-      "url": "https://github.com/royshil/obs-backgroundremoval/archive/e125e1daeb41c9743dc9134e290e7d3f01699eb6.tar.gz",
-      "hash": "sha256-vFbwqA7uIhc/x75GEfPd18lBp7OgG6ZEI1wQBT/WXuI="
+      "revision": "2c176160c95c4389fa89c252ccfad2f885afeae5",
+      "url": "https://github.com/royshil/obs-backgroundremoval/archive/2c176160c95c4389fa89c252ccfad2f885afeae5.tar.gz",
+      "hash": "sha256-sgHhYqhzoGsel35AHbtcf618STCzJbdsaxj3dmnGo40="
     },
     "obs-image-reaction": {
       "type": "Git",
