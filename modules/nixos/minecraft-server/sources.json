@@ -1,66 +1,66 @@
 {
   "VanillaRefresh": {
-    "sha512": "06b7dd3ca8cdc1ac12683fd90fe50c63f7810bb19f52e882a7bef0dea6ae1589acb1cf57cac97cfc03d7519d28c91f6f1127f29d543ad489635025c966b66e5a",
-    "url": "https://cdn.modrinth.com/data/gWO6Zqey/versions/S5lgkZMv/vanilla-refresh-1.4.28b.jar"
+    "sha512": "2322e8299e0a1b4c1b5657dc4d8d4acd883cce52dee98b57d2c3355dcd3f248d38e90cf73f2558c069b1767c808631bd9f64338f1633d72f17d2ec40db8e2ec1",
+    "url": "https://cdn.modrinth.com/data/gWO6Zqey/versions/v0Fz6vu7/vanilla-refresh-1.4.29.jar"
   },
   "Terralith": {
-    "sha512": "3103879ef390d47a68f10bd4bf1b9d406396905afa640b8c15c3a44c8c15bbc3c6fdc4eab5a946b6be15885131408f6cd698c4a8d2065144b2ab1c46fa710cdb",
-    "url": "https://cdn.modrinth.com/data/8oi3bsk5/versions/JKg71Gq0/Terralith_1.21.x_v2.5.13.jar"
+    "sha512": "98a1fea21ccbeacdc2572eca51d7f0d50a7bd41d1408b01eff8eb5eec1cd5c46ce90da589b0652d9e28dcb222abe35a3ce9709c6caab4e4185f9ee4706157c8e",
+    "url": "https://cdn.modrinth.com/data/8oi3bsk5/versions/TFW9ZxPQ/Terralith_1.21.x_v2.5.14.jar"
   },
   "Tectonic": {
-    "sha512": "1b23ef8f59661ed9a9e8e45c71efa29ba879b2861482daf7c7ec41ca34d4acd2ea0ece4e71f16bbe46083c7d5bc40b4d8e8297d4b0142a4133347c39f223b372",
-    "url": "https://cdn.modrinth.com/data/lWDHr9jE/versions/kL6i6vRY/tectonic-3.0.17-fabric-1.21.10.jar"
+    "sha512": "ce0643d45aac7b5e3f3a32fc01928371d97612a9dc6e8df721bf215bf90afa021b8e8d7e19c0d00060c3c98591aec90d2ea51f594fdc0012051f20657fae85ef",
+    "url": "https://cdn.modrinth.com/data/lWDHr9jE/versions/7olSYFxL/tectonic-3.0.19-fabric-1.21.11.jar"
   },
   "Nullscape": {
-    "sha512": "b35a9dfdc7180ca851aea378ee4687e18b3aae717c16870a7762afc67dc0c77598fb2c4a62cb12d6ed0eacf7c9166520e0a3e7dce20da09817065d27e62c8b44",
-    "url": "https://cdn.modrinth.com/data/LPjGiSO4/versions/3fv8O3xX/Nullscape_1.21.x_v1.2.14.jar"
+    "sha512": "070b224e0c0946f28b330d9e11fc62230aee721619fced5085e277b3318a37497f061c22a2305b8aaea6cb9b99ecb603ac8320b57bd2c01dd7d1d2b636a46f45",
+    "url": "https://cdn.modrinth.com/data/LPjGiSO4/versions/jFDyNQ0I/Nullscape_1.21.x_v1.2.16.jar"
   },
   "Incendium": {
-    "sha512": "068b07eb1eee0934bae443036578d4060f54a624f22f2aceb0a953b37288e0a3e676a0d721d25151e949e506ee7d0481c11f64953fe3159342f2446ea984859c",
-    "url": "https://cdn.modrinth.com/data/ZVzW5oNS/versions/PovCtpuw/Incendium_1.21.x_v5.4.9.jar"
+    "sha512": "595d3f3cc0b037cd57506a9742fc85b7f980749ce2225c7e32e84801e6118362baa704e8291dc0267ee8e125a5c7309f2e148767fd3201a21ee901910b86c692",
+    "url": "https://cdn.modrinth.com/data/ZVzW5oNS/versions/BUigTHnK/Incendium_1.21.x_v5.4.10.jar"
   },
   "Balm": {
-    "sha512": "3bb6422a31487ab953d61cbe12dd5230e22a87d24f25cc216657307d0bf1f1bfa1426204d50a7f4a276fcd364214343da9fad321ea8573ae34faf87672991039",
-    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/9HjDG5Uj/balm-fabric-1.21.10-21.10.11.jar"
+    "sha512": "89aac07146c8204e705662010589c60b4e8fdf07cabc254e5901116edc95da40448d4a49abfdf179883512c83c7909b7ba02e767cde49cb44b69e1e58c793041",
+    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/sbE6e5Gh/balm-fabric-1.21.11-21.11.6.jar"
   },
   "NetherPortalFix": {
-    "sha512": "6e8d8569c4ce93f2c8487a4a496199cdb5a0b1d254901c1c2629e071322a1c3f213436eaaf1f52b8aef69953950c1252ae8b52d16c71c936a9a4961f17d49698",
-    "url": "https://cdn.modrinth.com/data/nPZr02ET/versions/EQ03E7hB/netherportalfix-fabric-1.21.10-21.10.1.jar"
+    "sha512": "9e385c30418e1eb80c2f74d1e319ed5bc45a19dfaa8408fba40b8afb6b4b49dc7a7951cb06fc3b4a1679bd818073300df56740ecee8224f47334e8dd6395bb49",
+    "url": "https://cdn.modrinth.com/data/nPZr02ET/versions/D79IUl9r/netherportalfix-fabric-1.21.11-21.11.2.jar"
   },
   "ConcurrentChunkManagementEngine": {
-    "sha512": "71e193ecaa38e927a9f943eac6cac5b5dcb4ce6934aae994da9fe34cace5941fe25258056d8b9fdedbda87c5eb3787cad4c74e68ea39048cb6e86202a56dd7ec",
-    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/2EKX8Hiv/c2me-fabric-mc1.21.10-0.3.6%2Balpha.0.9.jar"
+    "sha512": "f9543febe2d649a82acd6d5b66189b6a3d820cf24aa503ba493fdb3bbd4e52e30912c4c763fe50006f9a46947ae8cd737d420838c61b93429542573ed67f958e",
+    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/QdLiMUjx/c2me-fabric-mc1.21.11-0.3.7%2Balpha.0.7.jar"
   },
   "Krypton": {
     "sha512": "4dcd7228d1890ddfc78c99ff284b45f9cf40aae77ef6359308e26d06fa0d938365255696af4cc12d524c46c4886cdcd19268c165a2bf0a2835202fe857da5cab",
     "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/O9LmWYR7/krypton-0.2.10.jar"
   },
   "FabricAPI": {
-    "sha512": "5e64c53391dfd1c059777d671c52be17a4e27a29d9bd7340ea9e3f55ce7a770b38db0a15e0966e981ee8c1b9372fb89543a278521624689268acebb85bd5c6e9",
-    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/tV4Gc0Zo/fabric-api-0.138.4%2B1.21.10.jar"
+    "sha512": "c20c017e23d6d2774690d0dd774cec84c16bfac5461da2d9345a1cd95eee495b1954333c421e3d1c66186284d24a433f6b0cced8021f62e0bfa617d2384d0471",
+    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/i5tSkVBH/fabric-api-0.141.3%2B1.21.11.jar"
   },
   "ClothConfigAPI": {
-    "sha512": "df1d9e0349dc64fc0859f17b65b67b0d7745a26b4905e87fc148ddebc0285de51a3255848599f0d5ee24f6aab00fbac4849d40bb9052936eaa452d216c7ada62",
-    "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/qMxkrrmq/cloth-config-20.0.149-fabric.jar"
+    "sha512": "8f455489d4b71069e998568cf4e1450116f4360a4eb481cd89117f629c6883164886cf63ca08ac4fc929dd13d1112152755a6216d4a1498ee6406ef102093e51",
+    "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/xuX40TN5/cloth-config-21.11.153-fabric.jar"
   },
   "Sit!": {
-    "sha512": "d261b5790a8ac0a17ed0c9bd26849af26ec520da0af1b3835edee189cde5796a9d3d3e616a2662a37fa406316a2982147d434f1425d4132530823d535ca4f4cb",
-    "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/cJvlmbfO/sit%21-1.2.5.0%2B1.21.9-1.21.10.jar"
+    "sha512": "2c53a85dcaf9db9866e99e06bec8b0f678b47ab2dc055ea02dd1aac14edd870043ade70e90e6628304f451d97f0c7aeee124863d5bef3d5678999d315ed678c5",
+    "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/xy4C23w4/sit%21-1.2.5.2%2B1.21.11.jar"
   },
   "Gyser": {
-    "sha512": "a1b358b58c9a584e247865b1e6f3eb04a49c996d0846b7884b1f8439c056f4eb2f81a665c325d054b6b0b2f85711a79f424920504e9902093570497e7af6ad4f",
-    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/ahzEdvn0/geyser-fabric-Geyser-Fabric-2.9.2-b1008.jar"
+    "sha512": "c5b87a923bb2a6c3cb44228e5ab1ed9f14907cd2b62a99b0609b5aa2db7ab59e51713b584f77d73de16f795912f1277c6be84cc42069f6de6c7466f3124a4809",
+    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/ojy6aicz/geyser-fabric-Geyser-Fabric-2.9.4-b1083.jar"
   },
   "ServerCore": {
-    "sha512": "d6113cedae8d0852c7341d8bb016732b03cea2d3729cb9140549bde6004aee1dd48634e16b3727b8cd4e8d101675672e43e6cc205958b4b41d4658ab3eb69b12",
-    "url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/TTQGy6U8/servercore-fabric-1.5.14%2B1.21.9.jar"
+    "sha512": "964392769e53f9764466e26044552f60e91137f487b49d98a85bd4dc03ab8e965f0c69bc1a43e96ef5737cd8f1a9bb75cc0a0c09dd30bab6786d8ab4bbea6e01",
+    "url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/zg8VIycZ/servercore-fabric-1.5.15%2B1.21.11.jar"
   },
   "Lithium": {
-    "sha512": "79b2892d123f3bb12649927dd8fccc25c955ff38a19f3aba7cd0180c4cf5506c2a76d49418b13050f90bba7bb59f3623af06e8a275e2ae8c63808084043902bb",
-    "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/NsswKiwi/lithium-fabric-0.20.1%2Bmc1.21.10.jar"
+    "sha512": "2883739303f0bb602d3797cc601ed86ce6833e5ec313ddce675f3d6af3ee6a40b9b0a06dafe39d308d919669325e95c0aafd08d78c97acd976efde899c7810fd",
+    "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/qvNsoO3l/lithium-fabric-0.21.3%2Bmc1.21.11.jar"
   },
   "SoundPhysicsRemastered": {
-    "sha512": "7d360daf63de4faa0a98faff246bf4de1d450c7aaceb3db06811aac90ed95809225d4a673d881d6a094fbf0dd9e0b8172d42739b7464312cd09aa3468292bcb7",
-    "url": "https://cdn.modrinth.com/data/qyVF9oeo/versions/pDo1ElL2/sound-physics-remastered-fabric-1.21.10-1.5.1.jar"
+    "sha512": "0413e8d654fa5d74dc32ab7c21a82cf8e44aec22c7392648f23a34e2cdb7255af5b34a6016d71bda226c251e5089838f2be9310360723f88e9080fd048efd25f",
+    "url": "https://cdn.modrinth.com/data/qyVF9oeo/versions/pfqxi9qs/sound-physics-remastered-fabric-1.21.11-1.5.1.jar"
   }
 }
