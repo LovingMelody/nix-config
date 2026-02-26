@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "6416d73aa38864c75c3f2a07340e95322a34c6db",
+      "revision": "a00a8f70d4f7ad7a677cf298c6a6919fcdaed08f",
       "url": null,
-      "hash": "sha256-aEDrGPBgS59Fwmh8WVGC/GZO2twIhCfF7c0LCQnU05w="
+      "hash": "sha256-JbK8vDK2LaD0NyhPusn2RyaDtz0B29rckEpU31ZWWi4="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -103,9 +103,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "d9d6243a52fcd27dc29ad6abe921c7e861df4129",
-      "url": "https://github.com/garglk/garglk/archive/d9d6243a52fcd27dc29ad6abe921c7e861df4129.tar.gz",
-      "hash": "sha256-ELTReSWb0WDqw7P/6PYDwlq0lawcXQ3vF9eaGd8Y9wk="
+      "revision": "8c440fb1370eb754643f3ede0529be7043125bfb",
+      "url": "https://github.com/garglk/garglk/archive/8c440fb1370eb754643f3ede0529be7043125bfb.tar.gz",
+      "hash": "sha256-L8XW37YaGUM34fCWRnDkrxqiGltJF6NZVWuxuUMgKr4="
     },
     "getopts.fish": {
       "type": "Git",
@@ -226,9 +226,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "48c18e31afeb6047a2bc60c0b26ad9bb2d092524",
-      "url": "https://github.com/royshil/obs-backgroundremoval/archive/48c18e31afeb6047a2bc60c0b26ad9bb2d092524.tar.gz",
-      "hash": "sha256-TQIw6kFvyew6SqQqfk2od9mF9oKWh8EGCejhKiRkff0="
+      "revision": "1a89ca655a72feefb235bb251ac514ba6b7c48c9",
+      "url": "https://github.com/royshil/obs-backgroundremoval/archive/1a89ca655a72feefb235bb251ac514ba6b7c48c9.tar.gz",
+      "hash": "sha256-bl0KixfBnBeyidZ4+RJhX4TDy33l9awo0wISMr7XUwk="
     },
     "obs-image-reaction": {
       "type": "Git",
