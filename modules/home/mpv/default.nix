@@ -28,11 +28,13 @@ in {
       scripts = with pkgs.mpvScripts; [
         dynamic-crop
         mpris
-        mpv-cheatsheet
+        # mpv-cheatsheet
         sponsorblock
+        thumbfast
         uosc
         videoclip
         vr-reversal
+        webtorrent-mpv-hook
         youtube-upnext
       ];
       config = {
