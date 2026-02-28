@@ -264,11 +264,6 @@ in {
     gamemode.enable = mkForce false;
     coolercontrol.enable = false;
     fuse.userAllowOther = true;
-    honkers-railway-launcher.enable = true;
-    wavey-launcher = {
-      enable = true;
-      package = inputs.aagl.packages.${system}.wavey-launcher;
-    };
     kdeconnect.enable = true;
     gnupg.agent = {
       enable = true;

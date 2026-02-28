@@ -229,7 +229,7 @@ in
           flatpak.enable = mkDefault config.xdg.portal.enable;
           resolved = {
             enable = mkDefault true;
-            dnsovertls = mkDefault "opportunistic";
+            settings.Resolve.DNSOverTLS = mkDefault "opportunistic";
           };
           upower.enable = mkDefault true;
           openssh = mkDefault {
@@ -333,10 +333,7 @@ in
                     if config.TM.hasWifi7
                     then "true"
                     else "false";
-                  "autoconnect-priority" =
-                    if config.TM.hasWifi7
-                    then "98"
-                    else "0";
+                  "autoconnect-priority" = "98";
                   # "interface-name" = "wlan0";     # uncomment to pin a NIC
                 };
                 wifi = {

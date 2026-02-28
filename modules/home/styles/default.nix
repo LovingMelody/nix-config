@@ -71,8 +71,8 @@ in {
         config.stylix.image;
     };
     stylix = {
-      iconTheme = {
-        enable = true;
+      icons = {
+        enable = osConfig.TM.isGui;
         package = pkgs.catppuccin-papirus-folders.override {
           accent = lib.toLower config.TM.styles.accent;
           flavor = lib.toLower config.TM.styles.flavor;

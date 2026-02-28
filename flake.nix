@@ -275,7 +275,7 @@
       url = "github:Infinidoge/nix-minecraft";
       inputs = {
         flake-compat.follows = "flake-compat";
-        flake-utils.follows = "flake-utils";
+        # flake-utils.follows = "flake-utils";
         nixpkgs.follows = "nixpkgs";
       };
     };
@@ -287,8 +287,8 @@
     nix-topology = {
       url = "github:oddlama/nix-topology";
       inputs = {
-        devshell.follows = "devshell";
-        flake-utils.follows = "flake-utils";
+        # devshell.follows = "devshell";
+        # flake-utils.follows = "flake-utils";
         nixpkgs.follows = "nixpkgs";
       };
     };

@@ -197,6 +197,7 @@ in {
         };
         # HINT: Don't define what defined by catppuccin
         targets = {
+          spicetify.colors.enable = false;
           nvf.enable = false;
           gtk.enable = mkDefault config.TM.isGui;
           qt = {

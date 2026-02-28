@@ -4,7 +4,7 @@
   inputs,
   ...
 }: let
-  inherit (inputs) nixpkgs nix-reshade;
+  inherit (inputs) nixpkgs nix-reshade spicetify-nix;
   inherit (lib.TM.package-helper) pins patchLibcuda blacklistPatches shortRev;
   # shortRev = s: builtins.substring 0 7 s;
   allowGplAsync = pins.dxvk-gplasync.revision != "159ee8ef743d18769dfea284ea95393aca6b8421";
@@ -240,6 +240,8 @@ in
       proprietaryCodecs = true;
       inherit (final) vivaldi-ffmpeg-codecs;
     };
+
+    spicePkgs = spicetify-nix.legacyPackages.${final.stdenv.hostPlatform.system};
 
     # EasyEffects on OpenSuse uses clang, mimic that
     # easyeffects = prev.easyeffects.override {stdenv = final.clangStdenv;};
