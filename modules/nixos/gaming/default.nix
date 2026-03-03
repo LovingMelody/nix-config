@@ -179,12 +179,12 @@ in {
 
     boot = {
       kernelPackages = cfg.kernel;
-      kernelPatches = optional cfg.cachyPatches [
+      kernelPatches =
+        optional cfg.cachyPatches
         {
           name = "0001-cachyos-base-all";
           patch = "${pins.cachy-kernel-patches}/${versions.majorMinor config.boot.kernelPackages.kernel.version}/all/0001-cachyos-base-all.patch";
-        }
-      ];
+        };
     };
 
     hardware = {
