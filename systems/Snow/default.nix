@@ -35,7 +35,10 @@ in {
     autoUpgrade.enable = false;
     users.enable = true;
     time.enable = true;
-    gaming.enable = true;
+    gaming = {
+      enable = true;
+      cachyPatches = true;
+    };
     streaming.enable = true;
     sound.enable = true;
     security = {

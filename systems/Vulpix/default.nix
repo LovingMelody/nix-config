@@ -41,7 +41,10 @@ in {
         enable = true;
       };
     };
-    gaming.enable = true;
+    gaming = {
+      enable = true;
+      cachyPatches = true;
+    };
     services.ai.ollama.enable = true;
   };
   stylix.fonts.sizes = {
