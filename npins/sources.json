@@ -200,9 +200,9 @@
       },
       "branch": "dev",
       "submodules": false,
-      "revision": "e8b9e3fd5057e642742e71463ed4232982dc61e3",
-      "url": "https://github.com/nagadomi/nunif/archive/e8b9e3fd5057e642742e71463ed4232982dc61e3.tar.gz",
-      "hash": "sha256-W3ipdJQeyUX1XiIAQR5EGAcuZ3jnbfOYNYpOz2370iY="
+      "revision": "6fcfea72f42c528a22799d2c1b5d3eeccec31a8a",
+      "url": "https://github.com/nagadomi/nunif/archive/6fcfea72f42c528a22799d2c1b5d3eeccec31a8a.tar.gz",
+      "hash": "sha256-uyZMFMOQSME7KtqxEl4F6AvpjojQHRotbeN9SIJahZY="
     },
     "obs": {
       "type": "Git",
