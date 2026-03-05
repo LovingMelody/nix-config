@@ -5,6 +5,10 @@
 }: let
   pins = import "${self}/npins";
 in rec {
+  selectHighestVersion = a: b:
+    if lib.versionOlder a.version b.version
+    then b
+    else a;
   package-helper = {
     shortRev = s: builtins.substring 0 7 s;
     inherit pins;
