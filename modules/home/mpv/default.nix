@@ -37,6 +37,11 @@ in {
         webtorrent-mpv-hook
         youtube-upnext
       ];
+      scriptOpts = {
+        webtorrent = {
+          path = "${config.xdg.cacheHome}/mpv";
+        };
+      };
       config = {
         profile = "gpu-hq";
         gpu-api = "opengl";
