@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "144232dd0dcc0f6d421c5a26aab269690caa27ad",
+      "revision": "e38194378cffaefcc386da1e4671f304f8949fa8",
       "url": null,
-      "hash": "sha256-4ZfRiMw1/2aWqkJEI3Tb8N/ghX2ClqqqVMjwvStC64g="
+      "hash": "sha256-nGJVImgdYJHbu6BXH8GFdKIt4tgXxhwIxDgNtFAo9AU="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -171,9 +171,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "3b55bc9795a4ab6cf04d1611f4839330cf5c1990",
-      "url": "https://github.com/mpv-player/mpv/archive/3b55bc9795a4ab6cf04d1611f4839330cf5c1990.tar.gz",
-      "hash": "sha256-7CZlHzou1anxwhxRwt//DLMiBMXVsCFSk5mg+ihhfLo="
+      "revision": "f9190e57f9d29a7a387b2b9f49671ebf19ea09bd",
+      "url": "https://github.com/mpv-player/mpv/archive/f9190e57f9d29a7a387b2b9f49671ebf19ea09bd.tar.gz",
+      "hash": "sha256-GoSnn8PTF86Mkrvtp2+pNOo/tJ8yX5csHzKWISe5NQs="
     },
     "npins": {
       "type": "GitRelease",
@@ -311,9 +311,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "d828aa6c9479a33f2b326b90e5192f1bdb0c4c65",
+      "revision": "bf4a024036f51731e1fd61f8ceffbeaad060043d",
       "url": null,
-      "hash": "sha256-4hd3ew5M4UZCRsjNRWrBKdxzGMUu3gWCegtcfOellLA="
+      "hash": "sha256-x3eLI2y+xbMYYtpz1YMUHKpz/PRaCnIEJNt+A5FHiWA="
     },
     "xivlauncher-rb": {
       "type": "GitRelease",
