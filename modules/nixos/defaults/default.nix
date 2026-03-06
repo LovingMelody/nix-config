@@ -213,6 +213,13 @@ in
                 "2620:fe::9"
               ];
               wifi.powersave = mkDefault config.TM.isLaptop;
+              settings = {
+                connection-wifi = {
+                  match-device = "type:wifi";
+                  "ipv4.route-metric" = 50;
+                  "ipv6.route-metric" = 25;
+                };
+              };
             };
           });
 
