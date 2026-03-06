@@ -325,37 +325,85 @@ in
           networking.networkmanager.ensureProfiles = {
             environmentFiles = [config.sops.secrets."wifi.env".path];
             profiles = {
-              Home_Milo = {
+              Mothers-Home = {
                 connection = {
-                  id = "Home-Milo";
+                  id = "Mothers-Home";
                   type = "wifi";
+                };
+                ipv4 = {
+                  method = "auto";
+                };
+                ipv6 = {
+                  addr-gen-mode = "default";
+                  method = "auto";
+                };
+                proxy = {};
+                wifi = {
+                  mode = "infrastructure";
+                  ssid = "$WIFI_MOM_SSID";
+                };
+                wifi-security = {
+                  key-mgmt = "sae";
+                  psk = "$WIFI_MOM_PSK";
+                };
+              };
+              Home-5G = {
+                connection = {
+                  id = "Home-5G";
+                  type = "wifi";
+                  autoconnect-priority = "2";
+                };
+                ipv4 = {
+                  method = "auto";
+                };
+                ipv6 = {
+                  addr-gen-mode = "default";
+                  method = "auto";
+                };
+                proxy = {};
+                wifi = {
+                  mode = "infrastructure";
+                  ssid = "$WIFI_HOME_B_SSID";
+                };
+                wifi-security = {
+                  auth-alg = "open";
+                  key-mgmt = "wpa-psk";
+                  psk = "$WIFI_HOME_B_PSK";
+                };
+              };
+              Home-MLO = {
+                connection = {
+                  autoconnect-priority = "99";
                   autoconnect =
                     if config.TM.hasWifi7
                     then "true"
                     else "false";
-                  "autoconnect-priority" = "98";
-                  # "interface-name" = "wlan0";     # uncomment to pin a NIC
+                  id = "Home-MLO";
+                  type = "wifi";
                 };
+                ipv4 = {
+                  method = "auto";
+                };
+                ipv6 = {
+                  addr-gen-mode = "stable-privacy";
+                  method = "auto";
+                };
+                proxy = {};
                 wifi = {
-                  ssid = "$WIFI_HOME_D_SSID";
                   mode = "infrastructure";
-                  hidden = "false";
+                  ssid = "$WIFI_HOME_D_SSID";
                 };
-                "wifi-security" = {
-                  "key-mgmt" = "wpa-psk";
+                wifi-security = {
+                  key-mgmt = "sae";
                   psk = "$WIFI_HOME_D_PSK";
                 };
-                ipv4.method = "auto";
-                ipv6.method = "auto";
               };
-
               Home = {
                 connection = {
                   id = "Home";
                   type = "wifi";
                   autoconnect = "true";
-                  "autoconnect-priority" = "95";
-                  # "interface-name" = "wlan0";     # uncomment to pin a NIC
+                  "autoconnect-priority" = "98";
                 };
                 wifi = {
                   ssid = "$WIFI_HOME_C_SSID";
@@ -374,7 +422,7 @@ in
                   id = "Home - Legacy";
                   type = "wifi";
                   autoconnect = "true";
-                  "autoconnect-priority" = "90";
+                  "autoconnect-priority" = "50";
                   # "interface-name" = "wlan0";     # uncomment to pin a NIC
                 };
                 wifi = {
@@ -405,26 +453,6 @@ in
                 "wifi-security" = {
                   "key-mgmt" = "wpa-psk";
                   psk = "$WIFI_HOME_A_PSK";
-                };
-                ipv4.method = "auto";
-                ipv6.method = "auto";
-              };
-
-              MothersHome = {
-                connection = {
-                  id = "MothersHome";
-                  type = "wifi";
-                  autoconnect = "true";
-                  "autoconnect-priority" = "50";
-                };
-                wifi = {
-                  ssid = "$WIFI_MOM_SSID";
-                  mode = "infrastructure";
-                  hidden = "false";
-                };
-                "wifi-security" = {
-                  "key-mgmt" = "wpa-psk";
-                  psk = "$WIFI_MOM_PSK";
                 };
                 ipv4.method = "auto";
                 ipv6.method = "auto";
