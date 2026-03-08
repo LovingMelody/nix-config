@@ -43,7 +43,7 @@ in {
     };
     gaming = {
       enable = true;
-      cachyPatches = true;
+      cachyPatches = false;
     };
     services.ai.ollama.enable = true;
   };

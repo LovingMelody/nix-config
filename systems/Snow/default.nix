@@ -37,7 +37,7 @@ in {
     time.enable = true;
     gaming = {
       enable = true;
-      cachyPatches = true;
+      cachyPatches = false;
     };
     streaming.enable = true;
     sound.enable = true;
