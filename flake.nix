@@ -21,7 +21,7 @@
       inputs.nix-minecraft.overlays.default
       inputs.nix-topology.overlays.default
       # inputs.nixpkgs-xr.overlays.default
-      inputs.prismlauncher.overlays.default
+      # inputs.prismlauncher.overlays.default
       inputs.rust-overlay.overlays.default
     ];
     listdir = dir: builtins.attrNames (lib.filterAttrs (_: t: t == "directory") (builtins.readDir dir));
