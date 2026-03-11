@@ -39,7 +39,7 @@ in {
       ];
       scriptOpts = {
         webtorrent = {
-          path = "${config.xdg.cacheHome}/mpv";
+          path = "${config.xdg.cacheHome}/mpv/webtorrent";
         };
       };
       config = {
