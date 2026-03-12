@@ -55,12 +55,12 @@ in {
     };
   };
 
-  environment.systemPackages = [pkgs.headsetcontrol];
+  environment.systemPackages = with pkgs; [headsetcontrol via qmk qmk_hid dos2unix];
   services = {
     blueman.enable = true;
     fwupd.enable = true;
     udev = {
-      packages = with pkgs; [liquidctl headsetcontrol];
+      packages = with pkgs; [liquidctl headsetcontrol via qmk-udev-rules];
       extraRules = ''
         SUBSYSTEM=="usb", ATTR{idVendor}=="2104", ATTR{idProduct}=="0313", MODE="0666"
       '';
@@ -78,6 +78,7 @@ in {
       enable = true;
       users = [config.users.users.melody.name];
     };
+    keyboard.qmk.enable = true;
   };
   networking.interfaces.enp7s0.wakeOnLan.enable = true;
 
