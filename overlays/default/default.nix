@@ -10,11 +10,11 @@
   allowGplAsync = pins.dxvk-gplasync.revision != "159ee8ef743d18769dfea284ea95393aca6b8421";
 in
   final: prev: let
-    pinnedOverlay = pkg:
-      prev.${pkg}.overrideAttrs {
-        src = pins.${pkg};
-        version = pins.${pkg}.version or "git+${pins.${pkg}.revision}";
-      };
+    # pinnedOverlay = pkg:
+    #   prev.${pkg}.overrideAttrs {
+    #     src = pins.${pkg};
+    #     version = pins.${pkg}.version or "git+${pins.${pkg}.revision}";
+    #   };
     discordEnableKrisp = pkg: let
       patch-krisp = prev.writers.writePython3 "krisp-patcher" {
         libraries = with prev.python3Packages; [
@@ -80,7 +80,7 @@ in
       ffmpeg = final.ffmpeg-full;
       imagemagick = final.imagemagickBig;
     };
-    kitty = pinnedOverlay "kitty";
+    # kitty = pinnedOverlay "kitty";
     gargoyle = blacklistPatches ((prev.gargoyle.override {stdenv = final.clangStdenv;}).overrideAttrs {
       src = pins.gargoyle;
       version = builtins.replaceStrings ["\n"] [""] "${builtins.readFile (pins.gargoyle + "/VERSION")}-${shortRev pins.gargoyle.revision}";
