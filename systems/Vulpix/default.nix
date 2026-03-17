@@ -26,7 +26,7 @@ in {
     sound.enable = true;
     security = {
       enableTPM = true;
-      enableSecureBoot = true;
+      enableSecureBoot = false;
     };
     desktop = {
       hyprland = {
@@ -84,7 +84,8 @@ in {
   # Use the systemd-boot EFI boot loader.
   boot = {
     loader = {
-      systemd-boot.enable = true;
+      systemd-boot.enable = false;
+      limine.enable = true;
       efi.canTouchEfiVariables = true;
     };
 
