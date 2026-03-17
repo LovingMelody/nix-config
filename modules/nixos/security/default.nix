@@ -129,9 +129,13 @@ in {
     (mkIf cfg.enableSecureBoot {
       environment.systemPackages = [pkgs.sbctl];
       boot = {
-        loader.systemd-boot.enable = lib.mkForce false;
+        loader = {
+          systemd-boot.enable = lib.mkForce false;
+          grub.enable = lib.mkForce false;
+          limine.secureBoot.enable = true;
+        };
         lanzaboote = {
-          enable = true;
+          enable = ! config.boot.limine.enable;
           pkiBundle = "/var/lib/sbctl";
         };
       };

@@ -34,6 +34,7 @@ in
             ];
             enable = mkDefault (format != "iso");
           };
+          loader.limine.additionalFiles = mkIf (pkgs.stdenv.hostPlatform.system == "x86_64-linux") {"efi/memtest86/memtest86.efi" = "${pkgs.memtest86-efi}/BOOTX64.efi";};
           supportedFilesystems = [
             "ntfs"
             "btrfs"
