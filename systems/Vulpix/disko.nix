@@ -7,7 +7,7 @@
         type = "gpt";
         partitions = {
           EFI = {
-            size = "5G";
+            size = "8G";
             type = "EF00";
             content = {
               type = "filesystem";
@@ -31,7 +31,7 @@
                   "compress=zstd"
                   "compress-force"
                 ];
-                /*
+
                 subvolumes = {
                   "@root" = {
                     mountpoint = "/";
@@ -57,7 +57,7 @@
                   };
                   "@persist" = {
                     mountpoint = "/.persist";
-                    mountOptions = [
+                    eountOptions = [
                       "compress=zstd"
                       "compress-force"
                     ];
@@ -87,7 +87,6 @@
                     ];
                   };
                 };
-                */
               };
             };
           };
