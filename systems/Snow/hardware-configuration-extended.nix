@@ -17,9 +17,10 @@ in {
   boot = {
     loader = {
       systemd-boot = {
-        enable = true;
+        enable = false;
         extraEntries = {};
       };
+      limine.enable = true;
       efi.canTouchEfiVariables = true;
     };
     binfmt = {
