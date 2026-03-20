@@ -135,7 +135,7 @@ in {
           limine.secureBoot.enable = true;
         };
         lanzaboote = {
-          enable = ! config.boot.limine.enable;
+          enable = ! config.boot.loader.limine.enable;
           pkiBundle = "/var/lib/sbctl";
         };
       };
