@@ -26,7 +26,7 @@ in {
     sound.enable = true;
     security = {
       enableTPM = true;
-      enableSecureBoot = false;
+      enableSecureBoot = true;
     };
     desktop = {
       hyprland = {
