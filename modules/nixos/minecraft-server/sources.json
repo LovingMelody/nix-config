@@ -20,8 +20,8 @@
     "url": "https://cdn.modrinth.com/data/ZVzW5oNS/versions/fwHirj8n/Incendium_1.21.x_v5.4.11.jar"
   },
   "Balm": {
-    "sha512": "9f3308b70585958409f92b0b8c6d96df499068c2960b80071d483aac2acdc6a8c06010f92e151e15098097899a587b2728310ee2606b9d2f29d2263981ba3912",
-    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/6h7RAm0u/balm-fabric-1.21.11-21.11.7.jar"
+    "sha512": "3d9af084e684e18152ea557cb8da92165f05d9ca7b9ee1c87db46a271681b7a1c0f23eab116cabe2734f1f445a75945168978d588f16ca785efe34e74216d826",
+    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/IYfoTfMp/balm-fabric-1.21.11-21.11.8.jar"
   },
   "NetherPortalFix": {
     "sha512": "9e385c30418e1eb80c2f74d1e319ed5bc45a19dfaa8408fba40b8afb6b4b49dc7a7951cb06fc3b4a1679bd818073300df56740ecee8224f47334e8dd6395bb49",
@@ -48,8 +48,8 @@
     "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/xy4C23w4/sit%21-1.2.5.2%2B1.21.11.jar"
   },
   "Gyser": {
-    "sha512": "ff2b027cab85bfbfc29f7cae6b0f3079bb65e02d384be627faea44eca2254e69fed4774547a3a02d70ced04b54fffe244f29c403be992f824efa328a7e5bf878",
-    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/KnvoDwZA/geyser-fabric-Geyser-Fabric-2.9.4-b1099.jar"
+    "sha512": "b57dc96bf6e8f12defd466f35bfbc85369f529aeaf991785493c9498101e1330701fae139ea189f313c5edd231d8dacb8ccd43f25a2e776011ef2a68e04ffa07",
+    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/DZzJBvXl/geyser-fabric-Geyser-Fabric-2.9.4-b1100.jar"
   },
   "ServerCore": {
     "sha512": "964392769e53f9764466e26044552f60e91137f487b49d98a85bd4dc03ab8e965f0c69bc1a43e96ef5737cd8f1a9bb75cc0a0c09dd30bab6786d8ab4bbea6e01",
