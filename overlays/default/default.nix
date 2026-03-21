@@ -43,6 +43,7 @@ in
     # https://github.com/NixOS/nixpkgs/issues/445447
     cmakeCompatFix = pkg: brokenVersion: pkg.overrideAttrs (o: {cmakeFlags = (o.cmakeFlags or []) ++ lib.optional (brokenVersion || (lib.versionOlder o.version brokenVersion)) "-DCMAKE_POLICY_VERSION_MINIMUM=3.5";});
     */
+    clangStdenv = pkg: pkg.override {stdenv = final.clangStdenv;};
   in {
     alvr = (prev.alvr.overrideAttrs
       (prev: {
@@ -244,7 +245,16 @@ in
     spicePkgs = spicetify-nix.legacyPackages.${final.stdenv.hostPlatform.system};
 
     # EasyEffects on OpenSuse uses clang, mimic that
-    # easyeffects = prev.easyeffects.override {stdenv = final.clangStdenv;};
+    easyeffects = clangStdenv (prev.easyeffects.overrideAttrs (o: {
+      buildInputs = o.buildInputs ++ (with final; [llvmPackages.openmp serd.dev flac libportal libportal-qt6 libsysprof-capture libogg libvorbis libopus] ++ flac.buildInputs ++ libsndfile.buildInputs);
+      cmakeFlags =
+        (o.cmakeFlags or [])
+        ++ [
+          "-DCMAKE_CXX_SCAN_FOR_MODULES=OFF"
+        ];
+      version = pins.easyeffects.version;
+      src = pins.easyeffects;
+    }));
 
     /*
     Lets use lix :D

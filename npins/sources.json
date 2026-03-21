@@ -65,6 +65,22 @@
       "url": null,
       "hash": "sha256-90jzxE7XFtXOmb0FvNvTix3hDDDQ1HFCp0fhcvllZoU="
     },
+    "easyeffects": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "wwmm",
+        "repo": "easyeffects"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v8.1.6",
+      "revision": "dfe402789072be37f63df5b46e886597a23307c6",
+      "url": "https://api.github.com/repos/wwmm/easyeffects/tarball/refs/tags/v8.1.6",
+      "hash": "sha256-MNBlhwF8quJ0wXBzwyn7KM2TNgbYbWYHTK6itn0fUVU="
+    },
     "gallery-dl": {
       "type": "Git",
       "repository": {
