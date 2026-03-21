@@ -48,8 +48,8 @@
     "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/xy4C23w4/sit%21-1.2.5.2%2B1.21.11.jar"
   },
   "Gyser": {
-    "sha512": "b57dc96bf6e8f12defd466f35bfbc85369f529aeaf991785493c9498101e1330701fae139ea189f313c5edd231d8dacb8ccd43f25a2e776011ef2a68e04ffa07",
-    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/DZzJBvXl/geyser-fabric-Geyser-Fabric-2.9.4-b1100.jar"
+    "sha512": "77bf3b158168115f95ab8a5b291c112d23a0365e070ce2a91485b17cf444cb9e383b972f3dfb111efe5a6a6afbd0aaccd43266b436685ab4fb03a6277b8b5a17",
+    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/3d9YRqB7/geyser-fabric-Geyser-Fabric-2.9.5-b1101.jar"
   },
   "ServerCore": {
     "sha512": "964392769e53f9764466e26044552f60e91137f487b49d98a85bd4dc03ab8e965f0c69bc1a43e96ef5737cd8f1a9bb75cc0a0c09dd30bab6786d8ab4bbea6e01",
@@ -62,5 +62,9 @@
   "SoundPhysicsRemastered": {
     "sha512": "0413e8d654fa5d74dc32ab7c21a82cf8e44aec22c7392648f23a34e2cdb7255af5b34a6016d71bda226c251e5089838f2be9310360723f88e9080fd048efd25f",
     "url": "https://cdn.modrinth.com/data/qyVF9oeo/versions/pfqxi9qs/sound-physics-remastered-fabric-1.21.11-1.5.1.jar"
+  },
+  "Vivecraft": {
+    "sha512": "dbb261dbe792473691fb41d1963386d56c8cc53d93caaa8d3b31ab98eae9f47b12507a57b778325f0389812eea68686658d763e8dc388dd91bebc9fa962dba8e",
+    "url": "https://cdn.modrinth.com/data/wGoQDPN5/versions/GovTWsJu/vivecraft-1.21.11-1.3.7-fabric.jar"
   }
 }

@@ -33,6 +33,7 @@ ENTRIES_TO_FIND = [
     {"name": "ServerCore", "id": "4WWQxlQP", "loader": "fabric"},
     {"name": "Lithium", "id": "gvQqBUqZ", "loader": "fabric"},
     {"name": "SoundPhysicsRemastered", "id": "qyVF9oeo", "loader": "fabric"},
+    {"name": "Vivecraft", "id": "wGoQDPN5", "loader": "fabric"},
 ]
 
 

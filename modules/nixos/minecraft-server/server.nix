@@ -139,6 +139,7 @@ in {
               "Gyser"
               "SoundPhysicsRemastered"
               # "Sit!"
+              "Vivecraft"
             ])));
         };
         files = {};
