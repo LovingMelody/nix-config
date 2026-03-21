@@ -120,6 +120,13 @@ in {
       scx = {
         enable = mkDefault false;
       };
+      bpftune.enable = mkDefault true;
+      ananicy = {
+        enable = mkDefault (! config.programs.gamemode.enable);
+        package = pkgs.ananicy-cpp;
+
+        rulesProvider = pkgs.ananicy-rules-cachyos;
+      };
     };
     nix.settings = let
       substituters = [
