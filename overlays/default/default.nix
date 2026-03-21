@@ -45,14 +45,11 @@ in
     */
     clangStdenv = pkg: pkg.override {stdenv = final.clangStdenv;};
   in {
-    alvr = (prev.alvr.overrideAttrs
+    alvr =
+      prev.alvr.overrideAttrs
       (prev: {
         nativeBuildInputs = prev.nativeBuildInputs ++ lib.optional final.config.cudaSupport final.cudaPackages.cuda_nvcc;
-      })).override {
-      /*
-      ffmpeg = final.ffmpeg-full;
-      */
-    };
+      });
     linuxKernel =
       prev.linuxKernel
       // {
@@ -82,7 +79,7 @@ in
       imagemagick = final.imagemagickBig;
     };
     # kitty = pinnedOverlay "kitty";
-    gargoyle = blacklistPatches ((prev.gargoyle.override {stdenv = final.clangStdenv;}).overrideAttrs {
+    gargoyle = blacklistPatches ((clangStdenv prev.gargoyle).overrideAttrs {
       src = pins.gargoyle;
       version = builtins.replaceStrings ["\n"] [""] "${builtins.readFile (pins.gargoyle + "/VERSION")}-${shortRev pins.gargoyle.revision}";
     }) ["ftbfs_gcc14.patch" "cmake4-fix"];
@@ -252,7 +249,7 @@ in
         ++ [
           "-DCMAKE_CXX_SCAN_FOR_MODULES=OFF"
         ];
-      version = pins.easyeffects.version;
+      inherit (pins.easyeffects) version;
       src = pins.easyeffects;
     }));
 
