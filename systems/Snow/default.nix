@@ -169,7 +169,7 @@ in {
   # programs.ssh.askPassword = "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
   services = {
     orca.enable = false;
-    desktopManager.cosmic.enable = true;
+    desktopManager.cosmic.enable = false;
     desktopManager.plasma6.enable = true;
     displayManager.sddm = {
       enable = true;
