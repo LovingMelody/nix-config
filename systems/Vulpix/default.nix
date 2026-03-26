@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   lib,
   ...
@@ -63,8 +64,8 @@ in {
     };
   };
   programs.opengamepadui = {
-    enable = true;
-    inputplumber.enable = true;
+    enable = false;
+    inputplumber.enable = config.programs.opengamepadui.enable;
   };
   # services.displayManager.cosmic-greeter.enable = true;
   TM.desktop.gnome.enable = false;
