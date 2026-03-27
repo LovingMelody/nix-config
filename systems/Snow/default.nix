@@ -80,10 +80,6 @@ in {
           };
     };
   };
-  virtualisation.podman = {
-    enable = true;
-    dockerCompat = true;
-  };
 
   # specialisation = {
   #   # Configs has conflits w/ Hyprland
@@ -161,11 +157,6 @@ in {
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-
-  # Disable pixiecore's autostart
-  systemd.services = mkIf config.services.pixiecore.enable {
-    pixiecore.wantedBy = mkForce [];
-  };
   # programs.ssh.askPassword = "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
   services = {
     orca.enable = false;
@@ -255,11 +246,28 @@ in {
     hardinfo2 # System information and benchmarks for Linux systems
     wayland-utils # Wayland utilities
     wl-clipboard # Command-line copy/paste utilities for Wayland
+
+    waydroid-helper
   ];
 
   virtualisation = {
     libvirtd.enable = false;
-    # waydroid.enable = true;
+    podman = {
+      enable = true;
+      dockerCompat = true;
+    };
+    waydroid.enable = true;
+  };
+  systemd = {
+    packages = [pkgs.waydroid-helper];
+    services =
+      {
+        waydroid-mount.wantedBy = ["multi-user.target"];
+      }
+      # Disable pixiecore autostart
+      // (mkIf config.services.pixiecore.enable {
+        pixiecore.wantedBy = mkForce [];
+      });
   };
   # Disable autosleep
   programs = {
