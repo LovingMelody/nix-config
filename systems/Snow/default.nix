@@ -137,6 +137,7 @@ in {
   boot.plymouth.enable = false;
 
   networking = {
+    nftables.enable = true;
     hostName = "Snow";
 
     networkmanager.enable = true;
