@@ -50,7 +50,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    fonts.packages = [pkgs.wineWowPackages.fonts];
+    fonts.packages = [pkgs.wineWow64Packages.fonts];
     programs.rsi-launcher = {
       inherit (cfg.rsiLauncher) enable;
       package = pkgs.rsi-launcher-git;
@@ -113,7 +113,7 @@ in {
     };
 
     services = with pkgs; {
-      xserver.modules = [xorg.xf86inputjoystick];
+      xserver.modules = [xf86-input-joystick];
       udev = {
         packages = [game-devices-udev-rules];
       };

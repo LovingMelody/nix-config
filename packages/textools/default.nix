@@ -1,7 +1,7 @@
 {
   lib,
   pkgs,
-  wine ? pkgs.wineWowPackages.stable,
+  wine ? pkgs.wineWow64Packages.stable,
   fetchurl,
   writeShellScriptBin,
   winetricks,
