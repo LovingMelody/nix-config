@@ -225,7 +225,7 @@ in {
                 ${getExe pkgs.rsync} -avz --no-perms --no-owner --no-group \
                   '${xlcore}/iMMERSE/Textures/'  '${xlcore}/ffxiv/game/reshade-shaders/textures/'
                 find '${xlcore}/iMMERSE/Addons' -type f -iname '*.addon64' \
-                  -exec cp -v {} '${xlcore}/ffxiv/game/' \;
+                  -exec cp --reflink=auto -v {} '${xlcore}/ffxiv/game/' \;
                 # Ensure ownership is correct (again)
                 chown -Rv "$USER" '${xlcore}/ffxiv/game/reshade-shaders'
                 chown -Rv "$USER" '${xlcore}/ffxiv/game/reshade-presets'
@@ -242,7 +242,7 @@ in {
                   --prefix PATH : ${
                   makeBinPath [
                     pkgs.bash
-                    pkgs.coreutils
+                    pkgs.uutils-coreutils-noprefix
                     pkgs.rsync
                   ]
                 }

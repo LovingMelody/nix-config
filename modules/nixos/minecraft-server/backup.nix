@@ -74,7 +74,7 @@ in {
           path = [
             pkgs.bash
             pkgs.restic
-            pkgs.coreutils
+            pkgs.uutils-coreutils-noprefix
           ];
           serviceConfig = {
             Type = "oneshot";
