@@ -15,7 +15,10 @@ in {
       home.username = "melody";
       imports = optional (builtins.pathExists homeConfigPath) homeConfigPath;
     };
-    programs.zsh.enable = true;
+    programs = {
+      zsh.enable = true;
+      fish.enable = true;
+    };
     users.groups.melody = {};
     users.users.melody = {
       isNormalUser = true;
@@ -42,7 +45,7 @@ in {
           "kvm"
         ]
         ++ optional config.virtualisation.incus.enable "incus-admin";
-      shell = mkForce pkgs.zsh;
+      shell = mkForce pkgs.fish;
       description = "Melody Renata";
       openssh.authorizedKeys.keyFiles = [
         (lib.TM.get-ssh-key-file "melody" "blink")

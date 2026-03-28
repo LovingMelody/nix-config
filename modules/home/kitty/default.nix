@@ -21,7 +21,7 @@ in {
         tab_powerline_style = "slanted";
         tab_title_template = "{title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}";
         show_hyperlink_targets = "yes";
-        shell = "fish";
+        # shell = "fish";
         update_check_interval = 0;
       };
     };
