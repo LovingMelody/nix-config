@@ -104,12 +104,12 @@ in {
         protontricks.enable = true;
         platformOptimizations.enable = true;
       };
-    };
-    programs.wine = {
-      ntsync = lib.versionAtLeast config.boot.kernelPackages.kernel.version "6.14";
-      enable = true;
-      package = mkDefault pkgs.wine-astral;
-      binfmt = true;
+      wine = {
+        ntsync = lib.versionAtLeast config.boot.kernelPackages.kernel.version "6.14";
+        enable = true;
+        package = mkDefault pkgs.wine-astral;
+        binfmt = true;
+      };
     };
 
     services = with pkgs; {
@@ -164,24 +164,28 @@ in {
     ];
     environment = {
       etc."vulkan/implicit_layer.d/VkLayer_LS_frame_generation.json".source = "${pkgs.lsfg-vk}/share/vulkan/implicit_layer.d/VkLayer_LS_frame_generation.json";
-      systemPackages = [
-        pkgs.bs-manager
-        pkgs.r2modman
-        pkgs.lsfg-vk
-        pkgs.lsfg-vk-ui
+      systemPackages =
+        [
+          (pkgs.makeAutostartItem {
+            name = "steam";
+            inherit (config.programs.steam) package;
+          })
+          config.programs.steam.package
+        ]
+        ++ (with pkgs; [
+          bs-manager
+          r2modman
+          lsfg-vk
+          lsfg-vk-ui
 
-        (pkgs.makeAutostartItem {
-          name = "steam";
-          inherit (config.programs.steam) package;
-        })
-        pkgs.lug-helper
-        pkgs.mangohud
-        config.programs.steam.package
-        pkgs.gargoyle
-        pkgs.teamspeak6-client
-        pkgs.mumble
-        pkgs.umu-launcher
-      ];
+          lug-helper
+          mangohud
+          gargoyle
+          teamspeak6-client
+          mumble
+          umu-launcher
+          faugus-launcher
+        ]);
     };
 
     boot = {
