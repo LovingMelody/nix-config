@@ -4,8 +4,8 @@
     "url": "https://cdn.modrinth.com/data/gWO6Zqey/versions/Zf5WC8ox/vanilla-refresh-1.4.30.jar"
   },
   "Terralith": {
-    "sha512": "3513374822c9181e2ec6e95ea04e0533d837934b6fe02165f3bc1b7752eff14972d094fce840355928ffa27844bf456ca6bb2cc968c5ad147601a64de1005c09",
-    "url": "https://cdn.modrinth.com/data/8oi3bsk5/versions/94lWUKHj/Terralith_1.21.11_v2.6.0_Fabric.jar"
+    "sha512": "c502e8c18cc6b749fd3d5e8fc6e1d3fc91cdb9763c58c1c7e68c2ea69fb61f27259128171d5f50b2aaa0ea6a7753fcc293f14127110f5f4d2e2141758ffd469e",
+    "url": "https://cdn.modrinth.com/data/8oi3bsk5/versions/vVdNToqE/Terralith_1.21.11_v2.6.1_Fabric.jar"
   },
   "Tectonic": {
     "sha512": "ce0643d45aac7b5e3f3a32fc01928371d97612a9dc6e8df721bf215bf90afa021b8e8d7e19c0d00060c3c98591aec90d2ea51f594fdc0012051f20657fae85ef",
@@ -16,8 +16,8 @@
     "url": "https://cdn.modrinth.com/data/LPjGiSO4/versions/f87vU1jc/Nullscape_1.21.x_v1.2.17.jar"
   },
   "Incendium": {
-    "sha512": "42a6d14c290d799a99e51f2730403221a1d5be7863c796d275aa916e6735c02397390236a2ae01800566288419adebe7776c563d6a3c2e4a2f9245d375da88d7",
-    "url": "https://cdn.modrinth.com/data/ZVzW5oNS/versions/fwHirj8n/Incendium_1.21.x_v5.4.11.jar"
+    "sha512": "e2fe0e64b2228cd4a5c0af63a8943c1c958c586378e5e9d22be6b4fee82871bf1098a0e91cf34aa80df9d6c9ba03f2e36148748dc555ab63e1482ffc912e3530",
+    "url": "https://cdn.modrinth.com/data/ZVzW5oNS/versions/dmD183NM/Incendium_26.1_v5.4.12.jar"
   },
   "Balm": {
     "sha512": "3d9af084e684e18152ea557cb8da92165f05d9ca7b9ee1c87db46a271681b7a1c0f23eab116cabe2734f1f445a75945168978d588f16ca785efe34e74216d826",
@@ -48,8 +48,8 @@
     "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/xy4C23w4/sit%21-1.2.5.2%2B1.21.11.jar"
   },
   "Gyser": {
-    "sha512": "c58cc6ccdaa64d6fe8a8476ba1da9c8d992f91892c8d07de1ccffb22fae935f0f95a2d02c95833e559722d1524534f6c1ed898225ac815d44a88db71ead556a2",
-    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/oMrMCLIB/geyser-fabric-Geyser-Fabric-2.9.5-b1107.jar"
+    "sha512": "6b000e5c6015d7e92577c79e0db5bf8870d31274802a83e0412034cc7cfe58559f57c8192b79218c0dd57b6be7e21fe1169da8b3790051eb7ee0bcb72f62006f",
+    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/YgokOb0l/geyser-fabric-Geyser-Fabric-2.9.5-b1108.jar"
   },
   "ServerCore": {
     "sha512": "964392769e53f9764466e26044552f60e91137f487b49d98a85bd4dc03ab8e965f0c69bc1a43e96ef5737cd8f1a9bb75cc0a0c09dd30bab6786d8ab4bbea6e01",
