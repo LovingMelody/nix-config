@@ -76,10 +76,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v8.1.7",
-      "revision": "af699b983608c82009f05ffded111a3ffb98509c",
-      "url": "https://api.github.com/repos/wwmm/easyeffects/tarball/refs/tags/v8.1.7",
-      "hash": "sha256-sdwPDoJdkLnJMPD/XNTHx9oFhD380v8s3ZTEKh1yfTE="
+      "version": "v8.1.8",
+      "revision": "d69d863fd52212c7ff40ea415f0709536ea0a54a",
+      "url": "https://api.github.com/repos/wwmm/easyeffects/tarball/refs/tags/v8.1.8",
+      "hash": "sha256-U0+OGxej5my2KpqzRTiHrB80arkWT1mxHOSxOCDsnb0="
     },
     "gallery-dl": {
       "type": "Git",
@@ -90,9 +90,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "841f772159c69517d39505ca775e531dc2d421e4",
+      "revision": "eeb7e5c0cab549945f44d74d62290d74035dd572",
       "url": null,
-      "hash": "sha256-YXX5khNcsqIdFaUpqVy+bXCmkjsrMFowb1NdKdcAiT8="
+      "hash": "sha256-vbtgKW4sK6ofYJx4TmYwDwVVN0QD/Dv2woIQ6RjQrns="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -174,9 +174,9 @@
       },
       "branch": "main",
       "submodules": true,
-      "revision": "cb0a0f6e1e9a77f93ac702e15a5bd38acf931a88",
+      "revision": "04362354a9c5ba7f1ae8e8e3b26ed07d2dbaff68",
       "url": null,
-      "hash": "sha256-5us4MMpsJrg0iabrOw6fvCfEiUNLo6R8ZPpqEMYGsT0="
+      "hash": "sha256-eLKJ2Td4qI33u3J/AlHVRxBqVsIFvpffKUO1IwZV1Sg="
     },
     "mpv": {
       "type": "Git",
@@ -187,9 +187,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "4f9f1ffaf375c14058024215423b969f44d48b2f",
-      "url": "https://github.com/mpv-player/mpv/archive/4f9f1ffaf375c14058024215423b969f44d48b2f.tar.gz",
-      "hash": "sha256-cSOVtjt6gGt0nifgFKF8NVmCKK4aiFVSrhud9W8jZ0Y="
+      "revision": "2e83b3b61c92fa9346bade8185d61e3f9f685fcb",
+      "url": "https://github.com/mpv-player/mpv/archive/2e83b3b61c92fa9346bade8185d61e3f9f685fcb.tar.gz",
+      "hash": "sha256-V7s6wPd27HrNfK7rjwbRBsYKdeJXcFJTspo1j98ZGnI="
     },
     "npins": {
       "type": "GitRelease",
