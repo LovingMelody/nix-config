@@ -90,9 +90,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "eeb7e5c0cab549945f44d74d62290d74035dd572",
+      "revision": "f9f9ec97c11f711adca187774efe4891e84123d2",
       "url": null,
-      "hash": "sha256-vbtgKW4sK6ofYJx4TmYwDwVVN0QD/Dv2woIQ6RjQrns="
+      "hash": "sha256-pAxYCGOfZvq02Taxs5q2N2WfZodFWfbCSeqWhVPAkj4="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -187,9 +187,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "2e83b3b61c92fa9346bade8185d61e3f9f685fcb",
-      "url": "https://github.com/mpv-player/mpv/archive/2e83b3b61c92fa9346bade8185d61e3f9f685fcb.tar.gz",
-      "hash": "sha256-V7s6wPd27HrNfK7rjwbRBsYKdeJXcFJTspo1j98ZGnI="
+      "revision": "9465b30a404dd2f713c6ef515c029ce4d26ebdc9",
+      "url": "https://github.com/mpv-player/mpv/archive/9465b30a404dd2f713c6ef515c029ce4d26ebdc9.tar.gz",
+      "hash": "sha256-YkkzZa8aDy4kNOgG+2/EQcY1IAoOVdCkmttnPI4RbWA="
     },
     "npins": {
       "type": "GitRelease",
@@ -242,9 +242,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "a503c2daa89892967426a7b4bdc9a515222d22ff",
-      "url": "https://github.com/royshil/obs-backgroundremoval/archive/a503c2daa89892967426a7b4bdc9a515222d22ff.tar.gz",
-      "hash": "sha256-ji1GDSONwX9LE1OEwaTj0XnAH2qmt05uyS3iTjUam0Q="
+      "revision": "0dd2746cff35c59de74924737de2d5913e72ffe5",
+      "url": "https://github.com/royshil/obs-backgroundremoval/archive/0dd2746cff35c59de74924737de2d5913e72ffe5.tar.gz",
+      "hash": "sha256-r2/zrOoCA1ydRh1DdmE695vnI+/NwoZrl99P3XkILuo="
     },
     "obs-image-reaction": {
       "type": "Git",
