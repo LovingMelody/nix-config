@@ -18,7 +18,6 @@ in {
     services.wivrn = {
       enable = cfg.useWivrn;
       openFirewall = true;
-      defaultRuntime = mkDefault true;
       autoStart = mkDefault cfg.autoStart;
       steam = {
         importOXRRuntimes = mkDefault true;
