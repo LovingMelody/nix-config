@@ -185,6 +185,7 @@ in {
           mumble
           umu-launcher
           faugus-launcher
+          protonplus
         ]);
     };
 
