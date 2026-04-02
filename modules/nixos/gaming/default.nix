@@ -83,6 +83,7 @@ in {
       inherit (cfg.zram) enable memoryPercent;
     };
     programs = {
+      sleepy-launcher.enable = true;
       gamemode = {
         enable = mkDefault config.TM.isLaptop;
         settings = {
