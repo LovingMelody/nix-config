@@ -163,12 +163,11 @@ in {
     orca.enable = false;
     desktopManager.cosmic.enable = false;
     desktopManager.plasma6.enable = true;
-    displayManager.sddm = {
+    displayManager.plasma-login-manager = {
       enable = true;
-      wayland.enable = true;
     };
 
-    gnome.gnome-remote-desktop.enable = true;
+    gnome.gnome-remote-desktop.enable = false;
     hardware.openrgb = {
       enable = true;
       motherboard = "intel";
