@@ -49,9 +49,10 @@ in {
           "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
           "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
           # "hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs="
-          "chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8="
           "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
           "robotnix.cachix.org-1:+y88eX6KTvkJyernp1knbpttlaLTboVp4vq/b24BIv0="
+          "flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs="
+          "https://cache.nixos-cuda.org"
         ];
         substituters = [
           "https://cache.nixos.org"
@@ -59,10 +60,11 @@ in {
           "https://nix-community.cachix.org"
           "https://nix-citizen.cachix.org"
           "https://cache.garnix.io"
-          "https://cosmic.cachix.org/"
+          "https://cosmic.cachix.org"
           # "https://hydra.nixos.org"
-          "https://chaotic-nyx.cachix.org/"
           "https://robotnix.cachix.org"
+          "https://cache.flox.dev"
+          "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="
         ];
         experimental-features = [
           "nix-command"
