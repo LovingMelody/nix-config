@@ -52,7 +52,8 @@ in {
           "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
           "robotnix.cachix.org-1:+y88eX6KTvkJyernp1knbpttlaLTboVp4vq/b24BIv0="
           "flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs="
-          "https://cache.nixos-cuda.org"
+          "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="
+          "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="
         ];
         substituters = [
           "https://cache.nixos.org"
@@ -64,7 +65,8 @@ in {
           # "https://hydra.nixos.org"
           "https://robotnix.cachix.org"
           "https://cache.flox.dev"
-          "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="
+          "https://cache.nixos-cuda.org"
+          "https://ezkea.cachix.org"
         ];
         experimental-features = [
           "nix-command"
