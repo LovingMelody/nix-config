@@ -17,6 +17,7 @@
     nixpkgs-overlays = [
       inputs.niri.overlays.default
       inputs.nix-citizen.overlays.default
+      inputs.nix-citizen.overlays.steamcompattools
       inputs.self.overlays.default
       inputs.nix-minecraft.overlays.default
       inputs.nix-topology.overlays.default

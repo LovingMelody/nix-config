@@ -106,7 +106,7 @@ in {
       steam = {
         enable = true;
         remotePlay.openFirewall = true;
-        extraCompatPackages = with pkgs; [proton-ge-bin dw-proton-bin];
+        extraCompatPackages = with pkgs; [proton-ge-bin dw-proton-bin proton-em-bin proton-cachyos-bin];
         extraPackages = with pkgs; [lsfg-vk lsfg-vk-ui umu-launcher mangohud];
         protontricks.enable = true;
         platformOptimizations.enable = true;
