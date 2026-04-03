@@ -92,7 +92,6 @@ in {
         hdrEnabled = cfg.enableHDR;
       in ''
         ${toShellVars {
-          ENABLE_HDR_WSI = hdrEnabled;
           DXVK_HDR = hdrEnabled;
         }}
       '';
