@@ -51,6 +51,12 @@ in {
 
   config = mkIf cfg.enable {
     fonts.packages = [pkgs.wineWow64Packages.fonts];
+    environment.sessionVariables = {
+      DXVK_HDR =
+        if config.TM.hasHDRDisplay
+        then 1
+        else 0;
+    };
     programs.rsi-launcher = {
       inherit (cfg.rsiLauncher) enable;
       package = pkgs.rsi-launcher-git;
