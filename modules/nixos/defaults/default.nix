@@ -134,6 +134,7 @@ in
         };
 
         programs = {
+          nix-ld.libraries = config.programs.steam.extraPackages ++ pkgs.wine-astral.buildInputs ++ pkgs.wine-astral.nativeBuildInputs;
           zsh = {
             enable = mkDefault true;
             autosuggestions.enable = mkDefault true;
