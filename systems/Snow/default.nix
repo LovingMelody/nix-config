@@ -3,7 +3,6 @@
   config,
   inputs,
   lib,
-  system,
   ...
 }: let
   inherit (lib) mkForce mkIf;
@@ -296,6 +295,7 @@ in {
     enable = true;
     enableGraphical = true;
   };
+  programs.nix-ld.enable = true;
 
   boot.kernel.sysctl."vm.max_map_count" = lib.mkForce 16777216;
 }

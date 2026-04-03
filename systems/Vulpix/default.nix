@@ -62,10 +62,17 @@ in {
       enable = true;
     };
   };
-  programs.opengamepadui = {
-    enable = false;
-    inputplumber.enable = config.programs.opengamepadui.enable;
+  programs = {
+    opengamepadui = {
+      enable = false;
+      inputplumber.enable = config.programs.opengamepadui.enable;
+    };
+    nix-ld = {
+      enable = true;
+      libraries = with pkgs; [gamemode];
+    };
   };
+
   # services.displayManager.cosmic-greeter.enable = true;
   TM.desktop.gnome.enable = false;
   # specialisation = {
