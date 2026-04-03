@@ -121,9 +121,15 @@ in {
           inherit (cfg.dxvk-nvapi) enable;
           source = "${osConfig.hardware.nvidia.package}/lib/nvidia/wine/_nvngx.dll";
         };
+        "dxvk-nvapi/deps/nvngx_dlssg.dll" = {
+          inherit (cfg.dxvk-nvapi) enable;
+          source = "${osConfig.hardware.nvidia.package}/lib/nvidia/wine/nvngx_dlssg.dll";
+        };
         "dxvk-nvapi/utils/smart-link.sh" = let
           nvngx = config.xdg.configFile."dxvk-nvapi/deps/nvngx.dll".source;
           _nvngx = config.xdg.configFile."dxvk-nvapi/deps/_nvngx.dll".source;
+          nvngx_dlssg = config.xdg.configFile."dxvk-nvapi/deps/nvngx_dlssg.dll".source;
+
           smart-link =
             pkgs.writeShellScriptBin "smart-link.sh"
             ''
@@ -137,6 +143,7 @@ in {
               }
               link-files 'nvngx.dll' '${nvngx}'
               link-files '_nvngx.dll' '${_nvngx}'
+              link-files 'nvngx_dlssg.dll' '${nvngx_dlssg}'
             '';
         in {
           enable = cfg.dxvk-nvapi.smartLink;
