@@ -8,5 +8,6 @@ pull_request_rules:
     actions:
       merge:
         method: squash
-      delete_head_branch:
 queue_rules: []
+merge_protections_settings:
+  reporting_method: check-runs
