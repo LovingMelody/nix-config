@@ -39,8 +39,8 @@ in
       platformdirs
       packaging
       filelock
-      torch-bin
-      torchvision-bin
+      torch
+      torchvision
       pillow
       pillow-heif
       wxpython
