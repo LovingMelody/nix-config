@@ -6,20 +6,13 @@
   cfg = config.TM.sound;
   inherit
     (lib)
-    mkDefault
     mkEnableOption
     mkIf
-    mkOption
     types
     ;
 in {
   options.TM.sound = {
     enable = mkEnableOption "Enable sound";
-    lowLatency = mkOption {
-      type = types.bool;
-      default = false;
-      description = "Enable low latency mode";
-    };
     support32Bit = mkEnableOption {
       types = types.bool;
       default = true;
@@ -29,21 +22,83 @@ in {
 
   config = mkIf cfg.enable {
     security.rtkit.enable = true;
-    services = {
-      pulseaudio.enable = false;
-      pipewire = {
+
+    services.pipewire = {
+      enable = true;
+      alsa = {
         enable = true;
-        alsa = mkDefault {
-          enable = true;
-          inherit (cfg) support32Bit;
+        inherit (cfg) support32Bit;
+      };
+      pulse.enable = true;
+      jack.enable = true;
+
+      extraConfig.pipewire."10-clock" = {
+        "context.properties" = {
+          "default.clock.rate" = 48000;
+
+          "default.clock.allowed-rates" = [48000 44100];
+
+          "default.clock.quantum" = 2048;
+
+          "default.clock.min-quantum" = 1024;
+
+          "default.clock.max-quantum" = 8192;
         };
-        pulse.enable = true;
-        jack.enable = true;
-        wireplumber.enable = true;
-        lowLatency = {
-          enable = cfg.lowLatency;
-          rate = 48000;
-        };
+
+        "context.modules" = [
+          {
+            name = "libpipewire-module-rt";
+            flags = ["ifexists" "nofail"];
+            args = {
+              "nice.level" = -11;
+              "rt.prio" = 88; # RT priority (rtkit ceiling is usually 99)
+              "rt.time.soft" = 200000; # 200ms soft RT time limit (microseconds)
+              "rt.time.hard" = 200000; # Hard limit — process killed if exceeded
+            };
+          }
+        ];
+      };
+
+      wireplumber.extraConfig = {
+        "10-device-rules"."monitor.alsa.rules" = [
+          {
+            # Topping E70 — native S32LE/48kHz, match pw-top observation
+            matches = [{"node.name" = "~alsa_output.usb-Topping.*";}];
+            actions.update-props = {
+              "audio.format" = "S32LE";
+              "audio.rate" = 48000;
+              # period-num * quantum = total ALSA buffer. 3 periods gives
+              # one quantum of slack before an underrun becomes audible.
+              "api.alsa.period-num" = 3;
+            };
+          }
+          {
+            # Logitech PRO X Wireless — USB, likely F32P internally.
+            matches = [{"node.name" = "~alsa_output.usb-Logitech_PRO_X.*";}];
+            actions.update-props = {
+              "audio.rate" = 48000;
+              "api.alsa.period-num" = 3;
+            };
+          }
+          {
+            # Blue USB mic — pin to 48kHz to match the output graph rate.
+            matches = [{"node.name" = "~alsa_input.usb-Generic_Blue_Microphones.*";}];
+            actions.update-props = {
+              "audio.rate" = 48000;
+            };
+          }
+        ];
+
+        "21-game-rate"."stream.rules" = [
+          {
+            # Catch-all: force any audio stream not already matched to 48kHz.
+            # Prevents any app from dragging the graph into resampling.
+            matches = [{"audio.rate" = "!48000";}];
+            actions.update-props = {
+              "audio.rate" = 48000;
+            };
+          }
+        ];
       };
     };
   };
