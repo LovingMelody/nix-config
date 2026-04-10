@@ -15,6 +15,7 @@
     mkMerge
     mkIf
     optional
+    optionals
     ;
   inherit (config.TM) isServer;
 in
@@ -119,7 +120,7 @@ in
           };
           pathsToLink =
             ["/share/zsh" "/share/fish"]
-            ++ lib.optionals config.TM.isGui [
+            ++ optionals config.TM.isGui [
               "/share/xdg-desktop-portal"
               "/share/applications"
             ];
@@ -186,32 +187,26 @@ in
             networkmanager.enable = mkDefault true;
           }
           // (mkIf config.networking.networkmanager.enable {
-            nameservers = mkDefault (
-              if config.services.resolved.enable
-              then [
-                "1.1.1.1#one.one.one.one"
-                "9.9.9.9#dns.quad9.net"
-              ]
-              else [
-                "1.1.1.1"
-                "9.9.9.9"
-              ]
-            );
             networkmanager = {
               dns = mkDefault (
                 if config.services.resolved.enable
                 then "systemd-resolved"
                 else "default"
               );
-              insertNameservers = [
+              insertNameservers = optionals (! config.services.resolved.enable) [
+                # TailScale
+                "100.100.100.100"
+                "fd7a:115c:a1e0::53"
+                # CloudFlare
                 "1.1.1.1"
                 "1.0.0.1"
                 "2606:4700:4700::1111"
                 "2606:4700:4700::1001"
+                # Quad 9
                 "9.9.9.9"
                 "149.112.112.112"
-                "2620:fe::fe"
                 "2620:fe::9"
+                "2620:fe::fe"
               ];
               wifi.powersave = mkDefault config.TM.isLaptop;
               settings = {
@@ -237,7 +232,21 @@ in
           flatpak.enable = mkDefault config.xdg.portal.enable;
           resolved = {
             enable = mkDefault true;
-            settings.Resolve.DNSOverTLS = mkDefault "opportunistic";
+            settings.Resolve = {
+              FallbackDNS =
+                optionals config.services.tailscale.enable ["100.100.100.100" "fd7a:115c:a1e0::53"]
+                ++ [
+                  "1.1.1.1"
+                  "1.0.0.1"
+                  "2606:4700:4700::1111"
+                  "2606:4700:4700::1001"
+                  "9.9.9.9"
+                  "149.112.112.112"
+                  "2620:fe::fe"
+                  "2620:fe::9"
+                ];
+              DNSOverTLS = mkDefault "opportunistic";
+            };
           };
           upower.enable = mkDefault true;
           openssh = mkDefault {
