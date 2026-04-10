@@ -135,7 +135,7 @@
         discord
         nixpkgs-using
         r2modman
-        # iw3
+        nunif-iw3
         ;
       inherit (pkgs.kdePackages) qtwebengine;
       inherit (pkgs.obs-studio-plugins) obs-ios-camera-source obs-image-reaction;
