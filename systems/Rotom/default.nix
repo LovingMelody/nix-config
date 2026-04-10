@@ -102,10 +102,10 @@
   programs.mosh.enable = true;
 
   networking = {
-    nameservers = [
-      "9.9.9.9"
-      "1.1.1.1"
-    ];
+    # nameservers = [
+    #   "9.9.9.9"
+    #   "1.1.1.1"
+    # ];
     hostName = "Rotom";
     networkmanager.enable = true;
   };

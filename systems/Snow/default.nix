@@ -152,7 +152,6 @@ in {
       allowedTCPPorts = [networking-services.wallpaper-engine.tcp];
       allowedUDPPorts = [networking-services.wallpaper-engine.udp];
     };
-    nameservers = ["1.1.1.1" "9.9.9.9"];
   };
 
   # Select internationalisation properties.
@@ -207,7 +206,7 @@ in {
     bitwarden-cli
     czkawka
     nmap
-    nunif-iw3
+    # nunif-iw3
     # inputs.ags.packages.${pkgs.stdenv.hostPlatform.system}.agsFull
   ];
 
