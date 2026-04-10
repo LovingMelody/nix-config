@@ -191,6 +191,7 @@ in {
     };
     dbus.packages = [pkgs.gcr];
     openssh.enable = true;
+    mullvad-vpn.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
