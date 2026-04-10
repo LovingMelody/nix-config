@@ -103,8 +103,7 @@ in
               pkgs.rsync
               pkgs.vim
               pkgs.fselect
-              pkgs.jq
-              pkgs.yq-go
+              pkgs.jaq
               pkgs.nix-output-monitor
               pkgs.restic
               pkgs.rclone

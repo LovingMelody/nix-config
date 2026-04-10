@@ -41,8 +41,7 @@ in {
           pkgs.rclone
           pkgs.ripgrep
           pkgs.fselect
-          pkgs.jq
-          pkgs.yq-go
+          pkgs.jaq
           pkgs.nix-output-monitor
           pkgs.gallery-dl-unstable
         ]
