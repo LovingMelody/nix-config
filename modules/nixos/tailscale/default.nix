@@ -74,14 +74,24 @@ in {
           checkReversePath = "loose";
           allowedUDPPorts = [config.services.tailscale.port];
         };
-        systemd.network.networks."50-tailscale" = {
-          matchConfig.Name = "tailscale0";
-          # Registers 100.100.100.100 on tailscale0 specifically in resolved,
-          # routing only .ts.net queries there — not a global resolver
-          networkConfig = {
-            DNS = "100.100.100.100 fd7a:115c:a1e0::53";
-            Domains = "~ts.net";
+        systemd.services.tailscale-resolved-dns = {
+          description = "Register Tailscale DNS with systemd-resolved";
+
+          after = ["tailscaled.service" "sys-subsystem-net-devices-tailscale0.device"];
+          bindsTo = ["sys-subsystem-net-devices-tailscale0.device"];
+          wantedBy = ["sys-subsystem-net-devices-tailscale0.device"];
+
+          serviceConfig = {
+            Type = "oneshot";
+            RemainAfterExit = true;
           };
+
+          script = let
+            resolvectl = lib.getExe' config.systemd.package "resolvectl";
+          in ''
+            ${resolvectl} dns tailscale0 '100.100.100.100' 'fd7a:115c:a1e0::53'
+            ${resolvectl} domain tailscale0 '~ts.net'
+          '';
         };
       }
       (mkIf cfg.autoConnect {
