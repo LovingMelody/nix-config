@@ -38,6 +38,23 @@
       "threshold": -18.0,
       "wet": 0.0
     },
+    "deesser#0": {
+      "bypass": false,
+      "detection": "Peak",
+      "f1-freq": 6000.0,
+      "f1-level": 0.0,
+      "f2-freq": 4500.0,
+      "f2-level": 12.0,
+      "f2-q": 1.0,
+      "input-gain": 0.0,
+      "laxity": 15,
+      "makeup": 0.0,
+      "mode": "Split",
+      "output-gain": 0.0,
+      "ratio": 3.0,
+      "sc-listen": false,
+      "threshold": -20.0
+    },
     "equalizer#0": {
       "balance": 0.0,
       "bypass": false,
@@ -212,7 +229,7 @@
           "q": 1.5,
           "slope": "x1",
           "solo": false,
-          "type": "Hi-shelf",
+          "type": "Bell",
           "width": 4.0
         },
         "band7": {
@@ -223,7 +240,7 @@
           "q": 0.71,
           "slope": "x1",
           "solo": false,
-          "type": "Bell",
+          "type": "Hi-shelf",
           "width": 4.0
         }
       },
@@ -270,6 +287,7 @@
       "rnnoise#0",
       "speex#0",
       "equalizer#0",
+      "deesser#0",
       "compressor#0"
     ],
     "rnnoise#0": {
@@ -285,7 +303,7 @@
     },
     "speex#0": {
       "bypass": false,
-      "enable-agc": true,
+      "enable-agc": false,
       "enable-denoise": false,
       "enable-dereverb": true,
       "input-gain": 0.0,

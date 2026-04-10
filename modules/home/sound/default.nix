@@ -20,9 +20,9 @@ in {
     services.easyeffects = {
       enable = mkDefault (pkgs.stdenv.isLinux && config.TM.isGui);
       extraPresets = {
-        # HD600S = builtins.fromJSON (builtins.readFile ./EasyEffectPresets/HD600S.json);
-        # "Logitech Pro X" = builtins.fromJSON (builtins.readFile ./EasyEffectPresets/LogitechProX.json);
-        # Microphone = builtins.fromJSON (builtins.readFile ./EasyEffectPresets/Microphone.json);
+        HD600S = builtins.fromJSON (builtins.readFile ./EasyEffectPresets/HD600S.json);
+        "Logitech Pro X" = builtins.fromJSON (builtins.readFile ./EasyEffectPresets/LogitechProX.json);
+        Microphone = builtins.fromJSON (builtins.readFile ./EasyEffectPresets/Microphone.json);
       };
     };
   };
