@@ -61,7 +61,7 @@ in {
           tailscale = {
             enable = true;
             extraUpFlags = optional cfg.manageSSH "--ssh";
-            extraSetFlags = optional cfg.userManaged.enable "--operator=${cfg.userManaged.user}";
+            extraSetFlags = ["--accept-dns=false"] ++ optional cfg.userManaged.enable "--operator=${cfg.userManaged.user}";
             useRoutingFeatures = mkDefault "both";
           };
           resolved = {
@@ -73,6 +73,15 @@ in {
           trustedInterfaces = ["tailscale0"];
           checkReversePath = "loose";
           allowedUDPPorts = [config.services.tailscale.port];
+        };
+        systemd.network.networks."50-tailscale" = {
+          matchConfig.Name = "tailscale0";
+          # Registers 100.100.100.100 on tailscale0 specifically in resolved,
+          # routing only .ts.net queries there — not a global resolver
+          networkConfig = {
+            DNS = "100.100.100.100 fd7a:115c:a1e0::53";
+            Domains = "~ts.net";
+          };
         };
       }
       (mkIf cfg.autoConnect {
