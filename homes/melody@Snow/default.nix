@@ -21,7 +21,6 @@
     impermanence.enable = true;
     # defaults.enable = true;
     programs = {
-      waybar.enable = true;
       _1password = {
         enable = true;
         sshAgent = true;
@@ -33,6 +32,6 @@
       git.enable = true;
     };
   };
-  wayland.windowManager.hyprland.settings.cursor.use_cpu_buffer = lib.mkDefault true;
+  # wayland.windowManager.hyprland.settings.cursor.use_cpu_buffer = lib.mkDefault true;
   home.stateVersion = lib.TM.stateVersion.nixos;
 }
