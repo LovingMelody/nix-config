@@ -46,7 +46,7 @@ in {
     enable = true;
     mode = "netclient";
     upsmon = {
-      enable = true;
+      enable = false;
       monitor.Charjabug = {
         user = "ghdsgsdgds";
         powerValue = 1;
