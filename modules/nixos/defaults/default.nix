@@ -25,6 +25,15 @@ in
     config =
       mkMerge [
         (mkIf cfg.enable {
+            assertions = [
+              {
+                assertion = ! (lib.TM.isBlacklistedKernelVersion config.boot.kernelPackages);
+                message = ''
+                  [Kernel Blacklisted]: Kernel version ${config.boot.kernelPackages.kernel.version} is blacklisted.
+                  [Kernel Blacklisted]: Blacklisted kernels: ${lib.strings.join lib.TM.blacklistedKernelVersions}
+                '';
+              }
+            ];
             home-manager.backupFileExtension = mkDefault "home-backup";
             # Feature isn't stable yet:
             # system.etc.overlay.enable = mkDefault config.boot.initrd.systemd.enable ;

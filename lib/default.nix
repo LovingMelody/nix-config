@@ -107,6 +107,21 @@ in rec {
     home = stateVersion.nixos;
     darwin = 6;
   };
+  blacklistedKernelVersions = [
+    # 6.19 has caused audio issues so its blacklisted for now.
+    # DRM Color API is of note in this release but not available
+    # For NVIDIA at this time
+    # Last tested version: 6.19.13
+    "~6.19"
+  ];
+  isBlacklistedKernelVersion = kernelPackages:
+    builtins.any (
+      v:
+        if lib.hasPrefix "~" v
+        then (lib.removePrefix "~" v) == (lib.versions.majorMinor kernelPackages.kernel.version)
+        else kernelPackages.kernel.version == v
+    )
+    blacklistedKernelVersions;
   latestZFSKernel = pkgs: zfsPackage: let
     zfsCompatibleKernelPackages =
       lib.filterAttrs (
@@ -115,6 +130,7 @@ in rec {
           != null
           && (builtins.tryEval kernelPackages).success
           && (!kernelPackages.${zfsPackage.kernelModuleAttribute}.meta.broken)
+          && (! isBlacklistedKernelVersion kernelPackages)
       )
       pkgs.linuxKernel.packages;
   in
