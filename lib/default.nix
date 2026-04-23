@@ -107,6 +107,9 @@ in rec {
     home = stateVersion.nixos;
     darwin = 6;
   };
+  # List of kernel versions known to be an issue
+  # `~` prefixed versions cover all minor versions of the kernel
+  # Otherwise the exact kernel version should be listed
   blacklistedKernelVersions = [
     # 6.19 has caused audio issues so its blacklisted for now.
     # DRM Color API is of note in this release but not available
@@ -114,6 +117,9 @@ in rec {
     # Last tested version: 6.19.13
     "~6.19"
   ];
+  # Helper function that takes the kernel package set and checks if the
+  # kernel version in the package set is blacklisted
+  # isBlacklistedKernelVersion: kernel package set -> bool
   isBlacklistedKernelVersion = kernelPackages:
     builtins.any (
       v:
@@ -139,7 +145,14 @@ in rec {
         builtins.attrValues zfsCompatibleKernelPackages
       )
     );
-  # TODO: This doesn't detect transparency, should be re-applied as a map
+  # Applies a lut to an image
+  # pkgs - this should be the nixpkgs package set
+  # palette - list of hex codes for lutgen to work with (base16 / base24)
+  # img: The image to be modified
+  # This returns a new DRV with the modified image
+  # IMPORTANT: This does not remove the original image from the nix store.
+  #    This means that you are doubling the space taken by the image with this function
+  # lutgen: pkgs ListOf[Strings] drv -> drv
   lutgen = pkgs: palette: img: let
     colors = lib.strings.concatStringsSep " " (lib.attrValues palette);
     baseName = builtins.baseNameOf img;
