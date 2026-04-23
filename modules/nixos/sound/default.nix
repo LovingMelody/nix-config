@@ -71,6 +71,7 @@ in {
               # period-num * quantum = total ALSA buffer. 3 periods gives
               # one quantum of slack before an underrun becomes audible.
               "api.alsa.period-num" = 3;
+              "session.suspend-timeout-seconds" = 0;
             };
           }
           {
@@ -79,6 +80,7 @@ in {
             actions.update-props = {
               "audio.rate" = 48000;
               "api.alsa.period-num" = 3;
+              "session.suspend-timeout-seconds" = 0;
             };
           }
           {
@@ -86,15 +88,14 @@ in {
             matches = [{"node.name" = "~alsa_input.usb-Generic_Blue_Microphones.*";}];
             actions.update-props = {
               "audio.rate" = 48000;
+              "session.suspend-timeout-seconds" = 0;
             };
           }
         ];
 
         "21-game-rate"."stream.rules" = [
           {
-            # Catch-all: force any audio stream not already matched to 48kHz.
-            # Prevents any app from dragging the graph into resampling.
-            matches = [{"audio.rate" = "!48000";}];
+            matches = [{"media.class" = "Stream/Output/Audio";}];
             actions.update-props = {
               "audio.rate" = 48000;
             };
