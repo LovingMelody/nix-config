@@ -136,7 +136,7 @@ in {
               "ClothConfigAPI"
               "ServerCore"
               "Lithium"
-              "Gyser"
+              # "Gyser"
               "SoundPhysicsRemastered"
               # "Sit!"
               "Vivecraft"
