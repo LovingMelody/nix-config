@@ -242,16 +242,20 @@ in
     spicePkgs = spicetify-nix.legacyPackages.${final.stdenv.hostPlatform.system};
 
     # EasyEffects on OpenSuse uses clang, mimic that
-    easyeffects = clangStdenv (prev.easyeffects.overrideAttrs (o: {
-      buildInputs = o.buildInputs ++ (with final; [llvmPackages.openmp serd.dev flac libportal libportal-qt6 libsysprof-capture libogg libvorbis libopus] ++ flac.buildInputs ++ libsndfile.buildInputs);
-      cmakeFlags =
-        (o.cmakeFlags or [])
-        ++ [
-          "-DCMAKE_CXX_SCAN_FOR_MODULES=OFF"
-        ];
-      inherit (pins.easyeffects) version;
-      src = pins.easyeffects;
-    }));
+
+    # TODO: Remove speexdsp override after https://nixpkgs-tracker.ocfox.me/?pr=511820 merges
+    easyeffects =
+      clangStdenv
+      ((prev.easyeffects.overrideAttrs (o: {
+        buildInputs = o.buildInputs ++ (with final; [llvmPackages.openmp serd.dev flac libportal libportal-qt6 libsysprof-capture libogg libvorbis libopus] ++ flac.buildInputs ++ libsndfile.buildInputs);
+        cmakeFlags =
+          (o.cmakeFlags or [])
+          ++ [
+            "-DCMAKE_CXX_SCAN_FOR_MODULES=OFF"
+          ];
+        inherit (pins.easyeffects) version;
+        src = pins.easyeffects;
+      })).override {speexdsp = final.speexdsp.override {withFftw3 = false;};});
 
     /*
     Lets use lix :D
