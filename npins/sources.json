@@ -76,10 +76,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v8.2.0",
-      "revision": "22206931b67fdd16ffca2a32d4be8f1f68ffad4e",
-      "url": "https://api.github.com/repos/wwmm/easyeffects/tarball/refs/tags/v8.2.0",
-      "hash": "sha256-HBCYXFFDOhwVebwPIduYNGJ61LFw9lOTZyYmt1k6CuA="
+      "version": "v8.2.1",
+      "revision": "1e174ae6cb6819bc4477f992431aec33e58ee2db",
+      "url": "https://api.github.com/repos/wwmm/easyeffects/tarball/refs/tags/v8.2.1",
+      "hash": "sha256-bGjIqts06ruwMQIW5hk4wlG7G/7GtgFVBgSr68tkIqY="
     },
     "gallery-dl": {
       "type": "Git",
@@ -119,9 +119,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "fbb2f3738141e7900d24a2900b62a173c63987b9",
-      "url": "https://github.com/garglk/garglk/archive/fbb2f3738141e7900d24a2900b62a173c63987b9.tar.gz",
-      "hash": "sha256-BM76aZakzKQofV2fhGN5qdmi3BMuOOKixZDTetbLqjA="
+      "revision": "4346ff64424ad79065838cb8edf0e0fc641ca536",
+      "url": "https://github.com/garglk/garglk/archive/4346ff64424ad79065838cb8edf0e0fc641ca536.tar.gz",
+      "hash": "sha256-7+MkPszJd6ViiXLT+36RHPFH5TVTO/WoF0hHFkdDnz8="
     },
     "getopts.fish": {
       "type": "Git",
@@ -187,9 +187,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "e046cd0736b7e651bb74fc577596a33fe9635468",
-      "url": "https://github.com/mpv-player/mpv/archive/e046cd0736b7e651bb74fc577596a33fe9635468.tar.gz",
-      "hash": "sha256-wfsr4N6MUol9kxDJljjabp3z92S4XdJe6CzV7UXk3EM="
+      "revision": "9ce79bcaa0132660a2e45b6bfc1fb0c199665277",
+      "url": "https://github.com/mpv-player/mpv/archive/9ce79bcaa0132660a2e45b6bfc1fb0c199665277.tar.gz",
+      "hash": "sha256-OyIceD6HnHMXqRwchApcZL5qIGznViknHeedaiTWCp8="
     },
     "npins": {
       "type": "GitRelease",
