@@ -123,14 +123,14 @@ in {
               mods;
           in
             pkgs.linkFarmFromDrvs "mods" (builtins.attrValues (builtins.listToAttrs (to-source-list [
-              "VanillaRefresh"
+              # "VanillaRefresh"
               # "Terralith"
               # "Tectonic"
               # "Nullscape"
               # "Incendium"
               # "Balm"
               # "NetherPortalFix"
-              # "ConcurrentChunkManagementEngine"
+              "ConcurrentChunkManagementEngine"
               "Krypton"
               "FabricAPI"
               "ClothConfigAPI"

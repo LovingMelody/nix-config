@@ -1,8 +1,5 @@
 {
-  "VanillaRefresh": {
-    "sha512": "67eded59a3b4588dc3a3ee3b29dc8f2564d5a63f31071d5e432ac95b2bb5d3c38ace168099b3ad267f46ebbcd5d29b656554fc62ad4fd0f520f0bebffae4a908",
-    "url": "https://cdn.modrinth.com/data/gWO6Zqey/versions/Zf5WC8ox/vanilla-refresh-1.4.30.jar"
-  },
+  "VanillaRefresh": null,
   "Terralith": {
     "sha512": "5a3be2986a624446c82a8879e34e4c7b09f6f98a1937fd4d9bcf5356b8321f0b9cebb5e567e8d00ae8161d261b108fb7c9a80ebed61f2edb8cdb0852b33cbacc",
     "url": "https://cdn.modrinth.com/data/8oi3bsk5/versions/FCzSjHeG/Terralith_26.1_v2.6.2_Fabric.jar"
@@ -20,16 +17,16 @@
     "url": "https://cdn.modrinth.com/data/ZVzW5oNS/versions/dmD183NM/Incendium_26.1_v5.4.12.jar"
   },
   "Balm": {
-    "sha512": "9e679c20a7bac4839b32469e400bd00f704ccf63ce2da54585993b05b9a0e3a10f70926ea33964d676acbe9959586e4494f27ca73fd141f763929d698cab5f2d",
-    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/9GKnh8vV/balm-fabric-26.1-26.1.0.6.jar"
+    "sha512": "0a350d6b717571bd1a957cbbf8935f2786a76d826ab283e9b0ef4de8b53be2c1a9ea71e45a4ccbc68524836221946736f13fd6b0240ff4cd08a2e64f6e794003",
+    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/CRLU4xOJ/balm-fabric-26.1.2-26.1.2.4.jar"
   },
   "NetherPortalFix": {
     "sha512": "f7278b229ee62237f0756980e5b9ff145abb043d1b63955c244b964045267bf1bdba2fb1a397e8c4ddfb250e8ddb69b68aec2d60d204d4c7decdd1e55d67724b",
     "url": "https://cdn.modrinth.com/data/nPZr02ET/versions/lxYeKU5D/netherportalfix-fabric-26.1-26.1.0.1.jar"
   },
   "ConcurrentChunkManagementEngine": {
-    "sha512": "6f5947e45f15cfbf8756fed2fad222702f331d5dfa6b0580bd92671b14c5ea6f8cb0a0968ecf53ca237763bdda29aedd33d60c9ee6cd36ce11618177f92b405b",
-    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/tKXPZtpT/c2me-fabric-mc26.1-0.3.7%2Balpha.0.61.jar"
+    "sha512": "c784f68a63be54307784b0d5e5ab46d1a78f5b5483ee83207658874d30b17cc718e0042453b06bf9c584148cfd0382c20c6d633ef3c5852efe078402b06e7eb7",
+    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/lWpNUM5l/c2me-fabric-mc26.1.2-0.3.7%2Balpha.0.67.jar"
   },
   "Krypton": {
     "sha512": "14233210283a76f3cf435a3b8ddbcbd65a858d2b1a10b88ff643c0a01486dfd2bf1843bd3456cd4fb86cbb3b06f2dea0c4e663b1976a48e96de16d3b5a707ec9",
