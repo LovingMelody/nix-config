@@ -33,19 +33,17 @@
   };
 
   disko.devices = import ./disko.nix {inherit lib;};
-  environment.etc.crypttab.text = let
-    inherit (config.disko.devices.disk.z.content.partitions.luks.content.settings) keyFile;
-  in ''
-    # See man crypttab
-    crypted UUID=133b06a1-5596-4fc3-b662-e81079e40133 ${keyFile} - discard
-  '';
+  # environment.etc.crypttab.text = let
+  #   inherit (config.disko.devices.disk.z.content.partitions.luks.content.settings) keyFile;
+  # in ''
+  #   # See man crypttab
+  #   crypted UUID=133b06a1-5596-4fc3-b662-e81079e40133 ${keyFile} - discard
+  # '';
   fileSystems = {
     "/home/melody/.xlcore".options = ["x-gvfs-hide"];
     "/home/melody/FinalFantasy".options = ["x-gvfs-hide"];
     "/home/melody/ffxiv-extras/Mare".options = ["x-gvfs-hide"];
     "/home/melody/ffxiv-extras/Penumbra".options = ["x-gvfs-hide"];
-    "/home/melody/OneDrive".options = ["x-gvfs-hide"];
-    "/home/melody/Games".options = ["x-gvfs-hide"];
     "/.persistent".neededForBoot = true;
   };
   system.activationScripts.melFileSystemPerms = {

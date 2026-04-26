@@ -2,7 +2,9 @@
   disks ? [
     "nvme0n1"
     "nvme1n1"
+    "nvme2n1"
     "nvme3n1"
+    "sda"
   ],
   secretFile ? "/.persistent/secret.key",
   ...
@@ -23,11 +25,13 @@
       };
     };
   };
-  b = builtins.elemAt disks 2;
+  b = builtins.elemAt disks 4;
 in {
   disk = {
     x = defineZfs 0;
     y = defineZfs 1;
+    # f = defineZfs 2;
+    # g = defineZfs 3;
     z = {
       type = "disk";
       device = "/dev/${b}";
@@ -35,7 +39,7 @@ in {
         type = "gpt";
         partitions = {
           boot = {
-            size = "2G";
+            size = "10G";
             type = "EF00";
             content = {
               type = "filesystem";
@@ -45,42 +49,11 @@ in {
             };
           };
           swap = {
-            size = "64G";
+            size = "-8G";
             content = {
               type = "swap";
               randomEncryption = true;
               resumeDevice = true; # resume from hibernation from this device
-            };
-          };
-          luks = {
-            size = "100%";
-            content = {
-              type = "luks";
-              name = "crypted";
-              # This should be done using crypttab
-              initrdUnlock = false;
-              settings = {
-                allowDiscards = true;
-                keyFile = secretFile;
-              };
-              content = {
-                type = "btrfs";
-                extraArgs = ["-f"];
-                subvolumes = {
-                  "@melody-OneDrive" = {
-                    mountpoint = "/home/melody/OneDrive";
-                    mountOptions = ["compress=zstd:9" "noatime" "discard=async"];
-                  };
-                  "@melody-Games" = {
-                    mountpoint = "/home/melody/Games";
-                    mountOptions = ["noatime" "discard=async"];
-                  };
-                  "@melody-docker" = {
-                    mountpoint = "/home/melody/.docker-files";
-                    mountOptions = ["compress=zstd:9" "noatime" "discard=async"];
-                  };
-                };
-              };
             };
           };
         };
@@ -90,7 +63,19 @@ in {
   zpool = {
     zroot = {
       type = "zpool";
-      mode = "mirror";
+      mode = {
+        type = "topology";
+        vdev = [
+          {
+            mode = "mirror";
+            members = ["x" "y"];
+          }
+          # {
+          #   mode = "mirror";
+          #   members = ["f" "g"];
+          # }
+        ];
+      };
       rootFsOptions = {
         compression = "zstd-5";
         "com.sun:auto-snapshot" = "false";
