@@ -30,8 +30,8 @@ in {
   disk = {
     x = defineZfs 0;
     y = defineZfs 1;
-    # f = defineZfs 2;
-    # g = defineZfs 3;
+    f = defineZfs 2;
+    g = defineZfs 3;
     z = {
       type = "disk";
       device = "/dev/${b}";
@@ -70,10 +70,10 @@ in {
             mode = "mirror";
             members = ["x" "y"];
           }
-          # {
-          #   mode = "mirror";
-          #   members = ["f" "g"];
-          # }
+          {
+            mode = "mirror";
+            members = ["f" "g"];
+          }
         ];
       };
       rootFsOptions = {
