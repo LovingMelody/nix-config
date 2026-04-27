@@ -387,7 +387,7 @@ fhsenv}/usr/lib64 $out/lib")
                   connection = {
                     id = "Home-5G";
                     type = "wifi";
-                    autoconnect-priority = "2";
+                    autoconnect-priority = "90";
                   };
                   ipv4 = {
                     method = "auto";
@@ -439,7 +439,7 @@ fhsenv}/usr/lib64 $out/lib")
                     id = "Home";
                     type = "wifi";
                     autoconnect = "true";
-                    "autoconnect-priority" = "98";
+                    "autoconnect-priority" = "10";
                   };
                   wifi = {
                     ssid = "$WIFI_HOME_C_SSID";
@@ -458,7 +458,7 @@ fhsenv}/usr/lib64 $out/lib")
                     id = "Home - Legacy";
                     type = "wifi";
                     autoconnect = "true";
-                    "autoconnect-priority" = "50";
+                    "autoconnect-priority" = "2";
                     # "interface-name" = "wlan0";     # uncomment to pin a NIC
                   };
                   wifi = {
@@ -478,7 +478,7 @@ fhsenv}/usr/lib64 $out/lib")
                     id = "Home - Fallback";
                     type = "wifi";
                     autoconnect = "true";
-                    "autoconnect-priority" = "80"; # prefer Home
+                    "autoconnect-priority" = "1"; # prefer Home
                     # "interface-name" = "wlan0";     # uncomment to pin a NIC
                   };
                   wifi = {
