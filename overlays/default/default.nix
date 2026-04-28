@@ -253,7 +253,20 @@ in
           ++ [
             "-DCMAKE_CXX_SCAN_FOR_MODULES=OFF"
           ];
-        inherit (pins.easyeffects) version;
+        version = let
+          cmakeVer =
+            builtins.match
+            ''.*project\([[:space:]]*[^[:space:]]+[[:space:]]+VERSION[[:space:]]+([0-9][0-9.]+[0-9]).*''
+            (builtins.readFile "${pins.easyeffects}/CMakeLists.txt");
+          ver =
+            builtins.elemAt (
+              if cmakeVer != null
+              then cmakeVer
+              else ["git"]
+            )
+            0;
+        in
+          ver + "-${shortRev pins.easyeffects.revision}";
         src = pins.easyeffects;
       })).override {speexdsp = final.speexdsp.override {withFftw3 = false;};});
 

@@ -66,20 +66,17 @@
       "hash": "sha256-t89/gWAVnAvPpTFkQIW/bxXVX+ultGlLQCzbeMZfQ2E="
     },
     "easyeffects": {
-      "type": "GitRelease",
+      "type": "Git",
       "repository": {
         "type": "GitHub",
         "owner": "wwmm",
         "repo": "easyeffects"
       },
-      "pre_releases": false,
-      "version_upper_bound": null,
-      "release_prefix": null,
+      "branch": "master",
       "submodules": false,
-      "version": "v8.2.1",
-      "revision": "1e174ae6cb6819bc4477f992431aec33e58ee2db",
-      "url": "https://api.github.com/repos/wwmm/easyeffects/tarball/refs/tags/v8.2.1",
-      "hash": "sha256-bGjIqts06ruwMQIW5hk4wlG7G/7GtgFVBgSr68tkIqY="
+      "revision": "952dfb48229a6a27f083ce6bcc37104c4c7bf5bf",
+      "url": "https://github.com/wwmm/easyeffects/archive/952dfb48229a6a27f083ce6bcc37104c4c7bf5bf.tar.gz",
+      "hash": "sha256-yb+qf2rOXis2Yt1u8/0qjYXXgaYsJqao6zmXj9Pcekg="
     },
     "gallery-dl": {
       "type": "Git",
