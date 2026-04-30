@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "bcbc563af48ea11eec7e3631c4648c71c2253f9d",
+      "revision": "ec9111c07d58b74b63e00169f690a835547358c0",
       "url": null,
-      "hash": "sha256-sxuXPei+vCxpYBcmGTvZPdMefyi7A+qQlueQgJzY3mg="
+      "hash": "sha256-4KBfCHkJhZCNmxA2hRfiFwJPAu9fbccsMCLUWAYDH0U="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "952dfb48229a6a27f083ce6bcc37104c4c7bf5bf",
-      "url": "https://github.com/wwmm/easyeffects/archive/952dfb48229a6a27f083ce6bcc37104c4c7bf5bf.tar.gz",
-      "hash": "sha256-yb+qf2rOXis2Yt1u8/0qjYXXgaYsJqao6zmXj9Pcekg="
+      "revision": "229daad2bb62f9866b1f8ee6c809a1253786144e",
+      "url": "https://github.com/wwmm/easyeffects/archive/229daad2bb62f9866b1f8ee6c809a1253786144e.tar.gz",
+      "hash": "sha256-qw1iPU/ijFqBZDjPreKCbO5HuvRB7BBJmAFRNV/kAZQ="
     },
     "gallery-dl": {
       "type": "Git",
@@ -184,9 +184,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "a42b1b9103b2a5ab60817dfe858bf92ec0abc8e0",
-      "url": "https://github.com/mpv-player/mpv/archive/a42b1b9103b2a5ab60817dfe858bf92ec0abc8e0.tar.gz",
-      "hash": "sha256-a/RCTItLwwvgTX8sukSTrfBqAP/SlvyGBIIYv7lX29E="
+      "revision": "b1d23bba5e98a832b312b1b3afa191b0c60ab87c",
+      "url": "https://github.com/mpv-player/mpv/archive/b1d23bba5e98a832b312b1b3afa191b0c60ab87c.tar.gz",
+      "hash": "sha256-eUVthHdK+uLw22V6bSyB51bnMb1lCJWhPz0t7bfGbP0="
     },
     "npins": {
       "type": "GitRelease",
@@ -213,9 +213,9 @@
       },
       "branch": "dev",
       "submodules": false,
-      "revision": "8e0b8405f38a6ff888846e07ce092196cc9e6de8",
-      "url": "https://github.com/nagadomi/nunif/archive/8e0b8405f38a6ff888846e07ce092196cc9e6de8.tar.gz",
-      "hash": "sha256-Hd90viD0NM9O2/5gFRmxWZPrUgyNwiMMwEUfM69ciQo="
+      "revision": "4cc1b7041858d7cca5b0c809dfd4f3a2a20358ed",
+      "url": "https://github.com/nagadomi/nunif/archive/4cc1b7041858d7cca5b0c809dfd4f3a2a20358ed.tar.gz",
+      "hash": "sha256-Nj5KhQxMeSsxgclPaVUgG9ZYEADa0wppqQGX04hA2CQ="
     },
     "obs": {
       "type": "Git",
@@ -324,9 +324,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "228cc3ad8a4b780560820485fd80ea8989764ae4",
+      "revision": "497357c0f03796d1a87696937c8b503106fdca6a",
       "url": null,
-      "hash": "sha256-CQ5VHBn8kggahyoyV13meuHr9g/Ay+nV6GFHO441+pM="
+      "hash": "sha256-546V5xE33mqtOY5Mg5DR7tSHFVUN+MXGRGmE1W5trac="
     },
     "xivlauncher-rb": {
       "type": "GitRelease",
