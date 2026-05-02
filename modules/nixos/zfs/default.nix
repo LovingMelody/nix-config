@@ -18,11 +18,15 @@ in {
     useUnstable = mkEnableOption "Enable ZFS unstable";
   };
   config = mkIf cfg.enable {
-    boot.zfs.package = mkDefault (
-      if (cfg.useUnstable && (lib.versionAtLeast pkgs.zfs_unstable.version pkgs.zfs.version))
-      then pkgs.zfs_unstable
-      else pkgs.zfs
-    );
+    boot.zfs = {
+      package = mkDefault (
+        if (cfg.useUnstable && (lib.versionAtLeast pkgs.zfs_unstable.version pkgs.zfs.version))
+        then pkgs.zfs_unstable
+        else pkgs.zfs
+      );
+      forceImportAll = false;
+      forceImportRoot = false;
+    };
     services.zfs = {
       autoScrub.enable = true;
       trim.enable = true;
