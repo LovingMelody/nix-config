@@ -243,10 +243,9 @@ in
 
     # EasyEffects on OpenSuse uses clang, mimic that
 
-    # TODO: Remove speexdsp override after https://nixpkgs-tracker.ocfox.me/?pr=511820 merges
     easyeffects =
       clangStdenv
-      ((prev.easyeffects.overrideAttrs (o: {
+      (prev.easyeffects.overrideAttrs (o: {
         buildInputs = o.buildInputs ++ (with final; [llvmPackages.openmp serd.dev flac libportal libportal-qt6 libsysprof-capture libogg libvorbis libopus] ++ flac.buildInputs ++ libsndfile.buildInputs);
         cmakeFlags =
           (o.cmakeFlags or [])
@@ -268,7 +267,7 @@ in
         in
           ver + "-${shortRev pins.easyeffects.revision}";
         src = pins.easyeffects;
-      })).override {speexdsp = final.speexdsp.override {withFftw3 = false;};});
+      }));
 
     /*
     Lets use lix :D
