@@ -24,6 +24,11 @@ in {
       default = 90;
       description = "zramSwap memory percent";
     };
+    priority = mkOption {
+      type = types.int;
+      default = 100;
+      description = "zram priority (higher than swap)";
+    };
   };
-  config = mkIf cfg.enable {zramSwap = mkDefault {inherit (cfg) enable memoryPercent;};};
+  config = mkIf cfg.enable {zramSwap = mkDefault {inherit (cfg) enable memoryPercent priority;};};
 }
