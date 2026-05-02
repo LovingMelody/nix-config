@@ -17,6 +17,7 @@ in {
     knowsHiddenMove = true;
     isGui = true;
     isLaptop = true;
+    lix.enable = true;
     defaultNetworkAdapter = "wlp2s0";
     autoUpgrade.enable = true;
     # ZFS Cannot safely be suspended & hibernate.
