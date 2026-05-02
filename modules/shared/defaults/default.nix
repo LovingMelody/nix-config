@@ -68,11 +68,7 @@ in {
           "https://cache.nixos-cuda.org"
           "https://ezkea.cachix.org"
         ];
-        experimental-features = [
-          "nix-command"
-          "flakes"
-          "recursive-nix"
-        ];
+        experimental-features = ["nix-command" "flakes"];
         auto-optimise-store = isLinux;
         keep-outputs = true;
         keep-derivations = true;
