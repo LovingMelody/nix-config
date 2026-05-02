@@ -11,7 +11,6 @@
     mkEnableOption
     mkIf
     mkOption
-    options
     types
     optional
     versions
@@ -27,18 +26,6 @@ in {
       type = types.raw;
       default = pkgs.linuxPackages_latest;
       description = "Set kernel";
-    };
-    zram = {
-      enable = mkOption {
-        type = types.bool;
-        default = true;
-        description = "Enable ZRam - Star citizen needs it <40G";
-      };
-      memoryPercent = mkOption {
-        type = types.int;
-        default = 30;
-        inherit (options.zramSwap.memoryPercent) description;
-      };
     };
     rsiLauncher = {
       enable =
@@ -84,9 +71,6 @@ in {
       '';
       patchXwayland = false;
       enforceWaylandDrv = true;
-    };
-    zramSwap = {
-      inherit (cfg.zram) enable memoryPercent;
     };
     programs = {
       wavey-launcher.enable = true;
