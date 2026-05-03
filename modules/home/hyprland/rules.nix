@@ -43,7 +43,7 @@ in {
 
       # throw sharing indicators away
       "workspace special silent, title:^(Firefox — Sharing Indicator)$"
-      "workspace special silent, title:^(.*is sharing (your screen|a window)\.)$"
+      "workspace special silent, title:^(.*is sharing (your screen|a window)\\.)$"
 
       # idle inhibit while watching videos
       "idleinhibit focus, class:^(mpv|.+exe|celluloid)$"
