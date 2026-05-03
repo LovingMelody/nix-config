@@ -9,6 +9,8 @@ in {
   # AMD :    pci-0000:04:00.0-card
   # NVIDIA : pci-0000:01:00.0-card
   imports = [./hardware-configuration-extended.nix];
+  # Use lix
+  lix.enable = true;
   TM = {
     pokemon = {
       name = "Vulpix";
@@ -17,7 +19,6 @@ in {
     knowsHiddenMove = true;
     isGui = true;
     isLaptop = true;
-    lix.enable = true;
     defaultNetworkAdapter = "wlp2s0";
     autoUpgrade.enable = true;
     # ZFS Cannot safely be suspended & hibernate.

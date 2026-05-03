@@ -24,6 +24,7 @@
       # inputs.nixpkgs-xr.overlays.default
       # inputs.prismlauncher.overlays.default
       inputs.rust-overlay.overlays.default
+      inputs.lix-module.overlays.lixFromNixpkgs
     ];
     listdir = dir: builtins.attrNames (lib.filterAttrs (_: t: t == "directory") (builtins.readDir dir));
     defineModules = type:
@@ -92,6 +93,7 @@
               inputs.aagl.nixosModules.default
               inputs.disko.nixosModules.disko
               inputs.home-manager.nixosModules.home-manager
+              inputs.lix-module.nixosModules.lixFromNixpkgs
               inputs.nix-gaming.nixosModules.pipewireLowLatency
               inputs.nix-gaming.nixosModules.platformOptimizations
               inputs.nix-gaming.nixosModules.wine
