@@ -61,9 +61,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "a62ec6fb5129bff486eed13cb848fdfd2c792117",
+      "revision": "42ed4947825ff0f4f5f64fe11ebfbb0fc6cb4a3e",
       "url": null,
-      "hash": "sha256-hEVvAzpJLweYXyLofFsOhNmKxi6zfa+LcIhUdf9i5Zg="
+      "hash": "sha256-S/bNzag424KY+DPjKK4UKpp/ZIGrQULJA4rAbX3xvyE="
     },
     "easyeffects": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "0b55867ba2969513835fe63b29379bd16a5fa3b6",
-      "url": "https://github.com/wwmm/easyeffects/archive/0b55867ba2969513835fe63b29379bd16a5fa3b6.tar.gz",
-      "hash": "sha256-CeBwXTzvLf7JrOdAmdAyuIMmuqNUtHzUosRsBpM/gDE="
+      "revision": "b0faf8484b5875a1468db8216f4fd9ba04eb5265",
+      "url": "https://github.com/wwmm/easyeffects/archive/b0faf8484b5875a1468db8216f4fd9ba04eb5265.tar.gz",
+      "hash": "sha256-pEmB65iqZP6y8KUdZDppnF/yeY6VrxBPgKpuMd+4tcs="
     },
     "gallery-dl": {
       "type": "Git",
@@ -213,9 +213,9 @@
       },
       "branch": "dev",
       "submodules": false,
-      "revision": "4cc1b7041858d7cca5b0c809dfd4f3a2a20358ed",
-      "url": "https://github.com/nagadomi/nunif/archive/4cc1b7041858d7cca5b0c809dfd4f3a2a20358ed.tar.gz",
-      "hash": "sha256-Nj5KhQxMeSsxgclPaVUgG9ZYEADa0wppqQGX04hA2CQ="
+      "revision": "9bbf14043380b2a5d747d6660f671a7944943281",
+      "url": "https://github.com/nagadomi/nunif/archive/9bbf14043380b2a5d747d6660f671a7944943281.tar.gz",
+      "hash": "sha256-DPApbIwNNTNxjC2Y6Rpc3biTIinzljBzd08hbfKJQIk="
     },
     "obs": {
       "type": "Git",
