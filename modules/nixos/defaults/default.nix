@@ -34,7 +34,6 @@ in
                 '';
               }
             ];
-            lix.enable = mkDefault false;
             home-manager.backupFileExtension = mkDefault "home-backup";
             # Feature isn't stable yet:
             # system.etc.overlay.enable = mkDefault config.boot.initrd.systemd.enable ;
