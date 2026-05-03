@@ -30,8 +30,6 @@ in {
     nixpkgs = {
       config = {
         allowUnfree = true;
-        # FIXME: Remove once darktable no longer requires this
-        permittedInsecurePackages = ["libsoup-2.74.3"];
         cudaSupport = config.TM.MyNextGPUWillNotBeNvidia or false;
         cudaCapabilities = ["8.6"];
 
