@@ -24,7 +24,7 @@
       # inputs.nixpkgs-xr.overlays.default
       # inputs.prismlauncher.overlays.default
       inputs.rust-overlay.overlays.default
-      inputs.lix-module.overlays.lixFromNixpkgs
+      # inputs.lix-module.overlays.default
     ];
     listdir = dir: builtins.attrNames (lib.filterAttrs (_: t: t == "directory") (builtins.readDir dir));
     defineModules = type:
@@ -93,7 +93,7 @@
               inputs.aagl.nixosModules.default
               inputs.disko.nixosModules.disko
               inputs.home-manager.nixosModules.home-manager
-              inputs.lix-module.nixosModules.lixFromNixpkgs
+              inputs.lix-module.nixosModules.default
               inputs.nix-gaming.nixosModules.pipewireLowLatency
               inputs.nix-gaming.nixosModules.platformOptimizations
               inputs.nix-gaming.nixosModules.wine
@@ -242,12 +242,12 @@
       };
     };
     lix = {
-      url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
+      url = "https://git.lix.systems/lix-project/lix/archive/2.95.1.tar.gz";
       flake = false;
     };
 
     lix-module = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/1688100bba140492658d597f6b307c327f35c780.tar.gz";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         lix.follows = "lix";
