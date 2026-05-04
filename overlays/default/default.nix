@@ -59,7 +59,10 @@ in
             kernelSet
             // (
               if kernelSet ? nvidiaPackages
-              then {nvidiaPackages.beta = patchLibcuda kernelSet.nvidiaPackages.beta;}
+              then {
+                nvidiaPackages.beta = patchLibcuda kernelSet.nvidiaPackages.beta;
+                nvidiaPackages.stable = patchLibcuda kernelSet.nvidiaPackages.stable;
+              }
               else {}
             ))
           prev.linuxKernel.packages;
