@@ -25,8 +25,7 @@ in {
     };
     hardware = {
       nvidia = {
-        # package = mkDefault (lib.TM.selectHighestVersion config.boot.kernelPackages.nvidiaPackages.beta config.boot.kernelPackages.stable);
-        branch = "latest";
+        branch = "bleeding_edge";
         modesetting.enable = mkDefault true;
         nvidiaSettings = mkDefault true;
         powerManagement.enable = mkDefault true;
