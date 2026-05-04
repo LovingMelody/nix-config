@@ -22,6 +22,11 @@ in {
       ELECTRON_OZONE_PLATFORM_HINT = mkDefault "auto";
       NVIDIA_WINE_DLL_DIR = "${config.hardware.nvidia.package}/lib/nvidia/wine/";
       XL_NVNGXPATH = "${config.hardware.nvidia.package}/lib/nvidia/wine/";
+      PROTON_ENABLE_NGX_UPDATER = "1";
+      DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE = "on";
+      DXVK_NVAPI_DRS_NGX_DLSS_RR_OVERRIDE = "on";
+      DXVK_NVAPI_DRS_NGX_DLSS_FG_OVERRIDE = "on";
+      DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE_RENDER_PRESET_SELECTION = "render_preset_latest";
     };
     hardware = {
       nvidia = {

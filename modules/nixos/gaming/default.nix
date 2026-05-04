@@ -15,7 +15,6 @@
     optional
     versions
     ;
-  inherit (lib.strings) toShellVars optionalString;
   inherit (lib.TM.package-helper) pins;
 in {
   options.TM.gaming = {
@@ -43,32 +42,13 @@ in {
         if config.TM.hasHDRDisplay
         then 1
         else 0;
+      DXVK_HUD = mkDefault "compiler";
     };
     programs.rsi-launcher = {
       inherit (cfg.rsiLauncher) enable;
       package = pkgs.rsi-launcher-git;
       umu.enable = false;
       disableEAC = false;
-      preCommands = let
-        vars = {
-          DXVK_HUD = "compiler";
-          MANGO_HUD = 1;
-          PROTON_ENABLE_NGX_UPDATER = "1";
-          DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE = "on";
-          DXVK_NVAPI_DRS_NGX_DLSS_RR_OVERRIDE = "on";
-          DXVK_NVAPI_DRS_NGX_DLSS_FG_OVERRIDE = "on";
-          DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE_RENDER_PRESET_SELECTION = "render_preset_latest";
-          # NVPRESENT_ENABLE_SMOOTH_MOTION = 1;
-        };
-        hdrVars =
-          optionalString config.TM.hasHDRDisplay
-          ''
-            export DXVK_HDR=1
-          '';
-      in ''
-        ${toShellVars vars}
-        ${hdrVars}
-      '';
       patchXwayland = false;
       enforceWaylandDrv = true;
     };
