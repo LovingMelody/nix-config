@@ -51,27 +51,6 @@ in {
     };
   };
   config = mkIf cfg.enable {
-    xdg.configFile."openvr/openvrpaths.vrpath" = mkIf ((osConfig.TM.vr.enable or false) && (osConfig.TM.vr.useWivrn or false)) {
-      text = let
-        steam = "${config.xdg.dataHome}/Steam";
-      in
-        builtins.toJSON {
-          version = 1;
-          jsonid = "vrpathreg";
-
-          external_drivers = null;
-          config = ["${steam}/config"];
-
-          log = ["${steam}/logs"];
-
-          "runtime" = [
-            "${pkgs.xrizer}/lib/xrizer"
-            "${config.home.homeDirectory}/.local/share/Steam/steamapps/common/SteamVR"
-            # OR
-            #"${pkgs.opencomposite}/lib/opencomposite"
-          ];
-        };
-    };
     # TM.reshade.enable = true;
     programs.mangohud = {
       enable = true;
@@ -105,6 +84,27 @@ in {
     };
     xdg = {
       configFile = {
+        "openvr/openvrpaths.vrpath" = mkIf ((osConfig.TM.vr.enable or false) && (osConfig.TM.vr.useWivrn or false)) {
+          text = let
+            steam = "${config.xdg.dataHome}/Steam";
+          in
+            builtins.toJSON {
+              version = 1;
+              jsonid = "vrpathreg";
+
+              external_drivers = null;
+              config = ["${steam}/config"];
+
+              log = ["${steam}/logs"];
+
+              "runtime" = [
+                "${pkgs.xrizer}/lib/xrizer"
+                "${config.home.homeDirectory}/.local/share/Steam/steamapps/common/SteamVR"
+                # OR
+                #"${pkgs.opencomposite}/lib/opencomposite"
+              ];
+            };
+        };
         "dxvk-nvapi/x32" = {
           inherit (cfg.dxvk-nvapi) enable;
           source = "${cfg.dxvk-nvapi.package}/x32";
