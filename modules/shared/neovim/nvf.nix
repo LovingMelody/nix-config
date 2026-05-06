@@ -74,7 +74,6 @@ in {
       sql.enable = false;
       java.enable = false;
       kotlin.enable = false;
-      ts.enable = true;
       go.enable = true;
       lua.enable = true;
       zig.enable = false;
@@ -101,7 +100,6 @@ in {
       haskell.enable = false;
       ruby.enable = false;
 
-      tailwind.enable = false;
       svelte.enable = false;
 
       # Nim LSP is broken on Darwin and therefore
