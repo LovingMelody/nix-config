@@ -44,7 +44,10 @@
     "sha512": "a73231af1361f264e06537e3a420728c8016440a49eda20c86e8644f5d220a75f220b9ba528ef8daaf5383d9e2a65799df54837560ca796b0e2ba2718665c82e",
     "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/HztkP6GQ/sit%21-1.2.6.0%2B26.1.1.jar"
   },
-  "Gyser": null,
+  "Gyser": {
+    "sha512": "490b134ccafa3b25154b09a787717d6fcebebb97b8e00317aefc3c2257e76c888181793a772d84b4bbb72b6534e17957451383adc71dc68822688f335dfc319b",
+    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/q4Pg0AcC/Geyser-Fabric-2.10.0-b1138.jar"
+  },
   "ServerCore": {
     "sha512": "ba8322c7569680f40f4162693623f488c17df0e8d394aaee20bbc8e1a3097aab3093896ea96e6839a36f817c1657bed89ba501316fa3980a15a5c0618e2d1a9e",
     "url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/P8k080Af/servercore-fabric-1.5.16%2B26.1.jar"
