@@ -23,6 +23,15 @@ creation_rules:
           - *host_Snow
           - *host_Rotom
           - *host_Vulpix
+  - path_regex: secrets/fonts/[^/]+\.(yaml|json|env|ini|bin)$
+    key_groups:
+      - pgp:
+        age:
+          - *admin_Melody
+          - *admin_Melody2
+          - *host_Snow
+          - *host_Rotom
+          - *host_Vulpix
   - path_regex: secrets/longview/[^/]+\.(yaml|json|env|ini)$
     key_groups:
       - pgp:
