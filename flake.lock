@@ -943,11 +943,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777083115,
-        "narHash": "sha256-XCbtVl3vRo/+jCm/zf3J32prejaykxUkBmk2UfAocrM=",
+        "lastModified": 1778189432,
+        "narHash": "sha256-0kp61lsr5Ni7/p21iAtwGBxPtgqxnG4/Dh5rkj9/nfM=",
         "owner": "LovingMelody",
         "repo": "nix-reshade",
-        "rev": "633d9d8a425046f3b0cb1fdd33fec82d902d3034",
+        "rev": "bc43c5a70a8d377282767b21d2dcd21071ef6d9c",
         "type": "github"
       },
       "original": {
