@@ -242,7 +242,7 @@
       };
     };
     lix = {
-      url = "https://git.lix.systems/lix-project/lix/archive/2.95.2.tar.gz";
+      url = "https://git.lix.systems/lix-project/lix/archive/2.95.3.tar.gz";
       flake = false;
     };
 
