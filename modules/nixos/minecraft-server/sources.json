@@ -1,5 +1,8 @@
 {
-  "VanillaRefresh": null,
+  "VanillaRefresh": {
+    "sha512": "67eded59a3b4588dc3a3ee3b29dc8f2564d5a63f31071d5e432ac95b2bb5d3c38ace168099b3ad267f46ebbcd5d29b656554fc62ad4fd0f520f0bebffae4a908",
+    "url": "https://cdn.modrinth.com/data/gWO6Zqey/versions/Zf5WC8ox/vanilla-refresh-1.4.30.jar"
+  },
   "Terralith": {
     "sha512": "5a3be2986a624446c82a8879e34e4c7b09f6f98a1937fd4d9bcf5356b8321f0b9cebb5e567e8d00ae8161d261b108fb7c9a80ebed61f2edb8cdb0852b33cbacc",
     "url": "https://cdn.modrinth.com/data/8oi3bsk5/versions/FCzSjHeG/Terralith_26.1_v2.6.2_Fabric.jar"
@@ -41,12 +44,12 @@
     "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/GFM8zh9J/cloth-config-26.1.154.jar"
   },
   "Sit!": {
-    "sha512": "a73231af1361f264e06537e3a420728c8016440a49eda20c86e8644f5d220a75f220b9ba528ef8daaf5383d9e2a65799df54837560ca796b0e2ba2718665c82e",
-    "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/HztkP6GQ/sit%21-1.2.6.0%2B26.1.1.jar"
+    "sha512": "91004b5817c153d5324e1692aff7a72c1d3af8a4770ff3f9baad0143099b22b4dcd877f4ab331a3c3038522e8ffe678642cdd4054f9faeb99b8314d0115e8e2f",
+    "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/s1ghgeMQ/sit%21-1.2.6.2%2B26.1.jar"
   },
   "Gyser": {
-    "sha512": "490b134ccafa3b25154b09a787717d6fcebebb97b8e00317aefc3c2257e76c888181793a772d84b4bbb72b6534e17957451383adc71dc68822688f335dfc319b",
-    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/q4Pg0AcC/Geyser-Fabric-2.10.0-b1138.jar"
+    "sha512": "bd7eed8599b69e875805b79c6d871d3a109d2b763a522cfedf746cf074c846bd6c00ef0e04c8da493eaa4079bf7836664677a8668ad96c30621f59ac8c30dbda",
+    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/tWdnw6uA/Geyser-Fabric-2.10.0-b1148.jar"
   },
   "ServerCore": {
     "sha512": "ba8322c7569680f40f4162693623f488c17df0e8d394aaee20bbc8e1a3097aab3093896ea96e6839a36f817c1657bed89ba501316fa3980a15a5c0618e2d1a9e",
