@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "65cbbfc17bb7e172cb06ef69037be5b0d517b2cd",
-      "url": "https://github.com/cachyos/kernel-patches/archive/65cbbfc17bb7e172cb06ef69037be5b0d517b2cd.tar.gz",
-      "hash": "sha256-QqEC7SVMVf1vj9OoflWzP+nGewMrUNSBSf1dB8sUbqY="
+      "revision": "f1cddb07bac67a19df1d72b51c8e0f33f9fd46e4",
+      "url": "https://github.com/cachyos/kernel-patches/archive/f1cddb07bac67a19df1d72b51c8e0f33f9fd46e4.tar.gz",
+      "hash": "sha256-5SdIKosgsscCVS16RO2OjH+LK9dq6aDWDIl3ra7W95U="
     },
     "dxvk": {
       "type": "Git",
@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "877c012000d459f41af8f54b2843e7e3ad41ac8e",
+      "revision": "02bcc98cc45ffc83a318dc2380548ffb6dae3ecf",
       "url": null,
-      "hash": "sha256-sDT4t97BdyolBi+NCg7d1ac0/J3lJLlTk1QbTxzpMJs="
+      "hash": "sha256-Ph6Je4VoNm7xcxsVc+26kGXwKQKx0E3KF1csYEQK57Q="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "f7df1f777aea485f90fed63c29a345b0e2275318",
-      "url": "https://github.com/wwmm/easyeffects/archive/f7df1f777aea485f90fed63c29a345b0e2275318.tar.gz",
-      "hash": "sha256-PMmVSMajMjltYI7lMybHv8vxDEVcFtTTNT4+ivYihd8="
+      "revision": "b23af3c78f44b47d8109bb794ec2c8a9fc5e9209",
+      "url": "https://github.com/wwmm/easyeffects/archive/b23af3c78f44b47d8109bb794ec2c8a9fc5e9209.tar.gz",
+      "hash": "sha256-lTcJK+zXEiQ35QkR75a4bi8U6IjWTHjJvvgN9zMkwWw="
     },
     "gallery-dl": {
       "type": "Git",
@@ -239,9 +239,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "810cf9cc5050ad362b83798ba5c7fa635c41f4e7",
-      "url": "https://github.com/royshil/obs-backgroundremoval/archive/810cf9cc5050ad362b83798ba5c7fa635c41f4e7.tar.gz",
-      "hash": "sha256-GC+lgCUlhw/vQrUvTG4UrdUILJlfW4xeACBGTwMdd9E="
+      "revision": "19d7440662e8236bd94dfcf09b7f1c32dec1e107",
+      "url": "https://github.com/royshil/obs-backgroundremoval/archive/19d7440662e8236bd94dfcf09b7f1c32dec1e107.tar.gz",
+      "hash": "sha256-Mcq6R1FDOE3vd8SMmN05V659j6YM095xtynTjp8sxwc="
     },
     "obs-image-reaction": {
       "type": "Git",
