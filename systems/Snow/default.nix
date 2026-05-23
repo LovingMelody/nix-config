@@ -78,6 +78,7 @@ in {
             hash = "sha512-oXX4aeUc4/rIfkcUHAym2y9nkenGdNYUaFbYrsvtA8yA4C9dZ/OUopqUZDLKbdwvHUprjwoscqHyolAM+pfIKA==";
           };
     };
+    zram.memoryPercent = 150;
   };
 
   # specialisation = {
