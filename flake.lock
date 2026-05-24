@@ -762,29 +762,22 @@
         "flake-compat": [
           "flake-compat"
         ],
-        "flake-parts": [
-          "flake-parts"
-        ],
         "nix-gaming": [
           "nix-gaming"
         ],
-        "nix-github-actions": "nix-github-actions",
         "nixpkgs": [
           "nixpkgs"
-        ],
-        "systems": [
-          "systems"
         ],
         "treefmt-nix": [
           "treefmt-nix"
         ]
       },
       "locked": {
-        "lastModified": 1779417261,
-        "narHash": "sha256-Lk40ldaOoX/qBetrhOz8yr+N+C6WvfXC8euQAUpZSCw=",
+        "lastModified": 1779651643,
+        "narHash": "sha256-34fq9T2qKCMaKmkFt2fUENygl/xQC+RjZCLgZuUF7AQ=",
         "owner": "LovingMelody",
         "repo": "nix-citizen",
-        "rev": "ed9bc7952708b09ddb2f9da963b10f7fce571281",
+        "rev": "4ed7421abd0b43f769400adc868b88858351729e",
         "type": "github"
       },
       "original": {
@@ -841,27 +834,6 @@
       "original": {
         "owner": "fufexan",
         "repo": "nix-gaming",
-        "type": "github"
-      }
-    },
-    "nix-github-actions": {
-      "inputs": {
-        "nixpkgs": [
-          "nix-citizen",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1737420293,
-        "narHash": "sha256-F1G5ifvqTpJq7fdkT34e/Jy9VCyzd5XfJ9TO8fHhJWE=",
-        "owner": "nix-community",
-        "repo": "nix-github-actions",
-        "rev": "f4158fa080ef4503c8f4c820967d946c2af31ec9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "nix-github-actions",
         "type": "github"
       }
     },
