@@ -6,7 +6,6 @@
   ...
 }: let
   cfg = config.TM.gaming;
-  nvidia = osConfig.TM.MyNextGPUWillNotBeNvidia or false;
 
   enableMangoHud =
     config.programs.mangohud.settings
@@ -30,7 +29,7 @@ in {
         default = (osConfig.TM.gaming.enable or false) && config.home.username != "root";
       };
     dxvk-nvapi = {
-      enable = mkEnableOption "Enable dxvk-nvapi only meant to be used on nixos" // {default = nvidia;};
+      enable = mkEnableOption "Enable dxvk-nvapi only meant to be used on nixos" // {default = false;};
       package = mkOption {
         type = lib.types.package;
         default = pkgs.dxvk-nvapi;
@@ -41,7 +40,7 @@ in {
       enable = mkEnableOption "Prepare Wine prefix for gaming" // {default = true;};
       package = mkOption {
         type = lib.types.package;
-        default = pkgs.wineprefix-preparer-git;
+        default = pkgs.wineprefix-preparer; #-git;
       };
       paths = mkOption {
         type = lib.types.attrsOf lib.types.str;

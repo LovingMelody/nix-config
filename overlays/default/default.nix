@@ -4,7 +4,7 @@
   inputs,
   ...
 }: let
-  inherit (inputs) nixpkgs nix-reshade spicetify-nix;
+  inherit (inputs) nix-reshade spicetify-nix;
   inherit (lib.TM.package-helper) pins patchLibcuda blacklistPatches shortRev;
   # shortRev = s: builtins.substring 0 7 s;
 in
@@ -94,7 +94,7 @@ in
       version = "${o.version}-git+${pins.gallery-dl.revision}";
       src = pins.gallery-dl;
     });
-    dxvk-nvapi = final.callPackage "${self}/packages/dxvk-nvapi" {inherit pins;};
+
     inherit
       (nix-reshade.system.packages.${final.stdenv.hostPlatform.system})
       reshade
@@ -115,29 +115,6 @@ in
     nunif-iw3 = final.callPackage "${self}/packages/nunif-iw3" {inherit pins;};
     unique-basenames = final.callPackage "${self}/packages/unique-basenames" {};
     textools = final.callPackage "${self}/packages/textools" {wine = final.wine-astral;};
-    star-citizen = prev.star-citizen.override {
-      preCommands = ''
-        export DXVK_LOG_LEVEL=debug
-        export WINEDEBUG=
-      '';
-      inherit (final) wineprefix-preparer;
-      wine = final.wine-astral;
-    };
-    rsi-launcher = prev.rsi-launcher.override {
-      disableEac = false;
-      extraEnvVars = {
-        DXVK_HUD = "compiler";
-        MANGO_HUD = 1;
-        DXVK_HDR = 1;
-        NVPRESENT_ENABLE_SMOOTH_MOTION = 1;
-      };
-      preCommands = ''
-        export DXVK_LOG_LEVEL=debug
-        export WINEDEBUG=
-      '';
-      inherit (final) wineprefix-preparer;
-      wine = final.wine-astral;
-    };
     discord = discordEnableKrisp (prev.discord.override {
       withOpenASAR = false;
       withVencord = false;

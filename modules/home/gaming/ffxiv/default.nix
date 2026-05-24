@@ -264,8 +264,8 @@ in {
           '';
           executable = true;
         };
-        ".xlcore/compatibilitytool/dxvk/dxvk-nix/x32".source = pkgs.dxvk-w32 + "/bin";
-        ".xlcore/compatibilitytool/dxvk/dxvk-nix/x64".source = pkgs.dxvk-w64 + "/bin";
+        # ".xlcore/compatibilitytool/dxvk/dxvk-nix/x32".source = pkgs.dxvk-w32 + "/bin";
+        # ".xlcore/compatibilitytool/dxvk/dxvk-nix/x64".source = pkgs.dxvk-w64 + "/bin";
       };
       activation = mkIf cfg.reshade.enable {
         ffxivShaderInstall = lib-hm.dag.entryAfter ["writeBoundary"] (shaderInstallActivation cfg.reshade.package);
