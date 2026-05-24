@@ -39,11 +39,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1779569285,
-        "narHash": "sha256-6aQlbi4siL97WVhLkr3w/5TtPnEHxzNkxcdakMMQpQU=",
+        "lastModified": 1779656086,
+        "narHash": "sha256-R6ZS0lHPVEZbgCW+sGL3WpY/fh4obrsTJK+r4JdqRNY=",
         "owner": "tadfisher",
         "repo": "android-nixpkgs",
-        "rev": "8b567038ad85afb2821d9859c58cb5ae8df98060",
+        "rev": "48362b76a722d6b4c7bbb5cc898bac6297a51814",
         "type": "github"
       },
       "original": {
@@ -773,11 +773,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1779651643,
-        "narHash": "sha256-34fq9T2qKCMaKmkFt2fUENygl/xQC+RjZCLgZuUF7AQ=",
+        "lastModified": 1779656157,
+        "narHash": "sha256-dA6u30HIKBACOYuzQHHaBIDBFnic4iaNh+nHEj2OLwg=",
         "owner": "LovingMelody",
         "repo": "nix-citizen",
-        "rev": "4ed7421abd0b43f769400adc868b88858351729e",
+        "rev": "e818de97b42cd0384efda2d6d257ae2f54bcb259",
         "type": "github"
       },
       "original": {
