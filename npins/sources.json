@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "b23af3c78f44b47d8109bb794ec2c8a9fc5e9209",
-      "url": "https://github.com/wwmm/easyeffects/archive/b23af3c78f44b47d8109bb794ec2c8a9fc5e9209.tar.gz",
-      "hash": "sha256-lTcJK+zXEiQ35QkR75a4bi8U6IjWTHjJvvgN9zMkwWw="
+      "revision": "8905ba6c10d40881f542a4caf6bfdcccb9509ebe",
+      "url": "https://github.com/wwmm/easyeffects/archive/8905ba6c10d40881f542a4caf6bfdcccb9509ebe.tar.gz",
+      "hash": "sha256-RPMdUEDcoddkCrOmhMPANDFjeNB2VlCXqYrvkcFU+is="
     },
     "gallery-dl": {
       "type": "Git",
@@ -339,10 +339,10 @@
       "version_upper_bound": null,
       "release_prefix": "rb-",
       "submodules": true,
-      "version": "rb-v1.4.0.3",
-      "revision": "956b384ee5fa6e93c9a59e211d8bd7f998aea037",
+      "version": "rb-v1.4.0.4",
+      "revision": "998582115a39bdf64d82ad5903f83eab0947a667",
       "url": null,
-      "hash": "sha256-t4PiERGpyOvEO5ehwD8m4WYDx84Rg1SOLP5BBzZ/Bes="
+      "hash": "sha256-LQU+4GAMwAFPSIlCAeUHNdEQ2D0pmpkN1y74Yt9jzqA="
     }
   },
   "version": 8
