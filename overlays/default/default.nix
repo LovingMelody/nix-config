@@ -7,7 +7,6 @@
   inherit (inputs) nixpkgs nix-reshade spicetify-nix;
   inherit (lib.TM.package-helper) pins patchLibcuda blacklistPatches shortRev;
   # shortRev = s: builtins.substring 0 7 s;
-  allowGplAsync = pins.dxvk-gplasync.revision != "159ee8ef743d18769dfea284ea95393aca6b8421";
 in
   final: prev: let
     # pinnedOverlay = pkg:
@@ -95,11 +94,6 @@ in
       version = "${o.version}-git+${pins.gallery-dl.revision}";
       src = pins.gallery-dl;
     });
-    dxvk_2 = prev.dxvk_2.overrideAttrs {
-      src = pins.dxvk;
-      version = "git+${pins.dxvk.revision}";
-    };
-    dxvk = final.callPackage "${nixpkgs}/pkgs/by-name/dx/dxvk/package.nix" {};
     dxvk-nvapi = final.callPackage "${self}/packages/dxvk-nvapi" {inherit pins;};
     inherit
       (nix-reshade.system.packages.${final.stdenv.hostPlatform.system})
@@ -144,42 +138,6 @@ in
       inherit (final) wineprefix-preparer;
       wine = final.wine-astral;
     };
-    dxvk-w64 = prev.dxvk-w64.overrideAttrs {
-      pname =
-        if allowGplAsync
-        then "dxvk-gplasync"
-        else "dxvk";
-      src = pins.dxvk;
-      version = "git+${pins.dxvk.revision}";
-      patches = lib.optionals allowGplAsync [
-        "${pins.dxvk-gplasync}/patches/dxvk-gplasync-master.patch"
-        "${pins.dxvk-gplasync}/patches/global-dxvk.conf.patch"
-      ];
-    };
-    dxvk-w32 = prev.dxvk-w32.overrideAttrs {
-      pname =
-        if allowGplAsync
-        then "dxvk-gplasync"
-        else "dxvk";
-      src = pins.dxvk;
-      version = "git+${pins.dxvk.revision}";
-      patches = lib.optionals allowGplAsync [
-        "${pins.dxvk-gplasync}/patches/dxvk-gplasync-master.patch"
-        "${pins.dxvk-gplasync}/patches/global-dxvk.conf.patch"
-      ];
-    };
-    vkd3d-proton-w64 = prev.vkd3d-proton-w64.overrideAttrs {
-      src = pins.vkd3d-proton;
-      version = "git+${pins.vkd3d-proton.revision}";
-    };
-    vkd3d-proton-w32 = prev.vkd3d-proton-w32.overrideAttrs {
-      src = pins.vkd3d-proton;
-      version = "git+${pins.vkd3d-proton.revision}";
-    };
-    wineprefix-preparer = final.callPackage ./wineprefix-preparer.nix {
-      inherit (final) dxvk-w64 dxvk-w32 vkd3d-proton-w64 vkd3d-proton-w32;
-    };
-    wineprefix-preparer-git = final.wineprefix-preparer;
     discord = discordEnableKrisp (prev.discord.override {
       withOpenASAR = false;
       withVencord = false;
