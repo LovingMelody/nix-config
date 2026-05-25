@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "08aa4fbe46dfe2cda179448e8a0965efa2ada7b6",
-      "url": "https://github.com/wwmm/easyeffects/archive/08aa4fbe46dfe2cda179448e8a0965efa2ada7b6.tar.gz",
-      "hash": "sha256-xdC0JqM939Jbx9FHJbtJHo7xP58BVkJ8omdY4arwcV8="
+      "revision": "d4fbec31b450f228b8d79fec047e667ccd7d92f7",
+      "url": "https://github.com/wwmm/easyeffects/archive/d4fbec31b450f228b8d79fec047e667ccd7d92f7.tar.gz",
+      "hash": "sha256-5WHO0WDPVSYCryzQ01+EzhrUFOk44Ji1u7M+LlFeYss="
     },
     "gallery-dl": {
       "type": "Git",
