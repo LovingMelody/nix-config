@@ -51,10 +51,10 @@
 
   services.fwupd.enable = true;
   hardware = {
-    openrazer = {
-      enable = true;
-      users = [config.users.users.melody.name];
-    };
+    # openrazer = {
+    #   enable = true;
+    #   users = [config.users.users.melody.name];
+    # };
   };
   networking.interfaces.enp7s0.wakeOnLan.enable = true;
   # fileSystems."/vault".neededForBoot = true;
