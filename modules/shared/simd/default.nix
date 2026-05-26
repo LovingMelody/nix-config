@@ -36,7 +36,7 @@ in {
       default = fromOS [
         "simd"
         "arch"
-      ] "x86-64-v2";
+      ] "x86-64-v3";
       description = ''
         Microarchetecture string for gcc march
         Can be determined with ``nix run nixpkgs#gcc -- -march=native -Q --help=target | grep march";
