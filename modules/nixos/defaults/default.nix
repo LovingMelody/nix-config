@@ -289,10 +289,12 @@ fhsenv}/usr/lib64 $out/lib")
                 submissionNick = mkDefault "geoclue";
               };
             };
+
             nixpkgs = {
               config = {
                 allowUnfree = true;
                 cudaSupport = config.TM.MyNextGPUWillNotBeNvidia or false;
+                cudaCapabilities = ["8.6"];
               };
               overlays =
                 nixpkgs-overlays

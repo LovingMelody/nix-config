@@ -3,8 +3,6 @@
   pkgs,
   lib,
   inputs,
-  nixpkgs-overlays,
-  osConfig ? {},
   ...
 }: let
   inherit
@@ -27,15 +25,6 @@ in {
 
   config = mkIf cfg.enable {
     qt.enable = lib.mkForce config.TM.isGui;
-    nixpkgs = {
-      config = {
-        allowUnfree = true;
-        cudaSupport = config.TM.MyNextGPUWillNotBeNvidia or false;
-        cudaCapabilities = ["8.6"];
-
-        overlays = mkIf (! (osConfig.home-manager.useGlobalPkgs or false)) nixpkgs-overlays;
-      };
-    };
     nix = {
       registry = mapAttrs (_: v: {flake = v;}) inputs;
       nixPath = mapAttrsToList (k: v: "${k}=${v.to.path}") config.nix.registry;
