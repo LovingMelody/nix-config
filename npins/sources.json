@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "02bcc98cc45ffc83a318dc2380548ffb6dae3ecf",
+      "revision": "fbd59a3ed6684e482379ed937f9e3113eba1c220",
       "url": null,
-      "hash": "sha256-Ph6Je4VoNm7xcxsVc+26kGXwKQKx0E3KF1csYEQK57Q="
+      "hash": "sha256-FTT2IhSE477LiwaQnCFDJjlRaa17xMQJtvnesvMZIJo="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "d4fbec31b450f228b8d79fec047e667ccd7d92f7",
-      "url": "https://github.com/wwmm/easyeffects/archive/d4fbec31b450f228b8d79fec047e667ccd7d92f7.tar.gz",
-      "hash": "sha256-5WHO0WDPVSYCryzQ01+EzhrUFOk44Ji1u7M+LlFeYss="
+      "revision": "6b4656abcb38c18f538e49532ef0570740869950",
+      "url": "https://github.com/wwmm/easyeffects/archive/6b4656abcb38c18f538e49532ef0570740869950.tar.gz",
+      "hash": "sha256-SUvsKYRotibtO0QlbGxsegbzSx3kVPX+Hw7E2p49K5w="
     },
     "gallery-dl": {
       "type": "Git",
@@ -171,9 +171,9 @@
       },
       "branch": "main",
       "submodules": true,
-      "revision": "a8ce9b6aa14cc10f0396bbb74a16ca12ed3990dc",
+      "revision": "8a00ff79309eb4a117bea1d16eb56a4fb9dc958c",
       "url": null,
-      "hash": "sha256-S9tPlHugYdg5dbOW4OyDPPfVhxBg6purYhc+Bgt3ovM="
+      "hash": "sha256-hdEOGz2WfUiF51yxLUwbpv5Tb4lfhXwvHpHE2hb7+sE="
     },
     "mpv": {
       "type": "Git",
@@ -184,9 +184,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "1ac687d791460736e16c0e0c2b17f422b4bdf1ee",
-      "url": "https://github.com/mpv-player/mpv/archive/1ac687d791460736e16c0e0c2b17f422b4bdf1ee.tar.gz",
-      "hash": "sha256-PEjnOk31xO0AxLdxzQiYK2IsEo7dKO19o6sDHPMJZj4="
+      "revision": "427e4bf25dd199c80018dbf48dce4f266dcdfd7e",
+      "url": "https://github.com/mpv-player/mpv/archive/427e4bf25dd199c80018dbf48dce4f266dcdfd7e.tar.gz",
+      "hash": "sha256-2tKLl5yjIKDyOc+4YpIUK0YxCGFghLJnDU0JIxBhAXM="
     },
     "npins": {
       "type": "GitRelease",
@@ -239,9 +239,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "a6df7ba9a36b2446d679cbd1ef85e4275935ae20",
-      "url": "https://github.com/royshil/obs-backgroundremoval/archive/a6df7ba9a36b2446d679cbd1ef85e4275935ae20.tar.gz",
-      "hash": "sha256-XaZ6KWvXuQ3ooRtC+MzwBnmKdLt8nnX4kurux5QBZTE="
+      "revision": "02524d7c19f16a4fc80fb703d2594688e90f760c",
+      "url": "https://github.com/royshil/obs-backgroundremoval/archive/02524d7c19f16a4fc80fb703d2594688e90f760c.tar.gz",
+      "hash": "sha256-ipU0KD9y6mxaTgWrWZsVjyD3thcSFpQmjKcnri+TQo4="
     },
     "obs-image-reaction": {
       "type": "Git",
