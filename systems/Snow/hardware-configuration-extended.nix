@@ -76,7 +76,7 @@ in {
       };
     };
     openrazer = {
-      enable = true;
+      enable = false; # Currently broken :(
       users = [config.users.users.melody.name];
     };
     keyboard.qmk.enable = true;
