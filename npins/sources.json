@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "053c1ccf993d02b7fb7e12109c02cb8562fb951c",
+      "revision": "cf983c1a87f3075a6b73ee4aa00d24db8c263cf5",
       "url": null,
-      "hash": "sha256-wRdyErUeOyt7i7wXij+57KRIk8EZT/5cXWAH/pMPTTQ="
+      "hash": "sha256-P81uPe7tOP+Giu/nUhqkCfSjfNl4cfUeT6DzQelIRzo="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -157,10 +157,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v0.47.0",
-      "revision": "b60844354b368c904906c4fb7cce18372f2e0e79",
-      "url": "https://api.github.com/repos/kovidgoyal/kitty/tarball/refs/tags/v0.47.0",
-      "hash": "sha256-QI+h7LSpJ5VYae3XdwDhKmpLqEGpmSulXP/mTop3gio="
+      "version": "v0.47.1",
+      "revision": "595fa217d9b271af08f8a08b5e526e392a1492b1",
+      "url": "https://api.github.com/repos/kovidgoyal/kitty/tarball/refs/tags/v0.47.1",
+      "hash": "sha256-/FOeJiC9SNE/k7SzXl5nmwdfKiFlKa0C0IuIph4cRxQ="
     },
     "linux-wallpaperengine": {
       "type": "Git",
@@ -239,9 +239,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "02524d7c19f16a4fc80fb703d2594688e90f760c",
-      "url": "https://github.com/royshil/obs-backgroundremoval/archive/02524d7c19f16a4fc80fb703d2594688e90f760c.tar.gz",
-      "hash": "sha256-ipU0KD9y6mxaTgWrWZsVjyD3thcSFpQmjKcnri+TQo4="
+      "revision": "274169e9440d574c2b93cc92751b96a68b443759",
+      "url": "https://github.com/royshil/obs-backgroundremoval/archive/274169e9440d574c2b93cc92751b96a68b443759.tar.gz",
+      "hash": "sha256-DI99di/4PqeZ+pFORc9j7+wL0/JPX3wCImHuFL3hmk4="
     },
     "obs-image-reaction": {
       "type": "Git",
@@ -324,9 +324,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "492fda4658ccdb9e5c24c16cbadcf3d906c8e732",
+      "revision": "d30c5eb1baba8474cbdd3a220dc7f669a84e3780",
       "url": null,
-      "hash": "sha256-j9dAETVbE3z3OMZnYnWy7tzTDi1+HLwVFb/mv1fxIf8="
+      "hash": "sha256-SdZrFKyUOInNPnHw2WOEfQG6CI9vvEZT4dIL4GK8nl0="
     },
     "xivlauncher-rb": {
       "type": "GitRelease",
