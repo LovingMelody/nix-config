@@ -47,6 +47,7 @@ in {
     programs.rsi-launcher = {
       inherit (cfg.rsiLauncher) enable;
       package = pkgs.rsi-launcher-git;
+      preCommands = "export MANGOHUD=1";
       umu.enable = false;
       disableEAC = false;
       patchXwayland = false;
