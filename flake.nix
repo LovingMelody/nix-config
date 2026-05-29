@@ -72,7 +72,7 @@
             [
               "${self}/systems/${host}"
               ({config, ...}: {
-                system.stateVersion = (import "${self}/stateVersion.nix").nixos;
+                system.stateVersion = lib.TM.stateVersion.nixos;
                 networking.hostName = host;
                 home-manager = {
                   useGlobalPkgs = true;
