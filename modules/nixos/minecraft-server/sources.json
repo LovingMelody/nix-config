@@ -56,15 +56,15 @@
     "url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/2siue87F/servercore-fabric-1.5.17%2B26.1.2.jar"
   },
   "Lithium": {
-    "sha512": "b6f948576b062f83f1b13033c3f1121a3d4add8f8294415f8d283caeb91ca28acc1e19fb021a8807a034ff9875ef0dd9b6054734d552e072336aa060a106044f",
-    "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/Nt50x0fz/lithium-fabric-0.24.3%2Bmc26.1.2.jar"
+    "sha512": "5d439660968bc06deea62a3b76ce46efa6907c460602d6e6d70fd5078a22f41acbca5d1177ee8f73a354a59ca3981f33ee20dafddffbf41ff0b4bfbfc657b6ca",
+    "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/rzrH7czY/lithium-fabric-0.24.4%2Bmc26.1.2.jar"
   },
   "SoundPhysicsRemastered": {
     "sha512": "7dd35bbe930d79a303564c61bf9e9de53480d0c602e6bd6889cbcff52969d76fbc598ca15dfd7a22219e5702f9c89ca5d7c8619d4f9612775a2053cd55e7a819",
     "url": "https://cdn.modrinth.com/data/qyVF9oeo/versions/y3vsp51g/sound-physics-remastered-fabric-1.5.1%2B26.1.2.jar"
   },
   "Vivecraft": {
-    "sha512": "3228489a2ff1191d90a47c0a50d11aa19c6a818032c8657bd530e7c1fbd7cdfca5c2e3062c9da2de868407b83e94f16c57bc44d4537d9538b08f1d9f584037a9",
-    "url": "https://cdn.modrinth.com/data/wGoQDPN5/versions/dAFnGtKk/vivecraft-26.1.2-1.3.8-fabric.jar"
+    "sha512": "2b33e535a65c34133905e591ed5c2ee0841fef06f69881981dd7c85a98e65c7cb662d7f60bfe74d52d052c542a5aab9ffbc1b4bd41b090a20fc1aef48cb3134b",
+    "url": "https://cdn.modrinth.com/data/wGoQDPN5/versions/nVVG5O02/vivecraft-26.1.2-1.3.10-fabric.jar"
   }
 }
