@@ -158,6 +158,7 @@ in {
           umu-launcher
           faugus-launcher
           protonplus
+          low-latency-layer
         ]);
     };
 
