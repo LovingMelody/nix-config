@@ -265,9 +265,7 @@
       inputs = {
         nix-gaming.follows = "nix-gaming";
         nixpkgs.follows = "nixpkgs";
-        systems.follows = "systems";
         treefmt-nix.follows = "treefmt-nix";
-        flake-parts.follows = "flake-parts";
         flake-compat.follows = "flake-compat";
       };
     };
@@ -322,7 +320,6 @@
       url = "github:nix-community/nixos-anywhere";
       inputs = {
         disko.follows = "disko";
-        flake-parts.follows = "flake-parts";
         nixpkgs.follows = "nixpkgs";
         treefmt-nix.follows = "treefmt-nix";
       };
@@ -334,7 +331,10 @@
     #     rust-overlay.follows = "rust-overlay";
     #   };
     # };
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixos-wsl = {
       url = "github:nix-community/NixOS-WSL";
       inputs = {
