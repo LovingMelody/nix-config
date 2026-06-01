@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "dbefb934823858ecd432bf4d8336eacf97fdabdb",
+      "revision": "be4ac08faa1ba7546193995ac6e45ca8c07763d4",
       "url": null,
-      "hash": "sha256-GO3yr+dxRFxN7pmQwJm7fFmyQvtkmgCra8qnbutXkwg="
+      "hash": "sha256-gERp3JLLk6lPGZ5LuajRcVsMWLqVXDoJmGQTP0jE018="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -184,9 +184,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "13a3e3ad0e7d21c0db7c85aab3c8f63b47f784d4",
-      "url": "https://github.com/mpv-player/mpv/archive/13a3e3ad0e7d21c0db7c85aab3c8f63b47f784d4.tar.gz",
-      "hash": "sha256-1L13vGwKsuipV3gRE2ZcJQS7nSJzTAHESBRQDbAKX5w="
+      "revision": "44a9b03f244f24e0ea443370cf2cfae0da5767f9",
+      "url": "https://github.com/mpv-player/mpv/archive/44a9b03f244f24e0ea443370cf2cfae0da5767f9.tar.gz",
+      "hash": "sha256-M+JmQTzCSCbXvODDXQcTImOa2XE9LELq9nXm6FjB+lk="
     },
     "npins": {
       "type": "GitRelease",
@@ -239,9 +239,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "3ba2248e7a0b7ca1e19dc52f59a073c257251f72",
-      "url": "https://github.com/royshil/obs-backgroundremoval/archive/3ba2248e7a0b7ca1e19dc52f59a073c257251f72.tar.gz",
-      "hash": "sha256-Ew8c8Lr1+pqq4+0QbvpD7H5qh4OwLdL0xJ7nFMC7bK4="
+      "revision": "281a254024198677cf2f47548062b6ea22252e3d",
+      "url": "https://github.com/royshil/obs-backgroundremoval/archive/281a254024198677cf2f47548062b6ea22252e3d.tar.gz",
+      "hash": "sha256-ZhJCPfM6jD8U0XEsYMgkr3Px7w8iaZNPdp0ee4SbT+g="
     },
     "obs-image-reaction": {
       "type": "Git",
@@ -339,10 +339,10 @@
       "version_upper_bound": null,
       "release_prefix": "rb-",
       "submodules": true,
-      "version": "rb-v1.4.0.5",
-      "revision": "d2f8a3e4d5811df44001fd3ff89bbfb272457662",
+      "version": "rb-v1.4.0.7",
+      "revision": "26db31a364da7c0be481eeb17d5aea9ea540d461",
       "url": null,
-      "hash": "sha256-pmOEfr5so2Ib6EsbVZk9KAKwt5WH6seq3XE0/hpeqlM="
+      "hash": "sha256-ErTNmxnHJyzeJBvVWHi+8MiU6HgsWojsWxdg12yBorA="
     }
   },
   "version": 8
