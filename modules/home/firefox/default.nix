@@ -91,6 +91,8 @@ in {
           "browser.aboutConfig.showWarning" = false;
           "general.autoScroll" = true;
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+          "gfx.color_management.hdr" = config.TM.hasHDRDisplay;
+          "gfx.color_management.hdr.force_enabled" = config.TM.hasHDRDisplay;
         };
         # extraConfig = builtins.readFile "${shyfox}/user.js";
         search = {
