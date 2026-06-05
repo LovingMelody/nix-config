@@ -85,6 +85,7 @@
                       inputs.nvf.homeManagerModules.default
                       inputs.sops-nix.homeManagerModules.sops
                       inputs.stylix.homeModules.stylix
+                      inputs.nixcord.homeModules.default
                     ]
                     ++ (lib.mapAttrsToList (_: m: m) self.homeModules);
                 };
@@ -314,6 +315,15 @@
         # devshell.follows = "devshell";
         # flake-utils.follows = "flake-utils";
         nixpkgs.follows = "nixpkgs";
+      };
+    };
+    nixcord = {
+      url = "github:FlameFlag/nixcord";
+      inputs = {
+        flake-parts.follows = "flake-parts";
+        nixpkgs.follows = "nixpkgs";
+        nixpkgs-nixcord.follows = "nixpkgs";
+        flake-compat.follows = "flake-compat";
       };
     };
     nixos-anywhere = {

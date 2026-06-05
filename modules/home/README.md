@@ -12,7 +12,6 @@
 | chrome       | ./chrome       | Install chrome w/ plugins and themed through stylix              |
 | defaults     | ./defaults     | Sensible defaults                                                |
 | desktop      | ./desktop      | Home-manager preset for desktop environments                     |
-| discord      | ./discord      | Install discord and configure w/ stylix theme and add plugins    |
 | eww          | ./eww          | eww configuration (Hiatus)                                       |
 | firefox      | ./firefox      | configure firefox w/ addons & theme                              |
 | fish         | ./fish         | fish shell config                                                |

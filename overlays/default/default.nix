@@ -14,30 +14,30 @@ in
     #     src = pins.${pkg};
     #     version = pins.${pkg}.version or "git+${pins.${pkg}.revision}";
     #   };
-    discordEnableKrisp = pkg: let
-      patch-krisp = prev.writers.writePython3 "krisp-patcher" {
-        libraries = with prev.python3Packages; [
-          capstone
-          pyelftools
-        ];
-        # Ignore syntax checker error codes that affect krisp-patcher.py
-        flakeIgnore = [
-          "E501"
-          "F403"
-          "F405"
-        ];
-      } (builtins.readFile ./discord-krisp-patcher.py);
-      binaryName = pkg.meta.mainProgram;
-      node_module = "\\$HOME/.config/discord/${prev.discord.version}/modules/discord_krisp/discord_krisp.node";
-    in
-      pkg.overrideAttrs (o: {
-        postInstall =
-          o.postInstall
-          + ''
-            wrapProgramShell $out/opt/${binaryName}/${binaryName} \
-              --run "${patch-krisp} ${node_module}"
-          '';
-      });
+    # discordEnableKrisp = pkg: let
+    #   patch-krisp = prev.writers.writePython3 "krisp-patcher" {
+    #     libraries = with prev.python3Packages; [
+    #       capstone
+    #       pyelftools
+    #     ];
+    #     # Ignore syntax checker error codes that affect krisp-patcher.py
+    #     flakeIgnore = [
+    #       "E501"
+    #       "F403"
+    #       "F405"
+    #     ];
+    #   } (builtins.readFile ./discord-krisp-patcher.py);
+    #   binaryName = pkg.meta.mainProgram;
+    #   node_module = "\\$HOME/.config/discord/${prev.discord.version}/modules/discord_krisp/discord_krisp.node";
+    # in
+    #   pkg.overrideAttrs (o: {
+    #     postInstall =
+    #       o.postInstall
+    #       + ''
+    #         wrapProgramShell $out/opt/${binaryName}/${binaryName} \
+    #           --run "${patch-krisp} ${node_module}"
+    #       '';
+    #   });
     /*
     # https://github.com/NixOS/nixpkgs/issues/445447
     cmakeCompatFix = pkg: brokenVersion: pkg.overrideAttrs (o: {cmakeFlags = (o.cmakeFlags or []) ++ lib.optional (brokenVersion || (lib.versionOlder o.version brokenVersion)) "-DCMAKE_POLICY_VERSION_MINIMUM=3.5";});
@@ -115,21 +115,6 @@ in
     nunif-iw3 = final.callPackage "${self}/packages/nunif-iw3" {inherit pins;};
     unique-basenames = final.callPackage "${self}/packages/unique-basenames" {};
     textools = final.callPackage "${self}/packages/textools" {wine = final.wine-astral;};
-    discord = discordEnableKrisp (prev.discord.override {
-      withOpenASAR = false;
-      withVencord = false;
-      withMoonlight = true;
-    });
-    discord-canary = discordEnableKrisp (prev.discord-canary.override {
-      withOpenASAR = false;
-      withVencord = true;
-      withMoonlight = false;
-    });
-    discord-ptb = discordEnableKrisp (prev.discord-ptb.override {
-      withOpenASAR = false;
-      withVencord = false;
-      withMoonlight = false;
-    });
 
     obs-studio = prev.obs-studio.overrideAttrs (o: {
       buildInputs = o.buildInputs ++ [final.rnnoise final.libsysprof-capture];

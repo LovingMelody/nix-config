@@ -970,6 +970,35 @@
         "type": "github"
       }
     },
+    "nixcord": {
+      "inputs": {
+        "flake-compat": [
+          "flake-compat"
+        ],
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "nixpkgs-nixcord": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1780678773,
+        "narHash": "sha256-Kcs/5iJcmbiNKAJThfyG3NAxAxDf7kYyKDr0ad6zKt4=",
+        "owner": "FlameFlag",
+        "repo": "nixcord",
+        "rev": "8929f18bddddc8848c3263f898d49a9076793fb8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "FlameFlag",
+        "repo": "nixcord",
+        "type": "github"
+      }
+    },
     "nixos-anywhere": {
       "inputs": {
         "disko": [
@@ -1398,6 +1427,7 @@
         "nix-minecraft": "nix-minecraft",
         "nix-reshade": "nix-reshade",
         "nix-topology": "nix-topology",
+        "nixcord": "nixcord",
         "nixos-anywhere": "nixos-anywhere",
         "nixos-hardware": "nixos-hardware",
         "nixos-wsl": "nixos-wsl",
