@@ -180,6 +180,7 @@ in {
     {
       catppuccin = {
         enable = true;
+        autoEnable = true;
         cache.enable = true;
         flavor = toLower cfg.flavor;
         accent = toLower cfg.accent;

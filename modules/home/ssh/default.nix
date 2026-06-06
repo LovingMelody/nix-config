@@ -7,16 +7,17 @@
   inherit (lib) mkEnableOption mkIf;
 in {
   options.TM.programs.ssh.enable = mkEnableOption "ssh";
-
   config = mkIf cfg.enable {
     programs.ssh = {
       enable = true;
-      matchBlocks = {
-        "*" = {
-          forwardAgent = true;
+      enableDefaultConfig = false;
+      /**/
+      settings = {
+        "Host *" = {
+          # forwardAgent = true;
           compression = true;
         };
-        "eu.nixbuild.net" = {
+        "Host eu.nixbuild.net" = {
           identitiesOnly = true;
           identityFile = "~/.ssh/nixbuild.pub";
         };

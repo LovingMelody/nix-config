@@ -53,13 +53,11 @@ in {
         signByDefault = true;
       };
     };
-    programs.ssh.matchBlocks = mkIf cfg.sshAgent {
-      "*".extraOptions = {
-        identityAgent =
-          if !stdenv.isDarwin
-          then "${config.home.homeDirectory}/.1password/agent.sock"
-          else "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock";
-      };
+    programs.ssh.settings = mkIf cfg.sshAgent {
+      "Host *".identityAgent =
+        if !stdenv.isDarwin
+        then "${config.home.homeDirectory}/.1password/agent.sock"
+        else "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock";
     };
   };
 }
