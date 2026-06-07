@@ -28,16 +28,16 @@
     "url": "https://cdn.modrinth.com/data/nPZr02ET/versions/lxYeKU5D/netherportalfix-fabric-26.1-26.1.0.1.jar"
   },
   "ConcurrentChunkManagementEngine": {
-    "sha512": "c2f0ebd2149e0c0b5a36f9288cc43ca609936988b808fc026f04f470372153d2d220499ea36afb267b9e64e1535f8000d34e2d2602e47c7095ec356b19d7a4fe",
-    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/ViTwuKCV/c2me-fabric-mc26.1.2-0.4.0-alpha.0.2.jar"
+    "sha512": "87d368dc3dd10b656142b064f68e5eaffdd168544f184d47fdf8a18ffe8b060f1ab5403ba59d2bc9af3233d3bc67d802c12d34c9624f4abb8f851dbe09962a04",
+    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/MmyZoUyp/c2me-fabric-mc26.1.2-0.4.0-alpha.0.4.jar"
   },
   "Krypton": {
     "sha512": "14233210283a76f3cf435a3b8ddbcbd65a858d2b1a10b88ff643c0a01486dfd2bf1843bd3456cd4fb86cbb3b06f2dea0c4e663b1976a48e96de16d3b5a707ec9",
     "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/kYAGItyj/krypton-0.3.0.jar"
   },
   "FabricAPI": {
-    "sha512": "238c793b720ed21d2d5b564eca88c714cf2188f7b0fb1fd30864660f80901e2b4dad273994b6f77de3c0aa365f930ed8aaccffac49b36c6456b153b52d5d21dc",
-    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/E1mjhYMF/fabric-api-0.150.0%2B26.1.2.jar"
+    "sha512": "d087349842b962414ba89248f9ef7bc75f537848f4d783435de633ddae8924cd50fd9bffc606aae0f1c2c3ed9b4339623244e1fd34c6b9c17f977528d1303cdd",
+    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/yALY9gHM/fabric-api-0.151.0%2B26.1.2.jar"
   },
   "ClothConfigAPI": {
     "sha512": "8bfb75f2cac0a9910316c6a368a228c0f8f1261ac6f03dec5fba594e1619ac04334a3df4fb29778d61d0b8290d55949371a523d722b35501bf9a2902956d3b17",
