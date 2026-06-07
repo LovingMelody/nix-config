@@ -8,12 +8,15 @@
 }: {
   imports = [./hardware-configuration-extended.nix];
 
-  sops.secrets.prism = {
-    owner = config.systemd.services.photoprism.serviceConfig.User;
-    group = config.systemd.services.photoprism.serviceConfig.Group;
-    path = "/.secrets-extra/photoprism-admin";
-    restartUnits = ["photoprism.service"];
-    sopsFile = lib.TM.get-secret-file "hosts/Rotom/prism.yaml";
+  sops.secrets = lib.mkIf config.services.photoprism.enable {
+    prism = {
+      enable = config.services.photoprism.enable;
+      owner = config.systemd.services.photoprism.serviceConfig.User;
+      group = config.systemd.services.photoprism.serviceConfig.Group;
+      path = "/.secrets-extra/photoprism-admin";
+      restartUnits = ["photoprism.service"];
+      sopsFile = lib.TM.get-secret-file "hosts/Rotom/prism.yaml";
+    };
   };
 
   TM = {
@@ -73,7 +76,7 @@
       ];
     };
     photoprism = {
-      enable = true;
+      enable = false;
       originalsPath = "/data/photoprism";
       passwordFile = config.sops.secrets.prism.path;
       # databasePasswordFile = config.sops.secrets.prism.path;
