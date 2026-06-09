@@ -81,31 +81,33 @@
     "gallery-dl": {
       "type": "Git",
       "repository": {
-        "type": "GitHub",
+        "type": "Forgejo",
+        "server": "https://codeberg.org/",
         "owner": "mikf",
         "repo": "gallery-dl"
       },
       "branch": "master",
-      "submodules": true,
-      "revision": "2e88d6ae29780dbed02e4a5172a1aa0a1b1c91b5",
-      "url": null,
-      "hash": "sha256-o/xP6u8ZdBojeuHsWcnTsyw+56nsuXW+GqhK6tTPs+0="
+      "submodules": false,
+      "revision": "c49230a0407aa06a4526f980beb8c028ba84b238",
+      "url": "https://codeberg.org/mikf/gallery-dl/archive/c49230a0407aa06a4526f980beb8c028ba84b238.tar.gz",
+      "hash": "sha256-8rye/g/Am0E0UxKvOT910Ht0mMxri1DsXvl8meVF7PQ="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
       "repository": {
-        "type": "GitHub",
+        "type": "Forgejo",
+        "server": "https://codeberg.org/",
         "owner": "mikf",
         "repo": "gallery-dl"
       },
       "pre_releases": false,
       "version_upper_bound": null,
       "release_prefix": null,
-      "submodules": true,
+      "submodules": false,
       "version": "v1.32.2",
-      "revision": "9a6255afd88306eace2cb8c7f508b8072d248656",
-      "url": null,
-      "hash": "sha256-o/xP6u8ZdBojeuHsWcnTsyw+56nsuXW+GqhK6tTPs+0="
+      "revision": "495a6dca4b39adc4461a9f9e574ced466b795e11",
+      "url": "https://codeberg.org/api/v1/repos/mikf/gallery-dl/archive/v1.32.2.tar.gz",
+      "hash": "sha256-NN9JpRK8UmnAyp7WrC2dg24P0jT2d+uBruYvyDVK4fQ="
     },
     "gargoyle": {
       "type": "Git",
