@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "42919925917c7fa42c7ae6744f8c05a40e5da494",
+      "revision": "9aa4e3da8d026b767de3c530e3b6bd0cdd9b0a76",
       "url": null,
-      "hash": "sha256-S9VOYyEk2BsYwiv8yMG4/u2kXAwNXU9qGvTLMIDxMzk="
+      "hash": "sha256-z1fS+SPTd528OfhtHmoX1QjSo40n4Qp+2X+bNGLrQGU="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "7eddad286c74eea0e5915f850a14e37632a38561",
-      "url": "https://github.com/wwmm/easyeffects/archive/7eddad286c74eea0e5915f850a14e37632a38561.tar.gz",
-      "hash": "sha256-/yivBA/eQWt98sKPesitNMLyI8ewhinOWGRK3PO14OQ="
+      "revision": "c4cdf15ed9d2d2757b3cab5358d4fa3d342bbf23",
+      "url": "https://github.com/wwmm/easyeffects/archive/c4cdf15ed9d2d2757b3cab5358d4fa3d342bbf23.tar.gz",
+      "hash": "sha256-9FJfZP5G913DWmO/eXhvJ0PlLghG6Nup+l4xZFLWiOk="
     },
     "gallery-dl": {
       "type": "Git",
@@ -88,9 +88,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "c49230a0407aa06a4526f980beb8c028ba84b238",
-      "url": "https://codeberg.org/mikf/gallery-dl/archive/c49230a0407aa06a4526f980beb8c028ba84b238.tar.gz",
-      "hash": "sha256-8rye/g/Am0E0UxKvOT910Ht0mMxri1DsXvl8meVF7PQ="
+      "revision": "50a1e69c501ab3b7f53223133b86521f5c1fb40c",
+      "url": "https://codeberg.org/mikf/gallery-dl/archive/50a1e69c501ab3b7f53223133b86521f5c1fb40c.tar.gz",
+      "hash": "sha256-s9l8pLHWIm4TNmKNdpqJU4YJtug5maYZ98ZGF3gNhdU="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -118,9 +118,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "98d670a9053aeeae6558a9a0f7b9623347e80b96",
-      "url": "https://github.com/garglk/garglk/archive/98d670a9053aeeae6558a9a0f7b9623347e80b96.tar.gz",
-      "hash": "sha256-dRYQpK5RpFtCn9o8+o55nXB1+7pTH6s89T1DnZyRMEk="
+      "revision": "d1fbc265189b32ea6562641d6b2ba131a8600768",
+      "url": "https://github.com/garglk/garglk/archive/d1fbc265189b32ea6562641d6b2ba131a8600768.tar.gz",
+      "hash": "sha256-2oyzH+o7k5CGVjxKNd294Bkzhqk8FL4dhNU32vGnQ14="
     },
     "getopts.fish": {
       "type": "Git",
@@ -326,9 +326,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "210e7741c83fee4b383e723707e47a62c0ca3e58",
+      "revision": "c15008837a578844b66f951bbbffc91e6ef09042",
       "url": null,
-      "hash": "sha256-BeX7MvTww9qeNPidsu/SSfApFA6QsIZzSFNN4pvXRWU="
+      "hash": "sha256-sd1MnE+EcLsRGoZKoxW+PpgRw3tGjbsn3HusRj8/FC0="
     },
     "xivlauncher-rb": {
       "type": "GitRelease",
