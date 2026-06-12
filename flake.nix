@@ -108,6 +108,7 @@
               inputs.lanzaboote.nixosModules.lanzaboote
               inputs.impermanence.nixosModules.impermanence
               inputs.nix-topology.nixosModules.default
+              inputs.nixpkgs-xr.nixosModules.nixpkgs-xr
             ]
             ++ (lib.mapAttrsToList (_: m: m) self.nixosModules);
         };
