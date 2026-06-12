@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: let
-  inherit (lib) mkEnableOption mkDefault mkIf optional;
+  inherit (lib) mkEnableOption mkDefault mkOption mkIf optional;
   cfg = config.TM.vr;
 in {
   options.TM.vr = {
@@ -12,6 +12,15 @@ in {
     patchKernel = mkEnableOption "Patch kernel remove CAP_SYS_NICE";
     useWivrn = mkEnableOption "Wivrn instead of ALVR" // {default = false;};
     autoStart = mkEnableOption "Autostart services";
+    apk = mkOption {
+      default = let
+        info = builtins.fromJSON (builtins.readFile ./wivrn-apk.json);
+      in
+        pkgs.fetchurl {
+          inherit (info) url hash;
+        };
+    };
+    readOnly = true;
   };
 
   config = mkIf cfg.enable {
