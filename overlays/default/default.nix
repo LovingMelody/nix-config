@@ -115,13 +115,19 @@ in
     nunif-iw3 = final.callPackage "${self}/packages/nunif-iw3" {inherit pins;};
     unique-basenames = final.callPackage "${self}/packages/unique-basenames" {};
     textools = final.callPackage "${self}/packages/textools" {wine = final.wine-astral;};
+    # NOTE: This is pinned to the commit the model was trained against.
     rnnoise =
       (prev.rnnoise.override {
         modelUrl = "https://cdn.little-melody.net/Public/Linux/Rnn/rnnoise_data-female.tar.gz";
         modelHash = "sha256-ql2BY86a1KIOR7u5ttPYxTcPPT8WUUvQ1vw4SrwsE58=";
       }).overrideAttrs (o: {
-        src = pins.rnnoise;
-        version = shortRev pins.rnnoise.revision;
+        src = final.fetchFromGitHub {
+          owner = "xiph";
+          repo = "rnnoise";
+          rev = "70f1d256acd4b34a572f999a05c87bf00b67730d";
+          hash = "sha256-fkSy7Sqnx0yLfGLciHf8PaptzFVzFAeRrhE4R5z8hSw=";
+        };
+        version = shortRev "70f1d256acd4b34a572f999a05c87bf00b67730d";
         patches = [];
         env.NIX_CFLAGS_COMPILE =
           toString (o.env.NIX_CFLAGS_COMPILE or "")
