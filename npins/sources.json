@@ -301,6 +301,20 @@
       "url": "https://github.com/jorgebucaran/replay.fish/archive/d2ecacd3fe7126e822ce8918389f3ad93b14c86c.tar.gz",
       "hash": "sha256-TzQ97h9tBRUg+A7DSKeTBWLQuThicbu19DHMwkmUXdg="
     },
+    "rnnoise": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "xiph",
+        "repo": "rnnoise"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "70f1d256acd4b34a572f999a05c87bf00b67730d",
+      "url": "https://github.com/xiph/rnnoise/archive/70f1d256acd4b34a572f999a05c87bf00b67730d.tar.gz",
+      "hash": "sha256-fkSy7Sqnx0yLfGLciHf8PaptzFVzFAeRrhE4R5z8hSw=",
+      "frozen": true
+    },
     "slower": {
       "type": "GitRelease",
       "repository": {

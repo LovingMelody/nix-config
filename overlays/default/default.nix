@@ -115,6 +115,21 @@ in
     nunif-iw3 = final.callPackage "${self}/packages/nunif-iw3" {inherit pins;};
     unique-basenames = final.callPackage "${self}/packages/unique-basenames" {};
     textools = final.callPackage "${self}/packages/textools" {wine = final.wine-astral;};
+    rnnoise =
+      (prev.rnnoise.override {
+        modelUrl = "https://cdn.little-melody.net/Public/Linux/Rnn/rnnoise_data-female.tar.gz";
+        modelHash = "sha256-ql2BY86a1KIOR7u5ttPYxTcPPT8WUUvQ1vw4SrwsE58=";
+      }).overrideAttrs (o: {
+        src = pins.rnnoise;
+        version = shortRev pins.rnnoise.revision;
+        patches = [];
+        env.NIX_CFLAGS_COMPILE =
+          toString (o.env.NIX_CFLAGS_COMPILE or "")
+          + lib.optionalString final.stdenv.hostPlatform.avx2Support " -mavx2 -mfma"
+          + lib.optionalString final.stdenv.hostPlatform.avxSupport " -mavx"
+          + lib.optionalString final.stdenv.hostPlatform.sse4_2Support " -msse4.2"
+          + lib.optionalString final.stdenv.hostPlatform.ssse3Support " -mssse3";
+      });
 
     obs-studio = prev.obs-studio.overrideAttrs (o: {
       buildInputs = o.buildInputs ++ [final.rnnoise final.libsysprof-capture];
