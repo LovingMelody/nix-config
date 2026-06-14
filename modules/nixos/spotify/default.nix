@@ -17,6 +17,7 @@ in {
     };
 
   config = mkIf cfg.enable {
+    environment.systemPackages = [pkgs.spotatui];
     programs.spicetify = {
       enable = true;
       theme = pkgs.spicePkgs.themes.catppuccin;
