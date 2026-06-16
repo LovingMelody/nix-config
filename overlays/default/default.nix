@@ -118,8 +118,8 @@ in
     # NOTE: This is pinned to the commit the model was trained against.
     rnnoise =
       (prev.rnnoise.override {
-        modelUrl = "https://cdn.little-melody.net/Public/Linux/Rnn/rnnoise_data-female.tar.gz";
-        modelHash = "sha256-ql2BY86a1KIOR7u5ttPYxTcPPT8WUUvQ1vw4SrwsE58=";
+        modelUrl = "https://cdn.little-melody.net/Public/Linux/Rnn/rnnoise_data-female-02b.tar.gz";
+        modelHash = "sha512-YI7zX0nKusqa9yziVmn0oQ1unW56KrCQhdIGiFaudwHairhpmUMxcCb9/l7ooUII8knkG+Kv+WprNALz+Eu7Ug==";
       }).overrideAttrs (o: {
         src = final.fetchFromGitHub {
           owner = "xiph";
