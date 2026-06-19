@@ -218,7 +218,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    impermanence.url = "github:nix-community/impermanence";
+    impermanence = {
+      url = "github:nix-community/impermanence";
+      inputs = {
+        home-manager.follows = "home-manager";
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
     ini-merger = {
       url = "github:LovingMelody/ini-merger";
       inputs = {
@@ -259,7 +265,6 @@
       url = "github:YaLTeR/niri";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        rust-overlay.follows = "rust-overlay";
       };
     };
     nix-citizen = {
@@ -303,6 +308,7 @@
         flake-compat.follows = "flake-compat";
         # flake-utils.follows = "flake-utils";
         nixpkgs.follows = "nixpkgs";
+        systems.follows = "systems";
       };
     };
     nix-reshade = {
@@ -313,8 +319,7 @@
     nix-topology = {
       url = "github:oddlama/nix-topology";
       inputs = {
-        # devshell.follows = "devshell";
-        # flake-utils.follows = "flake-utils";
+        flake-parts.follows = "flake-parts";
         nixpkgs.follows = "nixpkgs";
       };
     };
@@ -373,6 +378,7 @@
         flake-parts.follows = "flake-parts";
         nixpkgs.follows = "nixpkgs";
         systems.follows = "systems";
+        flake-compat.follows = "flake-compat";
       };
     };
     moonlight-mod = {
@@ -388,9 +394,10 @@
     robotnix = {
       url = "github:nix-community/robotnix";
       inputs = {
-        # nixpkgs.follows = "nixpkgs";
+        nixpkgs.follows = "nixpkgs";
         androidPkgs.follows = "androidPkgs";
         flake-compat.follows = "flake-compat";
+        treefmt-nix.follows = "treefmt-nix";
       };
     };
     rust-overlay = {
