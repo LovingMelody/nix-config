@@ -6,6 +6,7 @@ echo "Updating MC sources"
 python3 ./modules/nixos/minecraft-server/generate-sources.py >./modules/nixos/minecraft-server/sources.json
 
 echo "Updating Wivrn APK"
+bash ./modules/nixos/vr/wivrn-unstable-apk.sh
 
 echo "Updating npins"
 nix run .\#npins update
