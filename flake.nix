@@ -20,6 +20,7 @@
       inputs.nix-citizen.overlays.steamcompattools
       inputs.self.overlays.default
       inputs.nix-minecraft.overlays.default
+      inputs.nix-output-monitor.overlays.default
       inputs.nix-topology.overlays.default
       # inputs.nixpkgs-xr.overlays.default
       # inputs.prismlauncher.overlays.default
@@ -239,6 +240,7 @@
       inputs = {
         nixpkgs.follows = "nixpkgs";
         rust-overlay.follows = "rust-overlay";
+        pre-commit.follows = "";
       };
     };
     lib-aggregate = {
@@ -309,6 +311,14 @@
         # flake-utils.follows = "flake-utils";
         nixpkgs.follows = "nixpkgs";
         systems.follows = "systems";
+      };
+    };
+    nix-output-monitor = {
+      url = "github:maralorn/nix-output-monitor";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-utils.follows = "flake-utils";
+        git-hooks.follows = "nix-gaming/git-hooks";
       };
     };
     nix-reshade = {
