@@ -133,9 +133,7 @@
         # xivlauncher-rb
         gposingway
         slower
-        firefox
         brave
-        chromium
         discord
         nixpkgs-using
         r2modman
