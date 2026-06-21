@@ -17,6 +17,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
+      - run: nix flake update --commit-lock-file
       - run: nix shell nixpkgs#python3 nixpkgs#npins --command ./update-script.sh # Update pins & MC Mods
       - name: Check for changes in minecraft mods
         run: |
@@ -36,7 +37,16 @@ jobs:
             git add npins
             git commit -m "Update pins"
           fi
-      - run: nix flake update --commit-lock-file
+      - name: Check for changes in wivrn APK
+        run: |
+          if git diff --exit-code modules/nixos/vr/wivrn-apk.json; then
+            echo "WivrnAPK not updated"
+          elif [ -s modules/nixos/vr/wivrn-apk.json ] && [ $(nix run nixpkgs#jaq -- -r .hash < 'modules/nixos/vr/wivrn-apk.json') != "" ]; then
+            git add modules/nixos/vr/wivrn-apk.json
+            git commit -m "Update WivrnAPK"
+          else
+            echo "Wivrn apk update failed, skipping"
+          fi
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v8
         with:
