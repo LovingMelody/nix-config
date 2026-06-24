@@ -28,8 +28,8 @@
     "url": "https://cdn.modrinth.com/data/nPZr02ET/versions/lxYeKU5D/netherportalfix-fabric-26.1-26.1.0.1.jar"
   },
   "ConcurrentChunkManagementEngine": {
-    "sha512": "eb6c9dd628da067c4ebbc4345b93cf6573c0ede3e5120e9444a1e0dad355a0b1fe53f9bc5d72148ff68d3aa2f79bdab6a017b18e659a77a7b0fa4489c9e2c7bd",
-    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/zzYSg63u/c2me-fabric-mc26.1.2-0.4.0-beta.1.0.jar"
+    "sha512": "e5a0da868e28a808398bfd62c30ac1fa289ddce59aaeac08bfc3ef88620f78d21269a216344db71d787fd995aad2c58df553e9c16ccf608fb3e843bd43810afe",
+    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/1qBYfTmr/c2me-fabric-mc26.1.2-0.4.0-alpha.0.28.jar"
   },
   "Krypton": {
     "sha512": "14233210283a76f3cf435a3b8ddbcbd65a858d2b1a10b88ff643c0a01486dfd2bf1843bd3456cd4fb86cbb3b06f2dea0c4e663b1976a48e96de16d3b5a707ec9",
@@ -52,8 +52,8 @@
     "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/NL79aglD/Geyser-Fabric-2.10.1-b1174.jar"
   },
   "ServerCore": {
-    "sha512": "d8af5b005eeabfbb1aa9b0ae0fe66682ef7e2de31db18070f3f2ee00c3b359954b3366c11ff99d3fff2a34a1cf883bfa7b18bcad9e8f95f76fb31bd2a08b0eb9",
-    "url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/JO7SZMDs/servercore-fabric-1.5.18%2B26.1.2.jar"
+    "sha512": "056d56d74508bf34f25ded9323a721be915b9273796100ee81c4a867717364539285b4ae9749e360d6699d485e3fba0561502a8c94979684b0cf79ce8e80afcd",
+    "url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/H6TboTA2/servercore-fabric-1.5.19%2B26.1.2.jar"
   },
   "Lithium": {
     "sha512": "fac351f5b6150889b9355a01889c35b5798147d4bedb291594a590a2d41909eb8dc494ef0051317bf55886f2fc7fe134abbe2e755098df38473edb2bf43357e9",
