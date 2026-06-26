@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "8c3eaf980d7ff934f1e4834568220a0b09cdbad8",
+      "revision": "97fe0c66f89d3c8977578e1b500907306d4af536",
       "url": null,
-      "hash": "sha256-1tm7SM2EcxDRHrYr9KEQEho4FIc5l81Y4bfgFPs/X/U="
+      "hash": "sha256-RTioXBXmRE2LJ3Hqa/NndmX5Fu/Mi34V7wUUEoIh70o="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "a8f178fd37fa707085505b5133058cfd35ffe049",
-      "url": "https://github.com/wwmm/easyeffects/archive/a8f178fd37fa707085505b5133058cfd35ffe049.tar.gz",
-      "hash": "sha256-kxIwITFd7MRf9aqtjakArngce8b4y/+d3I7OcvA2J70="
+      "revision": "49586e6953e88338bcd289ef30839d473372a3a9",
+      "url": "https://github.com/wwmm/easyeffects/archive/49586e6953e88338bcd289ef30839d473372a3a9.tar.gz",
+      "hash": "sha256-jSGV1IsSvYnygGFVDHcWG7U6GE5U0GluPeH6iADB57M="
     },
     "gallery-dl": {
       "type": "Git",
@@ -88,9 +88,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "0a3c8f9e506edf4437b6fe3e9a86d4095c08ae31",
-      "url": "https://codeberg.org/mikf/gallery-dl/archive/0a3c8f9e506edf4437b6fe3e9a86d4095c08ae31.tar.gz",
-      "hash": "sha256-yV1uZu0VEOb85ucTv9hqolvA253SO/3PT1+GvoAdCHU="
+      "revision": "d39960c2df010fb7ceae7e4bf07cc3ff701c50dc",
+      "url": "https://codeberg.org/mikf/gallery-dl/archive/d39960c2df010fb7ceae7e4bf07cc3ff701c50dc.tar.gz",
+      "hash": "sha256-S552o5WjoNcKT4XN89MNSrhCcQlSyPjZ3x5TeVMd7uw="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -215,9 +215,9 @@
       },
       "branch": "dev",
       "submodules": false,
-      "revision": "140de0e1fcb443d05b74b406911d306507765cd3",
-      "url": "https://github.com/nagadomi/nunif/archive/140de0e1fcb443d05b74b406911d306507765cd3.tar.gz",
-      "hash": "sha256-QQsu4rtM+5QqUS7QRT++JfsYkXf6n0UHX+UM42qntoE="
+      "revision": "3dc4cd6c47d4c3927e436e2652514a4af28c0f65",
+      "url": "https://github.com/nagadomi/nunif/archive/3dc4cd6c47d4c3927e436e2652514a4af28c0f65.tar.gz",
+      "hash": "sha256-tA3bQz+e9zDRt/u0lrWBCofHL+aEobt4rc7xt7ePoP4="
     },
     "obs": {
       "type": "Git",
@@ -341,10 +341,10 @@
       "version_upper_bound": null,
       "release_prefix": "rb-",
       "submodules": true,
-      "version": "rb-v1.4.0.7",
-      "revision": "26db31a364da7c0be481eeb17d5aea9ea540d461",
+      "version": "rb-v1.4.0.8",
+      "revision": "cafb8186688ba4deb8736163abc1374533e1fdea",
       "url": null,
-      "hash": "sha256-ErTNmxnHJyzeJBvVWHi+8MiU6HgsWojsWxdg12yBorA="
+      "hash": "sha256-hZCuxGdaH+UuYK+pARocBDggE+pQ0WNJWfw+M96LFhY="
     }
   },
   "version": 8
