@@ -202,7 +202,39 @@ in {
     prismlauncher
     nil
     # telegram-desktop
-    vscode
+    (vscode-with-extensions.override {
+      vscodeExtensions = [
+        vscode-extensions."1Password".op-vscode
+        vscode-extensions.anthropic.claude-code
+        vscode-extensions.catppuccin.catppuccin-vsc
+        vscode-extensions.catppuccin.catppuccin-vsc-icons
+        vscode-extensions.continue.continue
+        vscode-extensions.docker.docker
+        vscode-extensions.donjayamanne.githistory
+        vscode-extensions.eamodio.gitlens
+        vscode-extensions.github.vscode-github-actions
+        vscode-extensions.github.vscode-pull-request-github
+        vscode-extensions.gitlab.gitlab-workflow
+        vscode-extensions.llvm-org.lldb-vscode
+        vscode-extensions.llvm-vs-code-extensions.lldb-dap
+        vscode-extensions.llvm-vs-code-extensions.vscode-clangd
+        vscode-extensions.ms-azuretools.vscode-containers
+        vscode-extensions.ms-python.debugpy
+        vscode-extensions.ms-python.isort
+        vscode-extensions.ms-python.python
+        vscode-extensions.ms-python.vscode-pylance
+        vscode-extensions.ms-toolsai.jupyter
+        vscode-extensions.ms-vscode-remote.vscode-remote-extensionpack
+        vscode-extensions.ms-vscode.cmake-tools
+        vscode-extensions.ms-vscode.cpptools-extension-pack
+        vscode-extensions.ms-vscode.hexeditor
+        vscode-extensions.ms-vscode.live-server
+        vscode-extensions.ms-vscode.remote-explorer
+        vscode-extensions.rust-lang.rust-analyzer
+        vscode-extensions.streetsidesoftware.code-spell-checker
+        vscode-extensions.tailscale.vscode-tailscale
+      ];
+    })
     wl-clipboard
     # yubioath-flutter
     bitwarden-cli
