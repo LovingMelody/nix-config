@@ -114,6 +114,18 @@ in {
           type = "zfs_fs";
           mountpoint = "/var/logs";
         };
+        "NixOS/tmp" = {
+          type = "zfs_fs";
+          mountpoint = "/tmp";
+          options = {
+            atime = "on";
+            relatime = "on";
+            sync = "disabled";
+            setuid = "off";
+            devices = "off";
+            "com.sun:auto-snapshot" = "false";
+          };
+        };
         "NixOS/FinalFantasyXIV" = {
           type = "zfs_fs";
           mountpoint = "/.FinalFantasyXIV";
