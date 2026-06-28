@@ -28,16 +28,16 @@
     "url": "https://cdn.modrinth.com/data/nPZr02ET/versions/lxYeKU5D/netherportalfix-fabric-26.1-26.1.0.1.jar"
   },
   "ConcurrentChunkManagementEngine": {
-    "sha512": "188067f5932e79bbc89e368480ed8d8dc3cbeaa240ee5c2d892d619eda6520b2a007a39eef3fc08e1a56d371ead951f026ae932d019c14eefdf996fde281de66",
-    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/v1RNsfu7/c2me-fabric-mc26.1.2-0.4.0-alpha.0.17.jar"
+    "sha512": "e5a0da868e28a808398bfd62c30ac1fa289ddce59aaeac08bfc3ef88620f78d21269a216344db71d787fd995aad2c58df553e9c16ccf608fb3e843bd43810afe",
+    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/1qBYfTmr/c2me-fabric-mc26.1.2-0.4.0-alpha.0.28.jar"
   },
   "Krypton": {
     "sha512": "14233210283a76f3cf435a3b8ddbcbd65a858d2b1a10b88ff643c0a01486dfd2bf1843bd3456cd4fb86cbb3b06f2dea0c4e663b1976a48e96de16d3b5a707ec9",
     "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/kYAGItyj/krypton-0.3.0.jar"
   },
   "FabricAPI": {
-    "sha512": "f3005eb44c15361e2278ac770459efd3c9b57329dcf7a2ff9be53615f5bb187542836258d59cab8a9d2e093257b32abf3de1381d387ecbd344dfb50943fc7671",
-    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/NqRnXk9x/fabric-api-0.152.1%2B26.1.2.jar"
+    "sha512": "4e31da3c796714d25ca079e5277980c5439bb09dcad33d1224cccdfec6000b776ba5d16323a9c312682e773bddedae75aa697a7c0f4ad2b77b5b11ba679b480a",
+    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/WC1KT7Yg/fabric-api-0.153.0%2B26.1.2.jar"
   },
   "ClothConfigAPI": {
     "sha512": "8bfb75f2cac0a9910316c6a368a228c0f8f1261ac6f03dec5fba594e1619ac04334a3df4fb29778d61d0b8290d55949371a523d722b35501bf9a2902956d3b17",
@@ -48,12 +48,12 @@
     "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/s1ghgeMQ/sit%21-1.2.6.2%2B26.1.jar"
   },
   "Gyser": {
-    "sha512": "3c3ee6b898ecbd59209df76e0f75fb5b8a4fc788bdd87eac577c0f198e289f1672751f1ce65d545698ade1ba697c2159309c0e0ca0b99904f7734165ee7731ab",
-    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/EKHX0VqN/Geyser-Fabric-2.10.1-b1172.jar"
+    "sha512": "62945dad38e53c3c7923c5f33e048727cc2064108410c69a9a49a08a88763d165418f21ddaeb48276d1afd4e407d386b4623b6798fafe09b53508593f12030e7",
+    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/uNs45NSH/Geyser-Fabric-2.10.1-b1175.jar"
   },
   "ServerCore": {
-    "sha512": "d8af5b005eeabfbb1aa9b0ae0fe66682ef7e2de31db18070f3f2ee00c3b359954b3366c11ff99d3fff2a34a1cf883bfa7b18bcad9e8f95f76fb31bd2a08b0eb9",
-    "url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/JO7SZMDs/servercore-fabric-1.5.18%2B26.1.2.jar"
+    "sha512": "056d56d74508bf34f25ded9323a721be915b9273796100ee81c4a867717364539285b4ae9749e360d6699d485e3fba0561502a8c94979684b0cf79ce8e80afcd",
+    "url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/H6TboTA2/servercore-fabric-1.5.19%2B26.1.2.jar"
   },
   "Lithium": {
     "sha512": "fac351f5b6150889b9355a01889c35b5798147d4bedb291594a590a2d41909eb8dc494ef0051317bf55886f2fc7fe134abbe2e755098df38473edb2bf43357e9",
@@ -64,7 +64,7 @@
     "url": "https://cdn.modrinth.com/data/qyVF9oeo/versions/y3vsp51g/sound-physics-remastered-fabric-1.5.1%2B26.1.2.jar"
   },
   "Vivecraft": {
-    "sha512": "2b33e535a65c34133905e591ed5c2ee0841fef06f69881981dd7c85a98e65c7cb662d7f60bfe74d52d052c542a5aab9ffbc1b4bd41b090a20fc1aef48cb3134b",
-    "url": "https://cdn.modrinth.com/data/wGoQDPN5/versions/nVVG5O02/vivecraft-26.1.2-1.3.10-fabric.jar"
+    "sha512": "79ccf7501ec950dee2f263379a3d5890ea6d12ff078b1c60c996a5997f5fcc8247d67f451775bf9ac69dc93ea27b21253f4776b7ed7d84505687c317400b797b",
+    "url": "https://cdn.modrinth.com/data/wGoQDPN5/versions/1H7xRHwL/vivecraft-26.1.2-1.3.13-fabric.jar"
   }
 }
