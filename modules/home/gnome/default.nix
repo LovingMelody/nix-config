@@ -59,7 +59,7 @@ in {
       };
       "org/gnome/desktop/lockdown" = {disable-lock-screen = false;};
       "org/gnome/desktop/privacy" = {
-        old-files-age = "unit32 30";
+        old-files-age = "uint32 30";
         remove-old-temp-files = true;
         remove-old-trash-files = true;
       };
