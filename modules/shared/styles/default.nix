@@ -51,9 +51,9 @@ in {
       readOnly = true;
     };
     enable =
-      mkEnableOption "Enable Nebula styles"
+      mkEnableOption "Enable styling"
       // {
-        default = osConfig.TM.styles.enable or true;
+        default = config.TM.libExtra.fromOS ["styles" "enable"] true;
       };
     flavor = mkOption {
       type = types.enum [
