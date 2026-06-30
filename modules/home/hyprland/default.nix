@@ -116,7 +116,7 @@ in {
       package = null;
       xwayland.enable = true;
       systemd = {
-        enable = !(osConfig.programs.hyprland.withUSM or true);
+        enable = !(osConfig.programs.hyprland.withUSM or false);
         variables = ["--all"];
       };
       settings = cfg.extraSettings;
