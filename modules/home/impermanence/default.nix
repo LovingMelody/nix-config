@@ -2,7 +2,6 @@
   config,
   lib,
   osConfig,
-  inputs,
   ...
 }: let
   cfg = config.TM.impermanence;
@@ -12,10 +11,7 @@ in {
     enable = mkOption {
       type = types.bool;
       description = "Impermanence";
-      default =
-        if builtins.hasAttr "nebula" osConfig
-        then osConfig.TM.impermanence.enable
-        else false;
+      default = osConfig.TM.impermanence.enable or false;
     };
   };
 
