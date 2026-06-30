@@ -88,7 +88,7 @@ in {
           "net.ipv4.tcp_rfc1337" = 1; # Partial protection against TIME-WAIT assasination
           "net.ipv4.tcp_sack" = 0; # Disable TCP Sack, exploitable and not needed
           "net.ipv4.tcp_syncookies" = 1; # Syn flood attack protection
-          "net.ipv4.tcp_timestamps" = 1; # Disable TCP timestamps to avoid leaking system time
+          "net.ipv4.tcp_timestamps" = 0; # Disable TCP timestamps to avoid leaking system time
           "net.ipv6.conf.all.accept_ra" = 0; # IPV6 router advertisment disable
           "net.ipv6.conf.all.accept_redirects" = 0; # Refuse ICMP redirects (MITM Mitigation)
           "net.ipv6.conf.all.accept_source_route" = 0; # Reject IP source route packets (router things)
