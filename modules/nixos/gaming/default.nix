@@ -89,9 +89,6 @@ in {
       udev = {
         packages = [game-devices-udev-rules];
       };
-      scx = {
-        enable = mkDefault false;
-      };
       bpftune.enable = mkDefault true;
       ananicy = {
         enable = mkDefault (! config.programs.gamemode.enable);
