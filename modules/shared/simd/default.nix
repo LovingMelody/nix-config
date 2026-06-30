@@ -29,7 +29,7 @@ in {
     partial =
       mkEnableOption "Dont set gcc options reducing builds. Features will still be added"
       // {
-        default = fromOS ["sind" "partial"] true;
+        default = fromOS ["simd" "partial"] true;
       };
     arch = mkOption {
       type = with types; str;

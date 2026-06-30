@@ -76,7 +76,7 @@ in {
         "Peach"
         "Pink"
         "Red"
-        "Rosewawter"
+        "RoseWater"
         "Sapphire"
         "Sky"
         "Teal"
