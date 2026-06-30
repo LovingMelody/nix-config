@@ -4,15 +4,9 @@
   ...
 }: let
   cfg = config.TM.programs.gpg;
-  inherit (lib) mkOption mkIf types;
+  inherit (lib) mkEnableOption mkIf;
 in {
-  options.TM.programs.gpg = {
-    enable = mkOption {
-      type = types.bool;
-      default = true;
-      description = "Enable GPG";
-    };
-  };
+  options.TM.programs.gpg.enable = mkEnableOption "Enable GPG" // {default = true;};
 
   config = mkIf cfg.enable {programs.gpg.enable = true;};
 }

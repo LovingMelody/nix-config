@@ -9,17 +9,12 @@
     (lib)
     mkEnableOption
     mkIf
-    mkOption
-    types
     ;
+  inherit (lib.TM) get-secret-file;
 in {
   options.TM.server.services.minecraft.backup = {
     enable = mkEnableOption "Enable backups";
-    everything = mkOption {
-      type = types.bool;
-      default = true;
-      description = "Backup everything";
-    };
+    everything = mkEnableOption "Backup Everything" // {default = true;};
   };
 
   config = let
@@ -30,22 +25,22 @@ in {
     mkIf (cfg.enable && cfg.backup.enable) {
       sops.secrets = {
         "Minecraft/backup/b2/applicationKey" = {
-          sopsFile = lib.TM.get-secret-file "Minecraft/generic.yaml";
+          sopsFile = get-secret-file "Minecraft/generic.yaml";
           owner = config.users.users.minecraft.name;
           reloadUnits = ["minecraft-backup.service"];
         };
         "Minecraft/backup/b2/keyID" = {
-          sopsFile = lib.TM.get-secret-file "Minecraft/generic.yaml";
+          sopsFile = get-secret-file "Minecraft/generic.yaml";
           owner = config.users.users.minecraft.name;
           reloadUnits = ["minecraft-backup.service"];
         };
         "Minecraft/backup/restic/password" = {
-          sopsFile = lib.TM.get-secret-file "Minecraft/generic.yaml";
+          sopsFile = get-secret-file "Minecraft/generic.yaml";
           owner = config.users.users.minecraft.name;
           reloadUnits = ["minecraft-backup.service"];
         };
         "Minecraft/backup/restic/repository" = {
-          sopsFile = lib.TM.get-secret-file "Minecraft/generic.yaml";
+          sopsFile = get-secret-file "Minecraft/generic.yaml";
           owner = config.users.users.minecraft.name;
           reloadUnits = ["minecraft-backup.service"];
         };

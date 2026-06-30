@@ -16,11 +16,7 @@
     ;
 in {
   options.TM.autoUpgrade = {
-    enable = mkOption {
-      type = types.bool;
-      default = true;
-      description = "Enable autoupgrades";
-    };
+    enable = mkEnableOption "Enable autoupgrades" // {default = true;};
     operation = mkOption {
       type = types.enum [
         "switch"
@@ -38,11 +34,7 @@ in {
       default = "1h";
       description = mdDoc "Randomized delay for upgrades format must be {manpage}`systemd.time(7)`";
     };
-    persistent = mkOption {
-      type = types.bool;
-      default = true;
-      description = "Enable persistent upgrades";
-    };
+    persistent = mkEnableOption "Enable persistent upgrades" // {default = true;};
     flags = mkOption {
       type = types.listOf types.str;
       default =

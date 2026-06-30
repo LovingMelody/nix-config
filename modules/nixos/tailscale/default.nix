@@ -18,11 +18,7 @@
     ;
 in {
   options.TM.networking.tailscale = {
-    enable = mkOption {
-      type = types.bool;
-      default = true;
-      description = "Enable tailscale";
-    };
+    enable = mkEnableOption "Enable TailScale" // {default = true;};
     manageSSH =
       mkEnableOption "Set tailscale to manage connections"
       // {

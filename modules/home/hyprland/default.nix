@@ -15,6 +15,7 @@
     types
     ;
   inherit (lib.strings) toShellVars;
+  inherit (config.TM.libExtra) fromOS;
 in {
   imports = [
     ./hyprpanel/base.nix
@@ -24,20 +25,20 @@ in {
     ./binds.nix
   ];
   options.TM.desktop.hyprland = {
-    enable = mkOption {
-      type = types.bool;
-      description = "Hyprland";
-      default = osConfig.TM.desktop.hyprland.enable or false;
-    };
+    enable =
+      mkEnableOption "Hyprland"
+      // {
+        default = fromOS ["dekstop" "hyprland" "enable"] false;
+      };
     enableHDR = mkEnableOption "Enable HDR" // {default = config.TM.hasHDRDisplay;};
     extraAutoStart = mkOption {
       # List of strings
       type = types.listOf types.str;
-      default = osConfig.TM.desktop.hyprland.extraAutoStart or [];
+      default = fromOS ["desktop" "hyprland" "extraAutoStart"] [];
     };
     extraSettings = mkOption {
       type = types.attrs;
-      default = osConfig.TM.desktop.hyprland.extraSettings or {};
+      default = fromOS ["desktop" "hyprland" "extraSettings"] {};
     };
     package = mkOption {
       type = types.package;

@@ -5,13 +5,9 @@
   ...
 }: let
   cfg = config.TM.users;
-  inherit (lib) mkIf mkOption types;
+  inherit (lib) mkIf mkEnableOption;
 in {
-  options.TM.users.enable = mkOption {
-    type = types.bool;
-    default = true;
-    description = "Nebula users defaults - Opt out";
-  };
+  options.TM.users.enable = mkEnableOption "User defaults - Opt out" // {default = true;};
   imports = [
     "${self}/modules/nixos/users/perUser/root"
     "${self}/modules/nixos/users/perUser/melody"

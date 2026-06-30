@@ -7,18 +7,12 @@
   inherit
     (lib)
     mkEnableOption
-    mkOption
     mkIf
-    types
     ;
 in {
   options.TM.sound = {
     enable = mkEnableOption "Enable sound";
-    support32Bit = mkOption {
-      type = types.bool;
-      default = true;
-      description = "Enable 32 bit support";
-    };
+    support32Bit = mkEnableOption "Enable 32 bit support" // {default = true;};
   };
 
   config = mkIf cfg.enable {

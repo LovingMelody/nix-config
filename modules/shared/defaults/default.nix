@@ -10,18 +10,13 @@
     mapAttrs
     mapAttrsToList
     mkIf
-    mkOption
-    types
+    mkEnableOption
     ;
   inherit (pkgs.stdenv) isLinux;
   cfg = config.TM.defaults;
 in {
   # Defaults to true
-  options.TM.defaults.enable = mkOption {
-    type = types.bool;
-    default = true;
-    description = "Enable nebula base defaults";
-  };
+  options.TM.defaults.enable = mkEnableOption "Enable base defaults" // {default = true;};
 
   config = mkIf cfg.enable {
     qt.enable = lib.mkForce config.TM.isGui;

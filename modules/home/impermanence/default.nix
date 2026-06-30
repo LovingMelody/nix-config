@@ -1,18 +1,18 @@
 {
   config,
   lib,
-  osConfig,
   ...
 }: let
   cfg = config.TM.impermanence;
-  inherit (lib) mkIf mkOption types;
+  inherit (lib) mkIf mkEnableOption;
+  inherit (config.TM.libExtra) fromOS;
 in {
   options.TM.impermanence = {
-    enable = mkOption {
-      type = types.bool;
-      description = "Impermanence";
-      default = osConfig.TM.impermanence.enable or false;
-    };
+    enable =
+      mkEnableOption "Impermanence"
+      // {
+        default = fromOS ["impermanence" "enable"] false;
+      };
   };
 
   config = mkIf cfg.enable {};

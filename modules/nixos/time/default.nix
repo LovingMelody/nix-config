@@ -15,11 +15,7 @@
   inherit (lib.strings) optionalString;
 in {
   options.TM.time = {
-    enable = mkOption {
-      type = types.bool;
-      default = true;
-      description = "Enable System time. Uses timesyncd to sync time.";
-    };
+    enable = mkEnableOption "Enable System time. Uses ntpd-rs to sync time." // {default = true;};
     timeZone = mkOption {
       type = with types; nullOr str;
       default = optionalString config.TM.isGui "America/New_York";
