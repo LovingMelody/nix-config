@@ -27,7 +27,7 @@ in {
     */
     system.userActivationScripts.diff = ''
       if [[ -e /run/current-system ]]; then
-          ${lib.getExe config.nix.package} ---extra-experimental-features 'nix-command' store diff-closures /run/current-system "$systemConfig" || true
+          ${lib.getExe config.nix.package} --extra-experimental-features 'nix-command' store diff-closures /run/current-system "$systemConfig" || true
         fi
     '';
   };
