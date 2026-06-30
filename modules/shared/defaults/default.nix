@@ -59,8 +59,8 @@ in {
         auto-optimise-store = isLinux;
         keep-outputs = true;
         keep-derivations = true;
-        min-free = "${toString (100 * 1024 * 1024)}";
-        max-free = "${toString (100 * 1024 * 1024)}";
+        min-free = "${toString (1 * 1024 * 1024 * 1024)}";
+        max = "${toString (5 * 1024 * 1024 * 1024)}";
         flake-registry = "/etc/nix/registry.json";
       };
     };

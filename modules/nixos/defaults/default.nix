@@ -145,14 +145,16 @@ in
 
             programs = {
               nix-ld.libraries =
-                config.programs.steam.extraPackages
-                ++ pkgs.wine-astral.buildInputs
-                ++ pkgs.wine-astral.nativeBuildInputs
-                ++ [
-                  (pkgs.runCommand "steamrun-lib" {}
-                    "mkdir $out; ln -s ${config.programs.steam.package.
+                mkIf config.programs.nix-ld.enable (
+                  config.programs.steam.extraPackages
+                  ++ pkgs.wine-astral.buildInputs
+                  ++ pkgs.wine-astral.nativeBuildInputs
+                  ++ [
+                    (pkgs.runCommand "steamrun-lib" {}
+                      "mkdir $out; ln -s ${config.programs.steam.package.
 fhsenv}/usr/lib64 $out/lib")
-                ];
+                  ]
+                );
 
               zsh = {
                 enable = mkDefault true;
