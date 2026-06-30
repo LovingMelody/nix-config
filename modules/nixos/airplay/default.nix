@@ -30,7 +30,7 @@ in {
                   name = "libpipewire-module-raop-discover";
                 }
                 // (mkIf (cfg.client.latency != null) {
-                  argsg."raop.latency.ms" = cfg.client.latency;
+                  args."raop.latency.ms" = cfg.client.latency;
                 }))
             ];
           };
