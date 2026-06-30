@@ -39,7 +39,6 @@
     virt.enable = true;
   };
   nixpkgs.config = {
-    rocmSupport = true;
     cudaSupport = true;
   };
   programs = {
