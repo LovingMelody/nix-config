@@ -195,7 +195,7 @@ in {
             type = "simple";
             sensitive = false;
             operand = "process.path";
-            data = lib.getExe (config.config.home-manager.users.melody.programs.firefox.finalPackage or config.programs.firefox.package);
+            data = lib.getExe (config.home-manager.users.melody.programs.firefox.finalPackage or config.programs.firefox.package);
           };
         };
         git = {
