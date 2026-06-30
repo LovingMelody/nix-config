@@ -3,7 +3,7 @@ _: {
 
   config = {
     topology.networks.home = {
-      name = "Home Netork";
+      name = "Home Network";
       cidrv4 = "192.168.4.1/24";
     };
   };

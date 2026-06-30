@@ -1,7 +1,7 @@
 # Topology config
 {pkgs, ...}: {
   networks.home = {
-    name = "Home Netork";
+    name = "Home Network";
     cidrv4 = "192.168.4.1/24";
   };
   networks.tailScale.icon = pkgs.fetchurl {
