@@ -39,7 +39,7 @@ in {
           "ssh"
           "tss"
           "video"
-          "virtualisation"
+          "virtualization"
           "wheel"
           "vboxusers"
           "kvm"
