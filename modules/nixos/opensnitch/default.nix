@@ -45,7 +45,7 @@ in {
           name = "1password-cli";
           enabled = config.TM.programs._1password.enable;
           action = "allow";
-          duration = "allways";
+          duration = "always";
           operator = {
             type = true;
             sensitive = false;
@@ -57,7 +57,7 @@ in {
           name = "ntpd-rs";
           enabled = config.services.ntpd-rs.enable;
           action = "allow";
-          duration = "allways";
+          duration = "always";
           operator = {
             type = true;
             sensitive = false;
