@@ -23,7 +23,6 @@
       inputs.nix-output-monitor.overlays.default
       inputs.nix-topology.overlays.default
       # inputs.nixpkgs-xr.overlays.default
-      # inputs.prismlauncher.overlays.default
       inputs.rust-overlay.overlays.default
       # inputs.lix-module.overlays.default
     ];
@@ -209,10 +208,6 @@
       url = "github:numtide/flake-utils";
       inputs.systems.follows = "systems";
     };
-    garnix-lib = {
-      url = "github:garnix-io/garnix-lib";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -241,13 +236,6 @@
         pre-commit.follows = "";
       };
     };
-    lib-aggregate = {
-      url = "github:nix-community/lib-aggregate";
-      inputs = {
-        flake-utils.follows = "flake-utils";
-        nixpkgs-lib.follows = "nixpkgs";
-      };
-    };
     lix = {
       url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
       flake = false;
@@ -274,14 +262,6 @@
         nixpkgs.follows = "nixpkgs";
         treefmt-nix.follows = "treefmt-nix";
         flake-compat.follows = "flake-compat";
-      };
-    };
-    nix-eval-jobs = {
-      url = "github:nix-community/nix-eval-jobs";
-      inputs = {
-        flake-parts.follows = "flake-parts";
-        nixpkgs.follows = "nixpkgs";
-        treefmt-nix.follows = "treefmt-nix";
       };
     };
     nix-gaming = {
@@ -359,13 +339,6 @@
       url = "github:NixOS/nixos-hardware/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-wsl = {
-      url = "github:nix-community/NixOS-WSL";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-compat.follows = "flake-compat";
-      };
-    };
     nixpkgs-using = {
       url = "github:uncenter/nixpkgs-using";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -394,10 +367,6 @@
       inputs = {
         nixpkgs.follows = "nixpkgs";
       };
-    };
-    prismlauncher = {
-      url = "github:PrismLauncher/PrismLauncher";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     robotnix = {
       url = "github:nix-community/robotnix";
