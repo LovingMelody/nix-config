@@ -19,8 +19,8 @@ in {
         pkgs.fetchurl {
           inherit (info) url hash;
         };
+      readOnly = true;
     };
-    readOnly = true;
   };
 
   config = mkIf cfg.enable {
