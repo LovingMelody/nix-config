@@ -36,8 +36,8 @@
     "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/kYAGItyj/krypton-0.3.0.jar"
   },
   "FabricAPI": {
-    "sha512": "4e31da3c796714d25ca079e5277980c5439bb09dcad33d1224cccdfec6000b776ba5d16323a9c312682e773bddedae75aa697a7c0f4ad2b77b5b11ba679b480a",
-    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/WC1KT7Yg/fabric-api-0.153.0%2B26.1.2.jar"
+    "sha512": "0f5885ca80716dee547e8e8ec6c2eda137b5591d40d8fb424d9d1d99a3e5c7a6d861ef11590903f9fa18838806de8876e51285c5d830cfa50f518c0217139e78",
+    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/1F9Sl2ke/fabric-api-0.154.0%2B26.1.2.jar"
   },
   "ClothConfigAPI": {
     "sha512": "8bfb75f2cac0a9910316c6a368a228c0f8f1261ac6f03dec5fba594e1619ac04334a3df4fb29778d61d0b8290d55949371a523d722b35501bf9a2902956d3b17",
