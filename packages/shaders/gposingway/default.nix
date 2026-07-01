@@ -1,6 +1,5 @@
 {
   stdenvNoCC,
-  fetchFromGitHub,
   pins,
 }: let
   inherit (pins) gposingway;

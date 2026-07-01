@@ -1,9 +1,7 @@
 {
   pkgs,
   config,
-  osConfig,
   lib,
-  system,
   ...
 }: let
   inherit

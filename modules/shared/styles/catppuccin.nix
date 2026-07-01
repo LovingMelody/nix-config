@@ -1,5 +1,6 @@
-{lib, ...}:
-with lib; {
+{lib, ...}: let
+  inherit (lib) mkEnableOption mkOption types;
+in {
   options.TM.styles.catppuccin = {
     enable = mkEnableOption "Catppucchin theming";
     flavor = mkOption {

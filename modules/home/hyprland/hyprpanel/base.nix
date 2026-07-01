@@ -3,7 +3,6 @@
   osConfig ? {},
   pkgs,
   lib,
-  inputs,
   ...
 }: let
   inherit (lib) getExe toLower mkIf;

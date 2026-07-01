@@ -1,12 +1,9 @@
 # https://github.com/nagadomi/nunif/discussions/547
 {
   pins,
-  lib,
-  stdenv,
   python3Packages,
   copyDesktopItems,
   makeDesktopItem,
-  fetchgit,
   pkgs,
   ...
 }: let

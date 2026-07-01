@@ -5,7 +5,6 @@
   config,
   inputs,
   system,
-  osConfig,
   ...
 }: let
   lib-hm = inputs.home-manager.lib.hm;

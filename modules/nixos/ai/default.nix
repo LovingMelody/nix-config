@@ -1,8 +1,6 @@
 {
-  self,
   config,
   lib,
-  pkgs,
   ...
 }: let
   cfg = config.TM.services.ai;

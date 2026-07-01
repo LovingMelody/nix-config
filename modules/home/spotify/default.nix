@@ -4,7 +4,6 @@
   lib,
   osConfig,
   pkgs,
-  system,
   ...
 }: let
   cfg = config.TM.programs.spotify;
