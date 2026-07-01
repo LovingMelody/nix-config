@@ -8,39 +8,16 @@
   inherit (lib.TM.package-helper) pins patchLibcuda blacklistPatches shortRev;
 in
   final: prev: let
-    # pinnedOverlay = pkg:
-    #   prev.${pkg}.overrideAttrs {
-    #     src = pins.${pkg};
-    #     version = pins.${pkg}.version or "git+${pins.${pkg}.revision}";
-    #   };
-    # discordEnableKrisp = pkg: let
-    #   patch-krisp = prev.writers.writePython3 "krisp-patcher" {
-    #     libraries = with prev.python3Packages; [
-    #       capstone
-    #       pyelftools
-    #     ];
-    #     # Ignore syntax checker error codes that affect krisp-patcher.py
-    #     flakeIgnore = [
-    #       "E501"
-    #       "F403"
-    #       "F405"
-    #     ];
-    #   } (builtins.readFile ./discord-krisp-patcher.py);
-    #   binaryName = pkg.meta.mainProgram;
-    #   node_module = "\\$HOME/.config/discord/${prev.discord.version}/modules/discord_krisp/discord_krisp.node";
-    # in
-    #   pkg.overrideAttrs (o: {
-    #     postInstall =
-    #       o.postInstall
-    #       + ''
-    #         wrapProgramShell $out/opt/${binaryName}/${binaryName} \
-    #           --run "${patch-krisp} ${node_module}"
-    #       '';
-    #   });
-    /*
-    # https://github.com/NixOS/nixpkgs/issues/445447
-    cmakeCompatFix = pkg: brokenVersion: pkg.overrideAttrs (o: {cmakeFlags = (o.cmakeFlags or []) ++ lib.optional (brokenVersion || (lib.versionOlder o.version brokenVersion)) "-DCMAKE_POLICY_VERSION_MINIMUM=3.5";});
-    */
+    pinnedOverlay = pkg: pin: ver:
+      pkg.overrideAttrs (o: let
+        v =
+          if ver == null
+          then o.version
+          else ver;
+      in {
+        src = pin;
+        version = pin.version or "${v}+${pin.revision}";
+      });
     clangStdenv = pkg: pkg.override {stdenv = final.clangStdenv;};
   in {
     alvr =
@@ -65,10 +42,7 @@ in
             ))
           prev.linuxKernel.packages;
       };
-    npins = (final.callPackage "${pins.npins}/npins.nix" {}).overrideAttrs (o: {
-      version = "${o.version}+${shortRev pins.npins.revision}";
-      src = pins.npins;
-    });
+    npins = pinnedOverlay (final.callPackage "${pins.npins}/npins.nix" {}) pins.npins null;
     inherit (inputs.nixpkgs-using.packages.${final.stdenv.hostPlatform.system}) nixpkgs-using;
     inherit (inputs.moonlight-mod.packages.${final.stdenv.hostPlatform.system}) moonlight;
     osm-gps-map = prev.osm-gps-map.overrideAttrs (o: {
@@ -89,10 +63,7 @@ in
       src = pins.gallery-dl-stable;
       disabledTestPaths = (o.disabledTestPaths or []) ++ ["test/test_postprocessor.py"];
     });
-    gallery-dl-unstable = final.gallery-dl.overrideAttrs (o: {
-      version = "${o.version}-git+${pins.gallery-dl.revision}";
-      src = pins.gallery-dl;
-    });
+    gallery-dl-unstable = pinnedOverlay final.gallery-dl pins.gallery-dl pins.gallery-dl-stable.version;
 
     inherit
       (nix-reshade.system.packages.${final.stdenv.hostPlatform.system})
@@ -140,10 +111,7 @@ in
       buildInputs = o.buildInputs ++ [final.rnnoise final.libsysprof-capture];
     });
 
-    linux-wallpaperengine = prev.linux-wallpaperengine.overrideAttrs {
-      src = pins.linux-wallpaperengine;
-      version = pins.linux-wallpaperengine.revision;
-    };
+    linux-wallpaperengine = pinnedOverlay prev.linux-wallpaperengine pins.linux-wallpaperengine "git";
 
     lutris = prev.lutris.override {
       steamSupport = true;
