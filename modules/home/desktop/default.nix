@@ -51,8 +51,6 @@ in {
         '';
       };
     };
-    # services.syncthing.enable = true;
-    #TM.programs.eww.enable = true;
 
     gtk.font.size = lib.mkDefault 12;
     /*
@@ -84,23 +82,14 @@ in {
         zathura
         audacity
         blanket
-        # cryptomator
-        #
-        # element-desktop
         epiphany
-        # floorp # For some reason, this breaks firefox policies
         fractal
         freetube
         gnome-text-editor
-        # lite-xl
         gimp3-with-plugins
-        # gimp3
-        # krita
         haruna
-
         protonmail-desktop
         protonmail-bridge-gui
-        # vivaldi
       ];
     };
     fonts.fontconfig.enable = true;
