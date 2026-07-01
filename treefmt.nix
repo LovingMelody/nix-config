@@ -1,7 +1,6 @@
 _: {
   # Project root
   projectRootFile = "flake.nix";
-  # Terraform formatter
   programs = {
     yamlfmt.enable = true;
     # nixfmt.enable = true;

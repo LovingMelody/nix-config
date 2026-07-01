@@ -6,7 +6,6 @@
 }: let
   inherit (inputs) nix-reshade spicetify-nix;
   inherit (lib.TM.package-helper) pins patchLibcuda blacklistPatches shortRev;
-  # shortRev = s: builtins.substring 0 7 s;
 in
   final: prev: let
     # pinnedOverlay = pkg:
@@ -186,7 +185,6 @@ in
     spicePkgs = spicetify-nix.legacyPackages.${final.stdenv.hostPlatform.system};
 
     # EasyEffects on OpenSuse uses clang, mimic that
-
     easyeffects =
       clangStdenv
       (prev.easyeffects.overrideAttrs (o: {
@@ -213,42 +211,6 @@ in
         src = pins.easyeffects;
       }));
 
-    /*
-    Lets use lix :D
-    */
-    # nixForLinking = final.nixVersions.stable;
-    #
-    # nixVersions =
-    #   prev.nixVersions
-    #   // {
-    #     stable = final.lix;
-    #     stable_upstream = prev.nixVersions.stable;
-    #   };
-    #
-    # nix-doc = prev.nix-doc.override {withPlugin = false;};
-    # nix = final.nixVersions.stable;
-
-    # r2modman = prev.r2modman.overrideAttrs {
-    #   src = pins.r2modman;
-    #   inherit (pins.r2modman) version;
-    #   offlineCache = final.fetchYarnDeps {
-    #     yarnLock = "${pins.r2modman}/yarn.lock";
-    #     hash = "sha256-V6N0RIjT3etoP6XdZhnQv4XViLRypp/JWxnb0sBc6Oo=";
-    #   };
-    # };
-
-    /*
-    Temp Fixes
-    https://github.com/NixOS/nixpkgs/issues/445447
-    */
-
-    /*
-    FFMPEG Fixes
-    */
-    # gmic = if lib.versionOlder prev.gmic.version "3.6.3" then
-    #   prev.gmic.overrideAttrs { ffmpeg = final.ffmpeg_7; }
-
-    # Apply Fix from NixOS/nixpkgs#457803
     /*
     TODO: Changes to to be upstreamed
     Anthing below this line should potentially be upstreamed

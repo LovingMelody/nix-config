@@ -40,27 +40,6 @@ in {
               mountpoint = "/boot";
             };
           };
-          # luks = {
-          #   size = "5G";
-          #   content = {
-          #     type = "luks";
-          #     name = "crypted";
-          #     passwordFile = secretFile;
-          #     settings = {
-          #       allowDiscards = true;
-          #     };
-          #     content = {
-          #       type = "btrfs";
-          #       extraArgs = ["-f"];
-          #       subvolumes = {
-          #         "@vault" = {
-          #           mountpoint = "/vault";
-          #           mountOptions = ["compress=zstd:9" "noatime" "discard=async"];
-          #         };
-          #       };
-          #     };
-          #   };
-          # };
           Swap = {
             size = "100%";
             content = {
@@ -95,15 +74,6 @@ in {
         mountpoint = "none";
       };
       datasets = {
-        # encrypted = {
-        #   type = "zfs_fs";
-        #   options = {
-        #     mountpoint = "none";
-        #     encryption = "aes-256-gcm";
-        #     keyformat = "passphrase";
-        #     keylocation = "file:///vault/secret.key";
-        #   };
-        # };
         "NixOS/root" = {
           type = "zfs_fs";
           mountpoint = "/";

@@ -99,7 +99,6 @@
               inputs.nix-gaming.nixosModules.wine
               inputs.nix-citizen.nixosModules.StarCitizen
               inputs.nix-minecraft.nixosModules.minecraft-servers
-              # inputs.nixos-cosmic.nixosModules.default
               inputs.nvf.nixosModules.default
               inputs.sops-nix.nixosModules.sops
               inputs.spicetify-nix.nixosModules.default
@@ -328,13 +327,6 @@
         treefmt-nix.follows = "treefmt-nix";
       };
     };
-    # nixos-cosmic = {
-    #   url = "github:lilyinstarlight/nixos-cosmic";
-    #   inputs = {
-    #     flake-compat.follows = "flake-compat";
-    #     rust-overlay.follows = "rust-overlay";
-    #   };
-    # };
     nixos-hardware = {
       url = "github:NixOS/nixos-hardware/master";
       inputs.nixpkgs.follows = "nixpkgs";

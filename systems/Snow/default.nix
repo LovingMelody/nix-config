@@ -81,59 +81,6 @@ in {
     zram.memoryPercent = 150;
   };
 
-  # specialisation = {
-  #   # Configs has conflits w/ Hyprland
-  #   hyprland = {
-  #     inheritParentConfig = true;
-  #     configuration = {
-  #       environment.etc."specialisation".text = "hyprland";
-  #       TM.desktop.gnome.enable = mkForce false;
-  #       TM.desktop.hyprland.enable = mkForce true;
-  #     };
-  #   };
-  #   cosmic = {
-  #     inheritParentConfig = true;
-  #     configuration = {
-  #       environment.etc."specialisation".text = "cosmic";
-  #       TM.desktop.gnome.enable = mkForce false;
-  #       TM.desktop.hyprland.enable = mkForce false;
-  #       services.desktopManager.cosmic.enable = true;
-  #       services.displayManager.cosmic-greeter.enable = true;
-  #     };
-  #   };
-  #   # kde = {
-  #   #   inheritParentConfig = true;
-  #   #   configuration = {
-  #   #     environment.etc."specialisation".text = "kde";
-  #   #     TM.desktop.gnome.enable = mkForce false;
-  #   #     TM.desktop.hyprland.enable = mkForce false;
-  #   #     services.desktopManager.plasma6.enable = true;
-  #   #   };
-  #   # };
-  #
-  #   # openNvidia = {
-  #   #   inheritParentConfig = true;
-  #   #   configuration = {
-  #   #     boot = {
-  #   #       blacklistedKernelModules = [
-  #   #         "nvidia"
-  #   #         "nvidia_uvm"
-  #   #       ];
-  #   #       initrd.kernelModules = [ "nouveau" ];
-  #   #       kernelParams = [
-  #   #         "nouveau.config=NvGspRm=1"
-  #   #         "nouveau.debug=info,VBIOS=info,gsp=debug"
-  #   #       ];
-  #   #     };
-  #   #     services.xserver.enable = true;
-  #   #     services.xserver.videoDrivers = lib.mkForce [ "modesetting" ];
-  #   #     environment.etc."specialisation".text = "openNvidia";
-  #   #     TM.MyNextGPUWillNotBeNvidia = mkForce false;
-  #   #     system.nixos.tags = [ "NVK" ];
-  #   #   };
-  #   # };
-  # };
-
   boot.plymouth.enable = false;
 
   networking = {
@@ -186,8 +133,6 @@ in {
     };
     xserver = {
       enable = true;
-
-      # Configure keymap in X11
       xkb.layout = "us";
     };
     dbus.packages = [pkgs.gcr];
@@ -195,13 +140,10 @@ in {
     mullvad-vpn.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-
   users.users.melody.packages = with pkgs; [
     gitkraken
     prismlauncher
     nil
-    # telegram-desktop
     (vscode-with-extensions.override {
       vscodeExtensions = [
         vscode-extensions."1Password".op-vscode
@@ -236,26 +178,21 @@ in {
       ];
     })
     wl-clipboard
-    # yubioath-flutter
     bitwarden-cli
     czkawka
     nmap
-    # nunif-iw3
-    # inputs.ags.packages.${pkgs.stdenv.hostPlatform.system}.agsFull
+    nunif-iw3
   ];
 
   environment.systemPackages = with pkgs; [
     tetex
     texstudio
-    #libvert
-    #qemu
     abaddon
     cava
     gh
     git
     pamixer
     spotify
-    # star-citizen
     tmux
     wget
     android-tools
@@ -263,22 +200,19 @@ in {
     xwayland-satellite
 
     # KDE
-    kdePackages.discover # Optional: Install if you use Flatpak or fwupd firmware update sevice
-    kdePackages.kcalc # Calculator
-    kdePackages.kcharselect # Tool to select and copy special characters from all installed fonts
-    kdePackages.kclock # Clock app
-    kdePackages.kcolorchooser # A small utility to select a color
-    kdePackages.kolourpaint # Easy-to-use paint program
-    kdePackages.ksystemlog # KDE SystemLog Application
-    kdePackages.sddm-kcm # Configuration module for SDDM
-    kdiff3 # Compares and merges 2 or 3 files or directories
-    kdePackages.isoimagewriter # Optional: Program to write hybrid ISO files onto USB disks
-    kdePackages.partitionmanager # Optional: Manage the disk devices, partitions and file systems on your computer
-    # Non-KDE graphical packages
-    hardinfo2 # System information and benchmarks for Linux systems
-    wayland-utils # Wayland utilities
-    wl-clipboard # Command-line copy/paste utilities for Wayland
-
+    kdePackages.discover
+    kdePackages.kcalc
+    kdePackages.kcharselect
+    kdePackages.kclock
+    kdePackages.kcolorchooser
+    kdePackages.kolourpaint
+    kdePackages.ksystemlog
+    kdiff3
+    kdePackages.isoimagewriter
+    kdePackages.partitionmanager
+    hardinfo2
+    wayland-utils
+    wl-clipboard
     waydroid-helper
   ];
 
