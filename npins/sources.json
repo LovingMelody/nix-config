@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "23ae1aa1e8d9fb3e7a6883e08a7011a7ae43bd32",
-      "url": "https://github.com/wwmm/easyeffects/archive/23ae1aa1e8d9fb3e7a6883e08a7011a7ae43bd32.tar.gz",
-      "hash": "sha256-YYwVoqCRVAZVu8vCTN3ZSicy1Fzw3l+hQbooGAE/AEI="
+      "revision": "69459fb6b1461e6ad9100c8261c2d09b8d145393",
+      "url": "https://github.com/wwmm/easyeffects/archive/69459fb6b1461e6ad9100c8261c2d09b8d145393.tar.gz",
+      "hash": "sha256-h+0PJ3Pl7EcTbuMDVcQEJWfe1QYfo23/Irlyk67qbRc="
     },
     "gallery-dl": {
       "type": "Git",
@@ -186,9 +186,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "3f1b23abd07464b95f2260880f85a57ea02e641e",
-      "url": "https://github.com/mpv-player/mpv/archive/3f1b23abd07464b95f2260880f85a57ea02e641e.tar.gz",
-      "hash": "sha256-qqWpYWkXJBtTUrhYPVeev0M8oQS1LHuu8QqioBCiyCA="
+      "revision": "99b4c12cccb4d8d3f72b41944cb6c640e2156650",
+      "url": "https://github.com/mpv-player/mpv/archive/99b4c12cccb4d8d3f72b41944cb6c640e2156650.tar.gz",
+      "hash": "sha256-aD1vm2w0/G3ozreTPYn4vpmYEYmojEj6hBtQdirak0s="
     },
     "npins": {
       "type": "GitRelease",
