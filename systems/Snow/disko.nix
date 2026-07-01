@@ -6,7 +6,7 @@
     "nvme3n1"
     "sda"
   ],
-  secretFile ? "/.persistent/secret.key",
+  _secretFile ? "/.persistent/secret.key",
   ...
 }: let
   defineZfs = idx: {

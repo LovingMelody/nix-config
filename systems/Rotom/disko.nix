@@ -4,7 +4,7 @@
     "/dev/disk/by-id/wwn-0x5f8db4c505130227" # SDB
     "/dev/disk/by-id/wwn-0x5000c500c3a5ee56" # SDC
   ],
-  secretFile ? "/tmp/secret.key",
+  _secretFile ? "/tmp/secret.key",
   ...
 }: let
   defineZfs = device: {

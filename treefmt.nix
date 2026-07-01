@@ -8,8 +8,7 @@ _: {
     deno.enable = true;
     deadnix = {
       enable = true;
-      # Can break callPackage if this is set to false
-      no-lambda-pattern-names = true;
+      no-underscore = true;
     };
     statix.enable = true;
     rustfmt.enable = true;
