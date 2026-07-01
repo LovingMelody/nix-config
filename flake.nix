@@ -113,7 +113,7 @@
             ++ (lib.mapAttrsToList (_: m: m) self.nixosModules);
         };
     in
-      builtins.mapAttrs (name: _: mkHost name) (filterAttrs (n: t: t == "directory" && (! builtins.elem n ["Melodys-MBP"])) (builtins.readDir "${self}/systems"));
+      builtins.mapAttrs (name: _: mkHost name) (filterAttrs (_n: t: t == "directory") (builtins.readDir "${self}/systems"));
     packages = forAllSystems (pkgs: {
       inherit
         (pkgs)

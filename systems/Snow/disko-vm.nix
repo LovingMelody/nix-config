@@ -1,11 +1,11 @@
 {
-  disks ? ["disk/by/label/nixos"],
+  disks ? ["disk/by-label/nixos"],
   secretFile ? "/secret.key",
   ...
 }: {
   disk.vm = {
     type = "disk";
-    device = "/dev/${builtins.getElemAt 0 disks}";
+    device = "/dev/${builtins.elemAt disks 0}";
     content = {
       type = "gpt";
       partitions = {

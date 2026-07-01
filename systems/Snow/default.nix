@@ -310,7 +310,6 @@ in {
       export VK_VRAM_REPORT_LIMIT_DEVICE_ID=0x10de:0x2208
     '';
     niri.enable = false;
-    gamemode.enable = mkForce false;
     coolercontrol.enable = false;
     fuse.userAllowOther = true;
     kdeconnect.enable = true;

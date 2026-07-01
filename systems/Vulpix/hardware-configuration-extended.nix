@@ -42,7 +42,6 @@
     cudaSupport = true;
   };
   programs = {
-    gamemode.enable = true;
     rog-control-center = {
       enable = true;
       autoStart = true;
