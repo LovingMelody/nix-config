@@ -39,11 +39,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1782854924,
-        "narHash": "sha256-HOHmZbH31fzr/00trSeFvxlEewAfV8BF0haAUN3/OVA=",
+        "lastModified": 1782941264,
+        "narHash": "sha256-7gO1JGgNi0qQqzBJLc3VoTNrtzCU0TSjCAA4DNr19z8=",
         "owner": "tadfisher",
         "repo": "android-nixpkgs",
-        "rev": "25747988c755ac8ba1d8738a41cd4fa1a7bb216f",
+        "rev": "946da0994e39b60c3f60bbec92f7db389bbe5f92",
         "type": "github"
       },
       "original": {
@@ -218,7 +218,7 @@
         "narHash": "sha256-Eg9b/rq/ECYwNwEXs5i9wHyhxNI0JrYx2srdI2uZMaQ=",
         "rev": "382052b74656a369c5408822af3f2501e9b1af81",
         "type": "tarball",
-        "url": "https://git.lix.systems/api/v1/repos/lix-project/flake-compat/archive/382052b74656a369c5408822af3f2501e9b1af81.tar.gz?rev=382052b74656a369c5408822af3f2501e9b1af81"
+        "url": "https://git.lix.systems/api/v1/repos/lix-project/flake-compat/archive/382052b74656a369c5408822af3f2501e9b1af81.tar.gz"
       },
       "original": {
         "type": "tarball",
@@ -481,7 +481,7 @@
         "narHash": "sha256-rzN+7Yke0pDv5+TH1tvoHrD6pqM4kAUvVK4PdZhfxc4=",
         "rev": "d26a73bfe6ee5108085a996e5dc9815daabeee8a",
         "type": "tarball",
-        "url": "https://git.lix.systems/api/v1/repos/lix-project/lix/archive/d26a73bfe6ee5108085a996e5dc9815daabeee8a.tar.gz?rev=d26a73bfe6ee5108085a996e5dc9815daabeee8a"
+        "url": "https://git.lix.systems/api/v1/repos/lix-project/lix/archive/d26a73bfe6ee5108085a996e5dc9815daabeee8a.tar.gz"
       },
       "original": {
         "type": "tarball",
@@ -506,7 +506,7 @@
         "narHash": "sha256-Ikdf593tWTFMkKhtScxE+t2fV+Myh8n4JeYU/0Xc8H8=",
         "rev": "727d859b6f5f3289ce49fe26146b3f006387d457",
         "type": "tarball",
-        "url": "https://git.lix.systems/api/v1/repos/lix-project/nixos-module/archive/727d859b6f5f3289ce49fe26146b3f006387d457.tar.gz?rev=727d859b6f5f3289ce49fe26146b3f006387d457"
+        "url": "https://git.lix.systems/api/v1/repos/lix-project/nixos-module/archive/727d859b6f5f3289ce49fe26146b3f006387d457.tar.gz"
       },
       "original": {
         "type": "tarball",
