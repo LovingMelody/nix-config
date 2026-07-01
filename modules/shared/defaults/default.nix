@@ -36,6 +36,7 @@ in {
           "flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs="
           "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="
           "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="
+          "nix-ci:g3xV5BDTLtIBZr/A00IU1x0EtKKlb7YLgBN2SgYgM6A="
         ];
         substituters = [
           "https://cache.nixos.org"
@@ -49,6 +50,7 @@ in {
           "https://cache.flox.dev"
           "https://cache.nixos-cuda.org"
           "https://ezkea.cachix.org"
+          "https://cache.nix-ci.com"
         ];
         experimental-features = ["nix-command" "flakes"];
         auto-optimise-store = isLinux;
