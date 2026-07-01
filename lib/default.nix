@@ -4,6 +4,7 @@
   ...
 }: let
   pins = import "${self}/npins";
+  flake = self;
 in rec {
   selectHighestVersion = a: b:
     if lib.versionOlder a.version b.version
@@ -13,7 +14,7 @@ in rec {
     shortRev = s: builtins.substring 0 7 s;
     inherit pins;
 
-    propegateInputs = package: deps:
+    propagateInputs = package: deps:
       package.overrideAttrs (old: {
         propagatedBuildInputs =
           deps
@@ -53,14 +54,14 @@ in rec {
   info = {
     flavor = "Mocha";
     url = "github:LovingMelody/nix-config";
-    hostInfo = host: flake: {
+    hostInfo = host: {
       inherit (flake.nixosConfigurations.${host}.config.networking) hostName;
-      platform = import (./src/hosts + "/${host}/system.nix");
+      platform = flake.nixosConfigurations.${host}.pkgs.stdenv.targetPlatform.system;
       extra-platforms = flake.nixosConfigurations.${host}.config.nix.settings.extra-platforms or [];
       features = flake.nixosConfigurations.${host}.config.nix.settings.system-features;
       inherit (flake.nixosConfigurations.${host}.config.system.nixos) tags;
     };
-    allHostInfo = flake: map (host: lib.TM.info.hostInfo host flake) (builtins.attrNames flake.nixosConfigurations);
+    allHostInfo = map (host: info.hostInfo host) (builtins.attrNames flake.nixosConfigurations);
   };
   styling = {
     # For using with config.TM.styles.palette;
