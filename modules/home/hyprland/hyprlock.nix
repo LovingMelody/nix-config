@@ -17,7 +17,7 @@
   minutes = n: 60 * n;
   seconds = n: 1000 * n;
   font_family = config.stylix.fonts.serif.name;
-  zfsDisabled = !(osConfig.config.TM.zfs.enable or false);
+  zfsDisabled = !(config.TM.libExtra.fromOS ["zfs" "enable"] false);
   lockScript = import ./lockscript.nix {inherit pkgs config lib;};
   suspendScript = pkgs.writeShellScript "suspend-script" (
     optionalString zfsDisabled ''
