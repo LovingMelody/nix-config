@@ -57,7 +57,7 @@ in {
         keep-outputs = true;
         keep-derivations = true;
         min-free = "${toString (1 * 1024 * 1024 * 1024)}";
-        max = "${toString (5 * 1024 * 1024 * 1024)}";
+        max-free = "${toString (5 * 1024 * 1024 * 1024)}";
         flake-registry = "/etc/nix/registry.json";
       };
     };
