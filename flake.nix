@@ -47,6 +47,11 @@
     nixosModules = defineModules "nixos";
     homeModules = defineModules "home";
     formatter = builtins.mapAttrs (_n: v: v.config.build.wrapper) treefmtEval;
+    checks =
+      (builtins.mapAttrs (_n: v: v.config.build.check self) treefmtEval)
+      // {
+        x86_64-linux.Rotom = self.nixosConfigurations.Rotom.config.system.build.toplevel;
+      };
     overlays.default = import ./overlays/default {inherit inputs self lib;};
     androidImages = {
       dumpling = inputs.robotnix.lib.robotnixSystem {
