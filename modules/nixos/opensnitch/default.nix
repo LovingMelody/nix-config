@@ -35,7 +35,7 @@ in {
           action = "allow";
           duration = "always";
           operator = {
-            type = true;
+            type = "simple";
             sensitive = false;
             operand = "process.path";
             data = getExe' pkgs._1password-gui "1password";
@@ -47,7 +47,7 @@ in {
           action = "allow";
           duration = "always";
           operator = {
-            type = true;
+            type = "simple";
             sensitive = false;
             operand = "process.path";
             data = getExe' pkgs._1password-cli "op";
@@ -59,7 +59,7 @@ in {
           action = "allow";
           duration = "always";
           operator = {
-            type = true;
+            type = "simple";
             sensitive = false;
             operand = "process.path";
             data = getExe config.services.ntpd-rs.package;

@@ -28,7 +28,7 @@ in {
     enable =
       mkEnableOption "Hyprland"
       // {
-        default = fromOS ["dekstop" "hyprland" "enable"] false;
+        default = fromOS ["desktop" "hyprland" "enable"] false;
       };
     enableHDR = mkEnableOption "Enable HDR" // {default = config.TM.hasHDRDisplay;};
     extraAutoStart = mkOption {
@@ -117,7 +117,7 @@ in {
       package = null;
       xwayland.enable = true;
       systemd = {
-        enable = !(osConfig.programs.hyprland.withUSM or false);
+        enable = !(osConfig.programs.hyprland.withUWSM or false);
         variables = ["--all"];
       };
       settings = cfg.extraSettings;

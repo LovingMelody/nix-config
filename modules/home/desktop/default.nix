@@ -72,11 +72,11 @@ in {
       };
       sessionPath = [
         "${pkgs.dotnet-sdk}/bin"
-        "~/.local/bin"
-        "~/.cargo/bin"
+        "${config.home.homeDirectory}/.local/bin"
+        "${config.home.homeDirectory}/.cargo/bin"
       ];
       keyboard = {
-        layout = true;
+        layout = "us";
       };
       packages = with pkgs; [
         zathura

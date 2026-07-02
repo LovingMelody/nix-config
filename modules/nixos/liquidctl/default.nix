@@ -45,6 +45,7 @@ in {
     systemd.services.liquidctl = {
       wantedBy = ["multi-user.target"];
       # Udev rules are needed
+      wants = ["systemd-udev-settle.service"];
       after = ["systemd-udev-settle.service"];
       # Only run once
       serviceConfig = {

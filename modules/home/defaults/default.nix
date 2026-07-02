@@ -4,7 +4,6 @@
   pkgs,
   ...
 }: let
-  inherit (pkgs.stdenv) isDarwin;
   inherit (lib) mkDefault mkIf optional TM;
 in {
   imports = [(TM.get-shared-module "defaults")];
@@ -20,7 +19,6 @@ in {
       broot.enable = true;
     };
     home = {
-      keyboard = mkIf isDarwin {layout = true;};
       homeDirectory = let
         inherit (config.home) username;
       in

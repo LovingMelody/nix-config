@@ -37,7 +37,7 @@ in {
       services = {
         # Prevent errors spam on screen
         greetd.serviceConfig = {
-          type = "idle";
+          Type = "idle";
           StandardInput = "tty";
           StandardOutput = "tty";
           StandardError = "journal";

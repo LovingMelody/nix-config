@@ -34,7 +34,7 @@ in {
         type = lib.types.package;
         default = pkgs.dxvk-nvapi;
       };
-      smartLink = mkEnableOption "Smartly link nvapi to wine & ~/Games" // {default = cfg.dxvk-nvapi.enable;};
+      smartLink = mkEnableOption "Smartly link nvapi to wine & ${config.home.homeDirectory}/Games" // {default = cfg.dxvk-nvapi.enable;};
     };
     prepareWinePrefix = {
       enable = mkEnableOption "Prepare Wine prefix for gaming" // {default = true;};
@@ -134,7 +134,7 @@ in {
             ''
               #!/usr/bin/env bash
               link-files() {
-                ${lib.getExe pkgs.findutils} ~/Games ~/.local/share/Steam/steamapps/compatdata -name "$1" -print0 |
+                ${lib.getExe pkgs.findutils} ${config.home.homeDirectory}/Games ${config.home.homeDirectory}/.local/share/Steam/steamapps/compatdata -name "$1" -print0 |
                   while IFS= read -r -d "" line; do
                     rm -v "$line"
                     ln -sv "$2" "$line"

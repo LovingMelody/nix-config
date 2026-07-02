@@ -22,7 +22,7 @@ in
     export USER="$(whoami)"
     export WINEDLLOVERRIDES='winemenubuilder.exe=d'
     TEXTOOLS="$WINEPREFIX/drive_c/Program Files/FFXIV TexTools/FFXIV_TexTools/FFXIV_TexTools.exe"
-    if ![ -f $TEXTOOLS ]; then
+    if [ ! -f $TEXTOOLS ]; then
       winetricks -q -f corefonts tahoma dotnet48 win10
       wineserver -k
       wine ${src} /S

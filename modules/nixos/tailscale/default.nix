@@ -98,7 +98,7 @@ in {
           sopsFile =
             if config.TM.knowsHiddenMove
             then config.sops.defaultSopsFile
-            else lib.TM.get-secret "hosts/${config.networking.hostName}/tailscale.yaml";
+            else lib.TM.get-secret-file "hosts/${config.networking.hostName}/tailscale.yaml";
         };
 
         # Autoconnect

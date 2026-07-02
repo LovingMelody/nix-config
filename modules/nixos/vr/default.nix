@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: let
-  inherit (lib) mkEnableOption mkDefault mkOption mkIf optional;
+  inherit (lib) mkEnableOption mkDefault mkOption mkIf optionals;
   cfg = config.TM.vr;
 in {
   options.TM.vr = {
@@ -38,7 +38,7 @@ in {
       openFirewall = true;
     };
     environment.systemPackages = [pkgs.wayvr];
-    boot.kernelPatches = optional cfg.patchKernel [
+    boot.kernelPatches = optionals cfg.patchKernel [
       {
         name = "amdgpu-ignore-ctx-privileges";
         patch = pkgs.fetchpatch {

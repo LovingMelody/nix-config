@@ -5,7 +5,7 @@
   lib,
   ...
 }: let
-  inherit (lib) mkForce mkIf;
+  inherit (lib) mkForce mkIf mkMerge;
 in {
   imports = [./hardware-configuration-extended.nix];
 
@@ -226,14 +226,15 @@ in {
   };
   systemd = {
     packages = [pkgs.waydroid-helper];
-    services =
+    services = mkMerge [
       {
         waydroid-mount.wantedBy = ["multi-user.target"];
       }
       # Disable pixiecore autostart
-      // (mkIf config.services.pixiecore.enable {
+      (mkIf config.services.pixiecore.enable {
         pixiecore.wantedBy = mkForce [];
-      });
+      })
+    ];
   };
   # Disable autosleep
   programs = {

@@ -19,7 +19,7 @@ in {
         };
         "Host eu.nixbuild.net" = {
           identitiesOnly = true;
-          identityFile = "~/.ssh/nixbuild.pub";
+          identityFile = "${config.home.homeDirectory}/.ssh/nixbuild.pub";
         };
       };
     };

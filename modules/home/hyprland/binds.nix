@@ -29,7 +29,7 @@
   runOnce = program: "${pgrep} ${builtins.baseNameOf program} || ${exec} ${program}";
   lockScript = import ./lockscript.nix {inherit pkgs lib config;};
   grimBlast = runOnce (getExe pkgs.grimblast);
-  saveArea = "~/Pictures/$(date '+%Y-%m-%d'T'%H:%M:%S_no_watermark').png";
+  saveArea = "${config.home.homeDirectory}/Pictures/$(date '+%Y-%m-%d'T'%H:%M:%S_no_watermark').png";
   inherit (config.wayland.windowManager.hyprland.settings.general) gaps_in gaps_out;
 in {
   wayland.windowManager.hyprland.settings = {

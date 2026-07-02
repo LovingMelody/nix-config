@@ -30,7 +30,7 @@ in
                 assertion = ! (lib.TM.isBlacklistedKernelVersion config.boot.kernelPackages);
                 message = ''
                   [Kernel Blacklisted]: Kernel version ${config.boot.kernelPackages.kernel.version} is blacklisted.
-                  [Kernel Blacklisted]: Blacklisted kernels: ${lib.strings.join lib.TM.blacklistedKernelVersions}
+                  [Kernel Blacklisted]: Blacklisted kernels: ${lib.strings.join ", " lib.TM.blacklistedKernelVersions}
                 '';
               }
             ];
@@ -281,7 +281,7 @@ fhsenv}/usr/lib64 $out/lib")
                     "diffie-hellman-group18-sha512"
                     "sntrup761x25519-sha512@openssh.com"
                   ];
-                  passwordAuthentication = false;
+                  PasswordAuthentication = false;
                   UseDns = true;
                 };
               };
