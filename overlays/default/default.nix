@@ -36,17 +36,13 @@ in
       ffmpeg = final.ffmpeg-full;
       imagemagick = final.imagemagickBig;
     };
-    # kitty = pinnedOverlay "kitty";
+    kitty = pinnedOverlay prev.kitty pins.kitty null;
     gargoyle = blacklistPatches ((clangStdenv prev.gargoyle).overrideAttrs {
       src = pins.gargoyle;
       version = builtins.replaceStrings ["\n"] [""] "${builtins.readFile (pins.gargoyle + "/VERSION")}-${shortRev pins.gargoyle.revision}";
     }) [];
-    gallery-dl = prev.gallery-dl.overrideAttrs (o: {
-      inherit (pins.gallery-dl-stable) version;
-      src = pins.gallery-dl-stable;
-      disabledTestPaths = (o.disabledTestPaths or []) ++ ["test/test_postprocessor.py"];
-    });
-    gallery-dl-unstable = pinnedOverlay final.gallery-dl pins.gallery-dl pins.gallery-dl-stable.version;
+    gallery-dl = pinnedOverlay prev.gallery-dl pins.gallery-dl-stable null;
+    gallery-dl-unstable = pinnedOverlay final.gallery-dl pins.gallery-dl null;
 
     inherit
       (nix-reshade.system.packages.${final.stdenv.hostPlatform.system})
@@ -109,20 +105,14 @@ in
 
     gposingway = final.callPackage "${self}/packages/shaders/gposingway" {inherit pins;};
 
-    mpv-unwrapped =
-      (prev.mpv-unwrapped.override {
-        jackaudioSupport = true;
-        sdl2Support = true;
-        sixelSupport = true;
-        vapoursynthSupport = true;
-        ffmpeg = final.ffmpeg-full;
-        stdenv = final.clangStdenv;
-      }).overrideAttrs (o: {
-        # version = lib.removeSuffix "-" (builtins.replaceStrings ["UNKNOWN"] [(shortRev pins.mpv.revision)] (builtins.readFile "${pins.mpv}/MPV_VERSION"));
-        # src = pins.mpv;
-        # patches = [];
-        mesonFlags = builtins.filter (flag: ! (builtins.elem flag [(lib.mesonEnable "sdl2" false) (lib.mesonEnable "sdl2" true)])) (o.mesonFlags or []);
-      });
+    mpv-unwrapped = prev.mpv-unwrapped.override {
+      jackaudioSupport = true;
+      sdl2Support = true;
+      sixelSupport = true;
+      vapoursynthSupport = true;
+      ffmpeg = final.ffmpeg-full;
+      stdenv = final.clangStdenv;
+    };
     mpv-mpris = prev.mpv-mpris.override {
       ffmpeg = final.ffmpeg-full;
       stdenv = final.clangStdenv;
