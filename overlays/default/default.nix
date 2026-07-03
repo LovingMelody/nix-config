@@ -25,23 +25,6 @@ in
       (prev: {
         nativeBuildInputs = prev.nativeBuildInputs ++ lib.optional final.config.cudaSupport final.cudaPackages.cuda_nvcc;
       });
-    linuxKernel =
-      prev.linuxKernel
-      // {
-        packages =
-          builtins.mapAttrs
-          (_kernelName: kernelSet:
-            kernelSet
-            // (
-              if kernelSet ? nvidiaPackages
-              then {
-                nvidiaPackages.beta = patchLibcuda kernelSet.nvidiaPackages.beta;
-                nvidiaPackages.stable = patchLibcuda kernelSet.nvidiaPackages.stable;
-              }
-              else {}
-            ))
-          prev.linuxKernel.packages;
-      };
     npins = pinnedOverlay (final.callPackage "${pins.npins}/npins.nix" {}) pins.npins null;
     inherit (inputs.nixpkgs-using.packages.${final.stdenv.hostPlatform.system}) nixpkgs-using;
     inherit (inputs.moonlight-mod.packages.${final.stdenv.hostPlatform.system}) moonlight;

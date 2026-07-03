@@ -34,22 +34,6 @@ in rec {
             else builtins.filter (patch: lib.lists.any (b: (builtins.baseNameOf patch) == b) blacklist) (o.patches or [])
           else [];
       });
-    patchLibcuda = package:
-      package.overrideAttrs (old: {
-        postInstall = ''
-          ${
-            if old ? postInstall && old.postInstall != null
-            then old.postInstall
-            else ""
-          }
-          for so in $out/lib*/libcuda.so*; do
-            echo patching "$so"
-            echo -ne $(od -An -tx1 -v "$so" | tr -d '\n' | sed -e 's/00 00 00 f8 ff 00 00 00/00 00 00 f8 ff ff 00 00/g' -e 's/ /\\x/g') > libcuda.patched.so
-            echo "Patched, outputted to libcuda.patched.so"
-            mv --verbose libcuda.patched.so "$so"
-          done
-        '';
-      });
   };
   info = {
     flavor = "Mocha";
