@@ -22,8 +22,8 @@ in
   in {
     alvr =
       prev.alvr.overrideAttrs
-      (prev: {
-        nativeBuildInputs = prev.nativeBuildInputs ++ lib.optional final.config.cudaSupport final.cudaPackages.cuda_nvcc;
+      (o: {
+        nativeBuildInputs = o.nativeBuildInputs ++ lib.optional final.config.cudaSupport final.cudaPackages.cuda_nvcc;
       });
     npins = pinnedOverlay (final.callPackage "${pins.npins}/npins.nix" {}) pins.npins null;
     inherit (inputs.nixpkgs-using.packages.${final.stdenv.hostPlatform.system}) nixpkgs-using;
@@ -40,7 +40,7 @@ in
     gargoyle = blacklistPatches ((clangStdenv prev.gargoyle).overrideAttrs {
       src = pins.gargoyle;
       version = builtins.replaceStrings ["\n"] [""] "${builtins.readFile (pins.gargoyle + "/VERSION")}-${shortRev pins.gargoyle.revision}";
-    }) ["ftbfs_gcc14.patch" "cmake4-fix"];
+    }) [];
     gallery-dl = prev.gallery-dl.overrideAttrs (o: {
       inherit (pins.gallery-dl-stable) version;
       src = pins.gallery-dl-stable;
