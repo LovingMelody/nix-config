@@ -5,7 +5,7 @@
   ...
 }: let
   inherit (inputs) nix-reshade spicetify-nix;
-  inherit (lib.TM.package-helper) pins patchLibcuda blacklistPatches shortRev;
+  inherit (lib.TM.package-helper) pins blacklistPatches shortRev;
 in
   final: prev: let
     pinnedOverlay = pkg: pin: ver:

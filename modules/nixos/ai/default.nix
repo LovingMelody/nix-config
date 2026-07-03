@@ -6,7 +6,6 @@
   cfg = config.TM.services.ai;
   inherit
     (lib)
-    mkDefault
     mkEnableOption
     mkIf
     mkMerge
