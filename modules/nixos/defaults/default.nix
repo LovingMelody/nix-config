@@ -135,7 +135,7 @@ in
                   "/share/applications"
                 ];
             };
-            system.configurationRevision = inputs.self.rev or inputs.self.dirtyRev;
+            system.configurationRevision = inputs.self.rev or inputs.self.dirtyRev or "unknown";
             fonts = {
               fontDir.decompressFonts = mkDefault true;
               enableDefaultPackages = config.TM.isGui;
@@ -248,7 +248,7 @@ fhsenv}/usr/lib64 $out/lib")
               ];
             };
             services = {
-              # Enable flatpk by default if xdg portal is enabled
+              # Enable flatpak by default if the xdg portal is enabled
               # Allows running things that nix wont run easily
               flatpak.enable = mkDefault config.xdg.portal.enable;
               resolved = {

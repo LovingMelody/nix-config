@@ -180,8 +180,8 @@ in
       }));
 
     /*
-    TODO: Changes to to be upstreamed
-    Anthing below this line should potentially be upstreamed
+    TODO: Changes to be upstreamed
+    Anything below this line should potentially be upstreamed
     */
     obs-studio-plugins =
       prev.obs-studio-plugins

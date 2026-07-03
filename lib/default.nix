@@ -97,7 +97,7 @@ in rec {
   get-ssh-key-file = user: key: "${self}/keys/${user}/ssh/${key}";
 
   # Takes a string ex: "pink" and converts it to title casing "Pink"
-  # toTitile: str -> str
+  # toTitle: str -> str
   toTitle = str:
     (lib.toUpper (builtins.substring 0 1 str))
     + lib.toLower (builtins.substring 1 (builtins.stringLength str) str);

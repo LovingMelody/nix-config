@@ -78,7 +78,7 @@ in {
       }
       {
         assertion = config.TM.isLaptop != config.TM.isDesktop;
-        message = "config.TM.isLpatop or config.TM.isDesktop needs to be defined";
+        message = "Exactly one of `config.TM.isLaptop` / `config.TM.isDesktop` must be set";
       }
     ];
   };

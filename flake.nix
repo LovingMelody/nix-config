@@ -43,7 +43,7 @@
   in {
     inherit lib;
     namespace = "TM";
-    revision = self.rev or self.dirtyRev;
+    revision = self.rev or self.dirtyRev or "unknown";
     nixosModules = defineModules "nixos";
     homeModules = defineModules "home";
     formatter = builtins.mapAttrs (_n: v: v.config.build.wrapper) treefmtEval;
@@ -167,9 +167,8 @@
     extra-substituters = ["https://cache.garnix.io"];
     extra-trusted-public-keys = ["cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="];
   };
-  # TODO: Migrate server configs to this flake
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs = {

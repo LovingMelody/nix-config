@@ -63,7 +63,7 @@ in {
         "Mocha"
       ];
       default = osConfig.TM.styles.flavor or  default_flavor;
-      description = "The catppucin flavor of the theme";
+      description = "The Catppuccin flavor of the theme";
     };
     accent = mkOption {
       type = types.enum [
@@ -83,7 +83,7 @@ in {
         "Yellow"
       ];
       default = osConfig.TM.styles.accent or "Pink";
-      description = "Catppucin accent color";
+      description = "Catppuccin accent color";
     };
     wallpaper = mkOption {
       default = osConfig.TM.styles.wallpaper or default_wallpaper;

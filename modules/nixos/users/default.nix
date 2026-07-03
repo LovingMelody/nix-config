@@ -15,9 +15,7 @@ in {
   ];
 
   config = mkIf cfg.enable {
-    # systemd.sysusers.enable = true;
-    # Create groups for servies
-    # Audio Group
+    # Create shared groups for services
 
     users.groups = {
       # Audio Services (EX Jellyfin & Polaris)

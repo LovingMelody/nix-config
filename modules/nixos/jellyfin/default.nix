@@ -36,7 +36,7 @@ in {
     };
     services.jellyfin = {
       enable = true;
-      # No reason for this to be accessable outside of Tailscale
+      # No reason for this to be accessible outside of Tailscale
       openFirewall = false;
       #user = config.users.users.jellyfin.name;
       #group = config.users.users.jellyfin.group;
