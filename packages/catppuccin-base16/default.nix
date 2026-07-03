@@ -11,8 +11,6 @@ in
     version = "git+${builtins.substring 0 7 finalAttrs.src.revision}";
     src = base16;
 
-    #passthru.updateScript = nix-update-script { extraArgs = [ "--version=branch" ]; };
-
     meta = {
       description = "Base16 Catppuccin theme";
       homepage = "https://github.com/catppuccin/base16";

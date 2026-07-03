@@ -53,8 +53,6 @@ in
     firefox-unwrapped = prev.firefox-unwrapped.override {pipewireSupport = true;};
     reshade-max = nix-reshade.system.packages.${final.stdenv.hostPlatform.system}.complete;
     rpcs3 = prev.rpcs3.override {enableDiscordRpc = true;};
-    # nix = prev.lix;
-    # Overlays go here
     catppuccin-base16 = final.callPackage "${self}/packages/catppuccin-base16" {inherit pins;};
     xivlauncher-rb = final.callPackage "${self}/packages/xivlauncher-rb" {inherit pins;};
     rename-padded-numbers = final.callPackage "${self}/packages/rename-padded-numbers" {};
@@ -160,8 +158,6 @@ in
       prev.obs-studio-plugins
       // {
         obs-backgroundremoval = prev.obs-studio-plugins.obs-backgroundremoval.overrideAttrs {
-          # version = "git+${pins.obs-backgroundremoval.revision}";
-          # src = pins.obs-backgroundremoval;
           CUDA_BIN_PATH = "${final.cudaPackages.cudatoolkit}";
           CUDA_TOOLKIT_ROOT_DIR = "${final.cudaPackages.cudatoolkit}";
         };

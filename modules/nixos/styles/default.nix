@@ -14,9 +14,6 @@
   inherit (lib.TM) get-shared-module get-secret-file;
 in {
   imports = [(import (get-shared-module "styles") {osConfig = {};})];
-  # TODO: Replace stylix some of the enabled styles just dont work
-  # Breaks some configs such as waybar by default
-
   config = mkIf cfg.enable (mkMerge [
     (mkIf config.TM.knowsHiddenMove {
       sops.secrets."Fonts/fontT.ttf" = {
@@ -49,8 +46,6 @@ in {
       };
       qt = {
         enable = mkDefault config.TM.isGui;
-        # platformTheme = "kvantum";
-        # style = mkForce "adwaita${lib.strings.optionalString (config.stylix.polarity == "dark") "-dark"}";
       };
       fonts = {
         fontDir.enable = config.TM.isGui;
@@ -74,7 +69,7 @@ in {
       };
       stylix = {
         homeManagerIntegration.autoImport = false;
-        # Catppuccin themes this
+        # Catppuccin themes these
         targets = {
           plymouth.enable = false;
           grub.enable = false;

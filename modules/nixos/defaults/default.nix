@@ -93,9 +93,7 @@ in
               mime.enable = mkDefault config.TM.isGui;
               sounds.enable = mkDefault config.TM.isGui;
             };
-            # GIT is needed for flakes
             environment = {
-              # stub-ld.enable = mkDefault (!config.TM.isServer);
               variables = mkIf config.TM.isServer {
                 BROWSER = mkDefault "echo";
               };
@@ -108,7 +106,7 @@ in
                   pkgs.gitFull
                   pkgs.htop
                   pkgs.imagemagickBig
-                  # pkgs.kitty.terminfo
+                  pkgs.kitty.terminfo
                   pkgs.nh
                   pkgs.ripgrep
                   pkgs.rsync
@@ -327,31 +325,6 @@ fhsenv}/usr/lib64 $out/lib")
                   "melody"
                 ];
               };
-              # buildMachines = let
-              #   snow = hostInfo.Snow;
-              #   vulpix = hostInfo.Vulpix;
-              # in [
-              #   {
-              #     inherit (snow) hostName;Gg
-              #     systems = [ snow.platform ] ++ snow.extra-platforms;
-              #     supportedFeatures = snow.features;
-              #     maxJobs = 4;
-              #     speedFactor = 8;
-              #     sshUser = "builder";
-              #   }
-              #   {
-              #     inherit (vulpix) hostName;
-              #     systems = [ vulpix.platform ] ++ vulpix.extra-platforms;
-              #     supportedFeatures = vulpix.features;
-              #     maxJobs = 4;
-              #     speedFactor = 2;
-              #     sshUser = "builder";
-              #   }
-              # ];
-              # gc = {
-              #   automatic = mkDefault true;
-              #   options = mkDefault "--delete-older-than 30d";
-              # };
             };
           })
         (mkIf

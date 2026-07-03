@@ -51,21 +51,6 @@ in rec {
         inherit (color) hex name;
         inherit (color.rgb) r g b;
       }) (lib.filterAttrs (n: _: n != "ansiColors") palette);
-      # fromColor = color: {
-      #   rgb =
-      #     let
-      #       c = palette.${color};
-      #     in
-      #     "rgb(${lib.strings.removePrefix "#" c.hex})";
-      #   rgba =
-      #     alpha:
-      #     let
-      #       c = palette.${color};
-      #     in
-      #     "rgba(${toString c.rgb.r}, ${toString c.rgb.g}, ${toString c.rgb.b}, ${toString alpha})";
-      #   inherit (palette.${color}) hex;
-      #   inherit (palette.${color}.rgb) r g b;
-      # };
     };
   };
   listdirs = dir: builtins.attrNames (lib.filterAttrs (_: t: t == "directory") (builtins.readDir dir));

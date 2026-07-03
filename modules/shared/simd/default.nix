@@ -69,13 +69,5 @@ in {
         // (builtins.mapAttrs
           (_name: function: function arch)
           lib.systems.architectures.predicates);
-      # legacy
-      # nixpkgs.localSystem = {
-      #   gcc = mkIf (! cfg.partial) {
-      #     inherit arch;
-      #     tune = arch;
-      #   };
-      #   inherit system;
-      # };
     };
 }

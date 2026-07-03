@@ -23,7 +23,6 @@ in {
     };
     "$mod" = "SUPER";
     env = [];
-    #nvidia things...
     monitor = [
       ", preferred, auto, 1, vrr, 1, bitdepth, 10${optionalString cfg.enableHDR ", cm, hdr, sdrbrightness, 1.3"}"
       "Unknown-1,disable"

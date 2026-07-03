@@ -14,7 +14,6 @@ in {
       /**/
       settings = {
         "Host *" = {
-          # forwardAgent = true;
           compression = true;
         };
         "Host eu.nixbuild.net" = {

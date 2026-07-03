@@ -19,7 +19,6 @@
     gaming.enable = true;
     home-profiles.desktop.enable = true;
     impermanence.enable = true;
-    # defaults.enable = true;
     programs = {
       _1password = {
         enable = true;
@@ -32,6 +31,5 @@
       git.enable = true;
     };
   };
-  # wayland.windowManager.hyprland.settings.cursor.use_cpu_buffer = lib.mkDefault true;
   home.stateVersion = lib.TM.stateVersion.nixos;
 }

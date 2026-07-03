@@ -14,17 +14,15 @@ in {
   config = mkIf cfg.enable {
     virtualisation = {
       incus = {
-        enable = mkDefault false; # config.networking.nftables.enable;
+        enable = mkDefault false;
         socketActivation = mkDefault true;
-        agent.enable = mkDefault false; #config.virtualisation.incus.enable;
-        ui.enable = mkDefault false; #true;
+        agent.enable = mkDefault false;
+        ui.enable = mkDefault false;
       };
       podman = {
-        enable = mkDefault false; #(! config.virtualisation.docker.enable);
-        dockerCompat = mkDefault false; # (! config.virtualisation.docker.enable);
+        enable = mkDefault (! config.virtualisation.docker.enable);
+        dockerCompat = mkDefault (! config.virtualisation.docker.enable);
       };
-      # lxc.enable = true;
-      # lxd.enable = true;
       libvirtd = {
         enable = mkDefault true;
         qemu = {

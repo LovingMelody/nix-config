@@ -22,9 +22,7 @@
       inputs.nix-minecraft.overlays.default
       inputs.nix-output-monitor.overlays.default
       inputs.nix-topology.overlays.default
-      # inputs.nixpkgs-xr.overlays.default
       inputs.rust-overlay.overlays.default
-      # inputs.lix-module.overlays.default
     ];
     listdir = dir: builtins.attrNames (lib.filterAttrs (_: t: t == "directory") (builtins.readDir dir));
     defineModules = type:
@@ -133,7 +131,6 @@
         rename-padded-numbers
         textools
         unique-basenames
-        # xivlauncher-rb
         gposingway
         slower
         brave
@@ -289,7 +286,6 @@
       url = "github:Infinidoge/nix-minecraft";
       inputs = {
         flake-compat.follows = "flake-compat";
-        # flake-utils.follows = "flake-utils";
         nixpkgs.follows = "nixpkgs";
         systems.follows = "systems";
       };

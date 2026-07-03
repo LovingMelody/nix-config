@@ -26,15 +26,6 @@ in {
       nixcord = {
         enable = true;
         discord.vencord.enable = true;
-        # config.plugins = {
-        #   platformIndicators.enable = true;
-        #   anonymiseFileNames = {
-        #     enable = true;
-        #     settings.method = 2;
-        #   };
-        #   blurNSFW.enable = true;
-        #
-        # };
       };
       alacritty.enable = true;
       vivaldi = {
@@ -53,17 +44,6 @@ in {
     };
 
     gtk.font.size = lib.mkDefault 12;
-    /*
-    gtk.theme = lib.mkDefault {
-    package = pkgs.catppuccin-gtk.override {
-    accents = [ "pink" ];
-    size = "compact";
-    tweaks = [ "rimless" "black" ];
-    variant = config.TM.styles.flavor;
-    };
-    name = "Catppuccin-${config.TM.styles.flavor}-Compact-Pink-Dark";
-    };
-    */
     home = {
       sessionVariables = {
         DOTNET_CLI_TELEMETRY_OPTOUT = "1";
