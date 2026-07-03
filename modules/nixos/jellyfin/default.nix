@@ -42,7 +42,7 @@ in {
       #group = config.users.users.jellyfin.group;
     };
     topology.self.services.jellyfin = {
-      hidden = config.services.jellyfin.openFirewall;
+      hidden = false;
       icon = pkgs.fetchurl {
         url = "https://simpleicons.org/icons/jellyfin.svg";
         hash = "sha256-JE1rGRNRiRQKz/b4wceTejBkkStIIpq3Xyb343Eku5I=";

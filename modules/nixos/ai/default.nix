@@ -65,7 +65,7 @@ in {
   config = mkMerge [
     (mkIf cfg.ollama.enable {
       topology.self.services.ollama = {
-        hidden = mkDefault (!cfg.ollama.openFirewall);
+        hidden = false;
         info = "${cfg.ollama.host}:${toString cfg.ollama.port}";
         name = "Ollama";
       };
@@ -82,7 +82,7 @@ in {
     })
     (mkIf cfg.open-webui.enable {
       topology.self.services.open-webui = {
-        hidden = mkDefault (!cfg.open-webui.openFirewall);
+        hidden = false;
         info = "AI Web Interface: ${cfg.open-webui.host}:${toString cfg.open-webui.port}";
         name = "Open WebUI";
       };
