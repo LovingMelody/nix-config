@@ -24,15 +24,10 @@ in rec {
       package.overrideAttrs (old: {
         patches = patches ++ lib.optionals (builtins.hasAttr "patches" old) old.patches;
       });
+    # Apply every patch but those listed in blacklist.
     blacklistPatches = package: blacklist:
       package.overrideAttrs (o: {
-        patches =
-          if (builtins.hasAttr "patches" o)
-          then
-            if o.patches == []
-            then []
-            else builtins.filter (patch: lib.lists.any (b: (builtins.baseNameOf patch) == b) blacklist) (o.patches or [])
-          else [];
+        patches = builtins.filter (patch: !(lib.elem (builtins.baseNameOf patch) blacklist)) (o.patches or []);
       });
   };
   info = {
