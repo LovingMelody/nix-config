@@ -142,7 +142,14 @@ in {
 
   users.users.melody.packages = with pkgs; [
     gitkraken
-    prismlauncher
+    (prismlauncher.override (o: {
+      additionalLibs =
+        (o.additionalLibs or [])
+        ++ lib.optionals config.TM.vr.enable [
+          openxr-loader
+          xrizer
+        ];
+    }))
     nil
     (vscode-with-extensions.override {
       vscodeExtensions = [
