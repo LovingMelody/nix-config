@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "fc099e49967f8f95de9ed5dd7135ad2067ad8fcc",
+      "revision": "c850747f1df24180ce97b7a9094603f39da1251d",
       "url": null,
-      "hash": "sha256-q9Ua+NBJAl4WR0xCoww8EQKbJKT5OS5M0C+0VkJcnRY="
+      "hash": "sha256-nG4zplcziqD2/Ezp6SulgkNqWM1bJsoVj9BS2/6PZoA="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -61,9 +61,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "97857e7c381ed22027c7c66af71623a5a13ff093",
+      "revision": "7a6b162a63234d149956c9af2cf3d326c7bf1555",
       "url": null,
-      "hash": "sha256-dz5OeqT5dKeYtQZHvzY2XaIqvBjuDTR/nF1XYT8g58g="
+      "hash": "sha256-/V+2KPjWfLwobz2bVeHVpXGKb1cDH/Z47itcoKNk52U="
     },
     "easyeffects": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "ba7dd27ca0356900bb9b84123e81a6c8f07a1fd3",
-      "url": "https://github.com/wwmm/easyeffects/archive/ba7dd27ca0356900bb9b84123e81a6c8f07a1fd3.tar.gz",
-      "hash": "sha256-SdblFdbfOf8zUIQVbOVo6rpSMA4z+ygp6820vVHG0HU="
+      "revision": "11b6d07b644e6d306d28e4757eb7cf216319ae59",
+      "url": "https://github.com/wwmm/easyeffects/archive/11b6d07b644e6d306d28e4757eb7cf216319ae59.tar.gz",
+      "hash": "sha256-OuurxPkO3MjO5s7st6zuaAbUbqQzRBf+hNzB26QRKD4="
     },
     "gallery-dl": {
       "type": "Git",
@@ -88,9 +88,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "aab120dabfa02a85a5f3ce9fb551be33781f53e0",
-      "url": "https://codeberg.org/mikf/gallery-dl/archive/aab120dabfa02a85a5f3ce9fb551be33781f53e0.tar.gz",
-      "hash": "sha256-8a2XXJ26FcgiVmYQcS+mjaGaDegYtiBiUYgueZBsiLI="
+      "revision": "c11469f40df35328d05210f255baf14ae5346a4a",
+      "url": "https://codeberg.org/mikf/gallery-dl/archive/c11469f40df35328d05210f255baf14ae5346a4a.tar.gz",
+      "hash": "sha256-+avp940WjsXKWUMNlzj2ZN56jRQXUsSdyt95efBnB9c="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
