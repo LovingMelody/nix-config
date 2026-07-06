@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "c850747f1df24180ce97b7a9094603f39da1251d",
+      "revision": "c2f9dfca3321299c50ec2a2b6e2684001d2854c7",
       "url": null,
-      "hash": "sha256-nG4zplcziqD2/Ezp6SulgkNqWM1bJsoVj9BS2/6PZoA="
+      "hash": "sha256-HsGRKWWA0tsAjkQJQ8uXpWNbCVcIUmY36vQpoRXoOog="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "11b6d07b644e6d306d28e4757eb7cf216319ae59",
-      "url": "https://github.com/wwmm/easyeffects/archive/11b6d07b644e6d306d28e4757eb7cf216319ae59.tar.gz",
-      "hash": "sha256-OuurxPkO3MjO5s7st6zuaAbUbqQzRBf+hNzB26QRKD4="
+      "revision": "066e5912aa77c8cb50bc5621c02ff7725b87915f",
+      "url": "https://github.com/wwmm/easyeffects/archive/066e5912aa77c8cb50bc5621c02ff7725b87915f.tar.gz",
+      "hash": "sha256-c65Z4iNeeqYXVkKQZV3yK8Pd8ZLkcLpQsmteG9VrdUE="
     },
     "gallery-dl": {
       "type": "Git",
@@ -88,9 +88,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "c11469f40df35328d05210f255baf14ae5346a4a",
-      "url": "https://codeberg.org/mikf/gallery-dl/archive/c11469f40df35328d05210f255baf14ae5346a4a.tar.gz",
-      "hash": "sha256-+avp940WjsXKWUMNlzj2ZN56jRQXUsSdyt95efBnB9c="
+      "revision": "51aa6cf87ef01acdb50dc1a00648ad75d15dd206",
+      "url": "https://codeberg.org/mikf/gallery-dl/archive/51aa6cf87ef01acdb50dc1a00648ad75d15dd206.tar.gz",
+      "hash": "sha256-kkaS0z4mITlthHcoLTea5zXL5kTUqATPjMj+OH63BOk="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -186,9 +186,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "33111f3212ee272ac4a79fe284a7b55c9b5be997",
-      "url": "https://github.com/mpv-player/mpv/archive/33111f3212ee272ac4a79fe284a7b55c9b5be997.tar.gz",
-      "hash": "sha256-u0L49f4nE0XeoaZAWTYXiE3AY/tYbgPgi//V4/s6O0c="
+      "revision": "8e88661257d832a72f9e0162aa84af9a4695345e",
+      "url": "https://github.com/mpv-player/mpv/archive/8e88661257d832a72f9e0162aa84af9a4695345e.tar.gz",
+      "hash": "sha256-n8YZrWxhGezGUPFtuN/ZtiN+77kKcCHtkxEiw+VjvFE="
     },
     "npins": {
       "type": "GitRelease",
