@@ -23,6 +23,10 @@ in {
       };
     };
     programs = {
+      obsidian = {
+        enable = true;
+        cli.enable = true;
+      };
       nixcord = {
         enable = true;
         discord.vencord.enable = true;
