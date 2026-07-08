@@ -32,7 +32,7 @@
       enable = true;
       autoStart = false;
       eula = true;
-      backup.enable = false; # Currently broken
+      backup.enable = true; # Currently broken
       openFirewall = true;
       worldName = "NewWorld";
     };
