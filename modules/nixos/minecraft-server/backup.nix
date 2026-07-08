@@ -21,6 +21,12 @@ in {
     overworld = "${cfg.dataDir}/${cfg.worldName}";
     nether = "${cfg.dataDir}/${cfg.worldName}_nether";
     end = "${cfg.dataDir}/${cfg.worldName}_the_end";
+    # nix-minecraft creates per server units / stdin
+    # minecraft-server-$NAME.{service/socket}
+
+    serverService = "minecraft-server-melody.service";
+    serverSocket = "minecraft-server-melody.socket";
+    stdinFifo = config.services.minecraft-servers.managementSystem.systemd-socket.stdinSocket.path "melody";
   in
     mkIf (cfg.enable && cfg.backup.enable) {
       sops.secrets = {
@@ -50,8 +56,8 @@ in {
         timers.minecraft-backup = {
           wantedBy = ["timers.target"];
           requires = [
-            "minecraft-server.service"
-            "minecraft-server.socket"
+            serverService
+            serverSocket
           ];
           timerConfig = {
             OnBootSec = "30min";
@@ -62,8 +68,8 @@ in {
           inherit (cfg.backup) enable;
           wantedBy = ["multi-user.target"];
           requires = [
-            "minecraft-server.service"
-            "minecraft-server.socket"
+            serverService
+            serverSocket
           ];
           after = ["minecraft-server.service"];
           path = [
@@ -90,7 +96,7 @@ in {
               test_readable ${config.sops.secrets."Minecraft/backup/b2/applicationKey".path}
 
               function rcon {
-                echo "$1" >> /run/minecraft-server.stdin
+                echo "$1" >> '${stdinFifo}'
               }
 
               function backup {
@@ -156,7 +162,7 @@ in {
 
               do_backup
 
-              rcon save-on
+              trap "rcon save-on" EXIT
               rcon 'say §a§lSUCCESS: §r§aWorld backup complete!'
             '';
         };
