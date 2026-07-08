@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "c2f9dfca3321299c50ec2a2b6e2684001d2854c7",
+      "revision": "deed3379a0061257504fbdcc2a386cd06fe06ffd",
       "url": null,
-      "hash": "sha256-HsGRKWWA0tsAjkQJQ8uXpWNbCVcIUmY36vQpoRXoOog="
+      "hash": "sha256-PaoU8AgLwJSFDurK+42wpVEHg5Yhd2FGBfiuXN099Lg="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "066e5912aa77c8cb50bc5621c02ff7725b87915f",
-      "url": "https://github.com/wwmm/easyeffects/archive/066e5912aa77c8cb50bc5621c02ff7725b87915f.tar.gz",
-      "hash": "sha256-c65Z4iNeeqYXVkKQZV3yK8Pd8ZLkcLpQsmteG9VrdUE="
+      "revision": "2c3b53e70cf709607deafc4cca2c04ea3cf30dcc",
+      "url": "https://github.com/wwmm/easyeffects/archive/2c3b53e70cf709607deafc4cca2c04ea3cf30dcc.tar.gz",
+      "hash": "sha256-kXcZ+BohtSuP3CXfBdwoug66m2kGnaOsFyDvSiyZ6p8="
     },
     "gallery-dl": {
       "type": "Git",
@@ -186,9 +186,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "8e88661257d832a72f9e0162aa84af9a4695345e",
-      "url": "https://github.com/mpv-player/mpv/archive/8e88661257d832a72f9e0162aa84af9a4695345e.tar.gz",
-      "hash": "sha256-n8YZrWxhGezGUPFtuN/ZtiN+77kKcCHtkxEiw+VjvFE="
+      "revision": "4c220ffd95c383b191b59a938c52b09ce7dfbc98",
+      "url": "https://github.com/mpv-player/mpv/archive/4c220ffd95c383b191b59a938c52b09ce7dfbc98.tar.gz",
+      "hash": "sha256-YShuFxwrY4+40RIF7NbvX3DN1qmdGoiiSUldPtJTMHY="
     },
     "npins": {
       "type": "GitRelease",
@@ -326,9 +326,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "f1338a56c0c1323148fccbb8cc7713254cca6c5d",
+      "revision": "ce3c862c26ef5b1b74a3a24cf637bddb1adb7a7c",
       "url": null,
-      "hash": "sha256-Pxw9nvYrs/rL0cE+Dm7a5ZTQN3prO3Ol8xnK8DBobA0="
+      "hash": "sha256-LAnOXcgqTYOq0ZBCyC/rIRvjprclEZDWxAz8L9ZZYhE="
     },
     "xivlauncher-rb": {
       "type": "GitRelease",
