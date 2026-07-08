@@ -123,22 +123,22 @@ in {
               mods;
           in
             pkgs.linkFarmFromDrvs "mods" (builtins.attrValues (builtins.listToAttrs (to-source-list [
-              "VanillaRefresh"
-              # "Terralith"
-              # "Tectonic"
+              # "VanillaRefresh"
+              "Terralith"
+              "Tectonic"
               # "Nullscape"
-              # "Incendium"
-              # "Balm"
-              # "NetherPortalFix"
+              "Incendium"
+              "Balm"
+              "NetherPortalFix"
               "ConcurrentChunkManagementEngine"
-              "Krypton"
+              # "Krypton"
               "FabricAPI"
               "ClothConfigAPI"
               "ServerCore"
               "Lithium"
               # "Gyser"
               "SoundPhysicsRemastered"
-              # "Sit!"
+              "Sit!"
               "Vivecraft"
             ])));
         };
