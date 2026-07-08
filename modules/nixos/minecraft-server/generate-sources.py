@@ -67,4 +67,4 @@ for entry in ENTRIES_TO_FIND:
     except IndexError:  # Only catch index errors
         print(f"Failed to get source for {entry['name']}", file=sys.stderr)
 
-print(json.dumps(sources))
+print(json.dumps(sources, sort_keys=True, indent=2))
