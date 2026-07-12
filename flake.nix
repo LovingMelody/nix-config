@@ -356,6 +356,7 @@
       url = "github:moonlight-mod/moonlight";
       inputs = {
         nixpkgs.follows = "nixpkgs";
+        flake-compat.follows = "flake-compat";
       };
     };
     robotnix = {
