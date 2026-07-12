@@ -1,4 +1,4 @@
-{osConfig ? {}}: {
+_: {
   config,
   pkgs,
   lib,
@@ -8,13 +8,13 @@
     (lib)
     importJSON
     mkDefault
-    mkEnableOption
     mkIf
     mkMerge
     mkOption
     toLower
     types
     ;
+  inherit (config.TM.libExtra) mkDisableTarget fromOS;
   inherit (lib.TM) toTitle;
   default_flavor = lib.TM.info.flavor;
   default_wallpaper = "${pkgs.hyprland.src}/assets/install/wall2.png";
@@ -50,11 +50,7 @@ in {
         colors.colors // {inherit (colors) ansiColors;};
       readOnly = true;
     };
-    enable =
-      mkEnableOption "Enable styling"
-      // {
-        default = config.TM.libExtra.fromOS ["styles" "enable"] true;
-      };
+    enable = mkDisableTarget "Enable Styling" ["styles" "enable"];
     flavor = mkOption {
       type = types.enum [
         "Latte"
@@ -62,7 +58,7 @@ in {
         "Macchiato"
         "Mocha"
       ];
-      default = osConfig.TM.styles.flavor or  default_flavor;
+      default = fromOS ["styles" "flavor"] default_flavor;
       description = "The Catppuccin flavor of the theme";
     };
     accent = mkOption {
@@ -82,11 +78,11 @@ in {
         "Teal"
         "Yellow"
       ];
-      default = osConfig.TM.styles.accent or "Pink";
+      default = fromOS ["styles" "accent"] "Pink";
       description = "Catppuccin accent color";
     };
     wallpaper = mkOption {
-      default = osConfig.TM.styles.wallpaper or default_wallpaper;
+      default = fromOS ["styles" "wallpaper"] default_wallpaper;
       description = "The wallpaper to use";
     };
     polarity = mkOption {
@@ -100,11 +96,7 @@ in {
         else "dark";
       description = "The polarity of the theme";
     };
-    editImage =
-      mkEnableOption "Edit the image to match the theme by applying LUT"
-      // {
-        default = osConfig.TM.styles.editImage or true;
-      };
+    editImage = mkDisableTarget "Edit the image to match the theme by applying LUT" ["styles" "editImage"];
     # finalImage = mkOption {
     #   type = types.path;
     #   internal = true;
@@ -116,59 +108,59 @@ in {
       serif = {
         package = mkOption {
           type = lib.types.package;
-          default = osConfig.TM.styles.fonts.serif.package or pkgs.inter;
+          default = fromOS ["styles" "fonts" "serif" "package"] pkgs.inter;
         };
         name = mkOption {
           type = lib.types.str;
-          default = osConfig.TM.styles.fonts.serif.name or "Inter";
+          default = fromOS ["styles" "fonts" "serif" "name"] "Inter";
         };
       };
       sansSerif = {
         package = mkOption {
           type = lib.types.package;
-          default = osConfig.TM.styles.fonts.sansSerif.package or cfg.fonts.serif.package;
+          default = fromOS ["styles" "fonts" "sansSerif" "package"] cfg.fonts.serif.package;
         };
         name = mkOption {
           type = lib.types.str;
-          default = osConfig.TM.styles.fonts.sansSerif.name or cfg.fonts.serif.name;
+          default = fromOS ["styles" "fonts" "sansSerif" "name"] cfg.fonts.serif.name;
         };
       };
       emoji = {
         package = mkOption {
           type = lib.types.package;
-          default = osConfig.TM.styles.fonts.emoji.package or pkgs.noto-fonts-color-emoji;
+          default = fromOS ["styles" "fonts" "emoji" "package"] pkgs.noto-fonts-color-emoji;
         };
         name = mkOption {
           type = lib.types.str;
-          default = osConfig.TM.styles.fonts.emoji.name or "Noto Color Emoji";
+          default = fromOS ["styles" "fonts" "emoji" "name"] "Noto Color Emoji";
         };
       };
       monospace = {
         package = mkOption {
           type = lib.types.package;
-          default = osConfig.TM.styles.fonts.monospace.package or pkgs.nerd-fonts.caskaydia-cove;
+          default = fromOS ["styles" "fonts" "monospace" "package"] pkgs.nerd-fonts.caskaydia-cove;
         };
         name = mkOption {
           type = lib.types.str;
-          default = osConfig.TM.styles.fonts.monospace.name or "CaskaydiaCove Nerd Font";
+          default = fromOS ["styles" "fonts" "monospace" "name"] "CaskaydiaCove Nerd Font";
         };
       };
       sizes = {
         terminal = mkOption {
           type = lib.types.int;
-          default = osConfig.TM.styles.fonts.sizes.terminal or 18;
+          default = fromOS ["styles" "fonts" "sizes" "terminal"] 18;
         };
         desktop = mkOption {
           type = lib.types.int;
-          default = osConfig.TM.styles.fonts.sizes.desktop or 14;
+          default = fromOS ["styles" "fonts" "sizes" "desktop"] 14;
         };
         applications = mkOption {
           type = lib.types.int;
-          default = osConfig.TM.styles.fonts.sizes.applications or 16;
+          default = fromOS ["styles" "fonts" "sizes" "desktop"] 16;
         };
         popups = mkOption {
           type = lib.types.int;
-          default = osConfig.TM.styles.fonts.sizes.popups or 12;
+          default = fromOS ["styles" "fonts" "sizes" "popups"] 12;
         };
       };
     };
