@@ -46,10 +46,12 @@ in {
       pokedex = mkOption {
         description = "Pokedex number for the system";
         type = types.nullOr types.int;
-        default = fromOS [
-          "pokemon"
-          "pokedex"
-        ];
+        default =
+          fromOS [
+            "pokemon"
+            "pokedex"
+          ]
+          null;
       };
       variant = mkOption {
         description = "Variant of the pokemon";
