@@ -188,7 +188,7 @@ in {
     bitwarden-cli
     czkawka
     nmap
-    # nunif-iw3
+    nunif-iw3
   ];
 
   environment.systemPackages = with pkgs; [
