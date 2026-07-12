@@ -5,6 +5,7 @@
   ...
 }: let
   flavor = lib.toLower config.TM.styles.flavor or "Mocha";
+  enableDAP = false;
 in {
   vim = {
     package = pkgs.neovim-unwrapped.override {inherit (pkgs.llvmPackages) stdenv;};
@@ -48,24 +49,20 @@ in {
 
     debugger = {
       nvim-dap = {
-        enable = true;
-        ui.enable = true;
+        enable = enableDAP;
+        ui.enable = enableDAP;
       };
     };
 
-    # This section does not include a comprehensive list of available language modules.
-    # To list all available language module options, please visit the nvf manual.
     languages = {
-      enableDAP = true;
+      enableDAP = enableDAP;
       enableFormat = true;
       enableTreesitter = true;
       enableExtraDiagnostics = true;
 
-      # Languages that will be supported in default and maximal configurations.
       nix.enable = true;
       markdown.enable = true;
 
-      # Languages that are enabled in the maximal configuration.
       bash.enable = true;
       clang.enable = true;
       css.enable = false;
@@ -102,11 +99,6 @@ in {
 
       svelte.enable = false;
 
-      # Nim LSP is broken on Darwin and therefore
-      # should be disabled by default. Users may still enable
-      # `vim.languages.vim` to enable it, this does not restrict
-      # that.
-      # See: <https://github.com/PMunch/nimlsp/issues/178#issue-2128106096>
       nim.enable = pkgs.stdenv.isLinux;
     };
 
