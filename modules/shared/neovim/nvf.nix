@@ -52,7 +52,7 @@ in {
     };
 
     languages = {
-      enableDAP = enableDAP;
+      inherit enableDAP;
       enableFormat = true;
       enableTreesitter = true;
       enableExtraDiagnostics = true;
