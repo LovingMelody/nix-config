@@ -13,10 +13,7 @@ in {
       enable = config.TM.isGui or true;
       registers = "unnamedplus";
       providers = {
-        xsel = {
-          enable = true;
-          package = pkgs.xsel;
-        };
+        xsel.enable = false;
         wl-copy = {
           enable = true;
           package = pkgs.wl-clipboard;
@@ -64,7 +61,7 @@ in {
       markdown.enable = true;
 
       bash.enable = true;
-      clang.enable = true;
+      clang.enable = false;
       css.enable = false;
       html.enable = false;
       # Currently broken & rarely used
@@ -196,12 +193,12 @@ in {
       };
 
       images = {
-        image-nvim.enable = false;
+        image-nvim.enable = true;
       };
     };
 
     notes = {
-      obsidian.enable = false; # FIXME: neovim fails to build if obsidian is enabled
+      obsidian.enable = true;
       neorg.enable = false;
       orgmode.enable = false;
       todo-comments.enable = true;
