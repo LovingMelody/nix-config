@@ -9,6 +9,7 @@
   # Should probably get added to lib.TM eventually...
   fromOS = import ./fromOS.nix {inherit lib args;};
   mkEnableTarget = txt: module: (mkEnableOption txt) // {default = fromOS module false;};
+  mkDisableTarget = txt: module: (mkEnableOption txt) // {default = fromOS module true;};
 in {
   options.TM = {
     isDesktop = mkEnableTarget "Environment is on a desktop" ["isDesktop"];
@@ -22,7 +23,9 @@ in {
     libExtra = mkOption {
       description = "Libs from TM that are required to be loaded in with the config";
       type = types.attrs;
-      default = fromOS "libExtra" {};
+      default = fromOS "libExtra" {
+        inherit mkDisableTarget mkEnableTarget fromOS;
+      };
     };
     defaultNetworkAdapter = mkOption {
       description = "Default Network interface for system";
@@ -69,7 +72,7 @@ in {
       config.TM.defaultNetworkAdapter == null
     ) "TM.defaultNetworkAdapter is not defined";
     TM.libExtra = {
-      inherit fromOS mkEnableTarget;
+      inherit mkDisableTarget mkEnableTarget fromOS;
     };
     assertions = [
       {
