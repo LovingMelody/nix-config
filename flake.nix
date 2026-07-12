@@ -48,7 +48,10 @@
     checks =
       (builtins.mapAttrs (_n: v: v.config.build.check self) treefmtEval)
       // {
-        x86_64-linux.Rotom = self.nixosConfigurations.Rotom.config.system.build.toplevel;
+        x86_64-linux = {
+          Rotom = self.nixosConfigurations.Rotom.config.system.build.toplevel;
+          Snow = self.nixosConfigurations.Snow.config.system.build.toplevel;
+        };
       };
     overlays.default = import ./overlays/default {inherit inputs self lib;};
     androidImages = {
