@@ -61,9 +61,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "7a6b162a63234d149956c9af2cf3d326c7bf1555",
+      "revision": "bac88f0a2fe94f14138d3f60f8734600a03beb3d",
       "url": null,
-      "hash": "sha256-/V+2KPjWfLwobz2bVeHVpXGKb1cDH/Z47itcoKNk52U="
+      "hash": "sha256-fasimRbrSgb9DAD7uHgEGoUS/rwI4XelSIZVEqOSOXc="
     },
     "easyeffects": {
       "type": "Git",
@@ -88,9 +88,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "7af01e4d1405d25cb91add23ddaa7d9345152e46",
-      "url": "https://codeberg.org/mikf/gallery-dl/archive/7af01e4d1405d25cb91add23ddaa7d9345152e46.tar.gz",
-      "hash": "sha256-ymbNhBMxWu+f35Zfa6vtpPuymLaltrZ2hEV9t+pRwqw="
+      "revision": "4eeb309b1b8e53c7ea226ff14718dfe6605a3337",
+      "url": "https://codeberg.org/mikf/gallery-dl/archive/4eeb309b1b8e53c7ea226ff14718dfe6605a3337.tar.gz",
+      "hash": "sha256-EWNKcFMrZG3WAcuKyVBk1u+4qn/a9gWt3QMc5Lu82es="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -104,10 +104,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v1.32.5",
-      "revision": "6c517b617236d3571d150abe99e2de70615ad295",
-      "url": "https://codeberg.org/api/v1/repos/mikf/gallery-dl/archive/v1.32.5.tar.gz",
-      "hash": "sha256-6E4PgJ6VWI0c6TyQOZ0siqsMxNNLpymy8/rANWaBVnU="
+      "version": "v1.32.6",
+      "revision": "9af276f3937e77e1d8a3ba892f6bd7577cccd94a",
+      "url": "https://codeberg.org/api/v1/repos/mikf/gallery-dl/archive/v1.32.6.tar.gz",
+      "hash": "sha256-EWNKcFMrZG3WAcuKyVBk1u+4qn/a9gWt3QMc5Lu82es="
     },
     "gargoyle": {
       "type": "Git",
@@ -118,9 +118,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "66bebce41d14dccc751745f381ad28e880a30f94",
-      "url": "https://github.com/garglk/garglk/archive/66bebce41d14dccc751745f381ad28e880a30f94.tar.gz",
-      "hash": "sha256-aHwXUQIAmn8jTKWQzYVI7l/jVGfxGwjOX0ut4DyD0a4="
+      "revision": "d38a15c415e665170bb803758eecf636b8572045",
+      "url": "https://github.com/garglk/garglk/archive/d38a15c415e665170bb803758eecf636b8572045.tar.gz",
+      "hash": "sha256-tc8MExxl1ifxAow44lh87whHpYPMpvb5E5vCcfIdXI8="
     },
     "getopts.fish": {
       "type": "Git",
