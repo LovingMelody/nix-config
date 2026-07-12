@@ -36,7 +36,7 @@
         overlays = nixpkgs-overlays;
         config = {allowUnfree = true;};
       };
-    forAllSystems = f: lib.genAttrs (import systems) (system: f (defineNixpkgs system));
+    forAllSystems = f: lib.genAttrs (builtins.filter (sys: sys != "x86_64-darwin") (import systems)) (system: f (defineNixpkgs system));
     treefmtEval = forAllSystems (pkgs: inputs.treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
   in {
     inherit lib;
