@@ -19,7 +19,7 @@
 in {
   options.TM.gaming = {
     enable = mkEnableOption "Enable gaming specific configs";
-    remotePlay = mkEnableOption "Enable settings for remote play";
+    remotePlay = mkEnableOption "Enable settings for remote play" // {default = true;};
     cachyPatches = mkEnableOption "Enable CachyOS Patches";
     kernel = mkOption {
       type = types.raw;
@@ -54,6 +54,7 @@ in {
       enforceWaylandDrv = true;
     };
     programs = {
+      moonlight-qt.enable = true;
       wavey-launcher.enable = true;
       gamemode = {
         enable = mkDefault config.TM.isLaptop;
@@ -70,11 +71,12 @@ in {
       };
       steam = {
         enable = true;
-        remotePlay.openFirewall = true;
+        remotePlay.openFirewall = cfg.remotePlay;
         extraCompatPackages = with pkgs; [proton-ge-bin dw-proton-bin proton-em-bin proton-cachyos-bin];
         extraPackages = with pkgs; [lsfg-vk lsfg-vk-ui umu-launcher mangohud];
         protontricks.enable = true;
         platformOptimizations.enable = true;
+        extest.enable = mkDefault true;
       };
       wine = {
         ntsync = lib.versionAtLeast config.boot.kernelPackages.kernel.version "6.14";
@@ -95,6 +97,10 @@ in {
         package = pkgs.ananicy-cpp;
 
         rulesProvider = pkgs.ananicy-rules-cachyos;
+      };
+      sunshine = {
+        enable = cfg.remotePlay;
+        capSysAdmin = mkDefault true;
       };
     };
     nix.settings = let
