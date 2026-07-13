@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "c8c49cc156f5044f9046ae5a8396a3a3aec2ed00",
+      "revision": "5098f1d0bd3e737ef0509ec51180cd01cfddd403",
       "url": null,
-      "hash": "sha256-IbjbJ/lyLYz8RxVrUitue+xX1P1Jj4sbfiWatqPckvQ="
+      "hash": "sha256-SRJyda1V1SPG56d4NY6QFYw8UJkZKdPUhQAruMIdhW8="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -61,9 +61,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "bac88f0a2fe94f14138d3f60f8734600a03beb3d",
+      "revision": "87047b68ec9b0f046f7ba39e6696101dc8bd3ad7",
       "url": null,
-      "hash": "sha256-fasimRbrSgb9DAD7uHgEGoUS/rwI4XelSIZVEqOSOXc="
+      "hash": "sha256-NzUpk2/13rdPw48rYMT9NCrPvgk/cS0pSWDhNTEbqN8="
     },
     "easyeffects": {
       "type": "Git",
@@ -88,9 +88,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "4eeb309b1b8e53c7ea226ff14718dfe6605a3337",
-      "url": "https://codeberg.org/mikf/gallery-dl/archive/4eeb309b1b8e53c7ea226ff14718dfe6605a3337.tar.gz",
-      "hash": "sha256-EWNKcFMrZG3WAcuKyVBk1u+4qn/a9gWt3QMc5Lu82es="
+      "revision": "3e59866fe537d3637f77d9b0f26b18f34c16e71e",
+      "url": "https://codeberg.org/mikf/gallery-dl/archive/3e59866fe537d3637f77d9b0f26b18f34c16e71e.tar.gz",
+      "hash": "sha256-y/vuantv1+/x1gtSs24MZCpRnknPmXreqab6Npd1f/0="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -118,9 +118,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "d38a15c415e665170bb803758eecf636b8572045",
-      "url": "https://github.com/garglk/garglk/archive/d38a15c415e665170bb803758eecf636b8572045.tar.gz",
-      "hash": "sha256-tc8MExxl1ifxAow44lh87whHpYPMpvb5E5vCcfIdXI8="
+      "revision": "0dcfb85628a1a62a85af5770beb7536a8e648f8f",
+      "url": "https://github.com/garglk/garglk/archive/0dcfb85628a1a62a85af5770beb7536a8e648f8f.tar.gz",
+      "hash": "sha256-uGEl/w4ZvZondTtkOY19XebmXiJ/h89wiscvbjV9J9E="
     },
     "getopts.fish": {
       "type": "Git",
