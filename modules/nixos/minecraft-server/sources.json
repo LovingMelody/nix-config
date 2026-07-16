@@ -8,22 +8,25 @@
     "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/Nv3xnWXd/cloth-config-26.2.155.jar"
   },
   "ConcurrentChunkManagementEngine": {
-    "sha512": "052c79f8da23a4215a812e3c3fb592b3992d519e1c5daedd193d66742823855dac65365de31408c18b750bb58990f2650e4402a3abc32cf0e30aab7125adb15b",
-    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/XQMx5J57/c2me-fabric-mc26.2-0.4.2-alpha.0.13.jar"
+    "sha512": "9b72b44150c08dea90a4a1eb8bc8ff8a7859a272bee185dfeae5fefd69ac2bb0b639b21bcf85ffa5625eb42f759f74440e861cc709a7d50fb3588267559356e8",
+    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/ZrrJuWws/c2me-fabric-mc26.2-0.4.2-alpha.0.18.jar"
   },
   "FabricAPI": {
     "sha512": "7cedad862e8105a7de8db090c0707c25a14a9472654090861dcf490f834862c3212723e762f6f797a0e4683104f4b3a20d3692fb29d7b5c0af437613283d34db",
     "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/Kr4WG5mG/fabric-api-0.154.2%2B26.2.jar"
   },
   "Gyser": {
-    "sha512": "09fc8d7dd03613d53ad16b083f52dd89c4e8a7cc01c9b4995c661c12c4cc1733c1a8c2cf08b3dd657b14b8ce035aa5503179fe2d9e991d54f5d409da20410ba2",
-    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/6TIwzcQR/Geyser-Fabric-2.11.0-b1196.jar"
+    "sha512": "042f1b20d24fac56c1f90476abb097429fbc0fae266db3bcab17564940cf2dec43ca3354f3c95436066f3c5c6a8bf3de9a445c0e2686721dfd26005ac851892e",
+    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/azpN0ZyG/Geyser-Fabric-2.11.0-b1199.jar"
   },
   "Incendium": {
     "sha512": "01ea96af25367f41ec420282abdb5684608b326fff40621cf9b0df9b0f7901a76ba23c38c79f55fcbb0f291923d181af243ca52c5414a2e19c8161319ef11dbe",
     "url": "https://cdn.modrinth.com/data/ZVzW5oNS/versions/kjnBRlCW/Incendium_Legacy_26.2_v5.5.0.jar"
   },
-  "Krypton": null,
+  "Krypton": {
+    "sha512": "b8d9af34cd0050493afb8a6232cb8f785daa9d8887b7045f6e6a53c6bb9b5ffc4318fd9b0347a940eacfeba4773f10cb80ae0be1e79ce4c1888f96eda21e564e",
+    "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/5WeL0Nkz/krypton-0.3.1.jar"
+  },
   "Lithium": {
     "sha512": "db676376c05b7e912cdae5aad9e51f125adc1554ae2b204599ccb598751921aedbac98e97b9cba0333b6b52488c6b75c915a7dbd50436f97800387fe1aad1c50",
     "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/UPNexAfy/lithium-fabric-0.25.2%2Bmc26.2.jar"
