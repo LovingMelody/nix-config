@@ -61,7 +61,7 @@ in {
       };
     }
 
-    (mkIf config.TM.knowsHiddenMove {
+    (mkIf (config.TM.knowsHiddenMove && (! (lib.hasAttrByPath ["home" "username"] config))) {
       sops.secrets."nix-netrc" = mkMerge [
         {
           sopsFile = get-secret-file "netrc.bin";
