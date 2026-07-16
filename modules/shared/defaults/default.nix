@@ -77,7 +77,7 @@ in {
         )
       ];
       nix.settings = {
-        netrc-file = "/home/user/.netrc";
+        netrc-file = config.sops.secrets."nix-netrc".path;
         substituters = ["https://cache.nix-ci.com"];
         trusted-public-keys = ["nix-ci:g3xV5BDTLtIBZr/A00IU1x0EtKKlb7YLgBN2SgYgM6A="];
       };
