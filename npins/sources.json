@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "a137f78453239ae1e71c421770d7a4fe4f6c28aa",
+      "revision": "6b20f622a77b87b2921fe5d2c1774d2f2ba3e9b7",
       "url": null,
-      "hash": "sha256-VExnWkVemJ0RPR7YYGqaExn1fl6BHea2Nn7zCuXuJs0="
+      "hash": "sha256-Kq6gUQ1Jeayq0wNtGiEiz4IxzJkgz0Yx0aysXdviipk="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "094ba8704503d4567bbfaa05151bf3155fad1410",
-      "url": "https://github.com/wwmm/easyeffects/archive/094ba8704503d4567bbfaa05151bf3155fad1410.tar.gz",
-      "hash": "sha256-6GAqEktYxMe5NDdIAyFE+zi8eTR/dQCTvDNati5Uods="
+      "revision": "9040e6a1d5daa3ee754edde0bb58651853f59a7e",
+      "url": "https://github.com/wwmm/easyeffects/archive/9040e6a1d5daa3ee754edde0bb58651853f59a7e.tar.gz",
+      "hash": "sha256-Y2gpn/kbsQO1gUEM7k5mSU89pFwMUqB7lXQK/fnAeNk="
     },
     "gallery-dl": {
       "type": "Git",
@@ -88,9 +88,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "21b3a476e7f464dfd3cbb238f2762e7780bfe79d",
-      "url": "https://codeberg.org/mikf/gallery-dl/archive/21b3a476e7f464dfd3cbb238f2762e7780bfe79d.tar.gz",
-      "hash": "sha256-10ahaAIvzDE5NwCspjlNSf3wrBuinGtmfMSuMtMK8aw="
+      "revision": "bb031bcb34d89912a3abc8d044db2239414f6986",
+      "url": "https://codeberg.org/mikf/gallery-dl/archive/bb031bcb34d89912a3abc8d044db2239414f6986.tar.gz",
+      "hash": "sha256-jogFKn2VVIBAhsu+VPRuWHRS26/uKXgIBYFFzvBLyLY="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -104,10 +104,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v1.32.6",
-      "revision": "9af276f3937e77e1d8a3ba892f6bd7577cccd94a",
-      "url": "https://codeberg.org/api/v1/repos/mikf/gallery-dl/archive/v1.32.6.tar.gz",
-      "hash": "sha256-EWNKcFMrZG3WAcuKyVBk1u+4qn/a9gWt3QMc5Lu82es="
+      "version": "v1.32.7",
+      "revision": "121586de7ab21c61a86d433074d79f3726f52945",
+      "url": "https://codeberg.org/api/v1/repos/mikf/gallery-dl/archive/v1.32.7.tar.gz",
+      "hash": "sha256-BIHjGbNjes9FMtz10cgGuHhpHTwdUfppINF1HjWMm7g="
     },
     "gargoyle": {
       "type": "Git",
@@ -118,9 +118,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "0dcfb85628a1a62a85af5770beb7536a8e648f8f",
-      "url": "https://github.com/garglk/garglk/archive/0dcfb85628a1a62a85af5770beb7536a8e648f8f.tar.gz",
-      "hash": "sha256-uGEl/w4ZvZondTtkOY19XebmXiJ/h89wiscvbjV9J9E="
+      "revision": "f33388e8905cd5d64676f4956b4f3732b851c24e",
+      "url": "https://github.com/garglk/garglk/archive/f33388e8905cd5d64676f4956b4f3732b851c24e.tar.gz",
+      "hash": "sha256-lQe2HgISB6/nTxP8MdksabYy/YW1cGvFPu5xogk80Gk="
     },
     "getopts.fish": {
       "type": "Git",
@@ -159,10 +159,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v0.47.4",
-      "revision": "793c1035570f1c91f63ed7faef5543771c057478",
-      "url": "https://api.github.com/repos/kovidgoyal/kitty/tarball/refs/tags/v0.47.4",
-      "hash": "sha256-UDuWbWg7HiyJ4q/fVLLD+ZFmK74H2A2HRRwPoyGyGtU="
+      "version": "v0.48.0",
+      "revision": "a816fdbed3e5d6d2e4f26cd920189b4d889a0d03",
+      "url": "https://api.github.com/repos/kovidgoyal/kitty/tarball/refs/tags/v0.48.0",
+      "hash": "sha256-+x3saXQw+6BzBYfwwur0DiTaJZVNgOYKJ4UVzeScbtk="
     },
     "linux-wallpaperengine": {
       "type": "Git",
@@ -241,9 +241,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "b105cbf38e3b03d9f5ca1b148c82c785b30458ec",
-      "url": "https://github.com/royshil/obs-backgroundremoval/archive/b105cbf38e3b03d9f5ca1b148c82c785b30458ec.tar.gz",
-      "hash": "sha256-AIp8vM7ss4EY6/uxSi9q3sKtyhHmTZ6UVgeKabErr2I="
+      "revision": "9cf74830b2ffc8a0a43cc2a8b9f99336beeaea2f",
+      "url": "https://github.com/royshil/obs-backgroundremoval/archive/9cf74830b2ffc8a0a43cc2a8b9f99336beeaea2f.tar.gz",
+      "hash": "sha256-1ZszbcYo8pQjOMesKTb/+hSH0JOxWm+Sfgu/XL5M/lI="
     },
     "obs-image-reaction": {
       "type": "Git",
