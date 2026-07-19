@@ -1,23 +1,23 @@
 {
   "Balm": {
-    "sha512": "da7227ac0eadd8e7fb534a8f205753c63f27b2ed2f0ef4955dbdd37445448bd3b65729c419b40eb47faff235c0a11d921e02994bedb0e8c81a50af9137be535a",
-    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/ZLn74Oar/balm-fabric-26.2-26.2.0.3.jar"
+    "sha512": "6ad44bfdb32a432ee160a790bf4e54cfdbacc619f1b2acb179fb19ef3ffbb9eaca69e7cbfa52cf22088a6fad2aa299afbe3d83bad2519f6809747425d193edc9",
+    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/L6soNs6H/balm-fabric-26.2-26.2.0.4.jar"
   },
   "ClothConfigAPI": {
     "sha512": "37b1e402f0df5a383656e21a38ee18cdd15cb4ba3fb62fbeba82ef4b959a4479fc32718ac0d9d154a7d9104c5f7315bfa67dbeced0b8ff240b8039d4848d5df1",
     "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/Nv3xnWXd/cloth-config-26.2.155.jar"
   },
   "ConcurrentChunkManagementEngine": {
-    "sha512": "9b72b44150c08dea90a4a1eb8bc8ff8a7859a272bee185dfeae5fefd69ac2bb0b639b21bcf85ffa5625eb42f759f74440e861cc709a7d50fb3588267559356e8",
-    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/ZrrJuWws/c2me-fabric-mc26.2-0.4.2-alpha.0.18.jar"
+    "sha512": "4cc2958249bc3e21e6323773eedb2bad267fa14f69aa16682bf2f671efb25afe5695b08c9be567e67c453417678edda368a0cd134173de60688f694099f0a1dc",
+    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/kOHKkdCS/c2me-fabric-mc26.2-0.4.2-alpha.0.20.jar"
   },
   "FabricAPI": {
-    "sha512": "cd2dfa120313093283e444e817f15c22d87f9f3c494bcc1d34b6ec88862991f3e3fc8c64d5e2a918c02919d2c8b2ae4d87acb6f0f3677f9505878f5c5a6c4deb",
-    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/KsF7R7m6/fabric-api-0.155.0%2B26.2.jar"
+    "sha512": "cc56984378a27c5bcd56374d6ffbb27a45c6bf3355add2ac6be9817ccac5854362249bf9d0147eb271a70fda2716129204e240d53c9aa876a2a7861f4c7f880f",
+    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/lVXlbH4w/fabric-api-0.155.2%2B26.2.jar"
   },
   "Gyser": {
-    "sha512": "042f1b20d24fac56c1f90476abb097429fbc0fae266db3bcab17564940cf2dec43ca3354f3c95436066f3c5c6a8bf3de9a445c0e2686721dfd26005ac851892e",
-    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/azpN0ZyG/Geyser-Fabric-2.11.0-b1199.jar"
+    "sha512": "1c9f510d180c0391f018beddc9e405ac9fb59032ab35e80b803c917444d77fefc5c21468c7e5b5d2e57e93426773b8e2ebde68c7cc069e8488a96da30571266a",
+    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/rRRaN6Lg/Geyser-Fabric-2.11.0-b1200.jar"
   },
   "Incendium": {
     "sha512": "01ea96af25367f41ec420282abdb5684608b326fff40621cf9b0df9b0f7901a76ba23c38c79f55fcbb0f291923d181af243ca52c5414a2e19c8161319ef11dbe",
@@ -61,7 +61,7 @@
   },
   "VanillaRefresh": null,
   "Vivecraft": {
-    "sha512": "25b72575d02db4e775392cdfd19bab4aef0a2d5e35f29e24940f41fc3191ce7593e5434ac9e2ded3e3663f6fd6a7fe3e3286e37c1794c53e5597a0efb6594deb",
-    "url": "https://cdn.modrinth.com/data/wGoQDPN5/versions/u5Kg1DX4/vivecraft-26.2-1.3.14-fabric.jar"
+    "sha512": "8f63a60587fd95b21884d2d61ac6e76f18a3e9a510226edbc0e06e4f276b8f84196bde314764aedf3bfc5f08499facd3bc3697ab97fa93602986fc6e8e7c7c7c",
+    "url": "https://cdn.modrinth.com/data/wGoQDPN5/versions/VrqKDtZn/vivecraft-26.2-1.3.15-fabric.jar"
   }
 }
