@@ -36,7 +36,7 @@ in
       ffmpeg = final.ffmpeg-full;
       imagemagick = final.imagemagickBig;
     };
-    kitty = pinnedOverlay prev.kitty pins.kitty null;
+    # kitty = pinnedOverlay prev.kitty pins.kitty null;
     gargoyle = blacklistPatches ((clangStdenv prev.gargoyle).overrideAttrs {
       src = pins.gargoyle;
       version = builtins.replaceStrings ["\n"] [""] "${builtins.readFile (pins.gargoyle + "/VERSION")}-${shortRev pins.gargoyle.revision}";
