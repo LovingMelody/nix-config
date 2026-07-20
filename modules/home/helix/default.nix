@@ -38,11 +38,10 @@ in {
           };
         };
       };
-      extraPackages = with pkgs; [
-        nil
+        extraPackages =  with pkgs; [
         marksman
         texlab
-      ];
+      ] ++ lib.optional (pkgs.nil.version != "2025-06-13") pkgs.nil;
     };
   };
 }

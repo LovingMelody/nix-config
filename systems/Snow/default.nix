@@ -150,7 +150,6 @@ in {
           xrizer
         ];
     }))
-    nil
     (vscode-with-extensions.override {
       vscodeExtensions = [
         vscode-extensions."1Password".op-vscode

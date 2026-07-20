@@ -57,7 +57,7 @@ in {
       enableTreesitter = true;
       enableExtraDiagnostics = true;
 
-      nix.enable = true;
+      nix.enable = pkgs.nil.version != "2025-06-13";
       markdown.enable = true;
 
       bash.enable = true;

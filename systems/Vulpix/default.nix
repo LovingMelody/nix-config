@@ -115,7 +115,6 @@ in {
     _1password-gui
     spotify
     vscode
-    nil
     android-tools
     # yubioath-flutter
     #KDE
