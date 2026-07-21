@@ -50,6 +50,7 @@ in {
       openssh.authorizedKeys.keyFiles = [
         (lib.TM.get-ssh-key-file "melody" "blink")
         (lib.TM.get-ssh-key-file "melody" "primary")
+        (lib.TM.get-ssh-key-file "melody" "automobile")
       ];
     };
     systemd.tmpfiles.rules = let
