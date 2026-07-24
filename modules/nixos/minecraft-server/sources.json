@@ -8,16 +8,16 @@
     "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/Nv3xnWXd/cloth-config-26.2.155.jar"
   },
   "ConcurrentChunkManagementEngine": {
-    "sha512": "88ce275d5b2bc5aff451d199184b8d1a693aaf0a6ac4e6202d0b12d6d92e99e476892ee2bbec09f629119fa36aa7d888214d8a13e6ee12d2016661e7c7a379d2",
-    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/Pk9KKjAm/c2me-fabric-mc26.2-0.4.2-alpha.0.23.jar"
+    "sha512": "423cff976ed0d1ec33d802dd314053dce6a77bc911503e1de444b7cb691988a7587174e23c036b07fbb1c81c3f81ed70ccceb81a89eed212a0c82474e2c682ed",
+    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/3KTCdSd3/c2me-fabric-mc26.2-0.4.2-alpha.0.27.jar"
   },
   "FabricAPI": {
     "sha512": "cc56984378a27c5bcd56374d6ffbb27a45c6bf3355add2ac6be9817ccac5854362249bf9d0147eb271a70fda2716129204e240d53c9aa876a2a7861f4c7f880f",
     "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/lVXlbH4w/fabric-api-0.155.2%2B26.2.jar"
   },
   "Gyser": {
-    "sha512": "1c9f510d180c0391f018beddc9e405ac9fb59032ab35e80b803c917444d77fefc5c21468c7e5b5d2e57e93426773b8e2ebde68c7cc069e8488a96da30571266a",
-    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/rRRaN6Lg/Geyser-Fabric-2.11.0-b1200.jar"
+    "sha512": "25bcedce46c968fc42af41db6a5a981db9c378915574602f1426eaf320afe5925628d06cb22db8000a620be5b6f55321aa9790f32f418e10081b4baa057b487a",
+    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/8Ymmab0N/Geyser-Fabric-2.11.0-b1202.jar"
   },
   "Incendium": {
     "sha512": "01ea96af25367f41ec420282abdb5684608b326fff40621cf9b0df9b0f7901a76ba23c38c79f55fcbb0f291923d181af243ca52c5414a2e19c8161319ef11dbe",
@@ -59,7 +59,10 @@
     "sha512": "0830f4601674c4ea58d247a71bfdc820e4676900e173c7d6df4e58e348a09da43b279cea060df7b67e6f74c84e2a05b401b2df79836c37cffc8dc994844ab250",
     "url": "https://cdn.modrinth.com/data/8oi3bsk5/versions/OxfI2n80/Terralith_26.2_v2.6.4.jar"
   },
-  "VanillaRefresh": null,
+  "VanillaRefresh": {
+    "sha512": "1944425ba4da0323eb71fb150382e02d362807364b6d38b7783ccd91b8c2434ae374a742f15e96987b1dee78b523a542c5d45273ec6820ae0ca0da86c4fcecfb",
+    "url": "https://cdn.modrinth.com/data/gWO6Zqey/versions/e4Gn0vUO/vanilla-refresh-1.4.31.jar"
+  },
   "Vivecraft": {
     "sha512": "8f63a60587fd95b21884d2d61ac6e76f18a3e9a510226edbc0e06e4f276b8f84196bde314764aedf3bfc5f08499facd3bc3697ab97fa93602986fc6e8e7c7c7c",
     "url": "https://cdn.modrinth.com/data/wGoQDPN5/versions/VrqKDtZn/vivecraft-26.2-1.3.15-fabric.jar"
