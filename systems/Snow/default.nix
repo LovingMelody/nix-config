@@ -193,7 +193,6 @@ in {
   environment.systemPackages = with pkgs; [
     tetex
     texstudio
-    abaddon
     cava
     gh
     git
