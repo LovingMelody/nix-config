@@ -185,4 +185,6 @@ in {
   #     };
   #   };
   # };
+
+  boot.kernelPackages = mkForce (lib.TM.latestZFSKernel pkgs config.boot.zfs.package);
 }
