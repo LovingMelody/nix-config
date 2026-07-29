@@ -61,9 +61,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "ffb351d627801570c1e39570d0e3f0033a494322",
+      "revision": "f32cb9c1b31ed3a7ae9065c122251dab50ed7354",
       "url": null,
-      "hash": "sha256-DQdEcuJlIIzMTWHUd6xHuqV7pvc5QEQJY1DLFpk6tqw="
+      "hash": "sha256-MyZye4Y/UgQq0GK2r+0uH44bUDjkONYmvT7zVjnV1oY="
     },
     "easyeffects": {
       "type": "Git",
@@ -88,9 +88,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "7d8a53f2493dbe4bc521e1526c0e087c47519019",
-      "url": "https://codeberg.org/mikf/gallery-dl/archive/7d8a53f2493dbe4bc521e1526c0e087c47519019.tar.gz",
-      "hash": "sha256-ueKOkVD3s0fE9i1WgSvZZpg/Esaz0uiPtsMgyS94RME="
+      "revision": "409afc5f94e404f0950263400d296cb124060f7e",
+      "url": "https://codeberg.org/mikf/gallery-dl/archive/409afc5f94e404f0950263400d296cb124060f7e.tar.gz",
+      "hash": "sha256-sjcVjWLf07l4ghndNNOfPKNzpNMKWIE8hXaIObdwll4="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
