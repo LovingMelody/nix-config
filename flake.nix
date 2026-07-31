@@ -51,6 +51,7 @@
         x86_64-linux = {
           Rotom = self.nixosConfigurations.Rotom.config.system.build.toplevel;
           Snow = self.nixosConfigurations.Snow.config.system.build.toplevel;
+          Vulpix = self.nixosConfigurations.Vulpix.config.system.build.toplevel;
         };
       };
     overlays.default = import ./overlays/default {inherit inputs self lib;};
