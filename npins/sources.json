@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "6227b633e8d528952873c4c146773663964fcb31",
+      "revision": "19dd2bb4510757739bf35e73d7154fae4be85e1b",
       "url": null,
-      "hash": "sha256-+uMJjatjNGjjFqJ3whk88NhG9SQL1masAElSy/MIjRI="
+      "hash": "sha256-11oqYs1j7PlyQNZ0GA/egpyGIVlHJqZYMOw9nd6RBgA="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -88,9 +88,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "5b357fa7d28f26482c33dfe2677f3dc7034c8ca4",
-      "url": "https://codeberg.org/mikf/gallery-dl/archive/5b357fa7d28f26482c33dfe2677f3dc7034c8ca4.tar.gz",
-      "hash": "sha256-vfxLHavfCFl8E89Mw3ASe6XiJPciV8SgMhtTTMuWfOM="
+      "revision": "ba5fd1398eef82ab3724528bed8bf750913ce1c3",
+      "url": "https://codeberg.org/mikf/gallery-dl/archive/ba5fd1398eef82ab3724528bed8bf750913ce1c3.tar.gz",
+      "hash": "sha256-3Bva0VQ75mA6B8HsW7zieeXRgRw5DJ6wuASiV3/UiFY="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -104,10 +104,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v1.32.8",
-      "revision": "5afd836b5972caaaa325ce6042475da8d68b1192",
-      "url": "https://codeberg.org/api/v1/repos/mikf/gallery-dl/archive/v1.32.8.tar.gz",
-      "hash": "sha256-ias2Agf+yNWGQ3Xm+q9jF/rHe42viN3v98dfO05QB+M="
+      "version": "v1.32.9",
+      "revision": "fe3525eed38bd9c663cc12df549fe3cfa1b685ef",
+      "url": "https://codeberg.org/api/v1/repos/mikf/gallery-dl/archive/v1.32.9.tar.gz",
+      "hash": "sha256-3Bva0VQ75mA6B8HsW7zieeXRgRw5DJ6wuASiV3/UiFY="
     },
     "gargoyle": {
       "type": "Git",
@@ -215,9 +215,9 @@
       },
       "branch": "dev",
       "submodules": false,
-      "revision": "3dc4cd6c47d4c3927e436e2652514a4af28c0f65",
-      "url": "https://github.com/nagadomi/nunif/archive/3dc4cd6c47d4c3927e436e2652514a4af28c0f65.tar.gz",
-      "hash": "sha256-tA3bQz+e9zDRt/u0lrWBCofHL+aEobt4rc7xt7ePoP4="
+      "revision": "fbc2dd9707effbd2b819cfe6a4e56efb5e94bd5e",
+      "url": "https://github.com/nagadomi/nunif/archive/fbc2dd9707effbd2b819cfe6a4e56efb5e94bd5e.tar.gz",
+      "hash": "sha256-M4FCuZRMB6bAHe5nCVDl5nUzlDnP3ruy+OZhVeJAafM="
     },
     "obs": {
       "type": "Git",
