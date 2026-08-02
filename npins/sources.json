@@ -88,9 +88,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "ba5fd1398eef82ab3724528bed8bf750913ce1c3",
-      "url": "https://codeberg.org/mikf/gallery-dl/archive/ba5fd1398eef82ab3724528bed8bf750913ce1c3.tar.gz",
-      "hash": "sha256-3Bva0VQ75mA6B8HsW7zieeXRgRw5DJ6wuASiV3/UiFY="
+      "revision": "dbbaf2fba4e55c0ab3780be25ae8e5be5266342c",
+      "url": "https://codeberg.org/mikf/gallery-dl/archive/dbbaf2fba4e55c0ab3780be25ae8e5be5266342c.tar.gz",
+      "hash": "sha256-AI5+v4JG9D2pzIOf51WoC45nCnd19ozfJgsvO9h2E0s="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
