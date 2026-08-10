@@ -320,7 +320,6 @@
         flake-parts.follows = "flake-parts";
         nixpkgs.follows = "nixpkgs";
         nixpkgs-nixcord.follows = "nixpkgs";
-        flake-compat.follows = "flake-compat";
       };
     };
     nixos-anywhere = {
