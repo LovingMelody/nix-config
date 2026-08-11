@@ -39,7 +39,7 @@
     virt.enable = true;
   };
   nixpkgs.config = {
-    cudaSupport = true;
+    cudaSupport = lib.mkForce true;
   };
   programs = {
     rog-control-center = {
