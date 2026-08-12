@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "cc3f785b87c0673eceb817e2d24cb1acf504c861",
-      "url": "https://github.com/wwmm/easyeffects/archive/cc3f785b87c0673eceb817e2d24cb1acf504c861.tar.gz",
-      "hash": "sha256-4CExr9PrL9uB8Pb/75OhyIyYtVs/Mf+b2sVYSlIAejU="
+      "revision": "959d0fa3d15e5818b05e6c53614dccf856791a65",
+      "url": "https://github.com/wwmm/easyeffects/archive/959d0fa3d15e5818b05e6c53614dccf856791a65.tar.gz",
+      "hash": "sha256-eHL/qQHWcGDeoNga+PP1P79GmP0IUW79v06Ihqop/YQ="
     },
     "gallery-dl": {
       "type": "Git",
@@ -326,9 +326,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "731c4aae5991b33f2ddab45d3cb1b4779159bf4b",
+      "revision": "238f157e1d64f90e0d90593557c092ab8af6e0a3",
       "url": null,
-      "hash": "sha256-l9PkInZQOSBgBu+g43tCZ3nYoTyV8N6NqU/QxoASP7Q="
+      "hash": "sha256-x+CFZ295IanGq5erSdZB3bm0ZdELRRDY17VK1q4cLI8="
     },
     "xivlauncher-rb": {
       "type": "GitRelease",
@@ -341,10 +341,10 @@
       "version_upper_bound": null,
       "release_prefix": "rb-",
       "submodules": true,
-      "version": "rb-v1.4.0.8",
-      "revision": "cafb8186688ba4deb8736163abc1374533e1fdea",
+      "version": "rb-v1.4.0.9",
+      "revision": "4aa6ac8d81c680d2dc17ad579c3e11059031255f",
       "url": null,
-      "hash": "sha256-hZCuxGdaH+UuYK+pARocBDggE+pQ0WNJWfw+M96LFhY="
+      "hash": "sha256-kB2nZmLv/oF79J8USOJnOth6MvbZbE0eQuwYh705Ics="
     }
   },
   "version": 8
