@@ -12,6 +12,10 @@ in {
   # Use lix
   lix.enable = true;
   TM = {
+    vr = {
+      enable = true;
+      useWivrn = true;
+    };
     pokemon = {
       name = "Vulpix";
       pokedex = 37;
