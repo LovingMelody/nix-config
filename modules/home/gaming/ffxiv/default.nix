@@ -82,7 +82,7 @@ in {
       enable =
         mkEnableOption "Enable reshade"
         // {
-          default = true;
+          default = false;
         };
 
       defaultPreset = mkOption {
