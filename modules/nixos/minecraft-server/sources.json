@@ -12,8 +12,8 @@
     "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/jSMMstCy/c2me-fabric-mc26.2-0.4.2-alpha.0.43.jar"
   },
   "FabricAPI": {
-    "sha512": "4ebec489f2b2ce621ebebb2d1b7e9714b6fd288ebdb4e287d767cde57612cf1d3d1d4f51daf7e7ec9541fa146df6bde4978ab98a29637ced6d9bc2f3c4217650",
-    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/vmQp7ixA/fabric-api-0.157.0%2B26.2.jar"
+    "sha512": "4c2c1ebe74ffd54875a01ff371b53ba3d8674ac98d561f7dae02a96d3d37fbdbc5f5abc6e820f73b6154d6f873ddd05a442b0998ed2d456863dc0ad972e040a6",
+    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/NqwNSxwA/fabric-api-0.158.0%2B26.2.jar"
   },
   "Gyser": {
     "sha512": "e22a5775063f5f3d3518aac73cd983dcf6e44750a3a5e1284c687f74a3062b81dca47d9c0f685d1a80d13fecff6309055bc9f7b20e675a8be6a841e873c387c4",
