@@ -44,7 +44,7 @@
   programs = {
     rog-control-center = {
       enable = true;
-      autoStart = true;
+      autoStart = false;
     };
   };
   environment.sessionVariables = lib.mkIf config.programs.gamemode.enable {
