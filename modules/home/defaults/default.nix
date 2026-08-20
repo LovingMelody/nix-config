@@ -23,7 +23,7 @@ in {
         inherit (config.home) username;
       in
         mkDefault (
-          if pkgs.stdenv.isDarwin
+          if pkgs.stdenv.hostPlatform.isDarwin
           then "/Users/${username}"
           else if (username != "root")
           then "/home/${username}"

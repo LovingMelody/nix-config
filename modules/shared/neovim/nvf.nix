@@ -96,7 +96,7 @@ in {
 
       svelte.enable = false;
 
-      nim.enable = pkgs.stdenv.isLinux;
+      nim.enable = pkgs.stdenv.hostPlatform.isLinux;
     };
 
     visuals = {

@@ -55,7 +55,7 @@ in {
     };
     programs.ssh.settings = mkIf cfg.sshAgent {
       "Host *".identityAgent =
-        if !stdenv.isDarwin
+        if !stdenv.hostPlatform.isDarwin
         then "${config.home.homeDirectory}/.1password/agent.sock"
         else "${config.home.homeDirectory}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock";
     };

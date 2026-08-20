@@ -12,7 +12,7 @@ in {
   options.TM.shells.fish.enable =
     mkEnableOption "Smart and user-friendly command line shell"
     // {
-      default = !pkgs.stdenv.isDarwin;
+      default = !pkgs.stdenv.hostPlatform.isDarwin;
     };
 
   config = mkIf cfg.enable {

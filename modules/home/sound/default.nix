@@ -18,7 +18,7 @@ in {
   config = mkIf cfg.enable {
     # # Enable Easy Effects
     services.easyeffects = {
-      enable = mkDefault (pkgs.stdenv.isLinux && config.TM.isGui);
+      enable = mkDefault (pkgs.stdenv.hostPlatform.isLinux && config.TM.isGui);
       extraPresets = {
         HD600S = builtins.fromJSON (builtins.readFile ./EasyEffectPresets/HD600S.json);
         "Logitech Pro X" = builtins.fromJSON (builtins.readFile ./EasyEffectPresets/LogitechProX.json);

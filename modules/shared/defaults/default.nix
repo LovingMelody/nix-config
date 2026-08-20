@@ -15,7 +15,7 @@
     mkMerge
     ;
   inherit (lib.TM) get-secret-file;
-  inherit (pkgs.stdenv) isLinux;
+  inherit (pkgs.stdenv.hostPlatform) isLinux;
   cfg = config.TM.defaults;
 in {
   # Defaults to true
