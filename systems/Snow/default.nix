@@ -271,7 +271,6 @@ in {
 
   hardware.logitech.wireless = {
     enable = true;
-    enableGraphical = true;
   };
   programs.nix-ld.enable = true;
 
