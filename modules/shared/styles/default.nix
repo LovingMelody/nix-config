@@ -3,7 +3,7 @@ _: {
   pkgs,
   lib,
   ...
-}: let
+} @ args: let
   inherit
     (lib)
     importJSON
@@ -16,6 +16,7 @@ _: {
     ;
   inherit (config.TM.libExtra) mkDisableTarget fromOS;
   inherit (lib.TM) toTitle;
+  globalPackagesEnabled = args.osConfig.home-manager.useGlobalPkgs or false;
   default_flavor = lib.TM.info.flavor;
   default_wallpaper = "${pkgs.hyprland.src}/assets/install/wall2.png";
   cfg = config.TM.styles;
@@ -200,7 +201,9 @@ in {
         };
         opacity.desktop = mkDefault 0.70;
         image = (editImage cfg.wallpaper).outPath;
-
+        # Quick Fix for nix-community/stylix#1832
+        # Alternative to PR #2473
+        overlays.enable = mkDefault (! globalPackagesEnabled);
         inherit (cfg) polarity fonts;
       };
     }
