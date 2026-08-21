@@ -932,11 +932,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787015473,
-        "narHash": "sha256-x7DlR0Dugz1148+Qi7pIUBWwbHrv4e/GxsATrh7jFsE=",
+        "lastModified": 1787274919,
+        "narHash": "sha256-9fThb4T5h/0/NzXndsdlKAzUUmfDMGp87OmecnW8oa8=",
         "owner": "nix-community",
         "repo": "nixpkgs-xr",
-        "rev": "c9884f71ee2ffa2755f97425891a41b9034571ec",
+        "rev": "040e94de9758cef3c2b4fd6b17851e9fa6d28e96",
         "type": "github"
       },
       "original": {
