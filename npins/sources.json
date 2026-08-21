@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "a3e186ae547829bb397f5c20e4675c642a993a44",
+      "revision": "ff25c7f57a635fd195d6d6fbc08a1e12e9a22b8e",
       "url": null,
-      "hash": "sha256-2tOb4VJXWgv3C+NGqBEDKwObaw8JtNTdHnpCqSEtwIE="
+      "hash": "sha256-54lArk3Pk5Com3Z7MELuywkg0lLlplf+WKcQyg6fbvg="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "97605d28264f5877e6674a194bc5228b2c23bfbf",
-      "url": "https://github.com/wwmm/easyeffects/archive/97605d28264f5877e6674a194bc5228b2c23bfbf.tar.gz",
-      "hash": "sha256-2AG08ybzQlptwJiMZdVmUnkELTLICfi1Tp81+H+bQgw="
+      "revision": "a14f4dbf8a7f3bef00c6fcf88c08d473b50b3ddd",
+      "url": "https://github.com/wwmm/easyeffects/archive/a14f4dbf8a7f3bef00c6fcf88c08d473b50b3ddd.tar.gz",
+      "hash": "sha256-UWnMKvrbNgsKS7VDMjWPhDPjK7t9SA/e0DPWdbEBFGw="
     },
     "gallery-dl": {
       "type": "Git",
@@ -186,9 +186,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "e7191f2a65d64af266c5c80793e79d2f4b92b789",
-      "url": "https://github.com/mpv-player/mpv/archive/e7191f2a65d64af266c5c80793e79d2f4b92b789.tar.gz",
-      "hash": "sha256-3wXUjKEu4yBmAvSXqaoFWupXxmsgiPGv5WXXh7bof/I="
+      "revision": "49418246f30a9c24af31ac184aa24f39755db89a",
+      "url": "https://github.com/mpv-player/mpv/archive/49418246f30a9c24af31ac184aa24f39755db89a.tar.gz",
+      "hash": "sha256-f1uFvUcGn6ADTxVCmqzzm8h+stEuPF8H+zBe4viqfjA="
     },
     "npins": {
       "type": "GitRelease",
@@ -215,9 +215,9 @@
       },
       "branch": "dev",
       "submodules": false,
-      "revision": "c718a090ba324f442273f2905b0c062fe25b5182",
-      "url": "https://github.com/nagadomi/nunif/archive/c718a090ba324f442273f2905b0c062fe25b5182.tar.gz",
-      "hash": "sha256-TWOOS4WYcQdHVQjnVUcjxSq1aegp+B1M2nhmoq91aes="
+      "revision": "3a7493b15d5c6f4876877823f1e595f3b3ab4397",
+      "url": "https://github.com/nagadomi/nunif/archive/3a7493b15d5c6f4876877823f1e595f3b3ab4397.tar.gz",
+      "hash": "sha256-pbZhvH69vcIRE32p3mYV2dtDDwbbg4r38NSV0hoijuI="
     },
     "obs": {
       "type": "Git",
