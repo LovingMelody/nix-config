@@ -97,7 +97,6 @@
                     ++ (lib.mapAttrsToList (_: m: m) self.homeModules);
                 };
               })
-              inputs.aagl.nixosModules.default
               inputs.disko.nixosModules.disko
               inputs.home-manager.nixosModules.home-manager
               inputs.lix-module.nixosModules.default
@@ -170,14 +169,6 @@
   };
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    aagl = {
-      url = "github:ezKEa/aagl-gtk-on-nix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-compat.follows = "flake-compat";
-        rust-overlay.follows = "rust-overlay";
-      };
-    };
     androidPkgs = {
       url = "github:tadfisher/android-nixpkgs";
       inputs = {

@@ -55,7 +55,6 @@ in {
     };
     programs = {
       moonlight-qt.enable = true;
-      wavey-launcher.enable = true;
       gamemode = {
         enable = mkDefault config.TM.isLaptop;
         settings = {
