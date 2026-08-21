@@ -430,46 +430,46 @@ fhsenv}/usr/lib64 $out/lib")
                   ipv4.method = "auto";
                   ipv6.method = "auto";
                 };
-                Home_Legacy = {
-                  connection = {
-                    id = "Home - Legacy";
-                    type = "wifi";
-                    autoconnect = "true";
-                    "autoconnect-priority" = "2";
-                    # "interface-name" = "wlan0";     # uncomment to pin a NIC
-                  };
-                  wifi = {
-                    ssid = "$WIFI_HOME_A_SSID";
-                    mode = "infrastructure";
-                    hidden = "false";
-                  };
-                  "wifi-security" = {
-                    "key-mgmt" = "wpa-psk";
-                    psk = "$WIFI_HOME_A_PSK";
-                  };
-                  ipv4.method = "auto";
-                  ipv6.method = "auto";
-                };
-                Home_Fallback = {
-                  connection = {
-                    id = "Home - Fallback";
-                    type = "wifi";
-                    autoconnect = "true";
-                    "autoconnect-priority" = "1"; # prefer Home
-                    # "interface-name" = "wlan0";     # uncomment to pin a NIC
-                  };
-                  wifi = {
-                    ssid = "$WIFI_HOME_A_SSID";
-                    mode = "infrastructure";
-                    hidden = "false";
-                  };
-                  "wifi-security" = {
-                    "key-mgmt" = "wpa-psk";
-                    psk = "$WIFI_HOME_A_PSK";
-                  };
-                  ipv4.method = "auto";
-                  ipv6.method = "auto";
-                };
+                # Home_Legacy = {
+                #   connection = {
+                #     id = "Home - Legacy";
+                #     type = "wifi";
+                #     autoconnect = "true";
+                #     "autoconnect-priority" = "2";
+                #     # "interface-name" = "wlan0";     # uncomment to pin a NIC
+                #   };
+                #   wifi = {
+                #     ssid = "$WIFI_HOME_A_SSID";
+                #     mode = "infrastructure";
+                #     hidden = "false";
+                #   };
+                #   "wifi-security" = {
+                #     "key-mgmt" = "wpa-psk";
+                #     psk = "$WIFI_HOME_A_PSK";
+                #   };
+                #   ipv4.method = "auto";
+                #   ipv6.method = "auto";
+                # };
+                # Home_Fallback = {
+                #   connection = {
+                #     id = "Home - Fallback";
+                #     type = "wifi";
+                #     autoconnect = "true";
+                #     "autoconnect-priority" = "1"; # prefer Home
+                #     # "interface-name" = "wlan0";     # uncomment to pin a NIC
+                #   };
+                #   wifi = {
+                #     ssid = "$WIFI_HOME_A_SSID";
+                #     mode = "infrastructure";
+                #     hidden = "false";
+                #   };
+                #   "wifi-security" = {
+                #     "key-mgmt" = "wpa-psk";
+                #     psk = "$WIFI_HOME_A_PSK";
+                #   };
+                #   ipv4.method = "auto";
+                #   ipv6.method = "auto";
+                # };
                 Hotspot_A = {
                   connection = {
                     id = "HotspotA";
