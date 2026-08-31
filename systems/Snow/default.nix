@@ -141,6 +141,7 @@ in {
   };
 
   users.users.melody.packages = with pkgs; [
+    dolphin-emu
     gitkraken
     (prismlauncher.override (o: {
       additionalLibs =
