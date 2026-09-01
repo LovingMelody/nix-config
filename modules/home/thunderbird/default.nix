@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: let
   inherit (lib) mkEnableOption mkIf;
@@ -11,6 +12,7 @@ in {
   config = mkIf cfg.enable {
     programs.thunderbird = {
       enable = true;
+      package = pkgs.thunderbird-bin;
       profiles.default = {
         isDefault = true;
       };
