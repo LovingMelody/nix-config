@@ -51,7 +51,7 @@
     GAMEMODERUNEXEC = lib.mkIf config.hardware.nvidia.prime.offload.enableOffloadCmd "nvidia-offload";
   };
   hardware = {
-    nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
+    # nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
     # uni-sync = { enable = true; };
     bluetooth = {
       enable = true;
