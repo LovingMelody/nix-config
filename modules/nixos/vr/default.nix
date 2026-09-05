@@ -32,6 +32,9 @@ in {
         importOXRRuntimes = mkDefault true;
         inherit (config.programs.steam) package;
       };
+      config = {
+        enable = true;
+      };
     };
     programs.alvr = {
       enable = ! cfg.useWivrn;
