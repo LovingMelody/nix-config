@@ -50,7 +50,6 @@ in
       reshade-full
       reshade-shaders-full
       ;
-    firefox-unwrapped = prev.firefox-unwrapped.override {pipewireSupport = true;};
     reshade-max = nix-reshade.system.packages.${final.stdenv.hostPlatform.system}.complete;
     rpcs3 = prev.rpcs3.override {enableDiscordRpc = true;};
     catppuccin-base16 = final.callPackage "${self}/packages/catppuccin-base16" {inherit pins;};
