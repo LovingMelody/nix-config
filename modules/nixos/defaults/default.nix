@@ -51,6 +51,7 @@ in
                 "btrfs"
               ];
               blacklistedKernelModules = [
+                "vivid"
                 # Obscure network protocols
                 "ax25"
                 "netrom"
@@ -58,25 +59,18 @@ in
                 # Old or rare or insufficiently audited filesystems
                 "adfs"
                 "affs"
-                "bfs"
                 "befs"
+                "bfs"
                 "cramfs"
                 "efs"
                 "erofs"
                 "exofs"
                 "freevxfs"
-                "f2fs"
-                "vivid"
                 "gfs2"
-                "ksmbd"
-                "cifs"
-                "cramfs"
-                "freevxfs"
-                "jffs2"
                 "hfs"
                 "hfsplus"
-                "udf"
                 "hpfs"
+                "jffs2"
                 "jfs"
                 "minix"
                 "nilfs2"
@@ -84,6 +78,7 @@ in
                 "qnx4"
                 "qnx6"
                 "sysv"
+                "udf"
               ];
             };
             xdg = {
