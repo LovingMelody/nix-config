@@ -98,7 +98,7 @@ in {
       dbus = {
         implementation = "broker";
         packages = with pkgs; [
-          gcr
+          gcr_4
           gnome-settings-daemon
         ];
       };

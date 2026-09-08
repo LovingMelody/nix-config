@@ -135,7 +135,7 @@ in {
       enable = true;
       xkb.layout = "us";
     };
-    dbus.packages = [pkgs.gcr];
+    dbus.packages = [pkgs.gcr_4];
     openssh.enable = true;
     mullvad-vpn.enable = true;
   };
