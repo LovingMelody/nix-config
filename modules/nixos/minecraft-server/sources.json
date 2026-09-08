@@ -1,7 +1,7 @@
 {
   "Balm": {
-    "sha512": "248bdd234c27dd2030acdb248378e711509015abd45e1c7b86a1014afc8d3d39f6a5e01a88a35c4d8d223c7d6cc27cb829eef7ec917589668259033a9fb577c0",
-    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/tYnUhVmF/balm-fabric-26.2-26.2.0.7.jar"
+    "sha512": "2434a667a7a2300d2d1e2bca193167d61b23a9512eb1a1c5e5536884e52c9e5e937de68ec0492b8c4f3c6c4c8eab2bd988a23105bb494867458e00e756b2357f",
+    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/LcKC6Cxw/balm-fabric-26.2-26.2.0.8.jar"
   },
   "ClothConfigAPI": {
     "sha512": "37b1e402f0df5a383656e21a38ee18cdd15cb4ba3fb62fbeba82ef4b959a4479fc32718ac0d9d154a7d9104c5f7315bfa67dbeced0b8ff240b8039d4848d5df1",
@@ -12,8 +12,8 @@
     "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/jSMMstCy/c2me-fabric-mc26.2-0.4.2-alpha.0.43.jar"
   },
   "FabricAPI": {
-    "sha512": "4d5d9c3daafe19be187f638f2d6de3db26420b8720ef5a266cfa81f79d9019cab8c86e6d47478bbb0b0ee0b8f769204b72c843caa2e4aabd94adc41f3dafb518",
-    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/BgeCGgGZ/fabric-api-0.159.0%2B26.2.jar"
+    "sha512": "1a08b68b2c2c90f6005ef441ab71b65f464be964005b9c0d18e6fc6c5ec53fe346e7dd76189c4f09ade59ef9bc3b836376a2cc71d4ce6e9be47122477d1bbd1e",
+    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/UWwhUX3k/fabric-api-0.160.0%2B26.2.jar"
   },
   "Gyser": {
     "sha512": "456edf7f0f19c789d4f0e08dc7f8dd5a3d277195f1e1599d5da75ea92ec86d3e1ef9a7de2cf5e92a828fad7efb186162badc4c268af0bd02d664d3d4e10634ef",
