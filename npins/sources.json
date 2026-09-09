@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "c3555d2ea83e22259652d5ad4b42036fd57b94f4",
-      "url": "https://github.com/cachyos/kernel-patches/archive/c3555d2ea83e22259652d5ad4b42036fd57b94f4.tar.gz",
-      "hash": "sha256-mRiapdEyC+wy3gNH9UVDnyOQixpbKV3Yc9RhEL7dMr4="
+      "revision": "d5db2a953637445998d2b0e5ab52ea9c04860a24",
+      "url": "https://github.com/cachyos/kernel-patches/archive/d5db2a953637445998d2b0e5ab52ea9c04860a24.tar.gz",
+      "hash": "sha256-nyTYbf7SUaqLmgdbfc60DmO13F1ZgOdglnhsm6UeqrI="
     },
     "dxvk": {
       "type": "Git",
@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "c833ea7e9af2a22ea6c88a202f95517f100ed945",
+      "revision": "8759acd15dc79c8a92f5dd028b9e0d81a153c262",
       "url": null,
-      "hash": "sha256-xbC+2qxvb6FZkf6Z8nppX0aeDXfUjVKba/exndz8YPM="
+      "hash": "sha256-bZbSM59o51NxailCeF+E3JJzaWHMwxeqD02rxf4QDv8="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -88,9 +88,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "3391ac2024b71f2165526b56b2396296e785599c",
-      "url": "https://codeberg.org/mikf/gallery-dl/archive/3391ac2024b71f2165526b56b2396296e785599c.tar.gz",
-      "hash": "sha256-zvLRLOJD23pmzJGsHAldoQQfMXiTtL2ih47MSfoO6Wk="
+      "revision": "3d6b5bdefd8a03d480f5ec1f524633287e08e205",
+      "url": "https://codeberg.org/mikf/gallery-dl/archive/3d6b5bdefd8a03d480f5ec1f524633287e08e205.tar.gz",
+      "hash": "sha256-+5FDw/UfRjee9344VObOXbdE86shH1/4pnxIGMG0sow="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -326,9 +326,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "736a756af0074f8323105446b69c7c48b1d7710c",
+      "revision": "ff262cf1dd2da04553d639e5bd824763e04bd177",
       "url": null,
-      "hash": "sha256-olSzSYX4kyOdjNo/qhW2kasnAoRv/UtjzpDMyDmtmgc="
+      "hash": "sha256-42gzV38emthpmF2z9RA2v819q6T7PzjMtCUDk8eV+MU="
     },
     "xivlauncher-rb": {
       "type": "GitRelease",
