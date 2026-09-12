@@ -16,8 +16,8 @@
     "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/UWwhUX3k/fabric-api-0.160.0%2B26.2.jar"
   },
   "Gyser": {
-    "sha512": "456edf7f0f19c789d4f0e08dc7f8dd5a3d277195f1e1599d5da75ea92ec86d3e1ef9a7de2cf5e92a828fad7efb186162badc4c268af0bd02d664d3d4e10634ef",
-    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/uAF2x7gK/Geyser-Fabric-2.11.2-b1234.jar"
+    "sha512": "b52209d5f152a61ced3b0015d0b10c595ed82ed32d06d6ce30fcd869d509655ee709dfa89322ebeae3ae5c8378078b08a07f210b44bfa97c98f41c4ce81abda8",
+    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/WGtIQbdQ/Geyser-Fabric-2.11.2-b1235.jar"
   },
   "Incendium": {
     "sha512": "202e1f23c64c37330d3ec0bfd80331355d15cc8d01f151edc4dabfa8ce719650d10f468df5bf523a93461d78c3660a2cdedbc1037fb08396c13f22b6457352f0",
@@ -52,8 +52,8 @@
     "url": "https://cdn.modrinth.com/data/qyVF9oeo/versions/d8iioMMp/sound-physics-remastered-fabric-1.5.1%2B26.2.jar"
   },
   "Tectonic": {
-    "sha512": "6ca2ac61ce7fa9e8758bdf83bff99c97d39a300efbec12db2714557aef420739b46a68aa62ee93cdd6339f8f7ad8cbbeca59f5be3c6361b8d0ea09e34a45864c",
-    "url": "https://cdn.modrinth.com/data/lWDHr9jE/versions/rc4JXlpP/tectonic-3.0.26-fabric-26.2.jar"
+    "sha512": "c653ee42fe48c1be9512fa7791e8495095ae01cb607555202714bbb95cb49da272128bb295e8f8c262b63739e7ca2de4bba9196e1738b06012b498d220b55acf",
+    "url": "https://cdn.modrinth.com/data/lWDHr9jE/versions/tGbplDzo/tectonic-3.0.28-fabric-26.2.jar"
   },
   "Terralith": {
     "sha512": "0830f4601674c4ea58d247a71bfdc820e4676900e173c7d6df4e58e348a09da43b279cea060df7b67e6f74c84e2a05b401b2df79836c37cffc8dc994844ab250",
