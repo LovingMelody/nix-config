@@ -308,9 +308,10 @@
     nixcord = {
       url = "github:FlameFlag/nixcord";
       inputs = {
-        flake-parts.follows = "flake-parts";
         nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
         nixpkgs-nixcord.follows = "nixpkgs";
+        treefmt-nix.follows = "treefmt-nix";
       };
     };
     nixos-anywhere = {
