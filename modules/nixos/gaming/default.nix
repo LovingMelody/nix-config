@@ -154,6 +154,7 @@ in {
           mumble
           umu-launcher
           faugus-launcher
+          heroic
           protonplus
           low-latency-layer
         ]);
