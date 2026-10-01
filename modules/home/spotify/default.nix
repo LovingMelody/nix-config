@@ -28,7 +28,6 @@ in {
         keyboardShortcut
         fullAppDisplay
         autoVolume
-        betterGenres
         aiBandBlocker
       ];
     };
