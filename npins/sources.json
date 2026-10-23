@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "17bb0bb818d283d0dc6e0280a2e9d5b95e66808b",
-      "url": "https://github.com/cachyos/kernel-patches/archive/17bb0bb818d283d0dc6e0280a2e9d5b95e66808b.tar.gz",
-      "hash": "sha256-MOmj83tnPnuOBrEG5ttgJs/MDKvFIp2IfIzhaaTCVfU="
+      "revision": "89bb22dec944d4d5b31332f2affbc740665cf0d9",
+      "url": "https://github.com/cachyos/kernel-patches/archive/89bb22dec944d4d5b31332f2affbc740665cf0d9.tar.gz",
+      "hash": "sha256-pnZWvsSUXIG9F6ca8hE2gE8bKcHLAP1ZGfTDUsuekjY="
     },
     "dxvk": {
       "type": "Git",
@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "e8c80a8d1cdaa0ad21516bf64d9cb073cb57eec3",
+      "revision": "02e2028c3fe954c8913b1f39bce2f581739f0c41",
       "url": null,
-      "hash": "sha256-OnJFrmN8ZMn8bzCMSn9kyrJjFzsZwlYG2WipCwdxLhU="
+      "hash": "sha256-oCNiIzzg5KBmUIXonQHbVmKdmIE+r4dLaysKrQDGcbk="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "a4e656d8fd4c72297f651956cbc62308d94f4682",
-      "url": "https://github.com/wwmm/easyeffects/archive/a4e656d8fd4c72297f651956cbc62308d94f4682.tar.gz",
-      "hash": "sha256-OfUpgcLhPUoMNF7I2N/g2YRp1roTZ8bVlgpAwefUKaQ="
+      "revision": "34af757a9cd509e3c76f5052ba341c40671ecbd8",
+      "url": "https://github.com/wwmm/easyeffects/archive/34af757a9cd509e3c76f5052ba341c40671ecbd8.tar.gz",
+      "hash": "sha256-eUaVuLetYRCNA0vxoL3WyYgEsXDtK1Jaqqh9zNTQCGM="
     },
     "gallery-dl": {
       "type": "Git",
@@ -88,9 +88,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "5d36266f85e74c30f8cb7a7bc4f9bae306cace7a",
-      "url": "https://codeberg.org/mikf/gallery-dl/archive/5d36266f85e74c30f8cb7a7bc4f9bae306cace7a.tar.gz",
-      "hash": "sha256-hyUrQhWa6doxUm3ay2HFk0nKWajvwqKeqH65pS4jqWs="
+      "revision": "b2df7f9444f4dbfda84cc7282eae96db99ef441d",
+      "url": "https://codeberg.org/mikf/gallery-dl/archive/b2df7f9444f4dbfda84cc7282eae96db99ef441d.tar.gz",
+      "hash": "sha256-aaIVxx68fa7Tnc3JOWcCvRqtHG3H8ejPy5gl/rsa6qk="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -104,10 +104,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v1.32.16",
-      "revision": "8533a21df11c4b45f2646033a20fea959b120d82",
-      "url": "https://codeberg.org/api/v1/repos/mikf/gallery-dl/archive/v1.32.16.tar.gz",
-      "hash": "sha256-7Ut9Zaol+liqdBPCAXfKt179i5L7+b++xq+JD6xdkkk="
+      "version": "v1.32.17",
+      "revision": "8749b1af2ad21a1c6514ebb59d041c03da911513",
+      "url": "https://codeberg.org/api/v1/repos/mikf/gallery-dl/archive/v1.32.17.tar.gz",
+      "hash": "sha256-oSAkddxcGnJ3M5v5cKAcKlVPuOm2KMGBLLzyvq9Rbw4="
     },
     "gargoyle": {
       "type": "Git",
@@ -186,9 +186,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "a2cd83c56de859ced3fc8e6055e5878e50f45286",
-      "url": "https://github.com/mpv-player/mpv/archive/a2cd83c56de859ced3fc8e6055e5878e50f45286.tar.gz",
-      "hash": "sha256-s7McHtvHn9cmhq8MerCg6qwpG7jQYP4tFHuscx2qi1c="
+      "revision": "0fae4695470bf2c0c06762503292ee5379f62f62",
+      "url": "https://github.com/mpv-player/mpv/archive/0fae4695470bf2c0c06762503292ee5379f62f62.tar.gz",
+      "hash": "sha256-VlBLnttIApOqckowE/I7sXmj7NRMGTyxd3muNCQuneI="
     },
     "npins": {
       "type": "GitRelease",
@@ -215,9 +215,9 @@
       },
       "branch": "dev",
       "submodules": false,
-      "revision": "7372557f62c7cb96428cbf5d810dbf22fb6b8fc1",
-      "url": "https://github.com/nagadomi/nunif/archive/7372557f62c7cb96428cbf5d810dbf22fb6b8fc1.tar.gz",
-      "hash": "sha256-iJktm1OCUdCk0nJk5iImCoqz22FS3eBrARLrYwEu4YA="
+      "revision": "0d3d92c8f4396da564c44524b6390ee5c76b9668",
+      "url": "https://github.com/nagadomi/nunif/archive/0d3d92c8f4396da564c44524b6390ee5c76b9668.tar.gz",
+      "hash": "sha256-DWDWbMu6QJR/EiGvYW8oO5r2Hjge9xNIJqW4FO7ZiO8="
     },
     "obs": {
       "type": "Git",
@@ -241,9 +241,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "ac26a4abaa34c9e5a8a346c2f92bb9fa3e8d5808",
-      "url": "https://github.com/royshil/obs-backgroundremoval/archive/ac26a4abaa34c9e5a8a346c2f92bb9fa3e8d5808.tar.gz",
-      "hash": "sha256-GHbSv4zd3IMg5P0p/PC1H5ReGN9moV4kWNHqZzsNT9E="
+      "revision": "b2786e87dc1d08ed2f2ce335000a8fb1992dc944",
+      "url": "https://github.com/royshil/obs-backgroundremoval/archive/b2786e87dc1d08ed2f2ce335000a8fb1992dc944.tar.gz",
+      "hash": "sha256-Neocu8JKm7U+DlrEM3sBDLz3lp+DHQ8BmFj/yRVU/e8="
     },
     "obs-image-reaction": {
       "type": "Git",
@@ -326,9 +326,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "0bb64c56c8f0dcc11ecc0f6c56e00e4f7bd8d506",
+      "revision": "ef9a02e873715c9e2da0d6db8a236aca8380b303",
       "url": null,
-      "hash": "sha256-yv/5CwTFdKPHB+CcZ+6tThWA7/S2dMjtpUpHkmzmvAE="
+      "hash": "sha256-LzsSYWNcaZfydtvWAKTn3c5g9EgMW6zy5j82/ppMkjo="
     },
     "xivlauncher-rb": {
       "type": "GitRelease",
