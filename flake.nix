@@ -99,7 +99,7 @@
               })
               inputs.disko.nixosModules.disko
               inputs.home-manager.nixosModules.home-manager
-              inputs.lix-module.nixosModules.default
+              inputs.lix.nixosModules.default
               inputs.nix-gaming.nixosModules.pipewireLowLatency
               inputs.nix-gaming.nixosModules.platformOptimizations
               inputs.nix-gaming.nixosModules.wine
@@ -233,17 +233,12 @@
     };
     lix = {
       url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
-      flake = false;
-    };
-
-    lix-module = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        lix.follows = "lix";
-        flake-utils.follows = "flake-utils";
+        flake-compat.follows = "flake-compat";
       };
     };
+
     niri = {
       url = "github:YaLTeR/niri";
       inputs = {
