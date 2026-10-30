@@ -19,6 +19,13 @@ in {
     isWSL = mkEnableTarget "Environment is running through WSL" ["isWSL"];
     hasHDRDisplay = mkEnableTarget "System has a HDR capable Display" ["hasHDRDisplay"];
     hasWifi7 = mkEnableTarget "System supports WIFI 7" ["hasWifi7"];
+
+    imageFormat = mkOption {
+      # null = normal system build; image builds set e.g. "iso", "sd-aarch64".
+      type = types.nullOr types.str;
+      default = fromOS "imageFormat" null;
+      description = "Image format being built, if any. Replaces the old `format` module arg.";
+    };
     knowsHiddenMove = mkEnableTarget "Host uses shared secrets" ["knowsHiddenMove"];
     libExtra = mkOption {
       description = "Libs from TM that are required to be loaded in with the config";

@@ -10,7 +10,6 @@ in {
   # NVIDIA : pci-0000:01:00.0-card
   imports = [./hardware-configuration-extended.nix];
   # Use lix
-  lix.enable = true;
   TM = {
     vr = {
       enable = true;
