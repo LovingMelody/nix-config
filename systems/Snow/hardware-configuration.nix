@@ -12,7 +12,6 @@
       MAILADDR root
     '';
     initrd = {
-      systemd.enable = true;
       availableKernelModules = [
         "vmd"
         "xhci_pci"
