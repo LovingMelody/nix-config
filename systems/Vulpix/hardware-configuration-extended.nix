@@ -16,7 +16,6 @@
     nixos-hardware.nixosModules.common-gpu-nvidia
   ];
   boot = {
-    initrd.systemd.enable = true;
     binfmt.emulatedSystems = ["aarch64-linux"];
   };
   #TM.MyNextGPUWillNotBeNvidia = true;
