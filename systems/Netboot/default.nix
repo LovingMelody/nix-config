@@ -4,7 +4,6 @@
   services.openssh.enable = true;
   networking.networkmanager.enable = true;
   programs.starship.enable = true;
-  boot.initrd.systemd.enable = false;
   TM = {
     isLaptop = true;
     isGui = false;

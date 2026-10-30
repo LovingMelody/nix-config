@@ -7,7 +7,6 @@ in {
       networking.wireless.enable = mkForce false;
       networking.networkmanager.enable = mkForce true;
       programs.starship.enable = true;
-      boot.initrd.systemd.enable = mkForce false;
       TM = {
         isLaptop = mkForce true;
         isDesktop = mkForce false;
