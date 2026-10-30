@@ -38,7 +38,7 @@ in {
       ++ lib.optionals config.TM.isGui [
         _1password-gui
         (makeAutostartItem {
-          name = "1password";
+          name = "com.onepassword.OnePassword.desktop";
           package = _1password-gui;
           appendExtraArgs = ["--silent"];
         })
