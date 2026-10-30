@@ -37,12 +37,19 @@ in {
       [_1password-cli]
       ++ lib.optionals config.TM.isGui [
         _1password-gui
-        (makeAutostartItem {
-          name = "com.onepassword.OnePassword.desktop";
-          package = _1password-gui;
-          appendExtraArgs = ["--silent"];
-        })
       ];
+    xdg.autostart = mkIf (config.TM.isGui && stdenv.hostPlatform.isLinux) {
+      enable = true;
+      entries = [
+        "${pkgs.makeDesktopItem {
+          name = "1password-silent";
+          desktopName = "1Password";
+          exec = "${getExe' pkgs._1password-gui "1password"} --silent";
+          icon = "1password";
+          categories = ["Office"];
+        }}/share/applications/1password-silent.desktop"
+      ];
+    };
     programs.git = mkIf (cfg.gpgSign.enable && cfg.sshAgent) {
       settings = {
         "gpg \"ssh\"".program = "${getExe' pkgs._1password-gui "op-ssh-sign"}";
