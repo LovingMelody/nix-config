@@ -8,8 +8,8 @@
     "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/Nv3xnWXd/cloth-config-26.2.155.jar"
   },
   "ConcurrentChunkManagementEngine": {
-    "sha512": "079ac7da5de422418a599e0fef1963b3094aa010b057582bc25233fa65bd62a5bea8659c7905eabbd4f6943914d56106c5c6ebe011b022a84583a061a99cc2d4",
-    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/4wjXxrDQ/c2me-fabric-mc26.2-0.4.2-alpha.0.60.jar"
+    "sha512": "8f155b2cf1e72b76fd18aeaf9e8b5dd27c64b0552df359ba580863144ec2f7e457144837d4a8d713175f26ca8a79af7729aa4ad9b3eabc96075524d54872c81c",
+    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/uR0wg5ss/c2me-fabric-mc26.2-0.4.2-alpha.0.67.jar"
   },
   "FabricAPI": {
     "sha512": "2502fa5ade78e9a120b3747bc1a9a2167d6671743bea45bf115d3174c94121aeda87c549446d1a604a9c11fb828de17a551e3514ce42f3e93069dd14bdaee55b",
@@ -60,8 +60,8 @@
     "url": "https://cdn.modrinth.com/data/8oi3bsk5/versions/OxfI2n80/Terralith_26.2_v2.6.4.jar"
   },
   "VanillaRefresh": {
-    "sha512": "1944425ba4da0323eb71fb150382e02d362807364b6d38b7783ccd91b8c2434ae374a742f15e96987b1dee78b523a542c5d45273ec6820ae0ca0da86c4fcecfb",
-    "url": "https://cdn.modrinth.com/data/gWO6Zqey/versions/e4Gn0vUO/vanilla-refresh-1.4.31.jar"
+    "sha512": "1b42a10bc4039058ccd6106f3a00ef10b35c4a0893811177244eec537486a8e4473ecdce0de920d828b07ca3f881d55119bd31e021e0ffac70b8f1ebecb18fcf",
+    "url": "https://cdn.modrinth.com/data/gWO6Zqey/versions/sl7WNz8q/vanilla-refresh-1.4.32.jar"
   },
   "Vivecraft": {
     "sha512": "8f63a60587fd95b21884d2d61ac6e76f18a3e9a510226edbc0e06e4f276b8f84196bde314764aedf3bfc5f08499facd3bc3697ab97fa93602986fc6e8e7c7c7c",
