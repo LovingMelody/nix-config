@@ -126,7 +126,7 @@
         rsi-launcher
         wine-astral
         catppuccin-base16
-        npins
+        # npins
         gargoyle
         gallery-dl
         gallery-dl-unstable
@@ -141,16 +141,16 @@
         nixpkgs-using
         r2modman
         ;
-      inherit
-        (
-          if (pkgs.stdenv.targetPlatform.system == self.nixosConfigurations.Snow.pkgs.stdenv.hostPlatform.system)
-          then self.nixosConfigurations.Snow.pkgs
-          else pkgs
-        )
-        nunif-iw3
-        ;
+      # inherit
+      #   (
+      #     if (pkgs.stdenv.targetPlatform.system == self.nixosConfigurations.Snow.pkgs.stdenv.hostPlatform.system)
+      #     then self.nixosConfigurations.Snow.pkgs
+      #     else pkgs
+      #   )
+      #   nunif-iw3
+      #   ;
       inherit (pkgs.kdePackages) qtwebengine;
-      inherit (pkgs.obs-studio-plugins) obs-ios-camera-source obs-image-reaction;
+      inherit (pkgs.obs-studio-plugins) obs-ios-camera-source; #obs-image-reaction;
       topology-map =
         (import inputs.nix-topology {
           inherit pkgs;
