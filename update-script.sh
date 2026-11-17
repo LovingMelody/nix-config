@@ -9,6 +9,6 @@ echo "Updating Wivrn APK"
 bash ./modules/nixos/vr/wivrn-unstable-apk.sh
 
 echo "Updating npins"
-nix run .\#npins update
+nix run nixpkgs#npins update
 echo "Formatting..."
 nix fmt --accept-flake-config -L
