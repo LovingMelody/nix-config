@@ -112,7 +112,6 @@ in {
 
   users.users.melody.packages = [pkgs.nmap];
   environment.systemPackages = with pkgs; [
-    firefox
     git
     _1password-cli
     _1password-gui

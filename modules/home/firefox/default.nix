@@ -15,17 +15,20 @@ in {
       };
   };
   config = mkIf cfg.enable {
-    xdg.mimeApps.defaultApplications = mkIf cfg.defaultApps {
-      "x-scheme-handler/http" = "firefox.desktop";
-      "x-scheme-handler/https" = "firefox.desktop";
-      "x-scheme-handler/chrome" = "firefox.desktop";
-      "text/html" = "firefox.desktop";
-      "application/x-extension-htm" = "firefox.desktop";
-      "application/x-extension-html" = "firefox.desktop";
-      "application/x-extension-shtml" = "firefox.desktop";
-      "application/xhtml+xml" = "firefox.desktop";
-      "application/x-extension-xhtml" = "firefox.desktop";
-      "application/x-extension-xht" = "firefox.desktop";
+    xdg.mimeApps = {
+      enable = mkIf cfg.defaultApps true;
+      defaultApplications = mkIf cfg.defaultApps {
+        "x-scheme-handler/http" = "firefox.desktop";
+        "x-scheme-handler/https" = "firefox.desktop";
+        "x-scheme-handler/chrome" = "firefox.desktop";
+        "text/html" = "firefox.desktop";
+        "application/x-extension-htm" = "firefox.desktop";
+        "application/x-extension-html" = "firefox.desktop";
+        "application/x-extension-shtml" = "firefox.desktop";
+        "application/xhtml+xml" = "firefox.desktop";
+        "application/x-extension-xhtml" = "firefox.desktop";
+        "application/x-extension-xht" = "firefox.desktop";
+      };
     };
     stylix.targets.firefox.profileNames = ["default"];
     programs.firefox = {
@@ -52,7 +55,7 @@ in {
           // (defineExtension {name = "uBlockOrigin";})
           // (defineExtension {name = "userchrome-toggle-extended";})
           // (defineExtension {name = "sidebery";})
-          // (mkIf config.TM.programs._1password.enable (defineExtension {
+          // (lib.optionalAttrs config.TM.programs._1password.enable (defineExtension {
             name = "_1password";
           }));
 
