@@ -3,6 +3,8 @@
   TM.time.enable = false;
   services.openssh.enable = true;
   networking.networkmanager.enable = true;
+  # ZFS support comes from netboot-minimal; root is never ZFS here, so never force-import pools
+  boot.zfs.forceImportRoot = false;
   programs.starship.enable = true;
   TM = {
     isLaptop = true;
