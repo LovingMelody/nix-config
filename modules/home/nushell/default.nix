@@ -15,6 +15,7 @@ in {
   config = mkIf cfg.enable {
     programs.nushell = {
       enable = true;
+      loadSessionVariables = true;
       extraConfig = ''
         def nuopen [arg, --raw (-r)] { if $raw { open -r $arg } else { open $arg } }
         alias open = ^open
