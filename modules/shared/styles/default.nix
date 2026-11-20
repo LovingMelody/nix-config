@@ -23,6 +23,33 @@ _: {
   # NOTE: Ugly fix for https://github.com/nix-community/stylix/issues/437
   # Maybe one day this will be fixed but for now this ugly code works
   palette = import ./palette.nix {inherit config lib;};
+  # Catppuccin owns colours: wherever a catppuccin target is enabled, turn off the
+  # colours of the matching stylix target (stylix keeps fonts/opacity), or the whole
+  # stylix target when it has no separate `colors` toggle.
+  catppuccinColorOverrides = let
+    aliases = {
+      nvim = "neovim";
+      tty = "console";
+    };
+    stylixTargets = args.options.stylix.targets;
+  in
+    # catppuccin.vscode is configured per profile, so the generic rule can't see it
+    lib.optionalAttrs (stylixTargets ? vscode && args.options ? catppuccin.vscode.profiles) {
+      vscode.colors.enable = mkIf (lib.any (p: p.enable) (lib.attrValues config.catppuccin.vscode.profiles)) (mkDefault false);
+    }
+    // lib.concatMapAttrs (name: opt: let
+      target = aliases.${name} or name;
+      # skip renamed/hidden aliases such as catppuccin.vscode.enable
+      isTarget = opt ? enable && (opt.enable.visible or true) == true;
+      off = mkIf config.catppuccin.${name}.enable (mkDefault false);
+    in
+      lib.optionalAttrs (isTarget && stylixTargets ? ${target}) {
+        ${target} =
+          if stylixTargets.${target} ? colors
+          then {colors.enable = off;}
+          else {enable = off;};
+      })
+    args.options.catppuccin;
   editImage =
     if config.TM.styles.editImage
     then
@@ -185,14 +212,17 @@ in {
           size = mkDefault 32;
         };
         # HINT: Don't define what defined by catppuccin
-        targets = {
-          spicetify.colors.enable = false;
-          nvf.enable = false;
-          gtk.enable = mkDefault config.TM.isGui;
-          qt = {
-            enable = mkDefault config.TM.isGui;
-          };
-        };
+        targets = mkMerge [
+          catppuccinColorOverrides
+          {
+            spicetify.colors.enable = false;
+            nvf.enable = false;
+            gtk.enable = mkDefault config.TM.isGui;
+            qt = {
+              enable = mkDefault config.TM.isGui;
+            };
+          }
+        ];
         opacity.desktop = mkDefault 0.70;
         image = (editImage cfg.wallpaper).outPath;
         # Quick Fix for nix-community/stylix#1832

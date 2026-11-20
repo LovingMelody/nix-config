@@ -95,6 +95,10 @@ in {
         kde.enable = config.TM.isGui;
         starship.enable = false;
         qt.enable = false;
+        # Discord
+        nixcord.enable = false;
+        vencord.enable = false;
+        vesktop.enable = false;
       };
     };
   };

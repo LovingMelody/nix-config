@@ -73,6 +73,8 @@ in {
         targets = {
           plymouth.enable = false;
           grub.enable = false;
+          # catppuccin sets the limine theme and clears its wallpapers
+          limine.enable = false;
           chromium.enable = config.TM.isGui;
           qt.enable = true;
         };
