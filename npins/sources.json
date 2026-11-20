@@ -22,9 +22,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "21d721415790e6717b2ece16e82e08eb98d16c00",
-      "url": "https://github.com/cachyos/kernel-patches/archive/21d721415790e6717b2ece16e82e08eb98d16c00.tar.gz",
-      "hash": "sha256-ss9yGbBH75Whu1n05QEx5ZOGff7NlLM20cD5Qa7fSPM="
+      "revision": "664442dd1a913ef8838453828d26ae13b2e7334d",
+      "url": "https://github.com/cachyos/kernel-patches/archive/664442dd1a913ef8838453828d26ae13b2e7334d.tar.gz",
+      "hash": "sha256-9VuqP4xNOIlTooCYTvsyz+AqHjrhXCglYwJFd5aOELQ="
     },
     "dxvk": {
       "type": "Git",
@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "c6f453f710a6be3246e893068b44ec5136929d8e",
+      "revision": "d9af36496fef7a5b24f0b916bfd578b9f875d9b1",
       "url": null,
-      "hash": "sha256-vqxjIfkZ+wiLd5N5HqqQUSUN6NYkA6Ck8GsVe/7iU0o="
+      "hash": "sha256-Q/EIGuIKu0WZQzBsl2b3EgOTEQccai3YqW91NFiP1r0="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -74,9 +74,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "ea72583f1e986e6ea14830bd8169199c85190467",
-      "url": "https://github.com/wwmm/easyeffects/archive/ea72583f1e986e6ea14830bd8169199c85190467.tar.gz",
-      "hash": "sha256-yAMscCRatK7nr4dYROIAukoKyFEleEdTzObR1YJbOAw="
+      "revision": "a7a123aa3ef33d3d7b30e67ac23e9ba6aec658b9",
+      "url": "https://github.com/wwmm/easyeffects/archive/a7a123aa3ef33d3d7b30e67ac23e9ba6aec658b9.tar.gz",
+      "hash": "sha256-31NOnN+pF9yjyImXB1WIVlYAPI9PyKDHfeAk9y0S698="
     },
     "gallery-dl": {
       "type": "Git",
@@ -118,9 +118,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "6d6a8ca1ea7c134b6a95fc91ae7728078425b1aa",
-      "url": "https://github.com/garglk/garglk/archive/6d6a8ca1ea7c134b6a95fc91ae7728078425b1aa.tar.gz",
-      "hash": "sha256-u1mxPXELZsFzALlr1WXoBr2118LG+j9R0dbj8YYq8K8="
+      "revision": "1cbaa4da9c7b77f16ca5e150a46a4bf59e251d1e",
+      "url": "https://github.com/garglk/garglk/archive/1cbaa4da9c7b77f16ca5e150a46a4bf59e251d1e.tar.gz",
+      "hash": "sha256-wr6EP7UuzrnTu28522sclmwTGZHK4QUKlVC/BI9+V6A="
     },
     "getopts.fish": {
       "type": "Git",
@@ -159,10 +159,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v0.50.0",
-      "revision": "5e0197fef01c1141925d2f7be08851b87af0b454",
-      "url": "https://api.github.com/repos/kovidgoyal/kitty/tarball/refs/tags/v0.50.0",
-      "hash": "sha256-CSSjL931OLZ9wwz9E3rAfMcm+TpczVJzJh9MPfuKmVU="
+      "version": "v0.51.0",
+      "revision": "553b7c16b90384dc97c66957de309dfad173920c",
+      "url": "https://api.github.com/repos/kovidgoyal/kitty/tarball/refs/tags/v0.51.0",
+      "hash": "sha256-JtjxZN7bm7mtvMb2mgb5Q3x3JqSmjKslRawmVhNZoWw="
     },
     "linux-wallpaperengine": {
       "type": "Git",
@@ -186,9 +186,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "f92afa75cdb06e077a9ecd9a9ec2eb36b16327c2",
-      "url": "https://github.com/mpv-player/mpv/archive/f92afa75cdb06e077a9ecd9a9ec2eb36b16327c2.tar.gz",
-      "hash": "sha256-lbCo7VeI68nTs8pyljAHQEwBcVthOXXC/OqXN7OIp9k="
+      "revision": "b7339522cd979ec3dd75b82e920577bc533fddea",
+      "url": "https://github.com/mpv-player/mpv/archive/b7339522cd979ec3dd75b82e920577bc533fddea.tar.gz",
+      "hash": "sha256-zB7HHdfuVHT4TSDoDoxs1DmaHI/13u7YOMZwD+5vpWw="
     },
     "npins": {
       "type": "GitRelease",
@@ -215,9 +215,9 @@
       },
       "branch": "dev",
       "submodules": false,
-      "revision": "a6469396f00731c298f4f9b2b3248388e17938e8",
-      "url": "https://github.com/nagadomi/nunif/archive/a6469396f00731c298f4f9b2b3248388e17938e8.tar.gz",
-      "hash": "sha256-PAW/z3c8rhVzlGWHdXJWlneFXh8MtQS+tmQMFRTUjN0="
+      "revision": "92c294e6624802dd78042ebd47370a127a6d6f96",
+      "url": "https://github.com/nagadomi/nunif/archive/92c294e6624802dd78042ebd47370a127a6d6f96.tar.gz",
+      "hash": "sha256-7Y3b2MKXD63gx/XOcYPAbFJ13zyOwYOaVKXNGVg0vfA="
     },
     "obs": {
       "type": "Git",
@@ -326,9 +326,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "bfdb811c6d7ccd8c6151f19532654b063a6631f2",
+      "revision": "3b5dd10106b61f6d74d2e4b6fb3022c0d9682c7f",
       "url": null,
-      "hash": "sha256-uGJs9bafLjQkPOPAdz1Wx7flnRZrb0rM5aefELWMhvc="
+      "hash": "sha256-pUtMAN6caXx3ohpAKILiYO5axGQdK7sX9R1Qx9j+QSs="
     },
     "xivlauncher-rb": {
       "type": "GitRelease",
