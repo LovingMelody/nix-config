@@ -15,7 +15,7 @@
 in {
   options.TM.zram = {
     enable =
-      mkEnableOption "Enable zswap"
+      mkEnableOption "compressed swap in RAM (zram)"
       // {
         default = true;
       };
