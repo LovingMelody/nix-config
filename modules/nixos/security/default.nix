@@ -92,11 +92,8 @@ in {
           "net.ipv4.icmp_echo_ignore_all" = 1; # Prevents smurf attacks
           "net.ipv4.icmp_ignore_bogus_error_responses" = 1; # Log cleanup
           "net.ipv4.tcp_congestion_control" = "bbr"; # Bufferbloat :D
-          "net.ipv4.tcp_dsack" = 0; # Disable TCP Sack, exploitable and not needed
-          "net.ipv4.tcp_fack" = 0; # Disable TCP Sack, exploitable and not needed
           "net.ipv4.tcp_fastopen" = 3; # Enable fast open - reduce network latency
           "net.ipv4.tcp_rfc1337" = 1; # Partial protection against TIME-WAIT assassination
-          "net.ipv4.tcp_sack" = 0; # Disable TCP Sack, exploitable and not needed
           "net.ipv4.tcp_syncookies" = 1; # Syn flood attack protection
           "net.ipv4.tcp_timestamps" = 0; # Disable TCP timestamps to avoid leaking system time
           "net.ipv6.conf.all.accept_ra" = 0; # IPV6 router advertisement disable
