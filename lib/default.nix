@@ -34,6 +34,23 @@ in rec {
         patches = builtins.filter (patch: !(lib.elem (builtins.baseNameOf patch) blacklist)) (o.patches or []);
       });
   };
+  # Catppuccin ports that catppuccin/nix (and our styles) read during evaluation.
+  # Upstream builds these as derivations, which forces import-from-derivation.
+  # The files are committed upstream, so fetch them with builtin fetchers instead,
+  # pinned to the revs/hashes of the locked `catppuccin` flake input.
+  catppuccinSources = let
+    locked = lib.importJSON "${self.inputs.catppuccin}/pkgs/sources.json";
+    fetchPort = port: subdir: let
+      src = locked.${port};
+    in "${builtins.fetchTarball {
+      url = "https://github.com/catppuccin/${port}/archive/${src.rev}.tar.gz";
+      sha256 = src.hash;
+    }}${subdir}";
+  in {
+    palette = fetchPort "palette" "";
+    starship = fetchPort "starship" "/themes";
+    limine = fetchPort "limine" "/themes";
+  };
   info = {
     flavor = "Mocha";
     url = "github:LovingMelody/nix-config";

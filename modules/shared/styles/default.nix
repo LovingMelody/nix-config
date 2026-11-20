@@ -170,6 +170,8 @@ in {
         cache.enable = true;
         flavor = toLower cfg.flavor;
         accent = toLower cfg.accent;
+        # Avoid IFD for ports read at eval time (see lib.TM.catppuccinSources).
+        sources = lib.TM.catppuccinSources;
       };
     }
 

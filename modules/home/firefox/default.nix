@@ -5,6 +5,56 @@
 }: let
   cfg = config.TM.programs.firefox;
   inherit (lib) mkEnableOption mkIf;
+  # Mirrors catppuccin/firefox's main.js. Upstream catppuccin/nix builds its themes.json
+  # with yarn and reads it during evaluation (IFD); generating it here avoids that.
+  catppuccinTheme = let
+    inherit (config.catppuccin) flavor accent;
+    c = name: {inherit (config.TM.styles.palette.${name}.rgb) r g b;};
+    a = c accent;
+  in {
+    colors = {
+      toolbar = c "base";
+      toolbar_text = c "text";
+      frame = c "crust";
+      tab_background_text = c "text";
+      toolbar_field = c "mantle";
+      toolbar_field_text = c "text";
+      tab_line = a;
+      popup = c "base";
+      popup_text = c "text";
+      button_background_active = c "overlay0";
+      frame_inactive = c "crust";
+      icons_attention = a;
+      icons = a;
+      ntp_background = c "crust";
+      ntp_text = c "text";
+      popup_border = a;
+      popup_highlight_text = c "text";
+      popup_highlight = c "overlay0";
+      sidebar_border = a;
+      sidebar_highlight_text = c "crust";
+      sidebar_highlight = a;
+      sidebar_text = c "text";
+      sidebar = c "base";
+      tab_background_separator = a;
+      tab_loading = a;
+      tab_selected = c "base";
+      tab_text = c "text";
+      toolbar_bottom_separator = c "base";
+      toolbar_field_border_focus = a;
+      toolbar_field_border = c "base";
+      toolbar_field_focus = c "base";
+      toolbar_field_highlight_text = c "base";
+      toolbar_field_highlight = a;
+      toolbar_field_separator = a;
+      toolbar_vertical_separator = a;
+    };
+    images = {
+      additional_backgrounds = ["./bg-000.svg"];
+      custom_backgrounds = [];
+    };
+    title = "Catppuccin ${flavor} ${accent}";
+  };
 in {
   options.TM.programs.firefox = {
     enable = mkEnableOption "A web browser built from Firefox source tree";
@@ -31,6 +81,8 @@ in {
       };
     };
     stylix.targets.firefox.profileNames = ["default"];
+    # Replaced by catppuccinTheme below to avoid IFD.
+    catppuccin.firefox.enable = false;
     programs.firefox = {
       enable = true;
       policies = {
@@ -88,7 +140,13 @@ in {
       };
       profiles.default = {
         isDefault = true;
-        extensions.force = true;
+        extensions = {
+          force = true;
+          settings."FirefoxColor@mozilla.com".settings = mkIf config.catppuccin.enable {
+            firstRunDone = true;
+            theme = catppuccinTheme;
+          };
+        };
         settings = {
           "apz.overscroll.enabled" = true;
           "browser.aboutConfig.showWarning" = false;
