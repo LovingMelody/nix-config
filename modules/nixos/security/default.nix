@@ -29,6 +29,16 @@ in {
       // {
         default = false;
       };
+    performanceKernel =
+      mkEnableOption ''
+        Drop costly hardening kernel params for better gaming/allocation performance
+        Examples:
+        init_on_alloc/init_on_free, strict IOMMU invalidation and forced isolation
+      ''
+      // {
+        default = config.TM.gaming.enable;
+        defaultText = lib.literalExpression "config.TM.gaming.enable";
+      };
   };
 
   config = mkMerge [
@@ -100,22 +110,25 @@ in {
           "vm.unprivileged_userfaultfd" = 0; # Restrict userdefaultfd to CAP_SYS_PTRACE to prevent use after free flaws
         };
         kernelModules = ["tcp_bbr"];
-        kernelParams = [
-          "init_on_alloc=1" # Enables zeroing of memory
-          "init_on_free=1" # Enables zeroing of memory
-          "page_alloc.shuffle=1" # Randomizes page allocator freelist (Also improves performance)
-          "randomize_kstack_offset=on" # Randomizes kernel stack offset makes CVE-2019-18683 more difficult
-          "vsyscall=none" # Obsolete replaced with vDSO
-          "debugfs=off" # Exposes lot of sensitive info about kernel when on
-          "oops=panic" # Prevents exploits that cause oops
-          "quiet" # Prevent info leaks during boot w/ kernel.printk
-          "loglevel=0" # Prevent info leaks during boot w/ kernel.printk
-          "intel_iommu=on"
-          "amd_iommu=force_isolation"
-          "iommu=force"
-          "iommu.passthrough=0"
-          "iommu.strict=1"
-        ];
+        kernelParams =
+          lib.optionals (!cfg.performanceKernel) [
+            "init_on_alloc=1" # Enables zeroing of memory
+            "init_on_free=1" # Enables zeroing of memory
+            "amd_iommu=force_isolation"
+            "iommu.strict=1" # Synchronous IOTLB invalidation, costs GPU/NVMe DMA throughput
+          ]
+          ++ [
+            "page_alloc.shuffle=1" # Randomizes page allocator freelist (Also improves performance)
+            "randomize_kstack_offset=on" # Randomizes kernel stack offset makes CVE-2019-18683 more difficult
+            "vsyscall=none" # Obsolete replaced with vDSO
+            "debugfs=off" # Exposes lot of sensitive info about kernel when on
+            "oops=panic" # Prevents exploits that cause oops
+            "quiet" # Prevent info leaks during boot w/ kernel.printk
+            "loglevel=0" # Prevent info leaks during boot w/ kernel.printk
+            "intel_iommu=on"
+            "iommu=force"
+            "iommu.passthrough=0"
+          ];
       };
     })
     (mkIf cfg.enableTPM {
