@@ -23,6 +23,34 @@
   # run as the user, so this goes through asusd / power-profiles-daemon.
   useAsusd = config.services.asusd.enable;
   usePpd = config.services.power-profiles-daemon.enable;
+  # If AC/battery changed while the game ran, the saved profile/governor are
+  # stale (e.g. saved "Quiet" on battery, then restored on AC). Fall back to
+  # what TLP would apply for the current power source instead.
+  tlp = config.services.tlp;
+  tlpSetting = name: lib.optionalString tlp.enable (toString (tlp.settings.${name} or ""));
+  # TLP uses sysfs names (low-power/quiet/balanced/performance)
+  toAsusctl = p:
+    {
+      low-power = "Quiet";
+      quiet = "Quiet";
+      balanced = "Balanced";
+      performance = "Performance";
+    }.${
+      p
+    } or "";
+  toPpd = p:
+    {
+      low-power = "power-saver";
+      quiet = "power-saver";
+      balanced = "balanced";
+      performance = "performance";
+    }.${
+      p
+    } or "";
+  toProfileName =
+    if useAsusd
+    then toAsusctl
+    else toPpd;
   gamemodeLaptopScripts = let
     runtimeInputs =
       [pkgs.coreutils pkgs.gnused pkgs.libnotify]
@@ -38,6 +66,7 @@
         done
         return 1
       }
+      if on_ac; then power=AC; else power=battery; fi
     '';
   in {
     start = pkgs.writeShellApplication {
@@ -48,22 +77,24 @@
         + (
           if useAsusd
           then ''
-            asusctl profile get | sed -n 's/^Active profile: //p' > "$state" || true
+            current=$(asusctl profile get | sed -n 's/^Active profile: //p') || true
             if on_ac; then target=Performance; else target=Balanced; fi
             asusctl profile set "$target" || true
           ''
           else if usePpd
           then ''
-            powerprofilesctl get > "$state" || true
+            current=$(powerprofilesctl get) || true
             if on_ac; then target=performance; else target=balanced; fi
             powerprofilesctl set "$target" || true
           ''
           else ''
+            current=""
             target="governor only"
           ''
         )
         + ''
-          if on_ac; then power=AC; else power=battery; fi
+          # Line 1: power source at start, line 2: profile to restore
+          printf '%s\n%s\n' "$power" "$current" > "$state"
           notify-send -a GameMode -i applications-games "GameMode on" "$power — $target" || true
         '';
     };
@@ -72,21 +103,45 @@
       inherit runtimeInputs;
       text =
         common
-        + (
-          if useAsusd || usePpd
-          then ''
-            if [ -s "$state" ]; then
-              ${
-              if useAsusd
-              then ''asusctl profile set "$(cat "$state")" || true''
-              else ''powerprofilesctl set "$(cat "$state")" || true''
-            }
-              rm -f "$state"
-            fi
-          ''
-          else ""
-        )
         + ''
+          saved_power=""
+          saved_profile=""
+          if [ -s "$state" ]; then
+            { read -r saved_power; read -r saved_profile; } < "$state" || true
+            rm -f "$state"
+          fi
+
+          if [ "$saved_power" = "$power" ]; then
+            profile="$saved_profile"
+          else
+            # Power source changed mid-game: saved values are for the other
+            # source, so apply TLP's values for the current one.
+            if on_ac; then
+              profile=${lib.escapeShellArg (toProfileName (tlpSetting "PLATFORM_PROFILE_ON_AC"))}
+              gov=${lib.escapeShellArg (tlpSetting "CPU_SCALING_GOVERNOR_ON_AC")}
+            else
+              profile=${lib.escapeShellArg (toProfileName (tlpSetting "PLATFORM_PROFILE_ON_BAT"))}
+              gov=${lib.escapeShellArg (tlpSetting "CPU_SCALING_GOVERNOR_ON_BAT")}
+            fi
+            # gamemoded already restored the governor it saw at start; this
+            # script runs after that, so override it (polkit allows the
+            # gamemode group without auth).
+            if [ -n "$gov" ]; then
+              /run/wrappers/bin/pkexec ${pkgs.gamemode}/libexec/cpugovctl set "$gov" || true
+            fi
+          fi
+        ''
+        + lib.optionalString (useAsusd || usePpd) ''
+          if [ -n "$profile" ]; then
+            ${
+            if useAsusd
+            then ''asusctl profile set "$profile" || true''
+            else ''powerprofilesctl set "$profile" || true''
+          }
+          fi
+        ''
+        + ''
+          echo "GameMode off ($power): profile=''${profile:-unchanged}"
           notify-send -a GameMode -i applications-games "GameMode off" || true
         '';
     };
@@ -141,6 +196,13 @@ in {
             inhibit_screensaver = mkDefault 1;
             desiredgov = mkDefault "performance";
             disable_splitlock = mkDefault 1;
+          };
+          # gamemode 1.8 pins games to a few "preferred" cores (amd-pstate
+          # prefcore ranking); on a 5900HS that left games on 5/16 threads
+          # and CPU-bound. Only useful on X3D / hybrid CPUs.
+          cpu = {
+            pin_cores = mkDefault "no";
+            park_cores = mkDefault "no";
           };
           custom = mkIf config.TM.isLaptop {
             start = "${gamemodeLaptopScripts.start}/bin/gamemode-laptop-start";

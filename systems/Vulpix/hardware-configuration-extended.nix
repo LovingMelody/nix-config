@@ -22,7 +22,13 @@
   services = {
     fprintd.enable = true;
     # asus-wmi has no "low-power"; quiet is the lowest profile here
-    tlp.settings.PLATFORM_PROFILE_ON_BAT = "quiet";
+    tlp.settings = {
+      PLATFORM_PROFILE_ON_BAT = "quiet";
+      # amd-pstate drops scaling_max_freq to nominal (3.3GHz) when boost is
+      # disabled on battery and doesn't raise it again when boost is
+      # re-enabled on AC, so restore the boost max explicitly.
+      CPU_SCALING_MAX_FREQ_ON_AC = 4683471;
+    };
     asusd = {
       enable = lib.mkDefault true;
       # TLP owns platform profile + EPP. asusd only does fan curves, charge
