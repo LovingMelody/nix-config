@@ -190,7 +190,7 @@ in {
   ];
 
   environment.systemPackages = with pkgs; [
-    tetex
+    texliveSmall
     texstudio
     cava
     gh
