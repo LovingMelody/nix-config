@@ -194,11 +194,11 @@ fhsenv}/usr/lib64 $out/lib")
                 };
               };
             };
-            networking =
+            networking = mkMerge [
               {
                 networkmanager.enable = mkDefault true;
               }
-              // (mkIf config.networking.networkmanager.enable {
+              (mkIf config.networking.networkmanager.enable {
                 networkmanager = {
                   dns = mkDefault (
                     if config.services.resolved.enable
@@ -229,7 +229,8 @@ fhsenv}/usr/lib64 $out/lib")
                     };
                   };
                 };
-              });
+              })
+            ];
 
             systemd = {
               enableEmergencyMode = !config.TM.isServer;
