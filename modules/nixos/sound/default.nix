@@ -25,7 +25,9 @@ in {
         inherit (cfg) support32Bit;
       };
       pulse.enable = true;
-      jack.enable = true;
     };
+    # services.pipewire.jack.enable is deprecated (global LD_LIBRARY_PATH impurity);
+    # run JACK apps through `pw-jack <app>` instead.
+    environment.systemPackages = [config.services.pipewire.package.jack];
   };
 }
