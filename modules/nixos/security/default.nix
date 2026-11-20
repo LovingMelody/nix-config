@@ -5,6 +5,8 @@
   ...
 }: let
   cfg = config.TM.security;
+  isAmd = config.hardware.cpu.amd.updateMicrocode;
+  isIntel = config.hardware.cpu.intel.updateMicrocode;
   inherit
     (lib)
     mkDefault
@@ -111,9 +113,11 @@ in {
           lib.optionals (!cfg.performanceKernel) [
             "init_on_alloc=1" # Enables zeroing of memory
             "init_on_free=1" # Enables zeroing of memory
-            "amd_iommu=force_isolation"
             "iommu.strict=1" # Synchronous IOTLB invalidation, costs GPU/NVMe DMA throughput
           ]
+          # Vendor-specific IOMMU flags; hosts with an unknown CPU vendor (installer/netboot) get both
+          ++ lib.optional (!cfg.performanceKernel && !isIntel) "amd_iommu=force_isolation"
+          ++ lib.optional (!isAmd) "intel_iommu=on"
           ++ [
             "page_alloc.shuffle=1" # Randomizes page allocator freelist (Also improves performance)
             "randomize_kstack_offset=on" # Randomizes kernel stack offset makes CVE-2019-18683 more difficult
@@ -122,7 +126,6 @@ in {
             "oops=panic" # Prevents exploits that cause oops
             "quiet" # Prevent info leaks during boot w/ kernel.printk
             "loglevel=0" # Prevent info leaks during boot w/ kernel.printk
-            "intel_iommu=on"
             "iommu=force"
             "iommu.passthrough=0"
           ];
