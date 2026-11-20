@@ -44,7 +44,9 @@ in {
           "vboxusers"
           "kvm"
         ]
-        ++ optional config.virtualisation.incus.enable "incus-admin";
+        ++ optional config.virtualisation.incus.enable "incus-admin"
+        # gamemode's polkit rule only lets this group switch governors without auth
+        ++ optional config.programs.gamemode.enable "gamemode";
       shell = mkForce pkgs.fish;
       description = "Melody Renata";
       openssh.authorizedKeys.keyFiles = [

@@ -16,6 +16,81 @@
     versions
     ;
   pins = lib.TM.package-helper.pinsFor pkgs;
+
+  # Laptop: bump the platform profile while a game runs (Performance on AC,
+  # Balanced on battery) and restore whatever was active afterwards.
+  # gamemode 1.8 can't drive platform_profile itself, and the custom scripts
+  # run as the user, so this goes through asusd / power-profiles-daemon.
+  useAsusd = config.services.asusd.enable;
+  usePpd = config.services.power-profiles-daemon.enable;
+  gamemodeLaptopScripts = let
+    runtimeInputs =
+      [pkgs.coreutils pkgs.gnused pkgs.libnotify]
+      ++ optional useAsusd pkgs.asusctl
+      ++ optional usePpd pkgs.power-profiles-daemon;
+    common = ''
+      state="''${XDG_RUNTIME_DIR:-/tmp}/gamemode-laptop-profile"
+      on_ac() {
+        for ps in /sys/class/power_supply/*; do
+          if [ "$(cat "$ps/type" 2>/dev/null)" = Mains ] && [ "$(cat "$ps/online" 2>/dev/null)" = 1 ]; then
+            return 0
+          fi
+        done
+        return 1
+      }
+    '';
+  in {
+    start = pkgs.writeShellApplication {
+      name = "gamemode-laptop-start";
+      inherit runtimeInputs;
+      text =
+        common
+        + (
+          if useAsusd
+          then ''
+            asusctl profile get | sed -n 's/^Active profile: //p' > "$state" || true
+            if on_ac; then target=Performance; else target=Balanced; fi
+            asusctl profile set "$target" || true
+          ''
+          else if usePpd
+          then ''
+            powerprofilesctl get > "$state" || true
+            if on_ac; then target=performance; else target=balanced; fi
+            powerprofilesctl set "$target" || true
+          ''
+          else ''
+            target="governor only"
+          ''
+        )
+        + ''
+          if on_ac; then power=AC; else power=battery; fi
+          notify-send -a GameMode -i applications-games "GameMode on" "$power — $target" || true
+        '';
+    };
+    end = pkgs.writeShellApplication {
+      name = "gamemode-laptop-end";
+      inherit runtimeInputs;
+      text =
+        common
+        + (
+          if useAsusd || usePpd
+          then ''
+            if [ -s "$state" ]; then
+              ${
+              if useAsusd
+              then ''asusctl profile set "$(cat "$state")" || true''
+              else ''powerprofilesctl set "$(cat "$state")" || true''
+            }
+              rm -f "$state"
+            fi
+          ''
+          else ""
+        )
+        + ''
+          notify-send -a GameMode -i applications-games "GameMode off" || true
+        '';
+    };
+  };
 in {
   options.TM.gaming = {
     enable = mkEnableOption "Enable gaming specific configs";
@@ -59,8 +134,18 @@ in {
         enable = mkDefault config.TM.isLaptop;
         settings = {
           general = {
-            softrealtime = "auto";
-            renice = 15;
+            softrealtime = mkDefault "auto";
+            # >10 risks starving pipewire / the compositor under load
+            renice = mkDefault 10;
+            ioprio = mkDefault 0;
+            inhibit_screensaver = mkDefault 1;
+            desiredgov = mkDefault "performance";
+            disable_splitlock = mkDefault 1;
+          };
+          custom = mkIf config.TM.isLaptop {
+            start = "${gamemodeLaptopScripts.start}/bin/gamemode-laptop-start";
+            end = "${gamemodeLaptopScripts.end}/bin/gamemode-laptop-end";
+            script_timeout = 10;
           };
         };
       };

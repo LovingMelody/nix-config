@@ -5,7 +5,7 @@
 }: let
   # Defined in helper
   cfg = config.TM.isLaptop;
-  inherit (lib) mkIf;
+  inherit (lib) mkDefault mkIf;
 in {
   config = mkIf cfg {
     services = {
@@ -22,8 +22,9 @@ in {
           CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
           CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
           CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
-          PLATFORM_PROFILE_ON_AC = "performance";
-          PLATFORM_PROFILE_ON_BAT = "low-power";
+          PLATFORM_PROFILE_ON_AC = mkDefault "performance";
+          # Must be one of /sys/firmware/acpi/platform_profile_choices
+          PLATFORM_PROFILE_ON_BAT = mkDefault "low-power";
         };
       };
       power-profiles-daemon.enable = false;
