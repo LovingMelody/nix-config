@@ -27,8 +27,6 @@ in {
       emulatedSystems = [
         "aarch64-linux"
         "x86_64-windows"
-        # "wasm32-wasi"
-        # "wasm64-wasi"
       ];
     };
     kernelModules = [
@@ -68,7 +66,6 @@ in {
     };
   };
   hardware = {
-    # uni-sync = { enable = true; };
     bluetooth = {
       enable = true;
       settings.general = {
@@ -83,15 +80,9 @@ in {
   };
   networking.interfaces.enp7s0.wakeOnLan.enable = true;
 
-  # # Set docker storage driver to btrfs
-  # virtualisation.docker.storageDriver = "btrfs";
   virtualisation.vmVariant = {
     disko.devices = mkForce (import ./disko-vm.nix {inherit lib;});
   };
-  # TPM
-  # security.tpm2.enable = true;
-  # security.tpm2.pkcs11.enable = true;
-  # security.tpm2.tctiEnvironment.enable = true;
 
   TM = {
     programs.wine.binfmt = true;

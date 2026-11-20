@@ -25,17 +25,10 @@ in {
     TM.isGui = true;
     home.packages = [
       pkgs.gnomeExtensions.appindicator # System tray icons
-      # pkgs.gnomeExtensions.gsconnect # KDE Connect implementation for gnome
-      # pkgs.gnomeExtensions.dash-to-panel # An icon taskbar for gnome
       pkgs.gnomeExtensions.caffeine # Disable auto suspend and screen blank
-      # pkgs.gnomeExtensions.arcmenu # Windows like start-menu
-      # pkgs.gnomeExtensions.removable-drive-menu # Add a removable drive menu to the top bar
-      # pkgs.gnomeExtensions.bluetooth-quick-connect # Quick connect to bluetooth devices
-      # pkgs.gnomeExtensions.blur-my-shell
       pkgs.gnomeExtensions.user-themes
       pkgs.gnomeExtensions.headsetcontrol
     ];
-    # ++ (optional (config.TM.styles.polarity == "light")) pkgs.gnomeExtensions.luminus-desktop-y;
 
     dconf.settings = {
       "org/gnome/shell".enabled-extensions = map (extension: extension.extensionUuid) (

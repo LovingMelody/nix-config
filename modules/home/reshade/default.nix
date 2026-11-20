@@ -31,7 +31,6 @@ in {
           source = gposingway;
         }
       ];
-      # type = listOf attrs;
       description = "List of shader files";
     };
   };

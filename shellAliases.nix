@@ -3,9 +3,6 @@
   pkgs,
   ...
 }: {
-  #l = "${pkgs.eza}/bin/eza";
-  #ls = "${pkgs.eza}/bin/eza";
-  #ll = "${pkgs.eza}/bin/eza -l";
   g = lib.getExe pkgs.git;
   t = "${lib.getExe pkgs.tig} status";
   e = "$EDITOR";

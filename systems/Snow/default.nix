@@ -64,7 +64,6 @@ in {
       accent = "Lavender";
       enable = true;
       editImage = config.TM.styles.flavor != "Latte";
-      # generateBase16 = false;
       wallpaper =
         if config.TM.styles.flavor == "Latte"
         then
@@ -104,7 +103,6 @@ in {
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-  # programs.ssh.askPassword = "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
   services = {
     orca.enable = false;
     desktopManager.cosmic.enable = false;

@@ -3,7 +3,6 @@ _: {
   projectRootFile = "flake.nix";
   programs = {
     yamlfmt.enable = true;
-    # nixfmt.enable = true;
     alejandra.enable = true;
     deno.enable = true;
     deadnix = {
@@ -19,7 +18,6 @@ _: {
   };
   settings.formatter = {
     deadnix.excludes = ["npins/default.nix"];
-    # nixfmt.excludes = ["npins/default.nix"];
     alejandra.excludes = ["npins/default.nix"];
     deno.excludes = ["npins/sources.json"];
     statix.excludes = ["npins/default.nix"];

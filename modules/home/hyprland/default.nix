@@ -77,7 +77,6 @@ in {
       };
       network-manager-applet.enable = true;
       gpg-agent.pinentry.package = mkDefault pkgs.pinentry-gnome3;
-      # swaync.enable = true;
       playerctld.enable = true;
       gnome-keyring = {
         enable = true;
@@ -124,12 +123,6 @@ in {
     };
     xdg.portal = {
       inherit (osConfig.xdg.portal) config;
-
-      #   enable = true;
-      #   extraPortals = [ cfg.portalPackage ];
-      #   config = {
-      #     common.default = [ "hyprland" ];
-      #   };
     };
   };
 }

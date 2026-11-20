@@ -30,7 +30,6 @@ in {
           name = "fish-fzf";
           src = fishPlugins.fzf-fish;
         }
-        # { name = "async-prompt"; src = fishPlugins.async-prompt;}
 
         {
           name = "replay.fish";

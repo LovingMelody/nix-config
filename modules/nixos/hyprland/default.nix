@@ -135,9 +135,6 @@ in {
         };
         hyprland.default = ["gtk" "hyprland"];
       };
-      extraPortals = with pkgs; [
-        # xdg-desktop-portal-gtk
-      ];
     };
   };
 }

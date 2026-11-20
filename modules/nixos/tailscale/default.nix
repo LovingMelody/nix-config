@@ -62,7 +62,6 @@ in {
           };
           resolved = {
             enable = mkDefault true;
-            # domains = ["~."];
           };
         };
         networking.firewall = {

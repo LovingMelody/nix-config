@@ -48,18 +48,10 @@
     GAMEMODERUNEXEC = lib.mkIf config.hardware.nvidia.prime.offload.enableOffloadCmd "nvidia-offload";
   };
   hardware = {
-    # nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
-    # uni-sync = { enable = true; };
     bluetooth = {
       enable = true;
     };
-    # openrazer = {
-    #   enable = true;
-    #   users = [ config.users.users.melody.name ];
-    # };
   };
 
-  #hardware.nvidia.modesetting.enable = true;
-  #services.logind.lidSwitch = "ignore";
   topology.self.interfaces.wlp2s0.network = "home";
 }

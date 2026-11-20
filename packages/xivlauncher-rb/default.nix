@@ -50,7 +50,6 @@ in
                   pkgs.libunwind
                   pkgs.zstd
                   pkgs.mangohud
-                  # pkgs.gamemode
                 ];
               extraProfile = ''
                 unset TZ

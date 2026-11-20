@@ -98,13 +98,6 @@ in {
       description = "The polarity of the theme";
     };
     editImage = mkDisableTarget "Edit the image to match the theme by applying LUT" ["styles" "editImage"];
-    # finalImage = mkOption {
-    #   type = types.path;
-    #   internal = true;
-    #   readOnly = true;
-    #   description = "Path to the output image";
-    #   default = if cfg.editImage then image else cfg.wallpaper;
-    # };
     fonts = {
       serif = {
         package = mkOption {
@@ -196,7 +189,6 @@ in {
           gtk.enable = mkDefault config.TM.isGui;
           qt = {
             enable = mkDefault config.TM.isGui;
-            # platform = mkForce "qtct";
           };
         };
         opacity.desktop = mkDefault 0.70;

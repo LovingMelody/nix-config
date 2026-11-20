@@ -29,9 +29,5 @@ in {
         obs-vkcapture
       ];
     };
-    # xdg.configFile."obs-studio/themes" = {
-    #   source = "${pkgs.catppuccin-obs}/share/themes";
-    #   recursive = true;
-    # };
   };
 }

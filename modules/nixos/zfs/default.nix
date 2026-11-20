@@ -51,6 +51,5 @@ in {
     This shouldn't cause anything to break...
     */
     boot.kernelPackages = mkForce (lib.TM.latestZFSKernel pkgs config.boot.zfs.package);
-    # (if isServer then pkgs.linuxPackages else pkgs.linuxPackages_xanmod)
   };
 }

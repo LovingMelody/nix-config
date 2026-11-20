@@ -41,7 +41,6 @@ in {
     };
     impermanence.enable = false;
     airplay.client.enable = true;
-    # defaults.enable = true;
     programs = {
       _1password = {
         enable = true;
@@ -118,7 +117,6 @@ in {
     spotify
     vscode
     android-tools
-    # yubioath-flutter
     #KDE
     kdePackages.discover
     kdePackages.kcalc
@@ -136,57 +134,6 @@ in {
   ];
 
   security.polkit.enable = true;
-
-  # home-manager.users.melody = {
-  #   services.linux-wallpaperengine = {
-  #     enable = false;
-  #     wallpapers = [
-  #       {
-  #         monitor = "eDP-1";
-  #         wallpaperId = "2800570496";
-  #         fps = 30;
-  #         audio = {
-  #           silent = true;
-  #           processing = false;
-  #           automute = false;
-  #         };
-  #       }
-  #     ];
-  #   };
-  #   stylix.fonts.sizes = {
-  #     terminal = mkForce 14;
-  #     desktop = mkForce 12;
-  #     applications = mkForce 12;
-  #     popups = mkForce 10;
-  #   };
-  #   xdg.configFile."uwsm/env-hyprland".text = ''
-  #     export AQ_DRM_DEVICES="/dev/dri/card1:/dev/dri/card0"
-  #   '';
-  #   wayland.windowManager.hyprland.settings.monitor = [
-  #     "eDP-1, preferred, 0x0, 1"
-  #     ", preferred, auto, 1"
-  #     "Unknown-1,disable"
-  #   ];
-  #   programs = {
-  #     direnv.enable = true;
-  #   };
-  #   TM = {
-  #     home-profiles.desktop.enable = true;
-  #     impermanence.enable = false;
-  #     # defaults.enable = true;
-  #     programs = {
-  #       _1password = {
-  #         enable = true;
-  #         sshAgent = true;
-  #         gpgSign = {
-  #           enable = true;
-  #           signingKey = lib.removeSuffix "\n" (readFile (lib.TM.get-ssh-key-file "melody" "primary"));
-  #         };
-  #       };
-  #       git.enable = true;
-  #     };
-  #   };
-  # };
 
   boot.kernelPackages = mkForce (lib.TM.latestZFSKernel pkgs config.boot.zfs.package);
 }

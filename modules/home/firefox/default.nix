@@ -97,7 +97,6 @@ in {
           "gfx.color_management.hdr" = config.TM.hasHDRDisplay;
           "gfx.color_management.hdr.force_enabled" = config.TM.hasHDRDisplay;
         };
-        # extraConfig = builtins.readFile "${shyfox}/user.js";
         search = {
           force = true;
           default = "ddg";
@@ -138,6 +137,5 @@ in {
         };
       };
     };
-    # home.file.".mozilla/firefox/${config.programs.firefox.profiles.homeManager.path}/chrome".source = "${shyfox}/chrome";
   };
 }

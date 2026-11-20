@@ -82,10 +82,8 @@ in {
           customModules.updates.pollingInterval = 1440000;
           launcher.icon = "=";
           media.show_active_only = true;
-          # monitorSpecific = true;
           workspaces = {
             applicationIconOncePerWorkspace = true;
-            # hideUnoccupied = true;
             monitorSpecific = true;
             scroll_speed = 7;
             showAllActive = false;
@@ -97,7 +95,6 @@ in {
         };
         hyprpanel.restartCommand = "${lib.getExe' pkgs.procps "pkill"} -u $USER -USR1 hyprpanel; ${lib.getExe pkgs.hyprpanel}";
         menus = {
-          # bluetooth.showBattery = true;
           clock = {
             time.military = true;
             weather.enabled = false;
@@ -140,7 +137,6 @@ in {
               style = "default";
             };
             floating = false;
-            # margin_bottom = "${builtins.toString gaps.gaps_in}px";
             margin_sides = "${builtins.toString gaps.gaps_out}px";
             margin_top = "${builtins.toString gaps.gaps_in}px";
             menus.monochrome = false;

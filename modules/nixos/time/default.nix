@@ -33,9 +33,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    # Lets set this to null
     time = {
-      # timeZone = if config.TM.isGui then cfg.timeZone else null;
       inherit (cfg) timeZone;
       hardwareClockInLocalTime = !cfg.hwclock;
     };
@@ -43,7 +41,6 @@ in {
     services = {
       timesyncd.enable = mkDefault false;
       ntpd-rs.enable = mkDefault (!config.boot.isContainer);
-      # automatic-timezoned.enable = mkDefault (config.time.timeZone != null);
       geoclue2.enable = config.time.timeZone != null;
     };
   };
