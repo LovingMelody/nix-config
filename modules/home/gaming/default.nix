@@ -165,25 +165,30 @@ in {
       dataFile."wine-astral".source = pkgs.wine-astral;
     };
 
-    # TODO: Check if wineprefix is already running
     systemd.user.services = mkIf cfg.prepareWinePrefix.enable (lib.attrsets.mapAttrs' (name: value:
       lib.attrsets.nameValuePair ("update-wine-prefix-" + name) {
         Unit = {
-          Description = "Update default wine prefix";
-          requiresMountsFor = [value];
+          Description = "Update wine prefix ${name}";
+          RequiresMountsFor = [value];
         };
         Service = {
           Type = "oneshot";
           RemainsAfterExit = false;
-          ExecStart = lib.getExe (pkgs.writeShellScriptBin "update-wine-prefix" ''
-            # This will check if the wine server is currently running
-            wineserver -k20 || ${lib.getExe cfg.prepareWinePrefix.package}
-          '');
-
-          Environment = [
-            ''WINEPREFIX=${value}''
-            ''PATH="${lib.strings.makeBinPath [pkgs.wine-astral cfg.prepareWinePrefix.package]}:$PATH"''
-          ];
+          ExecStart = lib.getExe (pkgs.writeShellApplication {
+            name = "update-wine-prefix";
+            runtimeInputs = [pkgs.coreutils pkgs.procps pkgs.wine-astral cfg.prepareWinePrefix.package];
+            # Don't touch a prefix while wine is using it. The wineserver's
+            # /tmp/.wine-$UID/server-<dev>-<ino> dir can't be matched reliably
+            # (bind mounts change st_dev), so skip while any of our wineservers run.
+            text = ''
+              if pgrep -u "$(id -u)" wineserver >/dev/null; then
+                echo "A wineserver is running, not updating $WINEPREFIX"
+                exit 0
+              fi
+              exec ${lib.getExe cfg.prepareWinePrefix.package}
+            '';
+          });
+          Environment = ["WINEPREFIX=${value}"];
         };
       })
     cfg.prepareWinePrefix.paths);
