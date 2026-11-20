@@ -18,9 +18,13 @@ in {
   };
 
   config = let
-    overworld = "${cfg.dataDir}/${cfg.worldName}";
-    nether = "${cfg.dataDir}/${cfg.worldName}_nether";
-    end = "${cfg.dataDir}/${cfg.worldName}_the_end";
+    # nix-minecraft keeps each server in <services.minecraft-servers.dataDir>/<name>,
+    # not in cfg.dataDir, so back up from where the server actually lives
+    serverDir = "${config.services.minecraft-servers.dataDir}/melody";
+    serverLog = "${serverDir}/logs/latest.log";
+    overworld = "${serverDir}/${cfg.worldName}";
+    nether = "${serverDir}/${cfg.worldName}_nether";
+    end = "${serverDir}/${cfg.worldName}_the_end";
     # nix-minecraft creates per server units / stdin
     # minecraft-server-$NAME.{service/socket}
 
@@ -55,10 +59,6 @@ in {
       systemd = {
         timers.minecraft-backup = {
           wantedBy = ["timers.target"];
-          requires = [
-            serverService
-            serverSocket
-          ];
           timerConfig = {
             OnBootSec = "30min";
             OnUnitActiveSec = "4h";
@@ -66,15 +66,16 @@ in {
         };
         services.minecraft-backup = {
           inherit (cfg.backup) enable;
-          wantedBy = ["multi-user.target"];
-          requires = [
+          # Triggered by the timer only; never pull the server up (autoStart may be off)
+          after = [
             serverService
             serverSocket
           ];
-          after = ["minecraft-server.service"];
           path = [
             pkgs.bash
+            pkgs.gnugrep
             pkgs.restic
+            pkgs.systemd
             pkgs.uutils-coreutils-noprefix
           ];
           serviceConfig = {
@@ -83,6 +84,11 @@ in {
           };
           script =
             ''
+              if ! systemctl is-active --quiet ${serverService}; then
+                echo "${serverService} is not running, skipping backup"
+                exit 0
+              fi
+
               function test_readable {
                 if [[ ! -r "$1" ]]; then
                   echo "File $1 is not readable"
@@ -113,7 +119,7 @@ in {
               then ''
 
                 function do_backup {
-                  backup ${cfg.dataDir}
+                  backup ${serverDir}
                 }
 
               ''
@@ -155,14 +161,27 @@ in {
               rcon 'say §c§lWARNING: §r§cWorld backup starting NOW!'
 
               rcon 'save-off'
+              # Re-enable saving however we exit, including a failed backup
+              trap "rcon save-on" EXIT
+
+              # rcon is fire-and-forget (stdin fifo), so wait for the server to
+              # log that the flush finished before reading the world files
+              log_offset=$(stat -c %s '${serverLog}' 2>/dev/null || echo 0)
+              exec {save_log}< <(exec timeout 5m tail -c "+$((log_offset + 1))" -F '${serverLog}' 2>/dev/null)
+              tail_pid=$!
               rcon 'save-all flush'
-              # Wait for save to finish before backing up
-              # FIXME: Fix race condition
-              sleep 1m
+              saved=0
+              grep -q -m1 'Saved the game' <&"$save_log" && saved=1
+              kill "$tail_pid" 2>/dev/null || true
+              exec {save_log}<&-
+              if [ "$saved" -ne 1 ]; then
+                rcon 'say §c§lERROR: §r§cWorld backup aborted, save did not finish'
+                echo "Timed out waiting for 'save-all flush' to finish" >&2
+                exit 1
+              fi
 
               do_backup
 
-              trap "rcon save-on" EXIT
               rcon 'say §a§lSUCCESS: §r§aWorld backup complete!'
             '';
         };
