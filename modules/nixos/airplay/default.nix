@@ -29,7 +29,7 @@ in {
               ({
                   name = "libpipewire-module-raop-discover";
                 }
-                // (mkIf (cfg.client.latency != null) {
+                // (lib.optionalAttrs (cfg.client.latency != null) {
                   args."raop.latency.ms" = cfg.client.latency;
                 }))
             ];
