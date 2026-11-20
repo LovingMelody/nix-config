@@ -18,7 +18,6 @@
   boot = {
     binfmt.emulatedSystems = ["aarch64-linux"];
   };
-  #TM.MyNextGPUWillNotBeNvidia = true;
   environment.systemPackages = [pkgs.headsetcontrol];
   services = {
     fprintd.enable = true;
@@ -33,8 +32,7 @@
   TM = {
     hasHDRDisplay = lib.mkDefault false;
     programs.wine.binfmt = true;
-    zfs.enable = false;
-    isLaptop = true;
+    nvidia.enable = true;
     virt.enable = true;
   };
   nixpkgs.config = {

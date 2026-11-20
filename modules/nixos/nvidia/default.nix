@@ -4,22 +4,26 @@
   pkgs,
   ...
 }: let
-  cfg = config.TM.MyNextGPUWillNotBeNvidia;
-  inherit (lib) mkDefault mkEnableOption mkIf;
+  cfg = config.TM.nvidia;
+  # With PRIME offload the iGPU drives the display; forcing these globally would
+  # put the whole session (and all VA-API/GLX clients) on the dGPU.
+  primeOffload = config.hardware.nvidia.prime.offload.enable;
+  inherit (lib) mkDefault mkEnableOption mkIf mkRenamedOptionModule;
 in {
-  options.TM.MyNextGPUWillNotBeNvidia = mkEnableOption "Fix nvidia nonsense";
+  imports = [(mkRenamedOptionModule ["TM" "MyNextGPUWillNotBeNvidia"] ["TM" "nvidia" "enable"])];
 
-  config = mkIf cfg {
+  options.TM.nvidia.enable = mkEnableOption "NVIDIA driver, Wayland and Proton/DLSS integration";
+
+  config = mkIf cfg.enable {
     boot.blacklistedKernelModules = ["nova_core" "nova_drm" "nouveau"];
     services.xserver.videoDrivers = mkDefault ["nvidia"];
     environment = {
       sessionVariables = {
-        LIBVA_DRIVER_NAME = mkDefault "nvidia";
+        LIBVA_DRIVER_NAME = mkIf (!primeOffload) (mkDefault "nvidia");
         # May crash firefox
-        GBM_BACKEND = mkDefault "nvidia-drm";
+        GBM_BACKEND = mkIf (!primeOffload) (mkDefault "nvidia-drm");
         # May break screensharing / Discord
-        __GLX_VENDOR_LIBRARY_NAME = mkDefault "nvidia";
-        # Unsure what this has the potential to break tbh
+        __GLX_VENDOR_LIBRARY_NAME = mkIf (!primeOffload) (mkDefault "nvidia");
         NIXOS_OZONE_WL = mkDefault "1";
         ELECTRON_OZONE_PLATFORM_HINT = mkDefault "auto";
         NVIDIA_WINE_DLL_DIR = "${config.hardware.nvidia.package}/lib/nvidia/wine/";

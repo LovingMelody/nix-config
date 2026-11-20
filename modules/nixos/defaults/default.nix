@@ -286,7 +286,7 @@ fhsenv}/usr/lib64 $out/lib")
             nixpkgs = {
               config = {
                 allowUnfree = true;
-                cudaSupport = config.TM.MyNextGPUWillNotBeNvidia or false;
+                cudaSupport = config.TM.nvidia.enable;
                 cudaCapabilities = ["8.6"];
               };
               overlays =

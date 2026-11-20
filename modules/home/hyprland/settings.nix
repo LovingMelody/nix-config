@@ -37,7 +37,7 @@ in {
       "col.active_border" = rgb (toLower accent);
       "col.inactive_border" = rgb "crust";
     };
-    cursor = mkIf (osConfig.TM.MyNextGPUWillNotBeNvidia or false) {no_hardware_cursors = true;};
+    cursor = mkIf (osConfig.TM.nvidia.enable or false) {no_hardware_cursors = true;};
     exec-once =
       [
         "${exec} hyprctl setcursor '${config.stylix.cursor.name}' ${toString config.stylix.cursor.size}"

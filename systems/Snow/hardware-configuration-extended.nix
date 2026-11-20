@@ -99,8 +99,7 @@ in {
     isDesktop = mkDefault true;
     hasHDRDisplay = mkDefault true;
     hasWifi7 = mkDefault true;
-    # Enable Nvidia stuff
-    MyNextGPUWillNotBeNvidia = true;
+    nvidia.enable = true;
     services.liquidctl = {
       enable = true;
       config = {
