@@ -50,25 +50,46 @@ in {
     };
   };
   config = mkIf cfg.enable {
+    # catppuccin/nix replaces MangoHud.conf
+    catppuccin.mangohud.enable = false;
+    stylix.targets.mangohud.enable = false;
     programs.mangohud = {
       enable = true;
       enableSessionWide = mkDefault false; # Disabled since it's rendering on Gnome Shell
-      settings = {
-        alpha = mkForce 0.6;
-        cpu_temp = true;
-        gpu_temp = true;
-        battery = true;
-        background_alpha = mkForce 0.3;
-        horizontal = true;
-        hud_compact = true;
-        hud_no_margin = true;
-        no_display = mkDefault true;
-        position = "top-center";
-        horizontal_stretch = false;
-        frame_timing = 0;
-        time = true;
-        time_no_label = true;
-      };
+      settings = let
+        c = name: lib.removePrefix "#" config.TM.styles.palette.${name}.hex;
+        load = [(c "text") (c "peach") (c "red")];
+      in
+        lib.optionalAttrs config.catppuccin.enable {
+          background_color = c "base";
+          text_color = c "text";
+          text_outline_color = c "surface0";
+          gpu_color = c "green";
+          gpu_load_color = load;
+          cpu_color = c "blue";
+          cpu_load_color = load;
+          ram_color = c "pink";
+          engine_color = c "red";
+          fps_color = [(c "red") (c "yellow") (c "green")];
+          wine_color = c "red";
+          frametime_color = c "green";
+        }
+        // {
+          alpha = mkForce 0.6;
+          cpu_temp = true;
+          gpu_temp = true;
+          battery = osConfig.TM.isLaptop or true;
+          background_alpha = mkForce 0.3;
+          horizontal = true;
+          hud_compact = true;
+          hud_no_margin = true;
+          no_display = mkDefault true;
+          position = "top-center";
+          horizontal_stretch = false;
+          frame_timing = 0;
+          time = true;
+          time_no_label = true;
+        };
       settingsPerApplication = {
         "wine-ffxiv_dx11" = enableMangoHud;
         "wine-StarCitizen" = enableMangoHud;
@@ -78,6 +99,17 @@ in {
         "wine-BlackDesert64" = enableMangoHud;
         "wine-Overwatch" = enableMangoHud;
         "wine-Warframe" = enableMangoHud;
+        "wine-wwm" = enableMangoHud;
+        "wine-NMS" = enableMangoHud; # No Man's Sky
+        "wine-Palworld-Win64-Shipping" = enableMangoHud;
+        "wine-Risk of Rain 2" = enableMangoHud;
+        "wine-Cinderia" = enableMangoHud;
+        "wine-Cat Quest II" = enableMangoHud;
+        "wine-Fallout3" = enableMangoHud;
+        "wine-FalloutNV" = enableMangoHud;
+        "wine-ShadowOfMordor" = enableMangoHud;
+        "wine-Wonderlands" = enableMangoHud; # Tiny Tina's Wonderlands
+        "wine-RiMS" = enableMangoHud; # RiMS Racing
       };
     };
     xdg = {
