@@ -89,7 +89,6 @@ in {
           options = {
             encryption = "aes-256-gcm";
             keyformat = "passphrase";
-            # keylocation = "file://${secretFile}";
             keylocation = "prompt";
           };
         };

@@ -36,7 +36,6 @@
       openFirewall = true;
       worldName = "NewWorld";
     };
-    # services.aria2.enable = true;
   };
   home-manager.users.melody = {
     TM.home-profiles.server.enable = true;
@@ -79,7 +78,6 @@
       enable = false;
       originalsPath = "/data/photoprism";
       passwordFile = config.sops.secrets.prism.path;
-      # databasePasswordFile = config.sops.secrets.prism.path;
       address = "0.0.0.0";
       settings = {
         PHOTOPRISM_ORIGINALS_LIMIT = builtins.toString (80 * 1023); # file size limit for originals in MB
@@ -105,10 +103,6 @@
   programs.mosh.enable = true;
 
   networking = {
-    # nameservers = [
-    #   "9.9.9.9"
-    #   "1.1.1.1"
-    # ];
     hostName = "Rotom";
     networkmanager.enable = true;
   };

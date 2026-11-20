@@ -137,8 +137,6 @@ in {
     # If this is linked in the script, the script will run when rsync is updated
     home = {
       packages = [
-        # Disabled, XLM is used instead
-        # cfg.package
         pkgs.rsync
         pkgs.textools
       ];
@@ -146,7 +144,6 @@ in {
         # use packaged reshade
         ".xlcore/ffxiv/game/dxgi.dll".source = "${cfg.reshade.package}/lib/reshade/ReShade64.dll";
 
-        # ".xlcore/wineprefix/drive_c/windows/system32/d3dcompiler_47.dll"
         ".xlcore/ffxiv/game/d3dcompiler_47.dll".source = "${cfg.reshade.package}/lib/d3dcompiler_47.dll";
         # FIXME: This doesn't work, ReShade.ini needs to be writable
         # FIXME: Move this to its own block thats configurable, its messy
@@ -166,14 +163,6 @@ in {
               '';
             };
         in "${genInI}/ReShade.ini";
-        # ".xlcore/ffxiv/game/reshade-presets" = {
-        #   source = "${cfg.reshade.package}/reshade-presets";
-        #   recursive = true;
-        # };
-        # ".xlcore/ffxiv/game/reshade-shaders" = {
-        #   source = "${cfg.reshade.package}/reshade-shaders";
-        #   recursive = true;
-        # };
         ".xlcore/copyIni.sh" = {
           text = ''
             mkdir -p "${config.home.homeDirectory}/.xlcore/ffxiv/game"
@@ -195,17 +184,9 @@ in {
               # Reshade Package path: ${cfg.reshade.package}
               mkdir -p '${xlcore}/ffxiv/game/reshade-shaders/'
               mkdir -p '${xlcore}/ffxiv/game/reshade-presets/'
-              # # copy the files from nixpkgs to reshade directory
-              # # This is to allow the user to modify the shaders without modifying the nix store
-              # # NOTE: This is just to prevent errors, changes will be deleted on next update
-              # ${getExe pkgs.rsync} -avz --no-perms --no-owner --no-group --delete \
-              #     '${cfg.reshade.package}/reshade-shaders/' '${xlcore}/ffxiv/game/reshade-shaders/'
-              # ${getExe pkgs.rsync} -avz --no-perms --no-owner --no-group --delete \
-              #     '${cfg.reshade.package}/reshade-presets/' '${xlcore}/ffxiv/game/reshade-presets/'
               # Ensure ownership is correct
               chown -Rv "$USER" '${xlcore}/ffxiv/game/reshade-shaders'
               chown -Rv "$USER" '${xlcore}/ffxiv/game/reshade-presets'
-              # find '${xlcore}/ffxiv/game/'reshade-{shaders,presets} -type f -exec chmod 644 {} \;
               # Cache to prevent this directory from being backed up, we create this from reshade
               cat > '${xlcore}/ffxiv/CACHEDIR.TAG' <<EOL
               Signature: 8a477f597d28d172789f06886806bc55
@@ -263,8 +244,6 @@ in {
           '';
           executable = true;
         };
-        # ".xlcore/compatibilitytool/dxvk/dxvk-nix/x32".source = pkgs.dxvk-w32 + "/bin";
-        # ".xlcore/compatibilitytool/dxvk/dxvk-nix/x64".source = pkgs.dxvk-w64 + "/bin";
       };
       activation = mkIf cfg.reshade.enable {
         ffxivShaderInstall = lib-hm.dag.entryAfter ["writeBoundary"] (shaderInstallActivation cfg.reshade.package);

@@ -38,8 +38,6 @@ in {
       enable = true;
       # No reason for this to be accessible outside of Tailscale
       openFirewall = false;
-      #user = config.users.users.jellyfin.name;
-      #group = config.users.users.jellyfin.group;
     };
     topology.self.services.jellyfin = {
       hidden = false;
