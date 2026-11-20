@@ -5,9 +5,11 @@
   ...
 }: let
   inherit (inputs) nix-reshade spicetify-nix;
-  inherit (lib.TM.package-helper) pins blacklistPatches shortRev;
+  inherit (lib.TM.package-helper) evalPins pinsFor blacklistPatches shortRev;
 in
   final: prev: let
+    # Fetched at build time. Use `evalPins` only where the source is read during evaluation.
+    pins = pinsFor final;
     pinnedOverlay = pkg: pin: ver:
       pkg.overrideAttrs (o: let
         v =
@@ -25,7 +27,7 @@ in
       (o: {
         nativeBuildInputs = o.nativeBuildInputs ++ lib.optional final.config.cudaSupport final.cudaPackages.cuda_nvcc;
       });
-    npins = pinnedOverlay (final.callPackage "${pins.npins}/npins.nix" {}) pins.npins null;
+    npins = pinnedOverlay (final.callPackage "${evalPins.npins}/npins.nix" {}) evalPins.npins null;
     inherit (inputs.nixpkgs-using.packages.${final.stdenv.hostPlatform.system}) nixpkgs-using;
     inherit (inputs.moonlight-mod.packages.${final.stdenv.hostPlatform.system}) moonlight;
     osm-gps-map = prev.osm-gps-map.overrideAttrs (o: {
@@ -37,8 +39,8 @@ in
       imagemagick = final.imagemagickBig;
     };
     gargoyle = blacklistPatches ((clangStdenv prev.gargoyle).overrideAttrs {
-      src = pins.gargoyle;
-      version = builtins.replaceStrings ["\n"] [""] "${builtins.readFile (pins.gargoyle + "/VERSION")}-${shortRev pins.gargoyle.revision}";
+      src = evalPins.gargoyle;
+      version = builtins.replaceStrings ["\n"] [""] "${builtins.readFile (evalPins.gargoyle + "/VERSION")}-${shortRev evalPins.gargoyle.revision}";
     }) [];
     gallery-dl = pinnedOverlay prev.gallery-dl pins.gallery-dl-stable null;
     gallery-dl-unstable = pinnedOverlay final.gallery-dl pins.gallery-dl null;
@@ -135,7 +137,7 @@ in
           cmakeVer =
             builtins.match
             ''.*project\([[:space:]]*[^[:space:]]+[[:space:]]+VERSION[[:space:]]+([0-9][0-9.]+[0-9]).*''
-            (builtins.readFile "${pins.easyeffects}/CMakeLists.txt");
+            (builtins.readFile "${evalPins.easyeffects}/CMakeLists.txt");
           ver =
             builtins.elemAt (
               if cmakeVer != null
@@ -144,8 +146,8 @@ in
             )
             0;
         in
-          ver + "-${shortRev pins.easyeffects.revision}";
-        src = pins.easyeffects;
+          ver + "-${shortRev evalPins.easyeffects.revision}";
+        src = evalPins.easyeffects;
       }));
 
     /*

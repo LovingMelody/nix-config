@@ -7,7 +7,7 @@
 }: let
   cfg = config.TM.shells.fish;
   inherit (lib) mkEnableOption mkIf;
-  inherit (lib.TM.package-helper) pins;
+  pins = lib.TM.package-helper.pinsFor pkgs;
 in {
   options.TM.shells.fish.enable =
     mkEnableOption "Smart and user-friendly command line shell"

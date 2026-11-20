@@ -12,7 +12,11 @@ in rec {
     else a;
   package-helper = {
     shortRev = s: builtins.substring 0 7 s;
-    inherit pins;
+    # `evalPins` uses builtin fetchers, so sources are downloaded at eval time.
+    # Only use it where the source must be read during evaluation (readFile/import);
+    # otherwise prefer `pinsFor pkgs`, which uses fixed-output derivations fetched at build time.
+    evalPins = pins;
+    pinsFor = pkgs: builtins.mapAttrs (_: pin: pin {inherit pkgs;}) pins;
 
     propagateInputs = package: deps:
       package.overrideAttrs (old: {

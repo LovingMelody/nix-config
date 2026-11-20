@@ -15,7 +15,7 @@
     optional
     versions
     ;
-  inherit (lib.TM.package-helper) pins;
+  pins = lib.TM.package-helper.pinsFor pkgs;
 in {
   options.TM.gaming = {
     enable = mkEnableOption "Enable gaming specific configs";
