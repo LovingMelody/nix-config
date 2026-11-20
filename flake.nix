@@ -89,7 +89,7 @@
                     [
                       inputs.catppuccin.homeModules.catppuccin
                       inputs.nix-index-database.homeModules.nix-index
-                      inputs.nvf.homeManagerModules.default
+                      inputs.nvf.homeModules.default
                       inputs.sops-nix.homeManagerModules.sops
                       inputs.stylix.homeModules.stylix
                       inputs.nixcord.homeModules.default
@@ -305,7 +305,6 @@
       inputs = {
         nixpkgs.follows = "nixpkgs";
         home-manager.follows = "home-manager";
-        nixpkgs-nixcord.follows = "nixpkgs";
         treefmt-nix.follows = "treefmt-nix";
       };
     };
