@@ -21,7 +21,22 @@ in
         version = pin.version or "${v}+${pin.revision}";
       });
     clangStdenv = pkg: pkg.override {stdenv = final.clangStdenv;};
+    # Plain nixpkgs with CUDA off and none of our overlays, so its derivations match
+    # what cache.nixos.org has built. Only realised when something below is evaluated.
+    pkgsNoCuda =
+      if final.config.cudaSupport or false
+      then
+        import final.path {
+          localSystem = final.stdenv.buildPlatform;
+          crossSystem = final.stdenv.hostPlatform;
+          config = builtins.removeAttrs final.config ["_module"] // {cudaSupport = false;};
+        }
+      else prev;
   in {
+    # Firefox/Thunderbird only use onnxruntime for local ML features (translations etc.), and
+    # with cudaSupport its CUDA/OpenVINO chain changes every hash, forcing a source build.
+    inherit (pkgsNoCuda) firefox-unwrapped thunderbird-unwrapped;
+
     alvr =
       prev.alvr.overrideAttrs
       (o: {
