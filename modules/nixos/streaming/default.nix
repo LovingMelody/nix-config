@@ -19,7 +19,7 @@ in {
         input-overlay
         obs-backgroundremoval
         obs-composite-blur
-        obs-image-reaction
+        # obs-image-reaction
         obs-ios-camera-source
         obs-pipewire-audio-capture
         obs-vkcapture
