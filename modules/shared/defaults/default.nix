@@ -17,6 +17,8 @@
   inherit (lib.TM) get-secret-file;
   inherit (pkgs.stdenv.hostPlatform) isLinux;
   cfg = config.TM.defaults;
+  # This module is imported by both NixOS and home-manager; only HM configs have home.username
+  isHM = lib.hasAttrByPath ["home" "username"] config;
 in {
   # Defaults to true
   options.TM.defaults.enable = mkEnableOption "Enable base defaults" // {default = true;};
@@ -28,28 +30,6 @@ in {
         registry = mapAttrs (_: v: {flake = v;}) inputs;
         settings = {
           nix-path = mapAttrsToList (k: v: "${k}=${v.to.path}") config.nix.registry;
-          trusted-public-keys = [
-            "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-            "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
-            "nix-citizen.cachix.org-1:lPMkWc2X8XD4/7YPEEwXKKBg+SVbYTVrAaLA2wQTKCo="
-            "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
-            "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-            "robotnix.cachix.org-1:+y88eX6KTvkJyernp1knbpttlaLTboVp4vq/b24BIv0="
-            "flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs="
-            "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="
-            "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="
-          ];
-          substituters = [
-            "https://cache.nixos.org"
-            "https://nix-gaming.cachix.org"
-            "https://nix-community.cachix.org"
-            "https://nix-citizen.cachix.org"
-            "https://cosmic.cachix.org"
-            "https://robotnix.cachix.org"
-            "https://cache.flox.dev"
-            "https://cache.nixos-cuda.org"
-            "https://ezkea.cachix.org"
-          ];
           experimental-features = ["nix-command" "flakes"];
           auto-optimise-store = isLinux;
           keep-outputs = true;
@@ -61,19 +41,44 @@ in {
       };
     }
 
-    (mkIf (config.TM.knowsHiddenMove && (! (lib.hasAttrByPath ["home" "username"] config))) {
-      sops.secrets."nix-netrc" = mkMerge [
-        {
-          sopsFile = get-secret-file "netrc.bin";
-          format = "binary";
-          mode = "600";
-        }
-        (
-          mkIf (! (lib.attrsets.hasAttrByPath ["home" "username"] config)) {
-            owner = "root";
-          }
-        )
-      ];
+    # Substituters live in the system nix.conf only. If HM writes `substituters` into
+    # ~/.config/nix/nix.conf, it replaces (not merges with) the system list, and because
+    # melody is a trusted user the daemon honours that replacement, dropping cache.nix-ci.com.
+    (mkIf (! isHM) {
+      nix.settings = {
+        trusted-public-keys = [
+          "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+          "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
+          "nix-citizen.cachix.org-1:lPMkWc2X8XD4/7YPEEwXKKBg+SVbYTVrAaLA2wQTKCo="
+          "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
+          "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+          "robotnix.cachix.org-1:+y88eX6KTvkJyernp1knbpttlaLTboVp4vq/b24BIv0="
+          "flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs="
+          "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="
+          "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="
+        ];
+        substituters = [
+          "https://cache.nixos.org"
+          "https://nix-gaming.cachix.org"
+          "https://nix-community.cachix.org"
+          "https://nix-citizen.cachix.org"
+          "https://cosmic.cachix.org"
+          "https://robotnix.cachix.org"
+          "https://cache.flox.dev"
+          "https://cache.nixos-cuda.org"
+          "https://ezkea.cachix.org"
+        ];
+      };
+    })
+
+    (mkIf (config.TM.knowsHiddenMove && (! isHM)) {
+      # Read by the nix-daemon (root) only; the outer mkIf already excludes HM
+      sops.secrets."nix-netrc" = {
+        sopsFile = get-secret-file "netrc.bin";
+        format = "binary";
+        mode = "600";
+        owner = "root";
+      };
       nix.settings = {
         netrc-file = config.sops.secrets."nix-netrc".path;
         substituters = ["https://cache.nix-ci.com"];
