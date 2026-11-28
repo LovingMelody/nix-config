@@ -23,6 +23,7 @@ in {
       enable = true;
       useWivrn = true;
     };
+    virt.enable = true;
     autoUpgrade.enable = true;
     # ZFS Cannot safely be suspended & hibernate.
     # Making it not suitable for laptops
@@ -136,4 +137,5 @@ in {
   security.polkit.enable = true;
 
   boot.kernelPackages = mkForce (lib.TM.latestZFSKernel pkgs config.boot.zfs.package);
+  users.users.melody.extraGroups = ["libvirtd" "wireshark"];
 }
