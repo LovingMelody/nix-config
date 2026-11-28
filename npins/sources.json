@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": true,
-      "revision": "6e25a5e7af5a05e5729e7abc5bf1184df9242e2a",
+      "revision": "1011dd97474a1c8c2608f3466429e4df45b36b7c",
       "url": null,
-      "hash": "sha256-DAhuHCEMaR4ShbhfOv45mf8+oYZJZRX9RgAyz/v3Y9o="
+      "hash": "sha256-oXU+dcRYKVa4fC0cNx4mc1493GhLviFd3CGZSVAORjY="
     },
     "dxvk-gplasync": {
       "type": "Git",
@@ -88,9 +88,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "1be242348f6d8598ce5c7eb5bb4456d6793c5e3e",
-      "url": "https://codeberg.org/mikf/gallery-dl/archive/1be242348f6d8598ce5c7eb5bb4456d6793c5e3e.tar.gz",
-      "hash": "sha256-i5Pmm7uJMUvAq1oo2hk0GRkmezp+zhNE13U9RfRs01E="
+      "revision": "85435263e38f7d2a2c0c2efb2b02c233bfce30f2",
+      "url": "https://codeberg.org/mikf/gallery-dl/archive/85435263e38f7d2a2c0c2efb2b02c233bfce30f2.tar.gz",
+      "hash": "sha256-HG4Za9zKnskYx1T7V/FVXG52tydVAyboJrND/SFlZCM="
     },
     "gallery-dl-stable": {
       "type": "GitRelease",
@@ -215,9 +215,9 @@
       },
       "branch": "dev",
       "submodules": false,
-      "revision": "40ff0e3d91a5cd4ea1796b989d9f16815e76d02d",
-      "url": "https://github.com/nagadomi/nunif/archive/40ff0e3d91a5cd4ea1796b989d9f16815e76d02d.tar.gz",
-      "hash": "sha256-Hp5pOpEbwXT9d/OCSRu1xZV/4hS5lv5NdmvmFlUsYro="
+      "revision": "210578f122559672cd28f97b718f67cb883ed753",
+      "url": "https://github.com/nagadomi/nunif/archive/210578f122559672cd28f97b718f67cb883ed753.tar.gz",
+      "hash": "sha256-y79STD/R+Cj9aDJaS6/NdLjwN9oh93fi8+fLNFWNG1k="
     },
     "obs": {
       "type": "Git",
