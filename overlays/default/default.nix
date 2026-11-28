@@ -53,10 +53,14 @@ in
       ffmpeg = final.ffmpeg-full;
       imagemagick = final.imagemagickBig;
     };
-    gargoyle = blacklistPatches ((clangStdenv prev.gargoyle).overrideAttrs {
-      src = evalPins.gargoyle;
-      version = builtins.replaceStrings ["\n"] [""] "${builtins.readFile (evalPins.gargoyle + "/VERSION")}-${shortRev evalPins.gargoyle.revision}";
-    }) [];
+    gargoyle =
+      blacklistPatches ((clangStdenv prev.gargoyle).overrideAttrs {
+        src = evalPins.gargoyle;
+        version = builtins.replaceStrings ["\n"] [""] "${builtins.readFile (evalPins.gargoyle + "/VERSION")}-${shortRev evalPins.gargoyle.revision}";
+      }) [
+        "macos-qt-datadir.patch"
+        "plus-cve-2026-131873-131874.patch"
+      ];
     gallery-dl = pinnedOverlay prev.gallery-dl pins.gallery-dl-stable null;
     gallery-dl-unstable = pinnedOverlay final.gallery-dl pins.gallery-dl null;
 
