@@ -23,6 +23,13 @@ in {
       };
     };
     programs = {
+      anki = {
+        enable = true;
+        addons = [
+          pkgs.ankiAddons.recolor
+          pkgs.ankiAddons.review-heatmap
+        ];
+      };
       obsidian = {
         enable = true;
         cli.enable = true;
