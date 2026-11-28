@@ -28,8 +28,14 @@ in {
         qemu = {
           package = mkDefault pkgs.qemu_kvm;
           swtpm.enable = mkDefault true;
+          runAsRoot = mkDefault false;
         };
       };
+      spiceUSBRedirection.enable = mkDefault config.virtualisation.libvirtd.enable;
     };
+    programs.virt-manager.enable = mkDefault true;
+    networking.firewall.trustedInterfaces = ["virbr0"];
+    boot.supportedFilesystems = ["ntfs"];
+    environment.systemPackages = with pkgs; [virtio-win quickemu];
   };
 }
