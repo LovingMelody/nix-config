@@ -26,7 +26,6 @@ in {
       anki = {
         enable = true;
         addons = [
-          pkgs.ankiAddons.recolor
           pkgs.ankiAddons.review-heatmap
         ];
       };
