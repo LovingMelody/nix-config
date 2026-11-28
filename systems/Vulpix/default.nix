@@ -11,10 +11,6 @@ in {
   imports = [./hardware-configuration-extended.nix];
   # Use lix
   TM = {
-    vr = {
-      enable = true;
-      useWivrn = true;
-    };
     pokemon = {
       name = "Vulpix";
       pokedex = 37;
@@ -23,6 +19,10 @@ in {
     isGui = true;
     isLaptop = true;
     defaultNetworkAdapter = "wlp2s0";
+    vr = {
+      enable = true;
+      useWivrn = true;
+    };
     autoUpgrade.enable = true;
     # ZFS Cannot safely be suspended & hibernate.
     # Making it not suitable for laptops
