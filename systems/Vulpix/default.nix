@@ -138,6 +138,7 @@ in {
 
   security.polkit.enable = true;
 
+  # no zfs here, but stay on snow's kernel so the cuda builds are shared
   boot.kernelPackages = mkForce (lib.TM.latestZFSKernel pkgs config.boot.zfs.package);
   users.users.melody.extraGroups = ["libvirtd" "wireshark"];
 }
