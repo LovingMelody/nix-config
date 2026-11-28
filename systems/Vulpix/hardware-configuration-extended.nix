@@ -7,10 +7,6 @@
 }: {
   imports = with inputs; [
     ./hardware-configuration.nix
-    nixos-hardware.nixosModules.common-cpu-amd
-    nixos-hardware.nixosModules.common-cpu-amd-pstate
-    nixos-hardware.nixosModules.common-pc-laptop-ssd
-    nixos-hardware.nixosModules.common-pc-laptop
     nixos-hardware.nixosModules.asus-zephyrus-ga401
     nixos-hardware.nixosModules.asus-battery
     nixos-hardware.nixosModules.common-gpu-nvidia
@@ -20,7 +16,6 @@
   };
   environment.systemPackages = [pkgs.headsetcontrol];
   services = {
-    fprintd.enable = true;
     # asus-wmi has no "low-power"; quiet is the lowest profile here
     tlp.settings = {
       PLATFORM_PROFILE_ON_BAT = "quiet";
@@ -66,7 +61,6 @@
   TM = {
     hasHDRDisplay = lib.mkDefault false;
     programs.wine.binfmt = true;
-    nvidia.enable = true;
     virt.enable = true;
   };
   nixpkgs.config = {
@@ -81,11 +75,5 @@
   environment.sessionVariables = lib.mkIf config.programs.gamemode.enable {
     GAMEMODERUNEXEC = lib.mkIf config.hardware.nvidia.prime.offload.enableOffloadCmd "nvidia-offload";
   };
-  hardware = {
-    bluetooth = {
-      enable = true;
-    };
-  };
-
   topology.self.interfaces.wlp2s0.network = "home";
 }

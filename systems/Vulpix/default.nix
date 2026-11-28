@@ -17,8 +17,6 @@ in {
     };
     knowsHiddenMove = true;
     isGui = true;
-    isLaptop = true;
-    defaultNetworkAdapter = "wlp2s0";
     vr = {
       enable = true;
       useWivrn = true;

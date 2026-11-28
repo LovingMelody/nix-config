@@ -8,6 +8,9 @@
   # With PRIME offload the iGPU drives the display; forcing these globally would
   # put the whole session (and all VA-API/GLX clients) on the dGPU.
   primeOffload = config.hardware.nvidia.prime.offload.enable;
+  hw = config.TM.hardware;
+  # Laptop with an NVIDIA dGPU next to an AMD/Intel GPU (from the facter report)
+  hybridLaptop = hw.hasReport && config.TM.isLaptop && hw.gpu.nvidia && (hw.gpu.amd || hw.gpu.intel);
   inherit (lib) mkDefault mkEnableOption mkIf mkRenamedOptionModule;
 in {
   imports = [(mkRenamedOptionModule ["TM" "MyNextGPUWillNotBeNvidia"] ["TM" "nvidia" "enable"])];
@@ -47,6 +50,15 @@ in {
         gsp.enable = true;
         dynamicBoost.enable = mkDefault config.TM.isLaptop;
         nvidiaPersistenced = mkDefault config.TM.isServer;
+        prime = mkIf hybridLaptop {
+          offload = {
+            enable = mkDefault true;
+            enableOffloadCmd = mkDefault true;
+          };
+          nvidiaBusId = mkDefault hw.gpu.busIds.nvidia;
+          amdgpuBusId = mkIf hw.gpu.amd (mkDefault hw.gpu.busIds.amdgpu);
+          intelBusId = mkIf (!hw.gpu.amd && hw.gpu.intel) (mkDefault hw.gpu.busIds.intel);
+        };
       };
       nvidia-container-toolkit.enable = mkDefault (
         config.virtualisation.docker.enable || config.virtualisation.podman.enable

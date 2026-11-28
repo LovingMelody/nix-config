@@ -238,6 +238,8 @@ in {
         packages = [game-devices-udev-rules];
       };
       bpftune.enable = mkDefault true;
+      # GPU monitoring / fan & power control (AMD and NVIDIA)
+      lact.enable = mkDefault (config.TM.nvidia.enable || config.TM.hardware.gpu.amd);
       ananicy = {
         enable = mkDefault (! config.programs.gamemode.enable);
         package = pkgs.ananicy-cpp;

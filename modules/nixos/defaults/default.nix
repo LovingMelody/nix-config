@@ -4,11 +4,10 @@
   inputs,
   pkgs,
   nixpkgs-overlays,
-  host,
   ...
 }: let
   cfg = config.TM.defaults;
-  facterReport = "${inputs.self}/systems/${host}/facter.json";
+  hwInfo = config.TM.hardware;
   inherit
     (lib)
     TM
@@ -23,6 +22,8 @@ in
   # hostInfo = lib.TM.info.allHostInfo (inputs.self);
   {
     imports = [(TM.get-shared-module "defaults")];
+    # replaces nixos-hardware common cpu/pc profiles
+    options.TM.defaults.hardwareTuning.enable = lib.mkEnableOption "hardware tuning based on the facter report" // {default = true;};
     config =
       mkMerge [
         (mkIf cfg.enable {
@@ -321,17 +322,27 @@ fhsenv}/usr/lib64 $out/lib")
               };
             };
           })
-        # We can make use of the factor report to auto enable or disable
-        # Things without hand enabling them per host as hardware changes
-        # Won't work for things like HDR but it will help for other things
-        # Factor doesnt need to be enabled to be useful and causes problems
-        # if it is enabled
-        (mkIf (cfg.enable && builtins.pathExists facterReport) {
-          hardware.facter = {
-            reportPath = mkDefault facterReport;
-            enable = mkDefault false;
+        # The facter report itself is loaded in modules/nixos/helpers/facter.nix.
+        # These are nixos-hardware's generic common/ profiles re-done as config
+        # so they can be toggled; device-specific profiles stay per host.
+        (mkIf (cfg.enable && cfg.hardwareTuning.enable && hwInfo.hasReport) (let
+          inherit (config.hardware.facter) detected;
+          inherit (hwInfo) cpu;
+          firmware = config.hardware.enableRedistributableFirmware;
+        in {
+          boot = {
+            # amd-pstate needs CPPC, present from Zen 3 (family 25) on
+            kernelParams = mkIf (cpu.vendor == "AuthenticAMD" && cpu.family >= 25 && lib.versionAtLeast config.boot.kernelPackages.kernel.version "6.3") ["amd_pstate=active"];
+            kernelModules = optional (cpu.kvmModule != null) cpu.kvmModule;
+            # Graphics modules are left out on purpose: nvidia pulls ~200MB of GSP firmware into the initrd
+            initrd.availableKernelModules = detected.boot.disk.kernelModules ++ detected.boot.keyboard.kernelModules;
           };
-        })
+          services.fstrim.enable = mkIf hwInfo.nvme (mkDefault true);
+          hardware.cpu = {
+            amd.updateMicrocode = mkIf (hwInfo.baremetal && cpu.vendor == "AuthenticAMD") (mkDefault firmware);
+            intel.updateMicrocode = mkIf (hwInfo.baremetal && cpu.vendor == "GenuineIntel") (mkDefault firmware);
+          };
+        }))
         (mkIf
           config.TM.knowsHiddenMove {
             sops.secrets."wifi.env" = {
