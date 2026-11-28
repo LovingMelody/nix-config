@@ -4,9 +4,11 @@
   inputs,
   pkgs,
   nixpkgs-overlays,
+  host,
   ...
 }: let
   cfg = config.TM.defaults;
+  facterReport = "${inputs.self}/systems/${host}/facter.json";
   inherit
     (lib)
     TM
@@ -319,6 +321,17 @@ fhsenv}/usr/lib64 $out/lib")
               };
             };
           })
+        # We can make use of the factor report to auto enable or disable
+        # Things without hand enabling them per host as hardware changes
+        # Won't work for things like HDR but it will help for other things
+        # Factor doesnt need to be enabled to be useful and causes problems
+        # if it is enabled
+        (mkIf (cfg.enable && builtins.pathExists facterReport) {
+          hardware.facter = {
+            reportPath = mkDefault facterReport;
+            enable = mkDefault false;
+          };
+        })
         (mkIf
           config.TM.knowsHiddenMove {
             sops.secrets."wifi.env" = {
