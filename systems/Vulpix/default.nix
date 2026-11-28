@@ -103,6 +103,10 @@ in {
       enable = true;
       libraries = with pkgs; [gamemode];
     };
+    wireshark = {
+      enable = true;
+      package = pkgs.wireshark; # Qt GUI build, not the CLI-only default
+    };
   };
   networking = {
     networkmanager.enable = true;
