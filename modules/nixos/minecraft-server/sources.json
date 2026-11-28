@@ -1,70 +1,70 @@
 {
   "Balm": {
-    "sha512": "a558ef7b432faf31e4dd35339d8d2b330343c0c84715ed3890eb1c2df5b7914c6f0beae919c8fc33ba8c2bbf6da4fb98c452c8efc5d90338d3051af70e4513a8",
-    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/qLWYe5p7/balm-fabric-26.2-26.2.0.9.jar"
+    "sha512": "aaf07f5b94f7015c87df7b242f3f45f0729fb3f72d887745ad5c5ceb31eb071e425254009158774101676d6480f31c832dd60860d79da5b661cc10b84241c319",
+    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/MYj31XNG/balm-fabric-26.3-26.3.0.3.jar"
   },
   "ClothConfigAPI": {
-    "sha512": "37b1e402f0df5a383656e21a38ee18cdd15cb4ba3fb62fbeba82ef4b959a4479fc32718ac0d9d154a7d9104c5f7315bfa67dbeced0b8ff240b8039d4848d5df1",
-    "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/Nv3xnWXd/cloth-config-26.2.155.jar"
+    "sha512": "6c258fd152cc37d54d08e39a28bcf1e0bf663079f5c49dcd38d4065d9ec74b902de0c65f2bcea0525ed35e4a25da76b0f4c5e88255799e3abca3426d838f86d5",
+    "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/x10ElkQ0/cloth-config-fabric-26.3.161.jar"
   },
   "ConcurrentChunkManagementEngine": {
-    "sha512": "69b3b5cc0cc451f968e6c7cf157a4cdd29a0f79b54d1a706368b709ff949e359691979958d3e98ea26eb431a0473ca94bec0a869e203bdcdbcda475d90759d37",
-    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/LUiKaxGQ/c2me-fabric-mc26.2-0.4.2-alpha.0.73.jar"
+    "sha512": "7667ed154f2115ea8076e0a25c5850f8224c4cbe0e899f236f1cc0528a772fdb9bd0c870f065af973fcfe39ddcb1f90464cdf1ad9e2c84a30e7e5e08e730fec5",
+    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/uJXIGMNg/c2me-fabric-mc26.3-0.4.2-alpha.0.126.jar"
   },
   "FabricAPI": {
-    "sha512": "2502fa5ade78e9a120b3747bc1a9a2167d6671743bea45bf115d3174c94121aeda87c549446d1a604a9c11fb828de17a551e3514ce42f3e93069dd14bdaee55b",
-    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/ewUK83HI/fabric-api-0.161.0%2B26.2.jar"
+    "sha512": "c01532a9a46ae90f83fb57de265e884bbb46106a844e6d9db21d08d1713f360e0a987255d5d965697465fe3910798af6c5dcf64ed3d34e85064ca41b7bff3d20",
+    "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/lPHkrIVF/fabric-api-0.167.0%2B26.3.jar"
   },
   "Gyser": {
-    "sha512": "9fa886fd354c50d7e67599489362e35b4f61c7016e89c15533cd96745ee10509ec9c7a4907c513af1c37d1842b2d3ad8c3b531bfcc20fb22cd598ebd36f5f6d8",
-    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/jVYS4ibU/Geyser-Fabric-2.11.3-b1254.jar"
+    "sha512": "54817c516d0b823791171cad6fabd0e169b933a56a0489be930fcc47e762d4e4de00d05bf7fc2ec7ce6122d4b47d1112e0a71256d312b2f906235a8dc8671628",
+    "url": "https://cdn.modrinth.com/data/wKkoqHrH/versions/ou7Fh0tV/Geyser-Fabric-2.12.1-b1313.jar"
   },
   "Incendium": {
-    "sha512": "202e1f23c64c37330d3ec0bfd80331355d15cc8d01f151edc4dabfa8ce719650d10f468df5bf523a93461d78c3660a2cdedbc1037fb08396c13f22b6457352f0",
-    "url": "https://cdn.modrinth.com/data/ZVzW5oNS/versions/vPwuqZ5y/Incendium_26.2_v5.5.1.jar"
+    "sha512": "9be3c614a6abd0d4b71c885cf7823cf4dc6252b006b4a1645a5f8319017275634b9baa22413fcb5f1664eb26a973c73b0439ca6d24669e34ae37965313fbd574",
+    "url": "https://cdn.modrinth.com/data/ZVzW5oNS/versions/D4vWUd23/Incendium_26.3_v5.5.4%2B26.3.jar"
   },
   "Krypton": {
-    "sha512": "b8d9af34cd0050493afb8a6232cb8f785daa9d8887b7045f6e6a53c6bb9b5ffc4318fd9b0347a940eacfeba4773f10cb80ae0be1e79ce4c1888f96eda21e564e",
-    "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/5WeL0Nkz/krypton-0.3.1.jar"
+    "sha512": "d1d57ebd41395b75b01f130cd9503eb8d208212424a399ff9f367f50be8fbc1c6472442b33c686e777c3148f6a609520e8fb732c755157c358cb207fd4d1123a",
+    "url": "https://cdn.modrinth.com/data/fQEb0iXm/versions/UugdIYJw/krypton-0.3.2.jar"
   },
   "Lithium": {
-    "sha512": "148b638f3c6229fbaf487120a2344a0af5e411a5aa6533d5db9d75da0a8c0d8304f63eb4cca13f4d03b2c9b4c23d559dd74c1d832422ef8a3087bd005e62a8bd",
-    "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/f7vZ0VWU/lithium-fabric-0.25.3%2Bmc26.2.jar"
+    "sha512": "033f85813b0bcafe848a55dd741b9b1a30685dcdf774a922507bf63716b16bfd0fc12856ffc4ca3c76a36f6dc73310a7dfdc4b6dc9e35c21a4482627b1d30b85",
+    "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/Lal8mJGR/lithium-fabric-0.26.4%2Bmc26.3.jar"
   },
   "NetherPortalFix": {
-    "sha512": "59d02006e5f51bd9a7e57de05a39f6803e504303bc22fb3451e41756c41ff7333ff6348ee51cf3b585dcf27454c0556407523a1a0bc4a84639e0d0b331ce8b6b",
-    "url": "https://cdn.modrinth.com/data/nPZr02ET/versions/GQpccFqg/netherportalfix-fabric-26.2-26.2.0.1.jar"
+    "sha512": "3e30a398702f49e6336870951bc7d64a650a370190dbab058e927aeb6a3bf398947497ae8e1750a3b52cbcdf751d5d9b6a78896313d342d16cbe204613703bb1",
+    "url": "https://cdn.modrinth.com/data/nPZr02ET/versions/RC1fmH8z/netherportalfix-fabric-26.3-26.3.0.1.jar"
   },
   "Nullscape": {
-    "sha512": "8c8f5ec050fb038da653c1023d2bbaf01cf0a88354d8081dbf99513375a64ebc18c669650d017c938ab4c4314c47f8b706422d8df43f4652c6c85460a63b6f01",
-    "url": "https://cdn.modrinth.com/data/LPjGiSO4/versions/lpsdO6Sg/Nullscape_26.2_v1.2.20.jar"
+    "sha512": "ae84946fd6a62ea0863cbc9fd2766ad08635a856d2e15af861af7d00807c98e606d1a2a06eb176ea6275031b66b6a186b245c7a4097797d3c12244ca9a4fe968",
+    "url": "https://cdn.modrinth.com/data/LPjGiSO4/versions/79OyFQtd/Nullscape_26.3_v2.0.1%2B26.3.jar"
   },
   "ServerCore": {
-    "sha512": "aa4cfc93f8e02172910302444330e37713dfcf2047d28e55eb7323a3cd5d51493374a0959aa3e626ec2bf43fc707a755508b83454bb34b6d57d65c069929074b",
-    "url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/edrtnY9v/servercore-fabric-1.5.19%2B26.2.jar"
+    "sha512": "6d12803a0d42eb619ac3bbd4b6eab7fc585e3ab9cadf32cee4656c8326a25f110e9952fc59b1356d55b3a252d6e61cf5d983207a0480322580cd4287e536d28e",
+    "url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/YNdFPSov/servercore-fabric-1.5.21%2B26.3.jar"
   },
   "Sit!": {
-    "sha512": "d6d1310de1f77601e45bbb25c5f5a8194053b3dc31b6c70f4f162c598354b1913bc6e07996e6cbf37a6673097444ce845403e52dd850437414d4d4c838f36e79",
-    "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/yymwWm0P/sit%21-1.2.6.3%2B26.2.jar"
+    "sha512": "4e6ffa81816571fcd69336406015d7f3daaf36709b8abaa5a72934db7138d1409e32ea2b9c4e324559041f7cdfaaee5cd3fdd7291b4e34e9e944ba2d4e0db683",
+    "url": "https://cdn.modrinth.com/data/EsYqsGV4/versions/9zKJaj9v/sit%21-1.2.6.4%2B26.3.jar"
   },
   "SoundPhysicsRemastered": {
-    "sha512": "d5809918e129b324767f4ec9d3fcc6a604de7860f2512db9f3dd368d8894cc8376de6eb659e78ce85bb97020315a3af877d96f07aea160e04c7925e0521a367e",
-    "url": "https://cdn.modrinth.com/data/qyVF9oeo/versions/spaXzTE9/sound-physics-remastered-fabric-1.5.2%2B26.2.jar"
+    "sha512": "dcd812a812ce04d87dbab0bf24fc42ef6a3ddd8150a98e45c78963bb0bfaf6cba6b9464101cf8a8d4d9551bc4ae0c300913b99715eaff787aba744a3c08317f2",
+    "url": "https://cdn.modrinth.com/data/qyVF9oeo/versions/29UOgzLw/sound-physics-remastered-fabric-1.5.4%2B26.3.jar"
   },
   "Tectonic": {
-    "sha512": "c653ee42fe48c1be9512fa7791e8495095ae01cb607555202714bbb95cb49da272128bb295e8f8c262b63739e7ca2de4bba9196e1738b06012b498d220b55acf",
-    "url": "https://cdn.modrinth.com/data/lWDHr9jE/versions/tGbplDzo/tectonic-3.0.28-fabric-26.2.jar"
+    "sha512": "e91888863558781746b3708809ae09e67c14bec6cfefd633f1c9eaf2d19ad7dc9a4bcbab6ff25024e33741e8af51579ca0accbd92df66beb855060934f4820dc",
+    "url": "https://cdn.modrinth.com/data/lWDHr9jE/versions/rKBGygwM/tectonic-3.1.0%2Bbeta2-fabric-26.3.jar"
   },
   "Terralith": {
-    "sha512": "0830f4601674c4ea58d247a71bfdc820e4676900e173c7d6df4e58e348a09da43b279cea060df7b67e6f74c84e2a05b401b2df79836c37cffc8dc994844ab250",
-    "url": "https://cdn.modrinth.com/data/8oi3bsk5/versions/OxfI2n80/Terralith_26.2_v2.6.4.jar"
+    "sha512": "918b232df7a855bae89c7fa85affb5ce134e236c4726fa14a5bdaa179eb1e010f040a9fa981f006a0e26e421a2a961bc29a75e99a4500fd18361a8ba81478071",
+    "url": "https://cdn.modrinth.com/data/8oi3bsk5/versions/aGE3hYAA/Terralith_26.3_v2.6.5%2B26.3.jar"
   },
   "VanillaRefresh": {
-    "sha512": "1b42a10bc4039058ccd6106f3a00ef10b35c4a0893811177244eec537486a8e4473ecdce0de920d828b07ca3f881d55119bd31e021e0ffac70b8f1ebecb18fcf",
-    "url": "https://cdn.modrinth.com/data/gWO6Zqey/versions/sl7WNz8q/vanilla-refresh-1.4.32.jar"
+    "sha512": "62b19d3d533fd3359b43290c94b4a3403f009e93109aa21c79f935a4924693c896fba903030e08909a99fd804235ef47378ea3c533b1e71084dd4d46d143d55c",
+    "url": "https://cdn.modrinth.com/data/gWO6Zqey/versions/U5vsfwe5/vanilla-refresh-1.4.33.jar"
   },
   "Vivecraft": {
-    "sha512": "8f63a60587fd95b21884d2d61ac6e76f18a3e9a510226edbc0e06e4f276b8f84196bde314764aedf3bfc5f08499facd3bc3697ab97fa93602986fc6e8e7c7c7c",
-    "url": "https://cdn.modrinth.com/data/wGoQDPN5/versions/VrqKDtZn/vivecraft-26.2-1.3.15-fabric.jar"
+    "sha512": "f952c991d2a3a1b63c2746408e6a056b3db108e6f2cde33e2466d6228212bb9fbc667abaedce31943dcc0b7f04d1fe8e060fc8f32b92e34337a7c1fe33e8e761",
+    "url": "https://cdn.modrinth.com/data/wGoQDPN5/versions/eV5kQTVM/vivecraft-26.3-1.3.18-fabric.jar"
   }
 }
